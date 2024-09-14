@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/</link>
+    <description>Recent content on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 15 Sep 2024 01:13:06 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>少女祈祷中...</title>
+      <link>https://blog.akvicor.com/posts/init/</link>
+      <pubDate>Sun, 15 Sep 2024 01:13:06 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/init/</guid>
+      <description>搬家中&amp;hellip;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://blog.akvicor.com/about/</link>
+      <pubDate>Thu, 14 Jul 2022 11:03:19 +0000</pubDate>
+      <guid>https://blog.akvicor.com/about/</guid>
+      <description>萌新 newbie 单推 千反田爱瑠 伊蕾娜 黑岩射手 惠惠 珂朵莉·诺塔·瑟尼欧里斯 信仰 小恶魔/腹黑控 ( 粉红的切开来都是黑的！！ 黑长直控 ( 女鬼一般都是黑长直 白毛控 ( 拆腻子都是白毛控！</description>
+    </item>
+    <item>
+      <title>Archive</title>
+      <link>https://blog.akvicor.com/archive/</link>
+      <pubDate>Thu, 14 Jul 2022 11:03:04 +0000</pubDate>
+      <guid>https://blog.akvicor.com/archive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Find</title>
+      <link>https://blog.akvicor.com/find/</link>
+      <pubDate>Thu, 14 Jul 2022 11:02:59 +0000</pubDate>
+      <guid>https://blog.akvicor.com/find/</guid>
+      <description>Searching ...</description>
+    </item>
+    <item>
+      <title>Search</title>
+      <link>https://blog.akvicor.com/search/</link>
+      <pubDate>Thu, 14 Jul 2022 11:02:59 +0000</pubDate>
+      <guid>https://blog.akvicor.com/search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nav</title>
+      <link>https://blog.akvicor.com/nav/</link>
+      <pubDate>Thu, 14 Jul 2022 10:53:05 +0000</pubDate>
+      <guid>https://blog.akvicor.com/nav/</guid>
+      <description> 📑 Special Home </description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://blog.akvicor.com/newbie/</link>
+      <pubDate>Sun, 10 Feb 2019 22:51:16 +0000</pubDate>
+      <guid>https://blog.akvicor.com/newbie/</guid>
+      <description>$math_inline$ \text{保持对万物充满好奇心} $math_inline$ 我，Akvicor是一枚 计算机系学生～～ 平时喜欢作死 本博客从大一创建至今， 旨在记录下自己在学习过程中所遇到并解决的问题，也</description>
+    </item>
+  </channel>
+</rss>

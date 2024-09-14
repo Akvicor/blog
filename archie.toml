@@ -1,0 +1,75 @@
+baseURL = "https://blog.kayuki.org/"
+languageCode = "en-us"
+title = "Akvicor's Blog"
+theme = "archie"
+copyright = "© Akvicor"
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+paginate = 7 # articles per page
+hasCJKLanguage = true
+
+[params]
+	mode = "toggle" # color-mode → light,dark,toggle or auto
+	useCDN = false # don't use CDNs for fonts and icons, instead serve them locally.
+	#subtitle = "Keep It Simple, Stupid."
+	#subtitle = "You can't stop the waves, but you can learn to surf."
+	#subtitle = "保持对万物充满好奇心"
+	#subtitle = "人生如此复杂，机会多得像稠密图，我们没理由认输。尽管我们走不了最短路，但图仍是连通图，TLE之前，没有一个节点叫失败。"
+	#subtitle = "残酷是残酷，有梦想也许一切都不同了。"
+	subtitle = "{{< kidding title=\"完全没理解\" text=\"太棒了，我逐渐理解一切\" >}}"
+	customcss = []
+	customJS = []
+	funnyTitle = false
+	consoleLogAkvicor = true
+	consoleLogWoW = true
+	viryLatex = false # 使用自建latex渲染服务
+    mathjax = true # enable MathJax support
+	katex = true # enable KaTeX support
+    # 在开发环境下（http://localhost:1313/），不再启用评论插件，
+    # 如果想在开发环境下启用它，修改服务端口即可，如下
+    # hugo server -p=1314
+    [params.utterances]
+        # 是否启用评论插件
+        active = true
+        # 输入你的仓库名称
+        repo = "AkvicorEdwards/blog"
+        issueTerm = "pathname"
+        theme = "github-light"
+        crossorigin = "anonymous"
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Find"
+url = "/find"
+weight = 2
+
+[[menu.main]]
+name       = "Categories"
+identifier = "categories"
+url        = "/categories"
+weight     = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 5
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 6
+

@@ -1,0 +1,92 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="{{ .Title }} - {{ .Permalink }}">
+    <meta name="author" content="{{ .Site.Params.Author }} - {{ .Site.BaseURL }}">
+    <!-- 必应分析 -->
+    <!-- <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" /> -->
+    <title>{{ .Title }}</title>
+    <!-- <link rel="icon" type="image/png" href="/favicon.ico"> -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<script defer src="https://analy.akvicor.com/script.js" data-website-id="c0cbafdd-207e-431e-a252-4a64c31d98b9"></script>
+    {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ $built := resources.Get "main.js" | js.Build "main.js" }}
+    <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+    {{ if .Site.Params.funnyTitle | default false }}
+    <script src="/js/funny_title.js"></script>
+    {{- end -}}
+    <script src="/js/hide_and_seek.js"></script>
+    <link rel="stylesheet" href="/css/hide_and_seek.css">
+    <link rel="stylesheet" href="/css/heimu.css">
+	{{ if .Site.Params.consoleLogAkvicor | default false }}
+		<script>
+			console.log(String.raw`
+          _           _                _ 
+    /\   | |         (_)              | |
+   /  \  | | ____   ___  ___ ___  _ __| |
+  / /\ \ | |/ /\ \ / / |/ __/ _ \| '__| |
+ / ____ \|   <  \ V /| | (_| (_) | |  |_|
+/_/    \_\_|\_\  \_/ |_|\___\___/|_|  (_)`);
+		</script>
+	{{- end -}}
+	{{ if .Site.Params.consoleLogWoW | default false }}
+		<script>
+			try{
+				if(window.console&&window.console.log) {
+					console.log("%cFor the Horde! %cFor the Azeroth!","color:red","color:blue");
+					console.log("%c火墙火墙火墙火墙！","color:red");
+					console.log("%c快打大怪！","color:red");
+					console.log("%c快打断！","color:red");
+					console.log("%c注意脚下！","color:red");
+					console.log("%c快躲开！","color:red");
+					console.log("%c震慑波！","color:red");
+					console.log("%c快转身！","color:red");
+					console.log("%c注意减伤！","color:red");
+					console.log("%c<Deadly Boss Mods> %cCombat against 10 Player - Garrosh Hellscream(1%) ended after 8 minutes ad 19 seconds. you have 3 total wipes on this difficulty.","color:red","color:blue");
+				}
+			}
+			catch(e){};
+        </script>
+	{{- end -}}
+    
+	<!-- Mathjax support -->
+	{{ with .Site.Params.mathjax }}
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+	
+		<!-- inline Mathjax -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$math_inline$','$math_inline$'], ['\\(','\\)']],
+				displayMath: [['$math_noinline$','$math_noinline$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	{{ end }}
+
+	<!-- KaTeX support -->
+	{{ with .Site.Params.katex }}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		<!-- inline KaTeX -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$math_noinline$", right: "$math_noinline$", display: true},
+									{left: "$math_inline$", right: "$math_inline$", display: false}
+							]
+					});
+			});
+			</script>
+	{{ end }}
+    <!-- <script type="module" src="/main.js"></script> -->
+</head>

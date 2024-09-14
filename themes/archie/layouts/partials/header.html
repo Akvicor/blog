@@ -1,0 +1,140 @@
+<head lang="{{ .Site.Language.Lang }}">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	{{- $title := ( .Title ) -}}
+	{{- $siteTitle := ( .Site.Title ) -}}
+	{{- if .IsHome -}}
+	<title>{{ $siteTitle }} | Home </title>
+	{{- else -}}
+	<title>{{ $title }} - {{ $siteTitle }}</title>
+	{{- end -}}
+
+    <!-- <link rel="icon" type="image/png" href="/favicon.ico"> -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+	<meta property="og:image" content="{{ .Site.Params.og_image }}"/>
+	{{ with .OutputFormats.Get "rss" -}}
+	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
+
+	{{- template "_internal/opengraph.html" . -}}
+	{{- template "_internal/twitter_cards.html" . -}}
+	{{ if and (isset .Site.Params "social") (.Site.Params.useCDN | default false) -}}
+		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	{{- else if or (isset .Site.Params "social") (eq .Site.Params.mode "toggle") -}}
+		<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
+	{{ end }}
+	{{ if .Site.Params.useCDN | default false -}}
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	{{- else -}}
+	{{ $fontstyle := resources.Get "css/fonts.css" | fingerprint }}
+        <link href="{{ $fontstyle.Permalink }}" rel="stylesheet">
+	{{ end }}
+
+	{{ $style := resources.Get "css/main.css" | fingerprint }}
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}" />
+
+	{{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") (eq .Site.Params.mode "toggle") -}}
+		{{ $darkstyle := resources.Get "css/dark.css" | fingerprint }}
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="{{ $darkstyle.Permalink }}" {{ if eq .Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)"{{ end }} {{ if eq .Site.Params.mode "toggle" }}disabled{{ end }} />
+	{{ end }}
+
+	{{ if .Site.Params.funnyTitle | default false }}
+		<script src="{{ .Site.BaseURL }}js/funny_title.js"></script>
+	{{- end -}}
+    <script src="{{ .Site.BaseURL }}js/hide_and_seek.js"></script>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/hide_and_seek.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/heimu.css">
+
+	{{ if .Site.Params.consoleLogAkvicor | default false }}
+		<script>
+			console.log(String.raw`
+          _           _                _ 
+    /\   | |         (_)              | |
+   /  \  | | ____   ___  ___ ___  _ __| |
+  / /\ \ | |/ /\ \ / / |/ __/ _ \| '__| |
+ / ____ \|   <  \ V /| | (_| (_) | |  |_|
+/_/    \_\_|\_\  \_/ |_|\___\___/|_|  (_)`);
+		</script>
+	{{- end -}}
+
+	{{ if .Site.Params.consoleLogWoW | default false }}
+		<script>
+			try{
+				if(window.console&&window.console.log) {
+					console.log("%cFor the Horde! %cFor the Azeroth!","color:red","color:blue");
+					console.log("%c火墙火墙火墙火墙！","color:red");
+					console.log("%c快打大怪！","color:red");
+					console.log("%c快打断！","color:red");
+					console.log("%c注意脚下！","color:red");
+					console.log("%c快躲开！","color:red");
+					console.log("%c震慑波！","color:red");
+					console.log("%c快转身！","color:red");
+					console.log("%c注意减伤！","color:red");
+					console.log("%c<Deadly Boss Mods> %cCombat against 10 Player - Garrosh Hellscream(1%) ended after 8 minutes ad 19 seconds. you have 3 total wipes on this difficulty.","color:red","color:blue");
+				}
+			}
+			catch(e){};
+		</script>
+	{{- end -}}
+
+	<!-- Mathjax support -->
+	{{ with .Site.Params.mathjax }}
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+	
+		<!-- inline Mathjax -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$math_inline$','$math_inline$'], ['\\(','\\)']],
+				displayMath: [['$math_noinline$','$math_noinline$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	{{ end }}
+
+	<!-- KaTeX support -->
+	{{ with .Site.Params.katex }}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		<!-- inline KaTeX -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$math_noinline$", right: "$math_noinline$", display: true},
+									{left: "$math_inline$", right: "$math_inline$", display: false}
+							]
+					});
+			});
+			</script>
+	{{ end }}
+	
+	<!-- Custom CSS style get applied last -->
+	{{- if isset .Site.Params "customcss" }}
+		{{ range .Site.Params.customCSS }}
+		{{ $customstyle := resources.Get . | fingerprint }}
+		<link rel="stylesheet" type="text/css" href="{{ $customstyle.Permalink }}">
+		{{ end }}
+	{{- end -}}
+	{{- range .Site.Params.customJS }}
+	{{- if or (hasPrefix . "http://") (hasPrefix . "https://") }}
+	<script src="{{ . }}"></script>
+	{{- else if (hasPrefix . "<script")}}
+    {{ .| safeHTML }}
+	{{- else }}
+	<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+	{{- end }}
+	{{- end }}
+</head>
