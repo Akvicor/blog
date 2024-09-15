@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ComentOJ on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/tags/comentoj/</link>
+    <description>Recent content in ComentOJ on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 15 Sep 2024 15:41:52 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/tags/comentoj/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>序列</title>
+      <link>https://blog.akvicor.com/posts/cf/comentoj_c73_4116/</link>
+      <pubDate>Mon, 18 Nov 2019 14:13:08 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/comentoj_c73_4116/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://cometoj.com/contest/73/problem/C?problem_id=4116&#34;&gt; ComentOJ-C73-4116 序列 &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>「火鼠的皮衣 -不焦躁的内心-」</title>
+      <link>https://blog.akvicor.com/posts/cf/comentoj_c72_4033/</link>
+      <pubDate>Mon, 28 Oct 2019 17:47:42 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/comentoj_c72_4033/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://cometoj.com/contest/72/problem/%EF%BC%A4?problem_id=4033&#34;&gt; ComentOJ-C72-4033 「火鼠的皮衣 -不焦躁的内心-」 &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>「佛御石之钵 -不碎的意志-」(困难版)</title>
+      <link>https://blog.akvicor.com/posts/cf/comentoj_c72_4032/</link>
+      <pubDate>Mon, 28 Oct 2019 13:03:19 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/comentoj_c72_4032/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://cometoj.com/contest/72/problem/%EF%BC%A32?problem_id=4032&#34;&gt; ComentOJ-C72-4032 「佛御石之钵 -不碎的意志-」(困难版) &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

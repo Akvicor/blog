@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codeforces on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/tags/codeforces/</link>
+    <description>Recent content in Codeforces on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 15 Sep 2024 15:41:52 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/tags/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RGB Substring (hard version)</title>
+      <link>https://blog.akvicor.com/posts/cf/cf_c1196_d2/</link>
+      <pubDate>Thu, 25 Jul 2019 20:12:24 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/cf_c1196_d2/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://codeforces.com/contest/1196/problem/D2&#34;&gt; Codeforces-C1196 D2. RGB Substring (hard version) &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Increasing Subsequence (hard version)</title>
+      <link>https://blog.akvicor.com/posts/cf/cf_c1157_c2/</link>
+      <pubDate>Fri, 19 Jul 2019 17:14:42 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/cf_c1157_c2/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://codeforces.com/contest/1157/problem/C2&#34;&gt; Codeforces-C1157 C2. Increasing Subsequence (hard version) &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Also applies to easy versions&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Increasing Subsequence (easy version)</title>
+      <link>https://blog.akvicor.com/posts/cf/cf_c1157_c1/</link>
+      <pubDate>Fri, 19 Jul 2019 15:41:18 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/cf_c1157_c1/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://codeforces.com/contest/1157/problem/C1&#34;&gt; Codeforces-C1157 C1. Increasing Subsequence (easy version) &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Long Number</title>
+      <link>https://blog.akvicor.com/posts/cf/cf_c1157_b/</link>
+      <pubDate>Fri, 19 Jul 2019 15:07:20 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/cf_c1157_b/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://codeforces.com/contest/1157/problem/B&#34;&gt; Codeforces-C1157 B. Long Number &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reachable Numbers</title>
+      <link>https://blog.akvicor.com/posts/cf/cf_c1157_a/</link>
+      <pubDate>Fri, 19 Jul 2019 14:47:48 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/cf_c1157_a/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://codeforces.com/contest/1157/problem/A&#34;&gt; Codeforces-C1157 A. Reachable Numbers &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
