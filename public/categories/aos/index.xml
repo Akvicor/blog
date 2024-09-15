@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AOS on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/aos/</link>
+    <description>Recent content in AOS on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 27 Feb 2023 08:37:25 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/aos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unreal mode</title>
+      <link>https://blog.akvicor.com/posts/aos/unreal_mode/</link>
+      <pubDate>Mon, 27 Feb 2023 08:37:25 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/aos/unreal_mode/</guid>
+      <description>Unreal mode consists of breaking the 64KiB limit of real mode segments (while retaining 16-bit instructions and the segment * 16 + offset addressing mode) by tweaking the descriptor caches.</description>
+    </item>
+    <item>
+      <title>Stack alignment in x64 assembly</title>
+      <link>https://blog.akvicor.com/posts/aos/stack_alignment_in_x64_assembly/</link>
+      <pubDate>Tue, 23 Aug 2022 17:29:21 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/aos/stack_alignment_in_x64_assembly/</guid>
+      <description>gcc会在call指令之前让rsp按16字节对齐。 cpu在call的时候将rip压栈rsp -= 8，所以进入被调用者之后rsp = 8 (mod 16)。如果在这个函数里面还要c</description>
+    </item>
+    <item>
+      <title>BOOT: 从FAT32分区搜索并读取loader</title>
+      <link>https://blog.akvicor.com/posts/aos/boot/</link>
+      <pubDate>Mon, 22 Aug 2022 21:52:00 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/aos/boot/</guid>
+      <description>初始化寄存器 我将物理地址0x050000-0x070008之间的内存分配给了堆栈。栈顶设置为0x070008的原因是，kernel函数在编译后会在函数开头加上这</description>
+    </item>
+  </channel>
+</rss>
