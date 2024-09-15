@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Sep 2024 15:34:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2024 15:35:27 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>少女祈祷中...</title>
@@ -14,6 +14,13 @@
       <pubDate>Sun, 15 Sep 2024 01:13:06 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/init/</guid>
       <description>搬家中&amp;hellip;</description>
+    </item>
+    <item>
+      <title>关闭一加氧系统更新</title>
+      <link>https://blog.akvicor.com/posts/android/oneplus_disable_update/</link>
+      <pubDate>Sat, 20 Apr 2024 03:57:22 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/android/oneplus_disable_update/</guid>
+      <description>通过ADB停用系统更新和去除更新统治 # 屏蔽更新 adb shell pm disable-user com.oneplus.opbackup # 清除更新通知 adb shell pm clear com.oneplus.opbackup # 恢复更新 adb shell pm enable com.oneplus.opbackup</description>
     </item>
     <item>
       <title>Unreal mode</title>
@@ -203,6 +210,13 @@
       <pubDate>Tue, 30 Apr 2019 14:13:35 +0000</pubDate>
       <guid>https://blog.akvicor.com/posts/algorithm/kmp/</guid>
       <description>&lt;p&gt;Knuth-Morris-Pratt 字符串查找算法，简称为 “KMP算法”，常用于在一个文本串S内查找一个模式串P 的出现位置，这个算法由Donald Knuth、Vaughan Pratt、James H. Morris三人于1977年联合发表，故取这3人的姓氏命名此算法。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ADB Commands</title>
+      <link>https://blog.akvicor.com/posts/android/adb/</link>
+      <pubDate>Sun, 28 Apr 2019 17:45:52 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/android/adb/</guid>
+      <description>&lt;h2 id=&#34;what-is-adb&#34;&gt;What Is ADB&lt;/h2&gt;&#xA;&lt;p&gt;Android Debug Bridge (adb) is a command line tool that lets you communicate with an emulator or connected Android device. You can find the adb tool in &lt;em&gt;android sdk/platform-tools&lt;/em&gt; or Download &lt;a href=&#34;http://adbshell.com/downloads&#34;&gt;ADB Kits&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>完全数</title>
