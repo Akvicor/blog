@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.akvicor.com/</loc>
-    <lastmod>2024-09-15T15:38:12+08:00</lastmod>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/categories/</loc>
-    <lastmod>2024-09-15T15:38:12+08:00</lastmod>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/</loc>
-    <lastmod>2024-09-15T15:38:12+08:00</lastmod>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/categories/rewrite/</loc>
     <lastmod>2024-09-15T02:05:43+08:00</lastmod>
@@ -28,6 +28,24 @@
   </url><url>
     <loc>https://blog.akvicor.com/posts/aos/unreal_mode/</loc>
     <lastmod>2024-09-15T15:34:58+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/categories/c/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/c/data_structure_alignment/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/categories/bochs/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/bochs/install/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/categories/caddy/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/caddy/install/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/aos/stack_alignment_in_x64_assembly/</loc>
     <lastmod>2024-09-15T15:34:58+08:00</lastmod>
@@ -50,6 +68,12 @@
     <loc>https://blog.akvicor.com/nav/</loc>
     <lastmod>2024-09-15T02:05:43+08:00</lastmod>
   </url><url>
+    <loc>https://blog.akvicor.com/categories/arch-linux/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/archlinux/install/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
+  </url><url>
     <loc>https://blog.akvicor.com/categories/algorithm/</loc>
     <lastmod>2024-09-15T15:22:44+08:00</lastmod>
   </url><url>
@@ -61,6 +85,12 @@
   </url><url>
     <loc>https://blog.akvicor.com/posts/algorithm/strange_tower_of_hanoi/</loc>
     <lastmod>2024-09-15T15:22:44+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/categories/apache/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/apache/deny_access_exec/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/algorithm/bit_operation/</loc>
     <lastmod>2024-09-15T15:22:44+08:00</lastmod>
@@ -148,6 +178,9 @@
   </url><url>
     <loc>https://blog.akvicor.com/posts/algorithm/euler_quick_pow/</loc>
     <lastmod>2024-09-15T15:22:44+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/apache/rewrite/</loc>
+    <lastmod>2024-09-15T15:40:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/newbie/</loc>
     <lastmod>2024-09-15T02:05:43+08:00</lastmod>

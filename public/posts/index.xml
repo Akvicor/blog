@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Sep 2024 15:38:12 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2024 15:40:28 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>少女祈祷中...</title>
@@ -30,6 +30,27 @@
       <description>Unreal mode consists of breaking the 64KiB limit of real mode segments (while retaining 16-bit instructions and the segment * 16 + offset addressing mode) by tweaking the descriptor caches.</description>
     </item>
     <item>
+      <title>Data Structure Alignment</title>
+      <link>https://blog.akvicor.com/posts/c/data_structure_alignment/</link>
+      <pubDate>Mon, 27 Feb 2023 07:14:03 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/c/data_structure_alignment/</guid>
+      <description>The CPU in modern computer hardware performs reads and writes to memory most efficiently when the data is naturally aligned, which generally means that the data&amp;rsquo;s memory address is a multiple of the data size. For instance, in a 32-bit architecture, the data may be aligned if the data is stored in four consecutive bytes and the first byte lies on a 4-byte boundary.&#xA;If the highest and lowest bytes in a datum are not within the same memory word the computer must split the datum access into multiple memory accesses.</description>
+    </item>
+    <item>
+      <title>Bochs Install</title>
+      <link>https://blog.akvicor.com/posts/bochs/install/</link>
+      <pubDate>Wed, 15 Feb 2023 11:15:29 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/bochs/install/</guid>
+      <description>apt install bochs bochs-x </description>
+    </item>
+    <item>
+      <title>Caddy Install</title>
+      <link>https://blog.akvicor.com/posts/caddy/install/</link>
+      <pubDate>Sun, 12 Feb 2023 06:10:02 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/caddy/install/</guid>
+      <description>官方安装文档https://caddyserver.com/docs/install Debian, Ubuntu, Raspbian apt install -y debian-keyring debian-archive-keyring apt-transport-https curl curl -1sLf &amp;#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&amp;#39; | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg curl -1sLf &amp;#39;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&amp;#39; | tee /etc/apt/sources.list.d/caddy-stable.list apt update apt install caddy Compile go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest ~/go/bin/xcaddy build --with github.com/mholt/caddy-webdav --with</description>
+    </item>
+    <item>
       <title>Stack alignment in x64 assembly</title>
       <link>https://blog.akvicor.com/posts/aos/stack_alignment_in_x64_assembly/</link>
       <pubDate>Tue, 23 Aug 2022 17:29:21 +0800</pubDate>
@@ -42,6 +63,13 @@
       <pubDate>Mon, 22 Aug 2022 21:52:00 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/aos/boot/</guid>
       <description>初始化寄存器 我将物理地址0x050000-0x070008之间的内存分配给了堆栈。栈顶设置为0x070008的原因是，kernel函数在编译后会在函数开头加上这</description>
+    </item>
+    <item>
+      <title>Arch Linux Installation</title>
+      <link>https://blog.akvicor.com/posts/archlinux/install/</link>
+      <pubDate>Fri, 14 Feb 2020 21:19:14 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/archlinux/install/</guid>
+      <description>Download ISO file https://www.archlinux.org/download/&#xA;https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/&#xA;Prepare an installation medium dd bs=4M if=path/to/archlinux.iso of=/dev/sdb status=progress oflag=sync Boot the live environment Connect Network iwctl device list station [device] scan station [device] get-networks station [device] connect SSID # Check ip address # Update the system clock timedatectl set-ntp true timedatectl status Partition the disks lsblk -l cgdisk /dev/sda # Format # EFI `ef00` # Linux `8300` # SWAP `8200` mkfs.ext4 mkfs.vfat mkswap # Mount mount /dev/sda3 /mnt mkdir /mnt/boot mount /dev/sda1 /mnt/boot swapon /dev/sda2 Edit Mirrorlist vim /etc/pacman.</description>
     </item>
     <item>
       <title>堆排序</title>
@@ -63,6 +91,13 @@
       <pubDate>Mon, 30 Sep 2019 07:58:40 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/algorithm/strange_tower_of_hanoi/</guid>
       <description>&lt;p&gt;将汉诺塔中的3跟柱子改为4根，求盘子数为1到12时将全部盘子从第一根移动到最后一根需要移动的次数。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>禁止某文件夹内运行PHP脚本、禁止访问文件或目录执行权限的设置方法</title>
+      <link>https://blog.akvicor.com/posts/apache/deny_access_exec/</link>
+      <pubDate>Sun, 29 Sep 2019 16:15:07 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/apache/deny_access_exec/</guid>
+      <description>&lt;p&gt;Apache禁止某文件夹内运行PHP脚本、禁止访问文件或目录执行权限的设置方法&lt;/p&gt;</description>
     </item>
     <item>
       <title>二进制操作</title>
@@ -266,6 +301,13 @@
       <pubDate>Mon, 18 Feb 2019 16:52:05 +0000</pubDate>
       <guid>https://blog.akvicor.com/posts/algorithm/euler_quick_pow/</guid>
       <description>&lt;p&gt;&lt;strong&gt;欧拉φ函数&lt;/strong&gt;：在数论中，对正整数n，欧拉函数是小于或等于n的正整数中与n互质的数的数目。此函数以其首名研究者欧拉命名，它又称为φ函数、欧拉商数等。&lt;/p&gt;&#xA;&lt;p&gt;φ(1)=1;  φ(2)=1;  φ(3)=2;  φ(4)=2;  φ(9)=6&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>添加重定向</title>
+      <link>https://blog.akvicor.com/posts/apache/rewrite/</link>
+      <pubDate>Mon, 11 Feb 2019 17:05:18 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/apache/rewrite/</guid>
+      <description>&lt;p&gt;给使用Appache网站添加重定向&lt;/p&gt;&#xA;&lt;p&gt;在网站根目录下建立&lt;code&gt;.htaccess&lt;/code&gt;文件&lt;/p&gt;</description>
     </item>
     <item>
       <title>AOS32 显示中文字符GB2312</title>
