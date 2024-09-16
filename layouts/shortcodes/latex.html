@@ -1,10 +1,10 @@
 <!-- layouts/shortcodes/latex.html -->
 {{ if .Site.Params.viryLatex }}
     {{ if ne (.Get "inline") ("false") }}
-      {{ $url := printf "<img style='border: none;' src=\"https://latex.viry.cc/?base=math&key=mTFPk34&crop=1&type=png&transp=1&latex=%s\">" (urlquery .Inner) }}
+      {{ $url := printf "<img style='border: none;' src=\"https://latex.akvicor.com/?base=math&key=mTFPk34&crop=1&type=png&transp=1&latex=%s\">" (urlquery .Inner) }}
       {{ replace $url "+" "%20" | safeHTML }}
     {{ else }}
-        {{ $url := printf "<p><img style='border: none;' src=\"https://latex.viry.cc/?base=math&key=mTFPk34&crop=1&type=png&transp=1&latex=%s\"></p>" (urlquery .Inner) }}
+        {{ $url := printf "<p><img style='border: none;' src=\"https://latex.akvicor.com/?base=math&key=mTFPk34&crop=1&type=png&transp=1&latex=%s\"></p>" (urlquery .Inner) }}
         {{ replace $url "+" "%20" | safeHTML }}
     {{ end }}
 {{ else }}
