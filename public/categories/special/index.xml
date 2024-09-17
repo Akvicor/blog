@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Special on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/special/</link>
+    <description>Recent content in Special on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Dec 2019 21:32:36 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/special/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cellular automaton</title>
+      <link>https://blog.akvicor.com/posts/special/cellular_automaton/</link>
+      <pubDate>Thu, 19 Dec 2019 21:32:36 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/special/cellular_automaton/</guid>
+      <description>&lt;p&gt;A cellular automaton is a discrete model studied in computer science, mathematics, physics, complexity science, theoretical biology and microstructure modeling.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一堆乱七八糟绝不正经的短文</title>
+      <link>https://blog.akvicor.com/posts/special/essay/</link>
+      <pubDate>Fri, 08 Nov 2019 23:13:44 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/special/essay/</guid>
+      <description>&lt;p&gt;花里胡哨&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一堆乱七八糟绝不正经的排序算法</title>
+      <link>https://blog.akvicor.com/posts/special/sort_method/</link>
+      <pubDate>Fri, 08 Nov 2019 21:39:09 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/special/sort_method/</guid>
+      <description>&lt;p&gt;花里胡哨&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>搜索引擎指令</title>
+      <link>https://blog.akvicor.com/posts/special/google_search_operators/</link>
+      <pubDate>Sun, 29 Sep 2019 19:50:32 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/special/google_search_operators/</guid>
+      <description>&lt;p&gt;搜索引擎命令&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ACM卡常数(各种玄学优化)</title>
+      <link>https://blog.akvicor.com/posts/special/acm_constant/</link>
+      <pubDate>Wed, 08 May 2019 21:16:14 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/special/acm_constant/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;首先声明，本博文部分内容仅仅适用于ACM竞赛，并不适用于NOIP与OI竞赛，违规使用可能会遭竞赛处理，请慎重使用！遭遇任何情况都与本人无关哈=7=&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;我也不想搞得那么严肃的，但真的有些函数在NOIP与OI竞赛中有相关规定不能使用，详细我也不知道各位要了解请自行去找比赛要求咯，当然在ACM竞赛中，没有限制函数，所以所有内容都适用于ACM竞赛。&lt;/p&gt;&#xA;&lt;p&gt;那么什么是卡常数呢，简单来说就是你和某神犇算法思路一样，结果他的AC了，你的TLE，复杂来说就是程序被卡常数，一般指程序虽然渐进复杂度可以接受，但是由于实现/算法本身的时间常数因子较大，使得无法在OI/ACM等算法竞赛规定的时限内运行结束。&lt;/p&gt;&#xA;&lt;p&gt;下面就是介绍各种各样的非（花）常（里）实（胡）用（哨）的优化方法的，若本文某些地方有错误或不明确的地方还请指出。=7=&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

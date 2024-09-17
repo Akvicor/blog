@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/javascript/</link>
+    <description>Recent content in JavaScript on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 23 Feb 2023 13:55:30 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clipboard</title>
+      <link>https://blog.akvicor.com/posts/js/clipboard/</link>
+      <pubDate>Thu, 23 Feb 2023 13:55:30 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/js/clipboard/</guid>
+      <description>向剪切板写入 图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能,是异步的 document.body.addEventListener( &amp;#39;click&amp;#39;, async (e) =&amp;gt; { await navigator.clipboard.writeText(&amp;#39;Yo&amp;#39;) } ) Clipboard.read()用于读取剪切板的数据，也</description>
+    </item>
+    <item>
+      <title>事件响应</title>
+      <link>https://blog.akvicor.com/posts/js/event/</link>
+      <pubDate>Sun, 29 Sep 2019 19:00:32 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/js/event/</guid>
+      <description>&lt;p&gt;JavaScript 创建动态页面。事件是可以被 JavaScript 侦测到的行为。 网页中的每个元素都可以产生某些可以触发 JavaScript 函数或程序的事件。&lt;/p&gt;&#xA;&lt;p&gt;比如说，当用户单击按钮或者提交表单数据时，就发生一个鼠标单击（onclick）事件，需要浏览器做出处理，返回给用户一个结果。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2024/09/17/66e99f925f195.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>网站添加个性的Console</title>
+      <link>https://blog.akvicor.com/posts/js/personalized_console/</link>
+      <pubDate>Tue, 12 Feb 2019 10:46:27 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/js/personalized_console/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2024/09/17/66e9a23e24352.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;使用Chrome浏览器访问百度，在页面上右键点击“检查”–&amp;gt;Console，可以看到上面这样的信息，如何在自己的网站上实现这样的功能？&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

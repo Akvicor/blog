@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/java/</link>
+    <description>Recent content in Java on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Feb 2019 17:25:46 +0000</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Install</title>
+      <link>https://blog.akvicor.com/posts/java/install/</link>
+      <pubDate>Mon, 11 Feb 2019 17:25:46 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/java/install/</guid>
+      <description>&lt;p&gt;在Windows环境下配置Java开发环境变量，并配置多版本Java&lt;/p&gt;&#xA;&lt;p&gt;本文使用java8和java11&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

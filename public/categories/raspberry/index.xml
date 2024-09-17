@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/raspberry/</link>
+    <description>Recent content in Raspberry on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 May 2024 21:03:44 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/raspberry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi 5 RTC Battery</title>
+      <link>https://blog.akvicor.com/posts/raspberry/rtc_battery/</link>
+      <pubDate>Wed, 15 May 2024 21:03:44 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/raspberry/rtc_battery/</guid>
+      <description>检查电池电压 vcgencmd pmic_read_adc BATT_V</description>
+    </item>
+    <item>
+      <title>树莓派 串口 UART</title>
+      <link>https://blog.akvicor.com/posts/raspberry/uart/</link>
+      <pubDate>Tue, 09 Apr 2024 17:12:08 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/raspberry/uart/</guid>
+      <description>引脚定义 展示所有串口 dtoverlay -a | grep uart 查看特定串口信息 dtoverlay -h uart2 开启串口 UART2-5 vim /boot/config.txt # 或 (新版本系统中路径发生变化) vim /boot/firmware/config.txt 在文件结尾添加如下： dtoverlay=uart2 dtoverlay=uart3 dtoverlay=uart4 dtoverlay=uart5 重启后查看是否生效： # UART1 ls /dev/ttyS0 #</description>
+    </item>
+    <item>
+      <title>修复树莓派等无法正常使用SD卡全部空间</title>
+      <link>https://blog.akvicor.com/posts/raspberry/use_full_sdcard/</link>
+      <pubDate>Mon, 11 Feb 2019 17:44:01 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/raspberry/use_full_sdcard/</guid>
+      <description>&lt;p&gt;在编译opencv的时候，出现内存不够的情况，/root使用率100%，导致编译错误，所以需要拓展SD卡容量&lt;/p&gt;&#xA;&lt;p&gt;google了一下，发现树莓派在默认情况下，仅仅使用了SD卡的4G容量，剩下的空间，属于空白分区，完全没有利用起来 所以，我们可以通过&lt;code&gt;df&lt;/code&gt;命令，来调整linux分区的size&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>为树莓派等挂载硬盘</title>
+      <link>https://blog.akvicor.com/posts/raspberry/mount_hhd/</link>
+      <pubDate>Mon, 11 Feb 2019 17:39:33 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/raspberry/mount_hhd/</guid>
+      <description>&lt;p&gt;硬盘首先进行分区和格式化，这里推荐用MiniTool Partition Wizard Home Edition来格式化成ext4，下载地址为&lt;code&gt;http://www.partitionwizard.com/download.html&lt;/code&gt; 。其实你也可以使用树莓派自带的sudo mkfs -t ext4 /dev/sdb1来进行格式化，这里不推荐啊，因为速度比较慢。：）&lt;/p&gt;&#xA;&lt;p&gt;用Xshell5软件连接树莓派，输入df -h来查看挂载情况。&lt;/p&gt;&#xA;&lt;p&gt;接下来就直接挂载到samba上面，为以后方便。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

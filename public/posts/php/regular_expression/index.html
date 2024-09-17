@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="正则表达式 - https://blog.akvicor.com/posts/php/regular_expression/">
+    <meta name="author" content="Akvicor - https://blog.akvicor.com/">
+    
+    
+    <title>正则表达式</title>
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<script defer src="https://analy.akvicor.com/script.js" data-website-id="c0cbafdd-207e-431e-a252-4a64c31d98b9"></script>
+    
+    <link rel="stylesheet" href="https://blog.akvicor.com/style.min.4151072d6fc9fe1a3df6b17d57d2d8ca2e6573201efdbc03d4e8e48525582b64.css">
+    
+    <script type="text/javascript" src="/main.js" defer></script>
+    <script src="/js/hide_and_seek.js"></script>
+    <link rel="stylesheet" href="/css/hide_and_seek.css">
+    <link rel="stylesheet" href="/css/heimu.css">
+	
+		<script>
+			console.log(String.raw`
+          _           _                _ 
+    /\   | |         (_)              | |
+   /  \  | | ____   ___  ___ ___  _ __| |
+  / /\ \ | |/ /\ \ / / |/ __/ _ \| '__| |
+ / ____ \|   <  \ V /| | (_| (_) | |  |_|
+/_/    \_\_|\_\  \_/ |_|\___\___/|_|  (_)`);
+		</script>
+		<script>
+			try{
+				if(window.console&&window.console.log) {
+					console.log("%cFor the Horde! %cFor the Azeroth!","color:red","color:blue");
+					console.log("%c火墙火墙火墙火墙！","color:red");
+					console.log("%c快打大怪！","color:red");
+					console.log("%c快打断！","color:red");
+					console.log("%c注意脚下！","color:red");
+					console.log("%c快躲开！","color:red");
+					console.log("%c震慑波！","color:red");
+					console.log("%c快转身！","color:red");
+					console.log("%c注意减伤！","color:red");
+					console.log("%c<Deadly Boss Mods> %cCombat against 10 Player - Garrosh Hellscream(1%) ended after 8 minutes ad 19 seconds. you have 3 total wipes on this difficulty.","color:red","color:blue");
+				}
+			}
+			catch(e){};
+        </script>
+	
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+	
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$math_inline$','$math_inline$'], ['\\(','\\)']],
+				displayMath: [['$math_noinline$','$math_noinline$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$math_noinline$", right: "$math_noinline$", display: true},
+									{left: "$math_inline$", right: "$math_inline$", display: false}
+							]
+					});
+			});
+			</script>
+	
+    
+</head>
+<body class="active-animate ">
+        <div id="header"><div class="container-header">
+    <div id="vars" class="container-vars" style="display: none;">
+	{
+		"isSingleColumnOfPostList": true,
+		"hasFoldAllCodeBlocks": false,
+		"svgColor": "",
+		"en": false,
+		"dark": false
+	}
+</div>
+    <h1 class="title">
+        
+            正则表达式
+            
+        
+    </h1>
+
+    <div class="container-breadcrumb-nav">
+    
+    <div class="breadcrumb-nav-bar">
+        <div><a href="/"><svg t="1656411084410" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2954" width="16" height="16"><path d="M947.5 390.6l-377-290c-34.5-26.5-82.6-26.5-117.1 0l-377 290c-14 10.8-16.6 30.9-5.9 44.9 10.8 14 30.9 16.6 44.9 5.9l28.5-21.9V768c0 88.2 71.8 160 160 160h80c35.3 0 64-28.7 64-64V640c0-17.6 14.4-32 32-32h64c17.6 0 32 14.4 32 32v224c0 35.3 28.7 64 64 64h80c88.2 0 160-71.8 160-160V419.4l28.5 21.9c5.8 4.5 12.7 6.6 19.5 6.6 9.6 0 19.1-4.3 25.4-12.5 10.8-13.9 8.2-34-5.8-44.8zM816 768c0 52.9-43.1 96-96 96h-80V640c0-52.9-43.1-96-96-96h-64c-52.9 0-96 43.1-96 96v224h-80c-52.9 0-96-43.1-96-96V370.2l284.5-218.8c11.5-8.8 27.5-8.8 39 0L816 370.2V768z" fill="#6c757d" p-id="2955"></path></svg></a></div>
+        <div><a href="/nav"><svg t="1656411531924" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5827" width="16" height="16"><path d="M849.59197473 125.23018519L139.22930586 391.72854662a23.35052669 23.35052669 0 0 0-14.95414244 21.65490745c-0.12257519 9.70384955 5.61801843 18.46795771 14.40255493 22.04306141l318.42928099 129.25528056 119.51057092 320.39047893c3.06437293 8.23295069 10.35758221 13.89182751 18.7335381 14.87242563l2.7170774 0.14300521a22.79893918 22.79893918 0 0 0 21.20546682-15.36272638l259.51158924-729.54564933a23.8612558 23.8612558 0 0 0-5.31158128-24.55584682 22.3290685 22.3290685 0 0 0-23.9021142-5.43415649zM793.65694081 211.64552314l-196.63064161 552.75171747-91.91077952-246.37564122-253.62799211-102.96295445 542.16941324-203.4131218z" p-id="5828" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/search"><svg t="1656411627509" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1730" width="14" height="14"><path d="M469.333333 85.333333c211.968 0 384 172.032 384 384s-172.032 384-384 384-384-172.032-384-384 172.032-384 384-384z m0 682.666667c164.992 0 298.666667-133.674667 298.666667-298.666667 0-165.034667-133.674667-298.666667-298.666667-298.666666-165.034667 0-298.666667 133.632-298.666666 298.666666 0 164.992 133.632 298.666667 298.666666 298.666667z m362.026667 3.029333l120.704 120.661334-60.373333 60.373333-120.661334-120.704 60.330667-60.330667z" p-id="1731" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/posts"><svg t="1656411724198" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5655" width="12" height="12"><path d="M811.705761 1024H212.294239c-93.1199 0-174.823046-87.570975-174.823046-187.387854V162.322018C37.471193 69.776145 112.604921 0 212.294239 0H596.190595l7.015883 5.93161c111.74388 95.479788 185.857116 170.741078 279.614824 266.093304 29.65805 30.040735 61.165743 62.122454 96.436499 97.393211l7.271006 7.334787v459.859234c-0.063781 99.816879-81.703145 187.387854-174.823046 187.387854zM212.294239 49.94033c-72.391155 0-124.882716 47.261538-124.882716 112.381688v674.290128c0 71.94469 59.507443 137.383743 124.882716 137.383743h599.411522c65.311492 0 124.882716-65.439053 124.882716-137.383743V397.417876c-32.528184-32.464404-61.73977-62.250016-89.356836-90.377328-90.951355-92.418312-163.278729-165.957521-269.601245-257.163999H212.294239z" fill="#6c757d" p-id="5656"></path><path d="M936.588477 449.526752h-212.326129c-99.753099 0-187.324073-81.703145-187.324073-174.823046V49.94033a25.002055 25.002055 0 0 1 49.94033 0v224.763376c0 65.311492 65.502834 124.882716 137.383743 124.882716h212.326129a25.002055 25.002055 0 1 1 0 49.94033z" fill="#6c757d" p-id="5657"></path></svg></a></div>
+        <div><a href="/archive"><svg t="1656411795742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7334" width="12" height="12"><path d="M884.224 522.24H504.32V141.824c0-16.896-13.824-30.72-30.72-30.72-120.32 0-233.472 47.616-317.952 134.144S26.112 445.952 29.184 566.784c2.56 114.688 49.152 222.72 131.072 304.128 81.92 81.408 189.952 128 304.64 130.56h10.24c117.76 0 227.84-45.568 312.32-128.512 86.528-85.504 133.632-199.68 132.608-321.024-0.512-2.048-1.536-29.696-35.84-29.696z m-140.288 307.712c-74.752 73.728-173.056 112.64-277.504 110.592-205.824-4.608-370.688-169.472-375.296-374.784-3.072-104.448 35.84-202.752 108.544-277.504 65.536-67.072 151.552-107.52 243.712-114.688v378.88c0 16.896 13.824 30.72 30.72 30.72 129.024 0 311.296 0 382.976 0.512-6.144 93.184-46.08 179.712-113.152 246.272z" fill="#6c757d" p-id="7335"></path><path d="M603.136 11.264c-8.192-0.512-15.872 3.072-22.016 8.704-5.632 5.632-9.216 13.824-9.216 22.016v378.88c0 16.896 13.824 30.72 30.72 30.72h378.88c16.896 0 30.72-13.824 30.72-30.72 0-223.744-183.808-407.552-409.088-409.6z m30.208 378.88V74.24c167.424 16.384 301.056 150.016 315.904 315.904h-315.904z" fill="#6c757d" p-id="7336"></path></svg></a></div>
+        <div id="light-dark" style="cursor: pointer;"><a><svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg></a></div>
+        
+    </div>
+
+    
+</div>
+
+            <div id="toc">📜</div>
+        
+    
+    
+</div>
+</div>
+        <div id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-main 
+     container-page 
+">
+
+    <div class="desc">
+        
+        <span>
+            
+            <svg t="1656736000388" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7409" width="12" height="12"><path d="M524.885333 338.986667L200.362667 663.466667c-17.28 15.274667-27.989333 36.693333-29.696 56.234666v133.76l130.730666 0.085334c22.784-1.621333 43.989333-12.245333 61.013334-31.701334l322.688-322.645333-160.213334-160.213333z m60.373334-60.330667l160.170666 160.213333 102.144-102.144a19.712 19.712 0 0 0 0-27.861333L715.093333 176.426667a19.456 19.456 0 0 0-27.605333 0L585.258667 278.613333zM701.312 85.333333c27.946667 0 54.741333 11.136 74.282667 30.848l132.309333 132.309334a105.045333 105.045333 0 0 1 0 148.565333L424.874667 879.957333c-29.824 34.346667-72.106667 55.466667-120.448 58.794667H85.333333v-42.666667l0.128-179.84c3.626667-44.970667 24.576-86.826667 56.448-114.944l485.12-485.034666A104.789333 104.789333 0 0 1 701.269333 85.333333z" p-id="7410" fill="#adb5bd"></path></svg>
+            2019-02-19&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737270708" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23838" width="11" height="11"><path d="M824.264 95.36c0-23.859 25.043-44.16 48.902-44.16s49.714 20.301 49.714 44.16v190.08c0 23.859-19.054 52.868-42.913 52.868h-190.08c-23.859 0-46.696-25.96-46.696-49.819s22.55-46.249 46.409-46.249h82.025C702.344 175.534 610.22 155.853 512 155.853c-206.775 0-360.398 149.372-360.398 356.147 0 206.775 153.623 358.23 360.398 358.23 206.775 0 357.467-151.455 357.467-358.23 0-23.859 23.634-50.706 53.413-50.706 29.78 0 49.92 26.847 49.92 50.706 0 254.493-206.307 460.8-460.8 460.8-254.493 0-460.8-206.307-460.8-460.8C51.2 257.507 257.507 51.2 512 51.2c122.4 0 226.684 33.296 312.264 117.369 0.358 0.351 0.358-24.052 0-73.209z" p-id="23839" fill="#adb5bd"></path></svg>
+            2019-02-19&nbsp;&nbsp;&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
+            6041 字</span>&nbsp;
+        <span>
+            
+            <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
+            13 分钟</span>
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/php">PHP</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div>
+        
+    </div>
+    
+    <div class="toc">
+        
+        <div class="page-operation">
+            <div><a href="#"><img src="/imgs/icons/arrow-up-circle.svg" alt=""></a></div>
+            <div><a href="https://blog.akvicor.com/posts/hexo/math/"><img src="/imgs/icons/arrow-left-circle.svg" alt=""></a></div>
+            <div><a href="https://blog.akvicor.com/posts/algorithm/euler_quick_pow/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
+        </div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#什么叫正则表达式">什么叫正则表达式</a></li>
+    <li><a href="#正则表达式的基本语法">正则表达式的基本语法</a></li>
+    <li><a href="#元字符与转义">元字符与转义</a></li>
+    <li><a href="#贪婪模式与懒惰模式">贪婪模式与懒惰模式</a></li>
+    <li><a href="#使用正则表达式进行匹配">使用正则表达式进行匹配</a></li>
+    <li><a href="#查找所有匹配结果">查找所有匹配结果</a></li>
+    <li><a href="#正则表达式的搜索和替换">正则表达式的搜索和替换</a></li>
+    <li><a href="#pcre-函数">PCRE 函数</a></li>
+    <li><a href="#preg-常量">PREG 常量</a></li>
+    <li><a href="#etc">ETC</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div class='content  content '>
+        <h2 id="什么叫正则表达式">什么叫正则表达式</h2>
+<p>正则表达式是对字符串进行操作的一种逻辑公式，就是用一些特定的字符组合成一个规则字符串，称之为正则匹配模式。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PHP" data-lang="PHP"><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/apple/&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;apple banna orange&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> (preg_match(<span style="color:#008080">$pre</span>, <span style="color:#008080">$str</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">echo</span> <span style="color:#d14">&#39;matched&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>其中字符串<code>/apple/</code>就是一个正则表达式，他用来匹配源字符串中是否存在apple字符串。</p>
+<p>PHP中使用PCRE库函数进行正则匹配，比如上例中的<code>preg_match</code>用于执行一个正则匹配，常用来判断一类字符模式是否存在。</p>
+<h2 id="正则表达式的基本语法">正则表达式的基本语法</h2>
+<p>PCRE库函数中，正则匹配模式使用分隔符与元字符组成，分隔符可以是非数字、非反斜线、非空格的任意字符。经常使用的分隔符是正斜线(/)、hash符号(#) 以及取反符号(~)，例如：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">/</span>foo bar<span style="color:#000;font-weight:bold">/</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#^[^0-9]$#
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">~</span>php<span style="color:#000;font-weight:bold">~</span>
+</span></span></code></pre></div><p>如果模式中包含分隔符，则分隔符需要使用反斜杠（\）进行转义。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">/</span>http<span style="color:#000;font-weight:bold">:</span>\<span style="color:#000;font-weight:bold">/</span>\<span style="color:#998;font-style:italic">//
+</span></span></span></code></pre></div><p>如果模式中包含较多的分割字符，建议更换其他的字符作为分隔符，也可以采用preg_quote进行转义。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;http://&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/&#39;</span><span style="color:#000;font-weight:bold">.</span>preg_quote(<span style="color:#008080">$pre</span>, <span style="color:#d14">&#39;/&#39;</span>)<span style="color:#000;font-weight:bold">.</span><span style="color:#d14">&#39;/&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> <span style="color:#008080">$p</span>;
+</span></span></code></pre></div><p>分隔符后面可以使用模式修饰符，模式修饰符包括：i, m, s, x等，例如使用i修饰符可以忽略大小写匹配：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Https://www.kvxi.org/&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> (preg_match(<span style="color:#d14">&#39;/https/i&#39;</span>, <span style="color:#008080">$str</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">echo</span> <span style="color:#d14">&#39;matched&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="元字符与转义">元字符与转义</h2>
+<p>正则表达式中具有特殊含义的字符称之为元字符，常用的元字符有：</p>
+<pre tabindex="0"><code>\ 一般用于转义字符
+^ 断言目标的开始位置(或在多行模式下是行首)
+$ 断言目标的结束位置(或在多行模式下是行尾)
+. 匹配除换行符外的任何字符(默认)
+[ 开始字符类定义
+] 结束字符类定义
+| 开始一个可选分支
+( 子组的开始标记
+) 子组的结束标记
+? 作为量词，表示 0 次或 1 次匹配。位于量词后面用于改变量词的贪婪特性。 (查阅量词)
+* 量词，0 次或多次匹配
++ 量词，1 次或多次匹配
+{ 自定义量词开始标记
+} 自定义量词结束标记
+</code></pre><p>//下面的\s匹配任意的空白符，包括空格，制表符，换行符。[\s]代表非空白符。[\s]+表示一次或多次匹配非空白符。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$p</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/^I[^\s]+(apple|banna)$/&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;I love apple&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> (preg_match(<span style="color:#008080">$p</span>, <span style="color:#008080">$str</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">echo</span> <span style="color:#d14">&#39;matched&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>元字符具有两种使用场景，一种是可以在任何地方都能使用，另一种是只能在方括号内使用，在方括号内使用的有：</p>
+<pre tabindex="0"><code>\ 转义字符
+^ 仅在作为第一个字符(方括号内)时，表明字符类取反
+- 标记字符范围
+</code></pre><p>其中^在反括号外面，表示断言目标的开始位置，但在方括号内部则代表字符类取反，方括号内的减号-可以标记字符范围，例如0-9表示0到9之间的所有数字。</p>
+<p>//下面的\w匹配字母或数字或下划线。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/[\w\.\-]+@[a-z0-9\-]+\.(com|cn)/&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;My Email akvicor@gmail.com&#34;</span>;
+</span></span><span style="display:flex;"><span>preg_match(<span style="color:#008080">$pre</span>, <span style="color:#008080">$str</span>, <span style="color:#008080">$match</span>);
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> <span style="color:#008080">$match</span>[<span style="color:#099">0</span>];
+</span></span></code></pre></div><h2 id="贪婪模式与懒惰模式">贪婪模式与懒惰模式</h2>
+<ul>
+<li>贪婪模式</li>
+</ul>
+<p>在可匹配与可不匹配的时候，优先匹配</p>
+<p>//下面的\d表示匹配数字</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/\d+\-\d+/&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;My Phone number 21-1234567890&#34;</span>;
+</span></span><span style="display:flex;"><span>preg_match(<span style="color:#008080">$pre</span>, <span style="color:#008080">$str</span>, <span style="color:#008080">$match</span>);
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> <span style="color:#008080">$match</span>[<span style="color:#099">0</span>]; <span style="color:#998;font-style:italic">// 结果为：21-1234567890
+</span></span></span></code></pre></div><ul>
+<li>懒惰模式</li>
+</ul>
+<p>在可匹配与可不匹配的时候，优先不匹配</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/\d?\-\d?/&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;My Phone number 21-1234567890&#34;</span>;
+</span></span><span style="display:flex;"><span>preg_match(<span style="color:#008080">$pre</span>, <span style="color:#008080">$str</span>, <span style="color:#008080">$match</span>);
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> <span style="color:#008080">$match</span>[<span style="color:#099">0</span>]; <span style="color:#998;font-style:italic">// 结果为：1-1
+</span></span></span></code></pre></div><p>当我们确切的知道所匹配的字符长度的时候，可以使用{}指定匹配字符数</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/\d{2}\-\d{10}/&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;My Phone number 21-1234567890&#34;</span>;
+</span></span><span style="display:flex;"><span>preg_match(<span style="color:#008080">$pre</span>, <span style="color:#008080">$str</span>, <span style="color:#008080">$match</span>);
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> <span style="color:#008080">$match</span>[<span style="color:#099">0</span>]; <span style="color:#998;font-style:italic">//结果为：21-1234567890
+</span></span></span></code></pre></div><h2 id="使用正则表达式进行匹配">使用正则表达式进行匹配</h2>
+<p>使用正则表达式的目的是为了实现比字符串处理函数更加灵活的处理方式，因此跟字符串处理函数一样，其主要用来判断子字符串是否存在、字符串替换、分割字符串、获取模式子串等。
+PHP使用PCRE库函数来进行正则处理，通过设定好模式，然后调用相关的处理函数来取得匹配结果。
+preg_match用来执行一个匹配，可以简单的用来判断模式是否匹配成功，或者取得一个匹配结果，他的返回值是匹配成功的次数0或者1，在匹配到1次以后就会停止搜索。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$subject</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;abcdef&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$pattern</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/def/&#39;</span>;
+</span></span><span style="display:flex;"><span>preg_match(<span style="color:#008080">$pattern</span>, <span style="color:#008080">$subject</span>, <span style="color:#008080">$matches</span>);
+</span></span><span style="display:flex;"><span>print_r(<span style="color:#008080">$matches</span>); <span style="color:#998;font-style:italic">// 结果为：Array ( [0] =&gt; def )
+</span></span></span></code></pre></div><p>上面的代码简单的执行了一个匹配，简单的判断def是否能匹配成功，但是正则表达式的强大的地方是进行模式匹配，因此更多的时候，会使用模式：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$subject</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;abcdef&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$pattern</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/a(.*?)d/&#39;</span>;
+</span></span><span style="display:flex;"><span>preg_match(<span style="color:#008080">$pattern</span>, <span style="color:#008080">$subject</span>, <span style="color:#008080">$matches</span>);
+</span></span><span style="display:flex;"><span>print_r(<span style="color:#008080">$matches</span>); <span style="color:#998;font-style:italic">// 结果为：Array ( [0] =&gt; abcd [1] =&gt; bc )
+</span></span></span></code></pre></div><p>通过正则表达式可以匹配一个模式，得到更多的有用的数据。</p>
+<h2 id="查找所有匹配结果">查找所有匹配结果</h2>
+<p><code>preg_match</code>只能匹配一次结果，但很多时候我们需要匹配所有的结果，<code>preg_match_all</code>可以循环获取一个列表的匹配结果数组。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;|&lt;[^&gt;]+&gt;(.*?)&lt;/[^&gt;]+&gt;|i&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;&lt;b&gt;example: &lt;/b&gt;&lt;div align=left&gt;this is a test&lt;/div&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>preg_match_all(<span style="color:#008080">$pre</span>, <span style="color:#008080">$str</span>, <span style="color:#008080">$matches</span>);
+</span></span><span style="display:flex;"><span>print_r(<span style="color:#008080">$matches</span>);
+</span></span></code></pre></div><p>可以使用<code>preg_match_all</code>匹配一个表格中的数据：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$pre</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;/&lt;tr&gt;&lt;td&gt;(.*?)&lt;\/td&gt;\s*&lt;td&gt;(.*?)&lt;\/td&gt;\s*&lt;\/tr&gt;/i&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;&lt;table&gt; &lt;tr&gt;&lt;td&gt;Eric&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;26&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>preg_match_all(<span style="color:#008080">$pre</span>, <span style="color:#008080">$str</span>, <span style="color:#008080">$matches</span>);
+</span></span><span style="display:flex;"><span>print_r(<span style="color:#008080">$matches</span>);
+</span></span></code></pre></div><p>$matches结果排序为$matches[0]保存完整模式的所有匹配, $matches[1] 保存第一个子组的所有匹配，以此类推。</p>
+<h2 id="正则表达式的搜索和替换">正则表达式的搜索和替换</h2>
+<p>正则表达式的搜索与替换在某些方面具有重要用途，比如调整目标字符串的格式，改变目标字符串中匹配字符串的顺序等。</p>
+<p>例如我们可以简单的调整字符串的日期格式：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$string</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;April 15, 2014&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$pattern</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/(\w+) (\d+), (\d+)/i&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$replacement</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;$3, ${1} $2&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> preg_replace(<span style="color:#008080">$pattern</span>, <span style="color:#008080">$replacement</span>, <span style="color:#008080">$string</span>); <span style="color:#998;font-style:italic">//结果为：2014, April 15
+</span></span></span></code></pre></div><p>其中${1}与$1的写法是等效的，表示第一个匹配的字串，$2代表第二个匹配的。</p>
+<p>通过复杂的模式，我们可以更加精确的替换目标字符串的内容。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$patterns</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">array</span> (<span style="color:#d14">&#39;/(19|20)(\d{2})-(\d{1,2})-(\d{1,2})/&#39;</span>,
+</span></span><span style="display:flex;"><span>                   <span style="color:#d14">&#39;/^\s*{(\w+)}\s*=/&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#008080">$replace</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">array</span> (<span style="color:#d14">&#39;\3/\4/\1\2&#39;</span>, <span style="color:#d14">&#39;$\1 =&#39;</span>);<span style="color:#998;font-style:italic">//\3等效于$3,\4等效于$4，依次类推
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">echo</span> preg_replace(<span style="color:#008080">$patterns</span>, <span style="color:#008080">$replace</span>, <span style="color:#d14">&#39;{startDate} = 1999-5-27&#39;</span>); <span style="color:#998;font-style:italic">//结果为：$startDate = 5/27/1999
+</span></span></span></code></pre></div><p>//详细解释下结果：(19|20)表示取19或者20中任意一个数字，(\d{2})表示两个数字，(\d{1,2})表示1个或2个数字，(\d{1,2})表示1个或2个数字。^\s*{(\w+)\s*=}表示以任意空格开头的，并且包含在{}中的字符，并且以任意空格结尾的，最后有个=号的。
+用正则替换来去掉多余的空格与字符：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;one     two&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> preg_replace(<span style="color:#d14">&#39;/\s+/&#39;</span>, <span style="color:#d14">&#39; &#39;</span>, <span style="color:#008080">$str</span>);
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> <span style="color:#008080">$str</span>; <span style="color:#998;font-style:italic">// 结果改变为&#39;one two&#39;
+</span></span></span></code></pre></div><h2 id="pcre-函数">PCRE 函数</h2>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_filter.html">preg_filter</a></td>
+<td>执行一个正则表达式搜索和替换</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_grep.html">preg_grep</a></td>
+<td>返回匹配模式的数组条目</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_last_error.html">preg_last_error</a></td>
+<td>返回最后一个PCRE正则执行产生的错误代码</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_match_all.html">preg_match_all</a></td>
+<td>执行一个全局正则表达式匹配</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_match.html">preg_match</a></td>
+<td>执行一个正则表达式匹配</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_quote.html">preg_quote</a></td>
+<td>转义正则表达式字符</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_replace_callback_array.html">preg_replace_callback_array</a></td>
+<td>执行一个正则表达式搜索并且使用一个回调进行替换</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_replace_callback.html">preg_replace_callback</a></td>
+<td>执行一个正则表达式搜索并且使用一个回调进行替换</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_replace.html">preg_replace</a></td>
+<td>执行一个正则表达式的搜索和替换</td>
+</tr>
+<tr>
+<td><a href="http://www.runoob.com/php/php-preg_split.html">preg_split</a></td>
+<td>通过一个正则表达式分隔字符串</td>
+</tr>
+</tbody>
+</table>
+<h2 id="preg-常量">PREG 常量</h2>
+<table>
+<thead>
+<tr>
+<th>常量</th>
+<th>描述</th>
+<th>自从</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PREG_PATTERN_ORDER</strong></td>
+<td>结果按照&quot;规则&quot;排序，仅用于preg_match_all()， 即$matches[0]是完整规则的匹配结果， $matches[1]是第一个子组匹配的结果，等等。</td>
+<td>since</td>
+</tr>
+<tr>
+<td><strong>PREG_SET_ORDER</strong></td>
+<td>结果按照&quot;集合&quot;排序，仅用于preg_match_all()， 即$matches[0]保存第一次匹配结果的所有结果(包含子组)信息, $matches[1]保存第二次的结果信息，等等。</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PREG_OFFSET_CAPTURE</strong></td>
+<td>查看<strong>PREG_SPLIT_OFFSET_CAPTURE</strong>的描述。</td>
+<td>4.3.0</td>
+</tr>
+<tr>
+<td><strong>PREG_SPLIT_NO_EMPTY</strong></td>
+<td>这个标记告诉 preg_split() 进返回非空部分。</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PREG_SPLIT_DELIM_CAPTURE</strong></td>
+<td>这个标记告诉 preg_split() 同时捕获括号表达式匹配到的内容。</td>
+<td>4.0.5</td>
+</tr>
+<tr>
+<td><strong>PREG_SPLIT_OFFSET_CAPTURE</strong></td>
+<td>如果设置了这个标记，每次出现的匹配子串的偏移量也会被返回。注意，这会改变返回数组中的值， 每个元素都是由匹配子串作为第0个元素，它相对目标字符串的偏移量作为第1个元素的数组。这个 标记只能用于 preg_split()。</td>
+<td>4.3.0</td>
+</tr>
+<tr>
+<td><strong>PREG_NO_ERROR</strong></td>
+<td>没有匹配错误时调用 preg_last_error() 返回。</td>
+<td>5.2.0</td>
+</tr>
+<tr>
+<td><strong>PREG_INTERNAL_ERROR</strong></td>
+<td>如果有PCRE内部错误时调用 preg_last_error() 返回。</td>
+<td>5.2.0</td>
+</tr>
+<tr>
+<td><strong>PREG_BACKTRACK_LIMIT_ERROR</strong></td>
+<td>如果调用回溯限制超出，调用preg_last_error()时返回。</td>
+<td>5.2.0</td>
+</tr>
+<tr>
+<td><strong>PREG_RECURSION_LIMIT_ERROR</strong></td>
+<td>如果递归限制超出，调用preg_last_error()时返回。</td>
+<td>5.2.0</td>
+</tr>
+<tr>
+<td><strong>PREG_BAD_UTF8_ERROR</strong></td>
+<td>如果最后一个错误时由于异常的utf-8数据(仅在运行在 UTF-8 模式正则表达式下可用)。 导致的，调用preg_last_error()返回。</td>
+<td>5.2.0</td>
+</tr>
+<tr>
+<td><strong>PREG_BAD_UTF8_OFFSET_ERROR</strong></td>
+<td>如果偏移量与合法的urf-8代码不匹配(仅在运行在 UTF-8 模式正则表达式下可用)。 调用preg_last_error()返回。</td>
+<td>5.3.0</td>
+</tr>
+<tr>
+<td><strong>PCRE_VERSION</strong></td>
+<td>PCRE版本号和发布日期(比如： &ldquo;<em>7.0 18-Dec-2006</em>&quot;)。</td>
+<td>5.2.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="etc">ETC</h2>
+<p>正则表达式是一种描述字符串结果的语法规则，是一个特定的格式化模式，可以匹配、替换、截取匹配的字符串。常用的语言基本上都有正则表达式，如JavaScript、java等。其实，只有了解一种语言的正则使用，其他语言的正则使用起来，就相对简单些。好了，开始写正则了。</p>
+<p>正则表达式在匹配字符串时，遵循以下2个基本原则：
+1.最左原则：正则表达式总是从目标字符串的最左侧开始，依次匹配，直到匹配到符合表达式要求的部分，或直到匹配目标字符串的结束。
+2.最长原则：对于匹配到的目标字符串，正则表达式总是会匹配到符合正则表达式要求的最长的部分；即贪婪模式</p>
+<p>那怎么开始呢，首先从分隔符开始写起，常用包括 / ; #；~，用于表明一串正则的开始。如：‘/a.*a/’。当表达式有过多的转义字符时，建议优先使用#，如url;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;http://baidu.com&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">$pattern</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/http:\/\/.*com/&#39;</span>;<span style="color:#998;font-style:italic">//需要转义/
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>preg_match(<span style="color:#008080">$pattern</span>,<span style="color:#008080">$str</span>,<span style="color:#008080">$match</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>var_dump( <span style="color:#008080">$match</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;http://baidu.com&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">$pattern</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;#http://.*com#&#39;</span>;<span style="color:#998;font-style:italic">//不需要转义/
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>preg_match(<span style="color:#008080">$pattern</span>,<span style="color:#008080">$str</span>,<span style="color:#008080">$match</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>var_dump( <span style="color:#008080">$match</span>);
+</span></span></code></pre></div><p>知道开始和结尾的写法了，接下来就是中间的判断了。正则表达式是自左向右的顺序使用原子和元字符进行拼接。比如&rsquo;<code>&lt;b&gt;zxcv&lt;/b&gt;</code>&rsquo;,进行匹配时，‘<code>/&lt;b&gt;.*&lt;\/b&gt;/</code>’,其中.*代表zxcv 。那么通用原子和元字符有哪些呢?</p>
+<ul>
+<li><code>\d</code>	匹配一个数字字符。等价于 <code>[0-9]</code>。</li>
+<li><code>\D</code>	匹配一个非数字字符。等价于 <code>[^0-9]</code>。</li>
+<li><code>\f</code>	匹配一个换页符。等价于 <code>\x0c</code> 和 <code>\cL</code>。</li>
+<li><code>\n</code>	匹配一个换行符。等价于 <code>\x0a</code> 和 <code>\cJ</code>。</li>
+<li><code>\r</code>	匹配一个回车符。等价于 <code>\x0d</code> 和 <code>\cM</code>。</li>
+<li><code>\s</code>	匹配任何空白字符，包括空格、制表符、换页符等等。等价于 <code>[ \f\n\r\t\v]</code>。</li>
+<li><code>\S</code>	匹配任何非空白字符。等价于 <code>[^ \f\n\r\t\v]</code>。</li>
+<li><code>\t</code>	匹配一个制表符。等价于 <code>\x09</code> 和 <code>\cI</code>。</li>
+<li><code>\v</code>	匹配一个垂直制表符。等价于 <code>\x0b</code> 和 <code>\cK</code>。</li>
+<li><code>\w</code>	匹配包括下划线的任何单词字符。等价于’<code>[A-Za-z0-9_]</code>’。</li>
+<li><code>\W</code>	匹配任何非单词字符。等价于 ‘<code>[^A-Za-z0-9_]</code>’。</li>
+<li><code>\xn</code>	匹配 n，其中 n 为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，’<code>\x41</code>’ 匹配 “<code>A</code>”。’<code>\x041</code>’ 则等价于 ‘<code>\x04</code>’ <code>&amp;</code> “<code>1</code>”。正则表达式中可以使用 ASCII 编码。</li>
+<li><code>\nm</code>	标识一个八进制转义值或一个向后引用。如果 <code>\nm</code> 之前至少有 nm 个获得子表达式，则 nm 为向后引用。如果 \nm 之前至少有 n 个获取，则 n 为一个后跟文字 m 的向后引用。如果前面的条件都不满足，若 n 和 m 均为八进制数字 <code>(0-7</code>)，则 • <code>\nm</code> 将匹配八进制转义值 <code>nm</code>。</li>
+<li><code>\nml</code>	如果 n 为八进制数字 <code>(0-3)</code>，且 m 和 l 均为八进制数字 <code>(0-7)</code>，则匹配八进制转义值 <code>nml</code>。</li>
+<li><code>\un</code>	十六进制数字表示的 Unicode 字符。例如， \u00A9 匹配版权符号(?)。</li>
+<li><code>.</code>	 匹配除 “<code>\n</code>” 之外的任何单个字符</li>
+<li><code>^</code> 匹配输入字符串的开始位置。在字符域<code>[]</code>中表示取反，如&rsquo;<code>[^\w]</code>&lsquo;等于&rsquo;<code>\w</code>&rsquo;;而<code>^\w</code>表示以单词字符开头。</li>
+<li><code>$</code> 匹配输入字符串的结束位置。例&rsquo;<code>\w$</code>&lsquo;表示以单词字符结尾。</li>
+<li><code>？</code> 匹配前面的子表达式零次或一次 等价于 <code>{0,1}</code>，例如，&quot;<code>do(es)?</code>&rdquo; 可以匹配 &ldquo;<code>do</code>&rdquo; 或 &ldquo;<code>does</code>&quot;。</li>
+<li><code>*</code> 匹配前面的子表达式零次或多次，等价于{0,}。例如，<code>zo*</code> 能匹配 &ldquo;<code>z</code>&rdquo; 、 &ldquo;<code>zo</code>&quot;、&rsquo;<code>zoo</code>&rsquo;。</li>
+<li><code>+</code> 匹配前面的子表达式一次或多次，等价于{1,}例如，&lsquo;zo+&rsquo; 能匹配 &ldquo;zo&rdquo; 以及 &ldquo;zoo&rdquo;。</li>
+<li><code>{n}</code> n 为非负整数,匹配确定的 n 次。例如，&rsquo;<code>o{2}</code>&rsquo; 不能匹配 &ldquo;Bob&rdquo; 或‘Booob’，但是能匹配 &ldquo;food&rdquo; 中的两个 o。</li>
+<li><code>{n,}</code> n 为非负整数。至少匹配n 次。例如，&rsquo;<code>o{2,}</code>&rsquo; 不能匹配 &ldquo;Bob&rdquo; 中的 &lsquo;o&rsquo;，但能匹配 &ldquo;<code>foooood</code>&rdquo; 中的所有 o。&rsquo;<code>o{1,}</code>&rsquo; 等价于 &lsquo;<code>o+</code>&rsquo;。&rsquo;<code>o{0,}</code>&rsquo; 则等价于 &lsquo;<code>o*</code>&rsquo;。</li>
+<li><code>{n,m}</code> m 和 n 均为非负整数，其中<code>n &lt;= m</code>。最少匹配 n 次且最多匹配 m 次。例如，&quot;<code>o{1,3}</code>&rdquo; 将匹配 &ldquo;<code>fooooood</code>&rdquo; 中的前三个 o。&rsquo;<code>o{0,1}</code>&rsquo; 等价于 &lsquo;<code>o?</code>&rsquo;。请注意在逗号和两个数之间不能有空格。</li>
+<li><code>[]</code> 字符集合(字符域)。匹配所包含的任意一个字符。例如， &lsquo;[abc]&rsquo; 可以匹配 &ldquo;<code>plain</code>&rdquo; 中的 &lsquo;a&rsquo;。</li>
+<li><code>()</code> 匹配 ()内的内容 并获取这一匹配。搭配<code>\n</code>(n为大于1的整数)，‘<code>http://baidu.com</code>’若表达式：‘<code>（\w+） (:)\/\/.*\1</code>’则匹配‘<code>http://baidu.comhttp</code>’,<code>\1</code>表示<code>http</code>。</li>
+<li><code>(?:)</code> 匹 配 但不获取匹配结果，不进行存储供以后使用。这在使用 &ldquo;或&rdquo; 字符 <code>(|)</code> 来组合一个模式的各个部分是很有用。例如， &lsquo;<code>industr(?:y|ies)</code> 就是一个比 &lsquo;<code>industry|industries</code>&rsquo; 更简略的表达式。上面表达式若改为&rsquo;<code>（?:\w+）(:)\/\/.*\1</code>&rsquo;，则\1表示为：</li>
+<li><code>|</code> x|y,匹配 x 或 y。例如，&rsquo;<code>z|food</code>&rsquo; 能匹配 &ldquo;z&rdquo; 或 &ldquo;<code>food</code>&quot;。&rsquo;<code>(z|f)ood</code>&rsquo; 则匹配 &ldquo;<code>zood</code>&rdquo; 或 &ldquo;<code>food</code>&quot;。</li>
+<li><code>[-]</code> 字符范围。匹配指定范围内的任意字符。例如，&rsquo;[a-z]&rsquo; 可以匹配 &lsquo;a&rsquo; 到 &lsquo;z&rsquo; 范围内的任意小写字母字符。</li>
+<li><code>(?=pattern)</code>	正 向预查，在任何匹配 pattern 的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹 配不需要获取供以后使用。例如，&rsquo;<code>Windows (?=95|98|NT|2000)</code>&rsquo; 能匹配 &ldquo;Windows 2000&rdquo; 中的 &ldquo;Windows&rdquo; ，但不能匹配 &ldquo;Windows 3.1&rdquo; 中的 &ldquo;Windows&rdquo;。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹 配的搜索，而不是从包含预查的字符之后开始。</li>
+<li><code>(?!pattern)</code>	负 向预查，在任何不匹配 pattern 的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不 需要获取供以后使用。例如&rsquo;<code>Windows (?!95|98|NT|2000)</code>&rsquo; 能匹配 &ldquo;Windows 3.1&rdquo; 中的 &ldquo;Windows&rdquo;，但不能匹配 &ldquo;Windows 2000&rdquo; 中的 &ldquo;Windows&rdquo;。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜 索，而不是从包含预查的字符之后开始</li>
+</ul>
+<p>有时候最后定界符会有一个字母，如‘<code>/as.*/i</code>’,那这个i又是什么呢，这就是模式修正符；</p>
+<ul>
+<li><code>i</code>	表示在和模式进行匹配进不区分大小写</li>
+<li><code>m</code>	将模式视为多行，使用<code>^</code>和<code>$</code>表示任何一行都可以以正则表达式开始或结束</li>
+<li><code>s</code>	如果没有使用这个模式修正符号，元字符中的&rdquo;.&ldquo;默认不能表示换行符号,将字符串视为单行</li>
+<li><code>x</code>	表示模式中的空白忽略不计</li>
+<li><code>e</code>	正则表达式必须使用在<code>preg_replace</code>替换字符串的函数中时才可以使用(讲这个函数时再说)</li>
+<li><code>A</code>	以模式字符串开头，相当于元字符<code>^</code></li>
+<li><code>Z</code>	以模式字符串结尾，相当于元字符<code>$</code></li>
+<li><code>U</code>	正则表达式的特点：就是比较“贪婪”，使用该模式修正符可以取消贪婪模式</li>
+</ul>
+<p>例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;asddadsdasd&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">$pattern</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/a.*d/&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        preg_match(<span style="color:#008080">$pattern</span>,<span style="color:#008080">$str</span>,<span style="color:#008080">$match</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        var_dump(<span style="color:#008080">$match</span>) ;<span style="color:#998;font-style:italic">//asddadsdasd;
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>       <span style="color:#008080">$str</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;asddadsdasd&#39;</span>;                                  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#008080">$pattern</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;/a.*d/U&#39;</span>;<span style="color:#998;font-style:italic">//$pattern = &#39;/a.*?d/&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>        preg_match(<span style="color:#008080">$pattern</span>,<span style="color:#008080">$str</span>,<span style="color:#008080">$match</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        var_dump(<span style="color:#008080">$match</span>) ;<span style="color:#998;font-style:italic">//asd
+</span></span></span></code></pre></div><p>php常用正则函数;</p>
+<p>匹配：<code>preg_match()</code> 与 <code>preg_match_all()</code></p>
+<p>1 <code>preg_match($pattern,$subject,[array &amp;$matches])</code>
+2 <code>preg_match_all($pattern,$subject,array &amp;$matches)</code></p>
+<p>1只会匹配一次，2会把所有符合的字符串都匹配出来，并且放置到matches数组中，而且这两个函数都有一个整形的返回 值。1是一维数组，2是二维数组</p>
+<p>替换：<code>preg_replace()</code></p>
+<p><code>mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int $limit = -1 [, int &amp;$count ]] )</code>
+搜索subject中匹配pattern的部分， 以replacement进行替换。</p>
+    </div>
+
+    
+
+    
+
+    <div class="container-prevnext">
+    <div><a href="https://blog.akvicor.com/posts/hexo/math/">← 支持数学公式</a></div>
+    <div><a href="https://blog.akvicor.com/posts/algorithm/euler_quick_pow/">欧拉降幂 &amp;&amp; 快速幂  →</a></div>
+</div>
+    
+    
+
+    
+</div>
+
+        </div>
+        <div id="footer"><div class="container-footer">
+    
+    <a href="" target="_blank">
+        
+        <span class="some">世界一、 幸せな女の子だ<span>
+        
+    </a>
+    <a id="s" href="/secrets">&nbsp;</a>
+    
+</div></div>
+    </body>
+</html>

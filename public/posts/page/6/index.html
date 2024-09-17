@@ -127,7 +127,7 @@
     </div>
 
      
-        <div class="count">共有 78 篇文章</div>
+        <div class="count">共有 254 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -208,9 +208,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/cf/poj_1703/">
+            <a href="https://blog.akvicor.com/posts/golang/build_with_ico/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Find them, Catch them <sup></sup></span>
+                <span> go编译文件带上图标 <sup></sup></span>
             </a>
 
             
@@ -218,12 +218,12 @@
                 <span class="date">
                     
                     
-                    2019-06-13
+                    2023-06-11
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-06-11
                 </span>
             </div>
             
@@ -234,24 +234,20 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/cf">CF</a>
+			<a href="/categories/golang">Golang</a>
 			
 		</div>
 		<div class="tag">
 			
-			 - 
 			
-			<a href="/tags/poj">POJ</a>
-			
-			<a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86">并查集</a>
 			
 		</div>
 	</div>
-</div><div class="summary"><strong><a href="http://poj.org/problem?id=1703">POJ-1703 Find them, Catch them</a></strong></div>
+</div><div class="summary">默认的go build -o xxx.exe这样是没有图标的，不怎么好看。 首先下载文件： git clone <a href="https://github.com/akavel/rsrc.git">https://github.com/akavel/rsrc.git</a> 进入目录,把上面的代码编译一下 go build rsrc.go # 然后有个rsrc.exe文件 就在rsrc的目</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/cf/poj_1703/">查看更多…</a>
+				  <a href="/posts/golang/build_with_ico/">查看更多…</a>
 				</div>
 				
             
@@ -264,9 +260,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/cf/hdu_1213/">
+            <a href="https://blog.akvicor.com/posts/linux/rsync/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> How Many Tables <sup></sup></span>
+                <span> rsync 文件夹同步 <sup></sup></span>
             </a>
 
             
@@ -274,12 +270,12 @@
                 <span class="date">
                     
                     
-                    2019-06-13
+                    2023-05-29
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-05-29
                 </span>
             </div>
             
@@ -290,24 +286,20 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/cf">CF</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
 			
-			 - 
 			
-			<a href="/tags/hdu">HDU</a>
-			
-			<a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86">并查集</a>
 			
 		</div>
 	</div>
-</div><div class="summary"><strong><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1213">HDU-1213 How Many Tables</a></strong></div>
+</div><div class="summary">描述 cp和scp是ubuntu中文件拷贝常用的两个命令，一般在同一台服务器上我们是用cp命令，跨服务时使用过scp命令，但是如果做文件同步的话，rsync要比上</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/cf/hdu_1213/">查看更多…</a>
+				  <a href="/posts/linux/rsync/">查看更多…</a>
 				</div>
 				
             
@@ -320,9 +312,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/cf/hdu_1272/">
+            <a href="https://blog.akvicor.com/posts/linux/fail2ban/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 小希的迷宫 <sup></sup></span>
+                <span> Fail2ban <sup></sup></span>
             </a>
 
             
@@ -330,12 +322,12 @@
                 <span class="date">
                     
                     
-                    2019-06-13
+                    2023-05-11
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-05-11
                 </span>
             </div>
             
@@ -346,24 +338,20 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/cf">CF</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
 			
-			 - 
 			
-			<a href="/tags/hdu">HDU</a>
-			
-			<a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86">并查集</a>
 			
 		</div>
 	</div>
-</div><div class="summary"><strong><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1272">HDU-1272 小希的迷宫</a></strong></div>
+</div><div class="summary">安装 Fail2ban apt-get install fail2ban Fail2ban 默认启用 ssh 的过滤器，可以在 /etc/fail2ban/jail.conf 查看，但是 Fail2ban 更新会覆盖此文件，建议复制一个 jail.local 进行编辑。 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local 此后建议编辑 jail.local 对于 jail.local，你能找到许多 unit 例如</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/cf/hdu_1272/">查看更多…</a>
+				  <a href="/posts/linux/fail2ban/">查看更多…</a>
 				</div>
 				
             
@@ -376,9 +364,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/cf/poj_1611/">
+            <a href="https://blog.akvicor.com/posts/openwrt/esxi/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> The Suspects <sup></sup></span>
+                <span> vmdk for ESXi <sup></sup></span>
             </a>
 
             
@@ -386,12 +374,12 @@
                 <span class="date">
                     
                     
-                    2019-06-13
+                    2023-05-05
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-05-05
                 </span>
             </div>
             
@@ -402,24 +390,67 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/cf">CF</a>
+			<a href="/categories/openwrt">OpenWrt</a>
 			
 		</div>
 		<div class="tag">
 			
-			 - 
 			
-			<a href="/tags/poj">POJ</a>
-			
-			<a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86">并查集</a>
 			
 		</div>
 	</div>
-</div><div class="summary"><strong><a href="http://poj.org/problem?id=1611">POJ-1611 The Suspects</a></strong></div>
+</div><div class="summary">开启SSH 管理 -&gt; 服务 -&gt; TSM-SSH 使用SSH登录到ESXI 修改的固件vmdk大小 cd /vmfs/volumes/datastore1 ls *.vmdk vmkfstools -i openwrt.vmdk 123.vmdk vmkfstools -X 1024M 123.vmdk # 需大于源文件大小 添加硬盘 根据实际情况选择EFI或BIOS引导</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/resize_partition/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Resize Partition <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-05-04
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2023-05-04
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">1.卸载磁盘 umount -l /data 若提示磁盘忙，使用fuser找出将正在使用磁盘的程序并结束掉。 fuser -m -v /data fuser -m -v -i -k /data 2.磁盘分区 使用fdisk命令重新调整磁盘分区大小 fdisk -l fdisk /dev/sdb p</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/cf/poj_1611/">查看更多…</a>
+				  <a href="/posts/linux/resize_partition/">查看更多…</a>
 				</div>
 				
             
@@ -432,9 +463,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/lines_dividing_planes/">
+            <a href="https://blog.akvicor.com/posts/linux/swap/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 直线划分平面 <sup></sup></span>
+                <span> 增加SWAP分区 <sup></sup></span>
             </a>
 
             
@@ -442,12 +473,12 @@
                 <span class="date">
                     
                     
-                    2019-05-31
+                    2023-05-04
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-05-04
                 </span>
             </div>
             
@@ -458,7 +489,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -467,11 +498,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary">如果一个平面中有n条直线，最多能将平面划分成多少区域。</div>
+</div><div class="summary">一般来说可以按照如下规则设置swap大小： 4G以内的物理内存，SWAP 设置为内存的2倍。 4-8G的物理内存，SWAP 等于内存大小。 8-64G 的物理内存，SWAP 设置为8</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/algorithm/lines_dividing_planes/">查看更多…</a>
+				  <a href="/posts/linux/swap/">查看更多…</a>
 				</div>
 				
             
@@ -484,9 +515,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/line_intersect/">
+            <a href="https://blog.akvicor.com/posts/windows/network_connection_does_not_exist/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 判断两个线段相交 <sup></sup></span>
+                <span> 无法删除网络驱动器：此网络连接不存在 <sup></sup></span>
             </a>
 
             
@@ -494,12 +525,12 @@
                 <span class="date">
                     
                     
-                    2019-05-29
+                    2023-03-28
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-03-28
                 </span>
             </div>
             
@@ -510,7 +541,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/windows">Windows</a>
 			
 		</div>
 		<div class="tag">
@@ -519,14 +550,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>如何判断两条直线是否相交？</p>
-<p>这很容易。平面直线，无非就是两种关系：相交 或 平行。因此，只需判断它们是否平行即可。而直线平行，等价于它们的斜率相等，只需分别计算出它们的斜率，即可做出判断。</p>
-<p>但倘若我把“直线”换成“线段”呢——如何判断两条线段是否相交？</p>
-<p>这就有些难度了。和 直线 不同，线段 是有固定长度的，即使它们所属的两条直线相交，这两条线段也不一定相交。</p></div>
+</div><div class="summary">单击 “开始”，指向 “运行”，键入 regedit，然后单击 “确定”。 在注册表编辑器中，找到以下注册表子项： HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2 右键单击要删除的映射驱动器。 例如，右键单击 ##Serv</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/algorithm/line_intersect/">查看更多…</a>
+				  <a href="/posts/windows/network_connection_does_not_exist/">查看更多…</a>
 				</div>
 				
             
@@ -539,9 +567,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/prime/">
+            <a href="https://blog.akvicor.com/posts/linux/music_player_control/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 素数判定 <sup></sup></span>
+                <span> Music Player Control <sup></sup></span>
             </a>
 
             
@@ -549,12 +577,12 @@
                 <span class="date">
                     
                     
-                    2019-05-28
+                    2023-03-22
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-03-22
                 </span>
             </div>
             
@@ -565,7 +593,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -574,16 +602,58 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>所谓素数，是指恰好有两个约数的正整数。</p>
-<ul>
-<li>埃氏筛法</li>
-<li>区间筛法</li>
-<li>Miller-Rabin素性测试</li>
-</ul></div>
+</div><div class="summary">通过命令行控制软件的声音 安装 sudo apt install playerctl 使用 控制当前 playerctl play playerctl pause playerctl play-pause # toggle playerctl stop playerctl next playerctl previous playerctl volume 控制指定软件 获取软件列表 playerctl status -l 控制指定软件，如网易云音乐 playerctl &ndash;player=netease-cloud-music play-pause</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/fstab/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Fstab <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-03-08
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2023-03-08
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">系统挂载的一些限制 根目录/是必须挂载的，而且一定要先于其他mount point被挂载进来。 其他挂载点必须为已新建的目录，可任意指定，但一定要遵守必需的系统目录架</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/algorithm/prime/">查看更多…</a>
+				  <a href="/posts/linux/fstab/">查看更多…</a>
 				</div>
 				
             
@@ -596,9 +666,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/segment_tree/">
+            <a href="https://blog.akvicor.com/posts/aos/unreal_mode/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 线段树 <sup></sup></span>
+                <span> Unreal mode <sup></sup></span>
             </a>
 
             
@@ -606,7 +676,7 @@
                 <span class="date">
                     
                     
-                    2019-05-28
+                    2023-02-27
                 </span>
                 <span class="date">
                     
@@ -622,7 +692,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/aos">AOS</a>
 			
 		</div>
 		<div class="tag">
@@ -631,13 +701,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>线段树（segment tree），顾名思义， 是用来存放给定区间（segment, or interval）内对应信息的一种数据结构。与树状数组（binary indexed tree）相似，线段树也用来处理数组相应的区间查询（range query）和元素更新（update）操作。与树状数组不同的是，线段树不止可以适用于区间求和的查询，也可以进行区间最大值，区间最小值（Range Minimum/Maximum Query problem）或者区间异或值的查询。</p>
-<p>对应于树状数组，线段树进行更新（update）的操作为O(logn)，进行区间查询（range query）的操作也为O(logn)。</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/segment_tree/">查看更多…</a>
-				</div>
+</div><div class="summary">Unreal mode consists of breaking the 64KiB limit of real mode segments (while retaining 16-bit instructions and the segment * 16 + offset addressing mode) by tweaking the descriptor caches.</div>
 				
             
 
@@ -649,9 +713,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/maximum_slice/">
+            <a href="https://blog.akvicor.com/posts/opensource/mathtex/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 最大子列和问题 <sup></sup></span>
+                <span> Mathtex <sup></sup></span>
             </a>
 
             
@@ -659,12 +723,12 @@
                 <span class="date">
                     
                     
-                    2019-05-27
+                    2023-02-27
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-02-27
                 </span>
             </div>
             
@@ -675,7 +739,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/open-source">Open Source</a>
 			
 		</div>
 		<div class="tag">
@@ -684,137 +748,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>求取数组中最大连续子序列和，例如给定数组为A={1， 3， -2， 4， -5}， 则最大连续子序列和为
-<pre><code>    $math_inline$6$math_inline$
-</code></pre>
-<p>，即</p>
-<pre><code>    $math_inline$1+3+(-2)+4=6$math_inline$
-</code></pre>
-<p>。</p></p>
-<p>方法一共有三种，复杂度分别为 
-<pre><code>    $math_inline$O(N^2)$math_inline$
-</code></pre>
-<p>、</p>
-<pre><code>    $math_inline$O(NlgN)$math_inline$
-</code></pre>
-<p>、</p>
-<pre><code>    $math_inline$O(N)$math_inline$
-</code></pre>
-</p></div>
+</div><div class="summary"><a href="https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access">https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access</a> 安装TexLive，使用 which latex 和 which dvipng 检查是否安装 按照注释中操作 &lt;?php # Place this file in extension directory as Mtag.php # Add the following line to LocalSettings.php: # include './extensions/Mtag.php'; # Mediawiki will render as LaTeX the code within &lt;m&gt; &lt;/m&gt; tags. $wgExtensionFunctions[] = &quot;wfMtag&quot;; function wfMtag() { global $wgParser; $wgParser-&gt;setHook( &quot;m&quot;, &quot;returnMtagged&quot; ); } function returnMtagged( $code, $argv)</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/algorithm/maximum_slice/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/algorithm/integer_factorization/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 分解质因数 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-05-26
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/algorithm">Algorithm</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><p>每个合数都可以写成几个质数相乘的形式，其中每个质数都是这个合数的质因数。如果一个质数是某个数的因数，那么就说这个质数是这个数的质因数。而这个因数一定是一个质数。</p>
-<p>把一个合数用质因数相乘的形式表示出来，叫做分解质因数。如30=2×3×5 。分解质因数只针对合数。</p>
-<p><strong>质数：</strong>
-质数（prime number）又称素数，有无限个。</p>
-<p>质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。</p>
-<p><strong>合数：</strong>
-合数指自然数中除了能被1和本身整除外，还能被其他数（0除外）整除的数。与之相对的是质数，而1既不属于质数也不属于合数。最小的合数是4。其中，完全数与相亲数是以它为基础的。</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/integer_factorization/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/algorithm/sum_of_the_positive_divisors/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 约数定理（约数个数定理，约束和定理） <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-05-26
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/algorithm">Algorithm</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">约数个数定理可以计算出一个数约数的个数</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/sum_of_the_positive_divisors/">查看更多…</a>
+				  <a href="/posts/opensource/mathtex/">查看更多…</a>
 				</div>
 				
             
@@ -852,7 +790,7 @@
         <a href="/posts/page/7/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/8/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>

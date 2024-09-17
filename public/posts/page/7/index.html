@@ -127,7 +127,7 @@
     </div>
 
      
-        <div class="count">共有 78 篇文章</div>
+        <div class="count">共有 254 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -208,9 +208,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/arbitrary_precision/">
+            <a href="https://blog.akvicor.com/posts/c/data_structure_alignment/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 高精度(Arbitrary-precision arithmetic) <sup></sup></span>
+                <span> Data Structure Alignment <sup></sup></span>
             </a>
 
             
@@ -218,7 +218,7 @@
                 <span class="date">
                     
                     
-                    2019-05-23
+                    2023-02-27
                 </span>
                 <span class="date">
                     
@@ -234,7 +234,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/c">C</a>
 			
 		</div>
 		<div class="tag">
@@ -243,11 +243,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary">在运算过程中如果运算结果很大，普通的数据类型无法储存，就需要用到所谓的高精度算法，即用数组来存储整数，并模拟手算的方式进行四则运算。</div>
+</div><div class="summary">The CPU in modern computer hardware performs reads and writes to memory most efficiently when the data is naturally aligned, which generally means that the data’s memory address is a multiple of the data size. For instance, in a 32-bit architecture, the data may be aligned if the data is stored in four consecutive bytes and the first byte lies on a 4-byte boundary.
+If the highest and lowest bytes in a datum are not within the same memory word the computer must split the datum access into multiple memory accesses.</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/algorithm/arbitrary_precision/">查看更多…</a>
+				  <a href="/posts/c/data_structure_alignment/">查看更多…</a>
 				</div>
 				
             
@@ -260,9 +261,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/kmp/">
+            <a href="https://blog.akvicor.com/posts/linux/create_iso_images/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> KMP 算法 <sup></sup></span>
+                <span> Creating ISO images with dd and mkisofs <sup></sup></span>
             </a>
 
             
@@ -270,12 +271,12 @@
                 <span class="date">
                     
                     
-                    2019-04-30
+                    2023-02-27
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-02-27
                 </span>
             </div>
             
@@ -286,7 +287,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -295,11 +296,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Knuth-Morris-Pratt 字符串查找算法，简称为 “KMP算法”，常用于在一个文本串S内查找一个模式串P 的出现位置，这个算法由Donald Knuth、Vaughan Pratt、James H. Morris三人于1977年联合发表，故取这3人的姓氏命名此算法。</div>
+</div><div class="summary">IMG file Make dd if=/dev/zero of=fdimage.img count=2880 # or dd if=/dev/zero of=fdimage.img bs=1024 count=1440 Format mkfs.msdos fdimage.img Mount mount -o loop *.img /mnt Bootable 因为制作可启动镜像一定会用到虚拟机，推荐用 Virtualbox，先到网上下个 DOS 启动盘来引导。用 DOS 的 sys 命令传递系统</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/algorithm/kmp/">查看更多…</a>
+				  <a href="/posts/linux/create_iso_images/">查看更多…</a>
 				</div>
 				
             
@@ -312,9 +313,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/android/adb/">
+            <a href="https://blog.akvicor.com/posts/linux/service/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> ADB Commands <sup></sup></span>
+                <span> Create Systemd Service Unit <sup></sup></span>
             </a>
 
             
@@ -322,12 +323,12 @@
                 <span class="date">
                     
                     
-                    2019-04-28
+                    2023-02-27
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-02-27
                 </span>
             </div>
             
@@ -338,7 +339,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/android">Android</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -347,12 +348,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="what-is-adb">What Is ADB</h2>
-<p>Android Debug Bridge (adb) is a command line tool that lets you communicate with an emulator or connected Android device. You can find the adb tool in <em>android sdk/platform-tools</em> or Download <a href="http://adbshell.com/downloads">ADB Kits</a>.</p></div>
+</div><div class="summary">文件所在路径 vim /usr/lib/systemd/system/SERVICE_NAME.service 服务模板 [Unit] Description=Viry Service After=network.target auditd.service [Service] User=root Type=oneshot RemainAfterExit=true ExecStart=/viry/serv/serv.sh ExecStop=/bin/true [Install] WantedBy=multi-user.target Alias=viry.service serv.sh #!/bin/bash echo &quot;Sync Time&quot; ntpdate 172.16.1.1 hwclock -w TIME=$(TZ=UTC-8 date &quot;+%Y-%m-%d %H:%M:%S&quot;) LOG=&quot;/viry/serv/serv.log&quot; echo &quot;Ready&quot; echo &quot;&quot; &gt;&gt; $LOG echo $TIME &gt;&gt; $LOG echo &quot;Start DEMO&quot; echo &quot;Start DEMO&quot; &gt;&gt; $LOG sh /viry/serv/demo/demo.sh echo &quot;Finished&quot; echo &quot;Finished&quot; &gt;&gt; $LOG demo.sh #!/bin/bash cd /viry/serv/demo/exec/ screen_name=&quot;demo&quot; screen -s /usr/bin/bash -dmS $screen_name cmd1=&quot;&quot; cmd2=&quot;./demo&quot; screen -x</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/android/adb/">查看更多…</a>
+				  <a href="/posts/linux/service/">查看更多…</a>
 				</div>
 				
             
@@ -365,9 +365,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/perfect_number/">
+            <a href="https://blog.akvicor.com/posts/css/carousel/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 完全数 <sup></sup></span>
+                <span> CSS-Only Carousel <sup></sup></span>
             </a>
 
             
@@ -375,12 +375,12 @@
                 <span class="date">
                     
                     
-                    2019-04-20
+                    2023-02-25
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-02-25
                 </span>
             </div>
             
@@ -391,7 +391,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/css">CSS</a>
 			
 		</div>
 		<div class="tag">
@@ -400,13 +400,58 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p><strong>完全数</strong>，又称<strong>完美数</strong>或<strong>完备数</strong>，是一些特殊的<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E6%95%B0">自然数</a>：它所有的真<a href="https://zh.wikipedia.org/wiki/%E5%9B%A0%E5%AD%90">因子</a>（即除了自身以外的约数）的和，恰好等于它本身，完全数不可能是<a href="https://zh.wikipedia.org/wiki/%E6%A5%94%E5%BD%A2%E6%95%B8">楔形数</a>。</p>
-<p>例如：第一个完全数是6，它有约数1、2、3、6，除去它本身6外，其余3个数相加，1+2+3＝6，恰好等于本身。第二个完全数是28，它有约数1、2、4、7、14、28，除去它本身28外，其余5个数相加，1+2+4+7+14＝28，也恰好等于本身。后面的数是<a href="https://zh.wikipedia.org/wiki/496">496</a>、<a href="https://zh.wikipedia.org/wiki/8128">8128</a>。</p>
-<p><a href="https://zh.wikipedia.org/wiki/%E5%8D%81%E9%80%B2%E4%BD%8D">十进制</a>的5位数到7位数、9位数、11位数、13到18位数等位数都没有完全数，它们不是<a href="https://zh.wikipedia.org/wiki/%E4%BA%8F%E6%95%B0">亏数</a>就是<a href="https://zh.wikipedia.org/wiki/%E9%81%8E%E5%89%A9%E6%95%B8">过剩数</a>。</p></div>
+</div><div class="summary">&lt;div class=&quot;wheelPlayer wheelAnimate&quot;&gt; &lt;div&gt;1&lt;/div&gt; &lt;div&gt;2&lt;/div&gt; &lt;div&gt;3&lt;/div&gt; &lt;/div&gt; .wheelPlayer{ padding: 20px 0; margin: auto; width: 350px; } .wheelPlayer div{ position: relative; height: 25px; line-height: 26px; width: 70px; text-align: center; border: 1px solid gray; } .wheelAnimate div{ animation: whellPlayer 9s infinite; -moz-animation: whellPlayer 9s infinite; -webkit-animation: whellPlayer 9s infinite; } .wheelPlayer div:nth-of-type(1){ animation-delay: -6s; -moz-animation-delay: -6s; -webkit-animation-delay: -6s; } .wheelPlayer div:nth-of-type(2){ animation-delay: -3s; -moz-animation-delay: -3s; -webkit-animation-delay: -3s; margin-top: -27px; } .wheelPlayer div:nth-of-type(3){ animation-delay: -0s; -moz-animation-delay: 0s; -webkit-animation-delay: 0s; margin-top: -27px; }</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/js/clipboard/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Clipboard <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-23
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2023-02-23
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/javascript">JavaScript</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">向剪切板写入 图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能,是异步的 document.body.addEventListener( 'click', async (e) =&gt; { await navigator.clipboard.writeText('Yo') } ) Clipboard.read()用于读取剪切板的数据，也</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/algorithm/perfect_number/">查看更多…</a>
+				  <a href="/posts/js/clipboard/">查看更多…</a>
 				</div>
 				
             
@@ -419,9 +464,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/green_determine_clockwise/">
+            <a href="https://blog.akvicor.com/posts/linux/xterm/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Green公式-判断多边形边界曲线顺/逆时针 <sup></sup></span>
+                <span> Xterm <sup></sup></span>
             </a>
 
             
@@ -429,12 +474,12 @@
                 <span class="date">
                     
                     
-                    2019-04-14
+                    2023-02-15
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-02-15
                 </span>
             </div>
             
@@ -445,7 +490,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -454,11 +499,105 @@
 			
 		</div>
 	</div>
-</div><div class="summary">判断一个多边形的边界曲线是否是顺时针或者逆时针</div>
+</div><div class="summary">vim ~/.Xresource 填写配置 xterm.termName: xterm-256color xterm<em>locale:true xterm.utf8: true xterm</em>utf8Title: true !fix alt key input !xterm<em>eightBitInput: false !xterm</em>altSendsEscape: true !xterm<em>scrollBar: true !xterm</em>rightScrollBar: true xterm<em>SaveLines: 4096 !xterm</em>background: black !xterm<em>foreground: green xterm</em>printAttributes: 0 xterm<em>printerCommand: cat &gt; ~/xtermdump !xterm</em>VT100.translations: #override &lt;Btn1UP&gt;: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) xterm<em>VT100.translations: #override \ Ctrl &lt;KeyPress&gt; V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\ &lt;BtnUp&gt;: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\ Ctrl &lt;KeyPress&gt; P: print() \n xterm</em>faceName: Ubuntu Bold:antialias=True:pixelsize=12 xterm*faceNameDoublesize:Noto Sans Mono CJK SC:antialias=True:pixelsize=12</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/sudo/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Sudo <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2023-02-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">apt install sudo cd /etc/sudoers.d vim user # Akvicor ALL=(ALL)NOPASSWD:ALL</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/ufw/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Ufw <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2023-02-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><a href="https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97">https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97</a> 安装 默认UFW的规则是放通全部端口 apt-get install ufw 设置默认规则 首先设置拒绝所有传入并允许所有传出。 请勿运行以下命令后直接应用，否则会直接锁定你的服务器。确保在应用默认规</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/algorithm/green_determine_clockwise/">查看更多…</a>
+				  <a href="/posts/linux/ufw/">查看更多…</a>
 				</div>
 				
             
@@ -471,9 +610,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/dynamic_programming/">
+            <a href="https://blog.akvicor.com/posts/windows/notepad_compile/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 动态规划 <sup></sup></span>
+                <span> Notepad Compile <sup></sup></span>
             </a>
 
             
@@ -481,12 +620,12 @@
                 <span class="date">
                     
                     
-                    2019-04-05
+                    2023-02-15
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-02-15
                 </span>
             </div>
             
@@ -497,7 +636,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/windows">Windows</a>
 			
 		</div>
 		<div class="tag">
@@ -506,22 +645,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>背包的状态转换方程 : 
-<pre><code>    $math_inline$f[i,j] = Max\lbrace f[i-1,j-W_i]+Pi( j &gt;= W_i ),  f[i-1,j] \rbrace$math_inline$
-</code></pre>
-</p>
-<p>
-<pre><code>    $math_inline$f[i,j]$math_inline$
-</code></pre>
-<p>表示在前i件物品中选择若干件放在承重为 j 的背包中，可以取得的最大价值。
-Pi表示第i件物品的价值。
-决策：为了背包中物品总价值最大化，第 i件物品应该放入背包中吗 ？</p></p>
-</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/dynamic_programming/">查看更多…</a>
-				</div>
+</div><div class="summary">Environment Add MinGW environment to Path: C:\MinGW\bin
+Open Notepad++ Plug-&gt;Plugin Manager-&gt;Show Plugin Manager
+at Available, double click ‘downloading list’
+Search ‘Nppexec’, install and restart
+Open Console Plug-&gt;NppExec-&gt;Show Console
+Compile Plug-&gt;NppExec-&gt;Execute
+Compile input: g++ $(FULL_CURRENT_PATH) -g -o $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: Compile Run input: $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: Run GDB input: gdb $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: GDB Add to Macros submenu Plug-&gt;NppExec-&gt;Advanced Options
+at Associated script:
+Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</div>
 				
             
 
@@ -533,9 +665,9 @@ Pi表示第i件物品的价值。
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/dijkstra/">
+            <a href="https://blog.akvicor.com/posts/linux/networking_timeout/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Dijkstra(迪杰斯特拉)算法 单源最短路径算法 <sup></sup></span>
+                <span> Networking timeout <sup></sup></span>
             </a>
 
             
@@ -543,12 +675,12 @@ Pi表示第i件物品的价值。
                 <span class="date">
                     
                     
-                    2019-04-03
+                    2023-02-15
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-02-15
                 </span>
             </div>
             
@@ -559,7 +691,7 @@ Pi表示第i件物品的价值。
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -568,148 +700,7 @@ Pi表示第i件物品的价值。
 			
 		</div>
 	</div>
-</div><div class="summary"><p><img src="https://img.akvicor.com/i/2024/09/15/66e67546df179.png" alt=""></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">path</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
-<th style="text-align:center">8</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">∞</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">∞</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">∞</td>
-</tr>
-<tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">3</td>
-</tr>
-<tr>
-<td style="text-align:center">7</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">3</td>
-</tr>
-<tr>
-<td style="text-align:center">8</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">∞</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">0</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>dis</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>估计值</td>
-<td>0</td>
-<td>3</td>
-<td>2</td>
-<td>3</td>
-<td>∞</td>
-<td>∞</td>
-<td>∞</td>
-<td>∞</td>
-</tr>
-</tbody>
-</table>
-<p><code>path</code>代表地图 例如<code>path[i][j]</code>代表从<code>i</code>到<code>j</code>的距离</p>
-<p><code>dis</code>代表从起点到达<code>i</code>的距离，开始时初始化为最大，代表无穷远即未连同</p>
-<p><code>vis</code>代表当前节点<code>[i]</code>是否访问过</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/dijkstra/">查看更多…</a>
-				</div>
+</div><div class="summary">1 vim /etc/systemd/system/network-online.target.wants/networking.service TimeoutStartSec=2sec 2 vim /etc/dhcp/dhclient.conf timeout 15 1 change auto eth0 to allow-hotplug eth0</div>
 				
             
 
@@ -721,9 +712,9 @@ Pi表示第i件物品的价值。
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/algorithm/union_find/">
+            <a href="https://blog.akvicor.com/posts/linux/analyzeblame/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 并查集 <sup></sup></span>
+                <span> Analyzeblame <sup></sup></span>
             </a>
 
             
@@ -731,12 +722,12 @@ Pi表示第i件物品的价值。
                 <span class="date">
                     
                     
-                    2019-03-24
+                    2023-02-15
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-15
+                    - 2023-02-15
                 </span>
             </div>
             
@@ -747,7 +738,7 @@ Pi表示第i件物品的价值。
 		<div class="ctg">
 			
 			
-			<a href="/categories/algorithm">Algorithm</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -756,174 +747,7 @@ Pi表示第i件物品的价值。
 			
 		</div>
 	</div>
-</div><div class="summary"><p><strong>并查集</strong>是一种树型的数据结构，用于处理一些**不交集（Disjoint Sets）<strong>的合并及查询问题。有一个</strong>联合-查找算法（union-find algorithm）**定义了两个用于此数据结构的操作：</p>
-<ul>
-<li>Find：确定元素属于哪一个子集。它可以被用来确定两个元素是否属于同一子集。</li>
-<li>Union：将两个子集合并成同一个集合。</li>
-</ul></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/union_find/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/algorithm/count_substring/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 统计字符串中子串数目 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-03-22
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/algorithm">Algorithm</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">统计一个字符串在另一个字符串中出现的次数，包含重叠和非重叠两种情况</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/count_substring/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/algorithm/euler_quick_pow/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 欧拉降幂 &amp;&amp; 快速幂 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-02-18
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/algorithm">Algorithm</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><p><strong>欧拉φ函数</strong>：在数论中，对正整数n，欧拉函数是小于或等于n的正整数中与n互质的数的数目。此函数以其首名研究者欧拉命名，它又称为φ函数、欧拉商数等。</p>
-<p>φ(1)=1;  φ(2)=1;  φ(3)=2;  φ(4)=2;  φ(9)=6</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/euler_quick_pow/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/apache/rewrite/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 添加重定向 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-02-11
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/apache">Apache</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><p>给使用Appache网站添加重定向</p>
-<p>在网站根目录下建立<code>.htaccess</code>文件</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/apache/rewrite/">查看更多…</a>
-				</div>
+</div><div class="summary">开机时间 systemd-analyze</div>
 				
             
 
@@ -942,9 +766,6 @@ Pi表示第i件物品的价值。
         <a href="/posts/page/6/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
-      </li>
-      <li class="page-item">
         <a href="/posts/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
       </li>
       <li class="page-item">
@@ -957,10 +778,13 @@ Pi表示第i件物品的价值。
         <a href="/posts/page/8/" aria-label="Page 8" class="page-link" role="button">8</a>
       </li>
       <li class="page-item">
+        <a href="/posts/page/9/" aria-label="Page 9" class="page-link" role="button">9</a>
+      </li>
+      <li class="page-item">
         <a href="/posts/page/8/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/8/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>

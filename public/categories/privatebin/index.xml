@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PrivateBin on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/privatebin/</link>
+    <description>Recent content in PrivateBin on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 11 Feb 2019 12:59:16 +0000</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/privatebin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PrivateBin Install</title>
+      <link>https://blog.akvicor.com/posts/privatebin/install/</link>
+      <pubDate>Mon, 11 Feb 2019 12:59:16 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/privatebin/install/</guid>
+      <description>&lt;p&gt;搭建自己的在线私密剪贴板&lt;/p&gt;&#xA;&lt;p&gt;PrivateBin类似于Ubuntu PasteBin，是一个开源的剪切板。&lt;/p&gt;&#xA;&lt;p&gt;作为一个用于临时分享文本(当然也有很多人拿来分享代码啥的)的网站，在有些时候还是挺方便的&lt;/p&gt;&#xA;&lt;p&gt;官网——&amp;gt;&lt;a href=&#34;https://privatebin.net/&#34;&gt;传送门&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;不仅支持加密，阅后即焚等功能，还可以在配置中开启支持文件上传等动能&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/proxy/</link>
+    <description>Recent content in Proxy on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 22 Jan 2020 13:47:14 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/proxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>通过proxychain在命令行实现魔法</title>
+      <link>https://blog.akvicor.com/posts/proxy/proxychains/</link>
+      <pubDate>Wed, 22 Jan 2020 13:47:14 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/proxy/proxychains/</guid>
+      <description>&lt;p&gt;在魔法环境下运行命令行命令，例如 &lt;code&gt;apt-get&lt;/code&gt; &lt;code&gt;wget&lt;/code&gt; &lt;code&gt;git&lt;/code&gt; &lt;code&gt;curl&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>检测IP地址</title>
+      <link>https://blog.akvicor.com/posts/proxy/check_ip_ban/</link>
+      <pubDate>Mon, 07 Oct 2019 11:40:20 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/proxy/check_ip_ban/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;当使用国外服务器搭建网站的时候, 可能遇到一些网站屏蔽了网站IP, 因此需要检测一下是否被屏蔽&lt;/li&gt;&#xA;&lt;li&gt;当使用国外服务器搭建网站的时候经常会碰到一些 IP 因为被墙导致网站不能访问，所以可以先检测一下 IP 是否被墙。&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/php/</link>
+    <description>Recent content in PHP on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 06 Nov 2019 21:25:26 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP Install</title>
+      <link>https://blog.akvicor.com/posts/php/install/</link>
+      <pubDate>Wed, 06 Nov 2019 21:25:26 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/php/install/</guid>
+      <description>Ubuntu 18.04 安装PHP7并配置Nginx 安装 sudo apt-get install software-properties-common python-software-properties sudo add-apt-repository ppa:ondrej/php sudo apt-get update sudo apt-get -y install php7.3 # 安装常用扩展 sudo -y apt-get install php7.3-fpm php7.3-mysql php7.3-curl php7.3-json php7.3-mbstring php7.3-xml php7.3-intl # 安装其他扩展（按需安装） sudo apt-get install php7.3-gd sudo apt-get install php7.3-soap sudo apt-get install php7.3-gmp sudo apt-get install</description>
+    </item>
+    <item>
+      <title>修改图片大小</title>
+      <link>https://blog.akvicor.com/posts/php/modify_picture_size/</link>
+      <pubDate>Sun, 29 Sep 2019 17:08:24 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/php/modify_picture_size/</guid>
+      <description>&lt;p&gt;叙述使用以下代码修改图片大小或创建缩略图。&lt;/p&gt;&#xA;&lt;p&gt;参数说明：&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;$filename&lt;/code&gt;：文件名。&#xA;&lt;code&gt;$tmpname&lt;/code&gt;：文件路径，如上传中的临时目录。&#xA;&lt;code&gt;$xmax&lt;/code&gt;：修改后最大宽度。&#xA;&lt;code&gt;$ymax&lt;/code&gt;：修改后最大高度。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LNMP安装</title>
+      <link>https://blog.akvicor.com/posts/php/lnmp/</link>
+      <pubDate>Tue, 09 Jul 2019 23:23:26 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/php/lnmp/</guid>
+      <description>&lt;p&gt;LNMP一键安装包是一个用Linux Shell编写的可以为CentOS/RHEL/Fedora/Aliyun/Amazon、Debian/Ubuntu/Raspbian/Deepin/Mint Linux VPS或独立主机安装LNMP(Nginx/MySQL/PHP)、LNMPA(Nginx/MySQL/PHP/Apache)、LAMP(Apache/MySQL/PHP)生产环境的Shell程序。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manual</title>
+      <link>https://blog.akvicor.com/posts/php/manual/</link>
+      <pubDate>Sat, 09 Mar 2019 20:54:22 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/php/manual/</guid>
+      <description>&lt;p&gt;PHP 手册&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>正则表达式</title>
+      <link>https://blog.akvicor.com/posts/php/regular_expression/</link>
+      <pubDate>Tue, 19 Feb 2019 19:00:56 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/php/regular_expression/</guid>
+      <description>&lt;h2 id=&#34;什么叫正则表达式&#34;&gt;什么叫正则表达式&lt;/h2&gt;&#xA;&lt;p&gt;正则表达式是对字符串进行操作的一种逻辑公式，就是用一些特定的字符组合成一个规则字符串，称之为正则匹配模式。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-PHP&#34; data-lang=&#34;PHP&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#008080&#34;&gt;$pre&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#39;/apple/&amp;#39;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#008080&#34;&gt;$str&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;apple banna orange&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;if&lt;/span&gt; (preg_match(&lt;span style=&#34;color:#008080&#34;&gt;$pre&lt;/span&gt;, &lt;span style=&#34;color:#008080&#34;&gt;$str&lt;/span&gt;)) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#39;matched&amp;#39;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中字符串&lt;code&gt;/apple/&lt;/code&gt;就是一个正则表达式，他用来匹配源字符串中是否存在apple字符串。&lt;/p&gt;&#xA;&lt;p&gt;PHP中使用PCRE库函数进行正则匹配，比如上例中的&lt;code&gt;preg_match&lt;/code&gt;用于执行一个正则匹配，常用来判断一类字符模式是否存在。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

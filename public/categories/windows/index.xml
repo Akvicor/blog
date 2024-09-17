@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/windows/</link>
+    <description>Recent content in Windows on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 18 Jan 2024 00:02:56 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>还原鼠标右键 Restore old Right-click Context menu in Windows 11</title>
+      <link>https://blog.akvicor.com/posts/windows/windows11_right_click/</link>
+      <pubDate>Thu, 18 Jan 2024 00:02:56 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/windows11_right_click/</guid>
+      <description>右键菜单改回Win10(展开) reg add &amp;#34;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&amp;#34; /f /ve taskkill /f /im explorer.exe &amp;amp; start explorer.exe 右键菜单改回Win11(折叠) reg delete &amp;#34;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}&amp;#34; /f taskkill /f /im explorer.exe &amp;amp; start explorer.exe</description>
+    </item>
+    <item>
+      <title>禁止Windows系统生成Thumbs.db缩略图缓存</title>
+      <link>https://blog.akvicor.com/posts/windows/thumbs/</link>
+      <pubDate>Tue, 19 Sep 2023 14:16:24 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/thumbs/</guid>
+      <description>在Win10系统下，按住键盘的 “Win+R” 组合快捷键，系统将会打开“运行”命令对话窗口。 在打开的运行命令对话框中输入 “gpedit.msc” 命令，然后再点击“</description>
+    </item>
+    <item>
+      <title>Chromium Tips</title>
+      <link>https://blog.akvicor.com/posts/windows/chromium_tips/</link>
+      <pubDate>Tue, 08 Aug 2023 06:44:51 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/chromium_tips/</guid>
+      <description>缺少Google API 密钥，因此Chromium 的部分功能将无法使用 1. 设置环境变量，屏蔽提示 (会导致无法登录Google) setx GOOGLE_API_KEY &amp;#34;no&amp;#34; setx GOOGLE_DEFAULT_CLIENT_ID &amp;#34;no&amp;#34; setx GOOGLE_DEFAULT_CLIENT_SECRET &amp;#34;no&amp;#34; 2. 配置Google API Key https://cloud.google.com/console</description>
+    </item>
+    <item>
+      <title>Disable Windows Hibernate</title>
+      <link>https://blog.akvicor.com/posts/windows/hibernate/</link>
+      <pubDate>Wed, 28 Jun 2023 13:03:21 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/hibernate/</guid>
+      <description>Hiberfil.sys文件位于系统盘的根目录下，这是一个受保护的操作系统文件，它是 win10 休眠功能（Hibernation）中将内存数据与会话数据保存到电脑硬盘、以</description>
+    </item>
+    <item>
+      <title>无法删除网络驱动器：此网络连接不存在</title>
+      <link>https://blog.akvicor.com/posts/windows/network_connection_does_not_exist/</link>
+      <pubDate>Tue, 28 Mar 2023 11:11:55 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/network_connection_does_not_exist/</guid>
+      <description>单击 “开始”，指向 “运行”，键入 regedit，然后单击 “确定”。 在注册表编辑器中，找到以下注册表子项： HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2 右键单击要删除的映射驱动器。 例如，右键单击 ##Serv</description>
+    </item>
+    <item>
+      <title>Notepad Compile</title>
+      <link>https://blog.akvicor.com/posts/windows/notepad_compile/</link>
+      <pubDate>Wed, 15 Feb 2023 12:05:02 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/notepad_compile/</guid>
+      <description>Environment Add MinGW environment to Path: C:\MinGW\bin&#xA;Open Notepad++ Plug-&amp;gt;Plugin Manager-&amp;gt;Show Plugin Manager&#xA;at Available, double click &amp;lsquo;downloading list&amp;rsquo;&#xA;Search &amp;lsquo;Nppexec&amp;rsquo;, install and restart&#xA;Open Console Plug-&amp;gt;NppExec-&amp;gt;Show Console&#xA;Compile Plug-&amp;gt;NppExec-&amp;gt;Execute&#xA;Compile input: g++ $(FULL_CURRENT_PATH) -g -o $(CURRENT_DIRECTORY)\$(NAME_PART).exe click save, input: Compile Run input: $(CURRENT_DIRECTORY)\$(NAME_PART).exe click save, input: Run GDB input: gdb $(CURRENT_DIRECTORY)\$(NAME_PART).exe click save, input: GDB Add to Macros submenu Plug-&amp;gt;NppExec-&amp;gt;Advanced Options&#xA;at Associated script:&#xA;Add-&amp;gt; Compile and Run and GBD Menu items -&amp;gt; Place to the Macros submenu </description>
+    </item>
+    <item>
+      <title>KMS &amp; GVLK</title>
+      <link>https://blog.akvicor.com/posts/windows/kms/</link>
+      <pubDate>Sat, 08 Oct 2022 10:00:21 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/kms/</guid>
+      <description>Windows https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations Windows Server 2022 操作系统版本 KMS 客户端安装程序密钥 Windows Server 2022 Datacenter WX4NM-KYWYW-QJJR4-XV3QB-6VM33 Windows Server 2022 Standard VDYBN-27WPP-V4HQT-9VMD4-VMK7H Windows Server 2019 操作系统版本 KMS 客户端安装程序密钥 Windows Server 2019 Datacenter WMDGN-G9PQG-XVVXX-R3X43-63DFG Windows Server 2019 Standard N69G4-B89J2-4G8F4-WWYCC-J464C Windows Server 2019 Essentials WVDHN-86M7X-466P6-VHXV7-YY726 Windows Server 2016 操作系统版本 KMS 客户端安装</description>
+    </item>
+    <item>
+      <title>Windows Product Activation</title>
+      <link>https://blog.akvicor.com/posts/windows/windows_product_activation/</link>
+      <pubDate>Sat, 08 Oct 2022 09:34:25 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/windows_product_activation/</guid>
+      <description>KMS激活Windows 首先用管理员权限打开命令提示符 卸载当前系统秘钥：slmgr.vbs /upk 写入KMS的GVLK秘钥：slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 写入KMS服务器地址：slm</description>
+    </item>
+    <item>
+      <title>Fix Windows and Linux Showing Different Times When Dual Booting</title>
+      <link>https://blog.akvicor.com/posts/windows/fix_windows_and_linux_showing_different_times_when_dual_booting/</link>
+      <pubDate>Tue, 04 Oct 2022 15:55:43 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/fix_windows_and_linux_showing_different_times_when_dual_booting/</guid>
+      <description>Make Windows Use UTC Time Filename: Make Windows Use UTC Time.reg Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation] &amp;#34;RealTimeIsUniversal&amp;#34;=dword:00000001 以管理员身份打开 「PowerShell」，输入以下命令 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1 Make Windows Use Local Time Filename: Make Windows Use Local Time.reg Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation] &amp;#34;RealTimeIsUniversal&amp;#34;=-</description>
+    </item>
+    <item>
+      <title>Auto Restart Network Interface</title>
+      <link>https://blog.akvicor.com/posts/windows/auto_restart_network_interface/</link>
+      <pubDate>Mon, 26 Sep 2022 17:21:15 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/auto_restart_network_interface/</guid>
+      <description>每隔30秒钟检查一次网络状态，如果网络异常则重启网卡，然后刷新DNS缓存。 @echo off echo &amp;#34;正在监听网络状态....&amp;#34; cd C:\opt\netcheck :begin ping akvicor.com &amp;gt; ping.txt rem echo %errorlevel% if %ERRORLEVEL% == 1 goto ping2 goto loop</description>
+    </item>
+    <item>
+      <title>Windows IP Local Port Range</title>
+      <link>https://blog.akvicor.com/posts/windows/ip_local_port_range/</link>
+      <pubDate>Mon, 08 Aug 2022 14:58:39 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/ip_local_port_range/</guid>
+      <description>:: 查看Windows系统TCP端口范围 netsh int ipv4 show dynamicportrange protocol=udp :: 修改Windows系统TCP端口范围 netsh int ipv4 set dynamicport tcp start=30000 num=35535 :: 查看Windows系统UDP端口范围 netsh int ipv4 show dynamicportrange protocol=udp :: 修改</description>
+    </item>
+    <item>
+      <title>从文件资源管理器边栏删除Creative Cloud</title>
+      <link>https://blog.akvicor.com/posts/windows/delete_creative_cloud/</link>
+      <pubDate>Sun, 29 Sep 2019 16:46:00 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/delete_creative_cloud/</guid>
+      <description>&lt;p&gt;不幸的是，无论您是否计划实际使用文件存储功能，Adobe的Creative Cloud安装程序都会在安装任何Creative Cloud应用程序时将其添加到Windows文件资源管理器侧栏中。 更糟糕的是，目前还没有办法通过文件资源管理器或创意云设置删除该边栏条目。 对于那些不喜欢文件资源管理器的人来说，无用的文件不必要地混乱，&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>exe文件图标变成了白色无图标</title>
+      <link>https://blog.akvicor.com/posts/windows/white_icon/</link>
+      <pubDate>Sun, 29 Sep 2019 16:43:06 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/white_icon/</guid>
+      <description>&lt;p&gt;exe文件图标变成了白色无图标&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>隐藏快捷方式小箭头</title>
+      <link>https://blog.akvicor.com/posts/windows/shortcut_arrow/</link>
+      <pubDate>Mon, 11 Feb 2019 18:00:00 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/shortcut_arrow/</guid>
+      <description>&lt;h2 id=&#34;下载文件&#34;&gt;下载文件&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://cloud.akvicor.com/Tools/win10shortcut.zip&#34;&gt;下载&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;解压后右键以管理员权限运行&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在Win10上使用Win7图片查看器</title>
+      <link>https://blog.akvicor.com/posts/windows/enabel_win7_photo_viewer/</link>
+      <pubDate>Mon, 11 Feb 2019 17:58:31 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/enabel_win7_photo_viewer/</guid>
+      <description>&lt;p&gt;适合喜欢Win7风格图片查看器的用户&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2024/09/17/66e9a63ea895c.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>为鼠标右键菜单添加g获取管理员权限</title>
+      <link>https://blog.akvicor.com/posts/windows/right_click_admin/</link>
+      <pubDate>Mon, 11 Feb 2019 17:55:21 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/windows/right_click_admin/</guid>
+      <description>&lt;p&gt;在操作某些系统文件时，会遇到权限不足而无法操作的问题，这时候我们就需要获取该文件的管理员权限才能继续操作&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2024/09/18/66e9a783d264d.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
