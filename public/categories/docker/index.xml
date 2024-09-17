@@ -6,7 +6,7 @@
     <description>Recent content in Docker on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 29 Jan 2024 13:03:30 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>暴力删除registry镜像文件</title>
