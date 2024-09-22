@@ -127,7 +127,7 @@
     </div>
 
      
-        <div class="count">共有 255 篇文章</div>
+        <div class="count">共有 256 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -135,6 +135,14 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/serial_port/">Linux虚拟串口 Serial port</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -192,14 +200,58 @@
                 </div>
                 
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/java/install/">Java Install</a>
-                    </div>
-                </div>
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
+            <a href="https://blog.akvicor.com/posts/golang/windows_always_on_top/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 窗口置顶 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-06-11
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/golang">Golang</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">将窗口标题中带有指定字符串的窗口置顶，使其显示在所有窗口之上 package main import ( &quot;golang.org/x/sys/windows&quot; &quot;strings&quot; &quot;syscall&quot; &quot;unsafe&quot; ) func AlwaysOnTop() { SetWindowAlwaysOnTop(GetWindowHandleByWindowName(&quot;Title&quot;)) } const SWP_NOSIZE = uintptr(0x0001) const SWP_NOMOVE = uintptr(0x0002) // This is dumb but Go doesn't like the inline conversion (see above image). func IntToUintptr(value int) uintptr { return uintptr(value) } func SetWindowAlwaysOnTop(hwnd uintptr) { user32dll :=</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/golang/windows_always_on_top/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -702,53 +754,6 @@
 				<div class="read-more">
 				  <a href="/posts/linux/fstab/">查看更多…</a>
 				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/aos/unreal_mode/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Unreal mode <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-27
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/aos">AOS</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Unreal mode consists of breaking the 64KiB limit of real mode segments (while retaining 16-bit instructions and the segment * 16 + offset addressing mode) by tweaking the descriptor caches.</div>
 				
             
 

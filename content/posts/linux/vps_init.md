@@ -93,33 +93,67 @@ chmod +x /etc/update-motd.d/99-custom
 ```bash
 #!/bin/bash
 
+# 主机名
+HOSTNAME=$(cat /etc/hostname)
+
 # 获取系统运行时间（天数）
 UPTIME_DAYS=$(awk '{print int($1/86400)}' /proc/uptime)
 
+# 获取系统时间
+DATE=$(date)
+
 # 获取IPv4地址
-IPV4=$(curl -s --max-time 2 ip.sb -4 || echo "未知")
+IPV4=$(curl -s --max-time 2 ip.sb -4 || echo "-")
 
 # 获取IPv6地址
-IPV6=$(curl -s --max-time 2 ip.sb -6 || echo "未知")
+IPV6=$(curl -s --max-time 2 ip.sb -6 || echo "-")
+
+# 架构
+CPU_ARCH=$(lscpu | grep "^Architecture:" | awk '{print substr($0, index($0, $2))}')
+
+# CPU名称
+CPU_NAME=$(lscpu | grep "^Model name:" | awk '{print substr($0, index($0, $3))}')
+CPU_BIOS_NAME=$(lscpu | grep "^BIOS Model name:" | awk '{print substr($0, index($0, $4))}')
 
 # CPU数量
-CPU_NUM=$(cat /proc/cpuinfo| grep "processor"| wc -l)
+#CPU_NUM=$(cat /proc/cpuinfo| grep "processor"| wc -l)
+CPU_NUM=$(lscpu | grep "^CPU(s):" | awk '{print substr($0, index($0, $2))}')
+
+# CPU Socket数量
+CPU_SOCKET=$(lscpu | grep "^Socket(s):" | awk '{print substr($0, index($0, $2))}')
+
+# CPU Core per Socket数量
+CPU_CORE_PER_SOCKET=$(lscpu | grep "^Core(s) per socket:" | awk '{print substr($0, index($0, $4))}')
+
+# CPU Thread per Core数量
+CPU_THREAD_PER_CORE=$(lscpu | grep "^Thread(s) per core:" | awk '{print substr($0, index($0, $4))}')
+
+# CPU最小频率
+CPU_MIN_Hz=$(lscpu | grep "^CPU min MHz:" | awk '{print substr($0, index($0, $4))}' | awk '{printf "%.2f",$0/1000}')
+
+# CPU最大频率
+CPU_MAX_Hz=$(lscpu | grep "^CPU max MHz:" | awk '{print substr($0, index($0, $4))}' | awk '{printf "%.2f",$0/1000}')
 
 # 获取内存占用
-MEM_USAGE=$(free -m | sed -n '2p' | awk '{printf "%dM / %dM\n",$3,$2}')
+MEM_USAGE=$(free -m | sed -n '2p' | awk '{printf "%.2fG / %.2fG\n",$3/1024,$2/1024}')
 
 # 获取硬盘使用情况
 DISK_USAGE=$(df -h / | awk 'NR==2 {print $3 " / " $2}')
 
 
-
-echo "-------------------------------------"
-echo "  运行时间:  $UPTIME_DAYS 天         "
-echo "  网络地址:  $IPV4 / $IPV6           "
-echo "  CPU数量 :  ${CPU_NUM}C             "
-echo "  内存占用:  $MEM_USAGE              "
-echo "  硬盘容量:  $DISK_USAGE             "
-echo "-------------------------------------"
+echo "-----------------------------------------"
+echo "  Hostname:  $HOSTNAME"
+echo "  Online:    $UPTIME_DAYS days"
+echo "  Date:      $DATE"
+echo "  Network:   $IPV4 / $IPV6"
+echo "  CPU Arch:  ${CPU_ARCH}"
+echo "  CPU Name:  ${CPU_NAME}"
+echo "  CPU BName: ${CPU_BIOS_NAME}"
+echo "  CPU Num:   ${CPU_NUM}T (${CPU_SOCKET}S*${CPU_CORE_PER_SOCKET}C*${CPU_THREAD_PER_CORE}T)"
+echo "  CPU Hz:    ${CPU_MIN_Hz}GHz / ${CPU_MAX_Hz}GHz"
+echo "  Memory:    $MEM_USAGE"
+echo "  Disk:      $DISK_USAGE"
+echo "-----------------------------------------"
 ```
 
 ## 安装Caddy

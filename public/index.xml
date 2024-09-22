@@ -6,8 +6,15 @@
     <description>Recent content on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 Sep 2024 03:00:02 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Sep 2024 21:29:29 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux虚拟串口 Serial port</title>
+      <link>https://blog.akvicor.com/posts/linux/serial_port/</link>
+      <pubDate>Sun, 22 Sep 2024 21:29:29 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/serial_port/</guid>
+      <description>首先安装socat sudo apt-get install socat 启动虚拟串口 socat -d -d pty,raw,echo=0 pty,raw,echo=0 成功后返回以下信息 2024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/13 2024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/14 2024/09/22 21:32:10 socat[1997612] N starting data transfer loop with FDs [5,5] and [7,7] （终端1）监听其中一个串口 cat &amp;lt; /dev/pts/2 （终端2</description>
+    </item>
     <item>
       <title>纯净安装Harbor</title>
       <link>https://blog.akvicor.com/posts/harbor/install/</link>
