@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Source on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/open-source/</link>
+    <description>Recent content in Open Source on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搭建 Hoppscotch</title>
+      <link>https://blog.akvicor.com/posts/opensource/hoppscotch/</link>
+      <pubDate>Sat, 13 Apr 2024 18:19:04 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/opensource/hoppscotch/</guid>
+      <description>官方安装教程 https://docs.hoppscotch.io/documentation/self-host/community-edition/install-and-build Chrome 插件 https://chromewebstore.google.com/detail/hoppscotch-browser-extens/amknoiejhlmhancpahfcfcfhllgkpbld 安装后在插件中添加域名https://post.akvicor.com来启用插件 初始化数据库 在安装成功且访问之前, 需要先初始化数据库, 否则</description>
+    </item>
+    <item>
+      <title>Mathtex</title>
+      <link>https://blog.akvicor.com/posts/opensource/mathtex/</link>
+      <pubDate>Mon, 27 Feb 2023 08:05:42 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/opensource/mathtex/</guid>
+      <description>https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access 安装TexLive，使用 which latex 和 which dvipng 检查是否安装 按照注释中操作 &amp;lt;?php # Place this file in extension directory as Mtag.php # Add the following line to LocalSettings.php: # include &amp;#39;./extensions/Mtag.php&amp;#39;; # Mediawiki will render as LaTeX the code within &amp;lt;m&amp;gt; &amp;lt;/m&amp;gt; tags. $wgExtensionFunctions[] = &amp;#34;wfMtag&amp;#34;; function wfMtag() { global $wgParser; $wgParser-&amp;gt;setHook( &amp;#34;m&amp;#34;, &amp;#34;returnMtagged&amp;#34; ); } function returnMtagged( $code, $argv)</description>
+    </item>
+    <item>
+      <title>LibreSpeed</title>
+      <link>https://blog.akvicor.com/posts/opensource/librespeed/</link>
+      <pubDate>Thu, 17 Nov 2022 08:52:54 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/opensource/librespeed/</guid>
+      <description>Compile from source git clone github.com/librespeed/speedtest-go cd speedtest-go go build -ldflags &amp;#34;-w -s&amp;#34; -trimpath -o speedtest main.go Setting 将settings.toml文件中的assets_path设置为web/assets目录（也可以将assets目录和可执行文</description>
+    </item>
+  </channel>
+</rss>

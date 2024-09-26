@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/git/</link>
+    <description>Recent content in Git on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git 默认对大小写不敏感</title>
+      <link>https://blog.akvicor.com/posts/git/ignorecase/</link>
+      <pubDate>Sun, 14 Apr 2019 21:26:29 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/git/ignorecase/</guid>
+      <description>&lt;p&gt;git 默认不区分文件名大小写&lt;/p&gt;&#xA;&lt;p&gt;当你创建一个文件后,叫 readme.md 写入内容后 提交到线上代码仓库.&lt;/p&gt;&#xA;&lt;p&gt;然后你在本地修改文件名为 Readme.md 接着你去提交,发现代码没有变化.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git status&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;无任何提示信息.&lt;/p&gt;&#xA;&lt;p&gt;其实 git 默认对于文件名大小写是不敏感的,所以上面你修改了首字母大写,但是git 并没有发现代码任何改动.&lt;/p&gt;&#xA;&lt;p&gt;那么如何才能让 git 识别文件名大小写变化.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在U盘中建立自己的私有Git云</title>
+      <link>https://blog.akvicor.com/posts/git/usb_private/</link>
+      <pubDate>Mon, 11 Feb 2019 17:44:58 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/git/usb_private/</guid>
+      <description>&lt;p&gt;安装好的git环境 &lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;在U盘上创建空仓库test.git(我的U盘盘符在PC端是I盘)。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH/Git-连接远程主机错误</title>
+      <link>https://blog.akvicor.com/posts/ssh/known_hosts_changed/</link>
+      <pubDate>Sun, 10 Feb 2019 16:47:57 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/ssh/known_hosts_changed/</guid>
+      <description>在git bash链接远程主机时连接失败 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Someone could be eavesdropping on you right now (man-in-the-middle attack)! It is also possible that a host key has just been changed. The fingerprint for the RSA key sent by the remote host is 51:82:00:1c:7e:6f:ac:ac:de:f1:53:08:1c:7d:55:68. Please contact your system administrator. Add correct</description>
+    </item>
+  </channel>
+</rss>

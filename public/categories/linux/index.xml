@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/linux/</link>
+    <description>Recent content in Linux on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Sep 2024 03:00:02 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux虚拟串口 Serial port</title>
+      <link>https://blog.akvicor.com/posts/linux/serial_port/</link>
+      <pubDate>Sun, 22 Sep 2024 21:29:29 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/serial_port/</guid>
+      <description>首先安装socat sudo apt-get install socat 启动虚拟串口 socat -d -d pty,raw,echo=0 pty,raw,echo=0 成功后返回以下信息 2024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/13 2024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/14 2024/09/22 21:32:10 socat[1997612] N starting data transfer loop with FDs [5,5] and [7,7] （终端1）监听其中一个串口 cat &amp;lt; /dev/pts/2 （终端2</description>
+    </item>
+    <item>
+      <title>VPS Init</title>
+      <link>https://blog.akvicor.com/posts/linux/vps_init/</link>
+      <pubDate>Thu, 29 Aug 2024 21:04:35 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/vps_init/</guid>
+      <description>修改时区 ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime 配置bash命令 alias l=&amp;#39;ls -Al --color=auto&amp;#39; alias ll=&amp;#39;ls -Alh --color=auto&amp;#39; 配置apt源 删除普通用户 userdel -r admin 安装工具 apt update apt install -y systemd-timesyncd vim curl wget gcc g++ git make screen telnet jq bc tcptrack 修改主机名 vim /etc/hosts vim /etc/hostname 配置ssh key mkdir .ssh chmod 600</description>
+    </item>
+    <item>
+      <title>SSH 密钥</title>
+      <link>https://blog.akvicor.com/posts/linux/ssh_key/</link>
+      <pubDate>Sat, 17 Aug 2024 21:11:12 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/ssh_key/</guid>
+      <description>Ed25519算法 ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; 旧算法 ssh-keygen -t rsa -b 4096 -C &amp;#34;your_email@example.com&amp;#34; 设置文件权限 chmod 700 ~/.ssh chmod 600 ~/.ssh/authorized_keys</description>
+    </item>
+    <item>
+      <title>Disable IPV6</title>
+      <link>https://blog.akvicor.com/posts/linux/disable_ipv6/</link>
+      <pubDate>Sat, 03 Aug 2024 22:33:47 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/disable_ipv6/</guid>
+      <description>永久关闭IPV6 编辑grub配置文件/etc/default/grub 修改增加ipv6.disable=1属性 GRUB_CMDLINE_LINUX_DEFAULT=&amp;#34;quiet splash ipv6.disable=1&amp;#34; GRUB_CMDLINE_LINUX=&amp;#34;ipv6.disable=1&amp;#34; 使设置生效 update-grub</description>
+    </item>
+    <item>
+      <title>获取 Debian Version</title>
+      <link>https://blog.akvicor.com/posts/linux/debian_version/</link>
+      <pubDate>Sun, 19 May 2024 15:07:33 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/debian_version/</guid>
+      <description>lsb_release apt-get install lsb-release lsb_release -a issue cat /etc/issue os-release cat /etc/os-release hostnamectl hostnamectl uname uname debian_version cat /etc/debian_version</description>
+    </item>
+    <item>
+      <title>搭建NTP服务器</title>
+      <link>https://blog.akvicor.com/posts/linux/ntp/</link>
+      <pubDate>Sun, 12 May 2024 23:14:12 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/ntp/</guid>
+      <description>为其他设备提供NTP授时服务 # 安装NTP服务 apt-get install ntp # 编辑配置文件, pool 后替换为想要的ntp地址 vim /etc/ntpsec/ntp.conf # 重启NTP服务 systemctl status ntp systemctl restart ntp # 检查NTP同步功能 ntpq -p # 开放UDP</description>
+    </item>
+    <item>
+      <title>指纹识别 Fingerprint</title>
+      <link>https://blog.akvicor.com/posts/linux/fingerprint/</link>
+      <pubDate>Fri, 26 Apr 2024 11:35:09 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/fingerprint/</guid>
+      <description>Debian指纹识别 # 安装 sudo apt install fprintd # 录入 (录入5次后会显示completed) sudo fprintd-enroll # 识别 sudo fprintd-verify</description>
+    </item>
+    <item>
+      <title>Synergy 多设备鼠标键盘共享</title>
+      <link>https://blog.akvicor.com/posts/linux/synergy/</link>
+      <pubDate>Mon, 11 Mar 2024 14:38:52 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/synergy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debian 触摸板 Touchpad</title>
+      <link>https://blog.akvicor.com/posts/linux/touchpad/</link>
+      <pubDate>Tue, 06 Feb 2024 07:59:59 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/touchpad/</guid>
+      <description>使触摸板敲击（不是按压）时也产生左键事件 sudo apt install xserver-xorg-input-synaptics sudo vim /etc/X11/xorg.conf.d/50-synaptics.conf 在文件中添加以下内容 Section &amp;#34;InputClass&amp;#34; Identifier &amp;#34;touchpad catchall&amp;#34; Driver &amp;#34;synaptics&amp;#34; MatchIsTouchpad &amp;#34;on&amp;#34; Option &amp;#34;TapButton1&amp;#34; &amp;#34;1&amp;#34; #单指敲击产生左键事件 Option &amp;#34;TapButton2&amp;#34; &amp;#34;2&amp;#34; #双指敲击产生中键事件 Option &amp;#34;TapButton3&amp;#34; &amp;#34;3&amp;#34; #三指</description>
+    </item>
+    <item>
+      <title>Pake: 打包网页为桌面端应用</title>
+      <link>https://blog.akvicor.com/posts/linux/pake_webpage_into_desktop_app/</link>
+      <pubDate>Thu, 04 Jan 2024 13:23:19 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/pake_webpage_into_desktop_app/</guid>
+      <description>https://github.com/tw93/Pake/tree/master 安装程序 npm install pake-cli -g 安装依赖 sudo apt install libwebkit2gtk-4.0-dev \ build-essential \ curl \ wget \ file \ libssl-dev \ libgtk-3-dev \ libayatana-appindicator3-dev \ librsvg2-dev # 安装rust curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh 打包网站 # 打包为appimage可执行程序 pake https://ha.akvicor.com --name &amp;#34;ha&amp;#34; --targets appimage</description>
+    </item>
+    <item>
+      <title>Nvidia 显卡驱动</title>
+      <link>https://blog.akvicor.com/posts/linux/nvidia/</link>
+      <pubDate>Wed, 03 Jan 2024 20:25:07 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/nvidia/</guid>
+      <description>Nvidia 驱动在Linux下, 必须安装 Xorg 查看显卡信息 lspci -k | grep -EA3 &amp;#39;VGA|3D|Display&amp;#39; lspci | grep VGA lspci | grep -i nvidia # 查看指定显卡的详细信息用以下指令 lspci -v -s 00:0f.0 # Nvidia自带一个命令行工具可以查看显存</description>
+    </item>
+    <item>
+      <title>Keyboard rate</title>
+      <link>https://blog.akvicor.com/posts/linux/keyboard_rate/</link>
+      <pubDate>Wed, 03 Jan 2024 19:20:43 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/keyboard_rate/</guid>
+      <description>修改键盘重复频率和延迟 XServer startup options As alternative to this tool, you can set defaults for the X Server at startup. For the keyboard repeat rate: /etc/X11/xinit/xserverrc X -ardelay 200 -arinterval 30 # (interval is 1000/rate_in_hz) For this to configure, you need the privileges to edit X launch properties (probably in your login tool like lightdm). XServer configuration file XServer since version 21.1.0 supports the option AutoRepeat. Basically you need an xorg</description>
+    </item>
+    <item>
+      <title>屏幕保护、息屏</title>
+      <link>https://blog.akvicor.com/posts/linux/screen/</link>
+      <pubDate>Wed, 03 Jan 2024 17:29:44 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/screen/</guid>
+      <description>可以使用xset命令进行操作 xset dpms force off # 关闭屏幕 xset s 300 #设置屏保时间为300秒，时间单位为秒 xset s 0 #关闭屏幕保护 xset dpms 600 900 1200 # 三个数值分别为Standby、Susp</description>
+    </item>
+    <item>
+      <title>PPTP VPN</title>
+      <link>https://blog.akvicor.com/posts/linux/pptp_vpn/</link>
+      <pubDate>Fri, 29 Dec 2023 13:35:12 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/pptp_vpn/</guid>
+      <description># 安装PPTP客户端 apt-get install pptp-linux 编辑配置文件 vim /etc/ppp/chap-secrets # Secrets for authentication using CHAP # client server secret IP addresses your_username PPTP your_password home.akvicor.com 在 /etc/ppp/peers/ 下新建一个VPN配置文件，文件名就是VPN的名字 vim /etc/ppp/peers/PPTP pty &amp;#34;pptp home.akvicor.com --nolaunchpppd&amp;#34; name Akvicor remotename PPTP require-mppe-128 file /etc/ppp/options.pptp ipparam PPTP 添加</description>
+    </item>
+    <item>
+      <title>使用find和rm搜索并删除文件</title>
+      <link>https://blog.akvicor.com/posts/linux/search_and_delete/</link>
+      <pubDate>Tue, 19 Sep 2023 14:27:37 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/search_and_delete/</guid>
+      <description>删除指定目录下指定文件 find /path -name .svn | xargs rm -rf 删除指定名称的文件或文件夹: find -type d | grep .svn$ | xargs rm -r 分析： find -type d | grep .svn$ 通过此命令查找文件夹 过滤正则表达式中的目录 | xargs rm -r 执行删</description>
+    </item>
+    <item>
+      <title>X11VNC Srver</title>
+      <link>https://blog.akvicor.com/posts/linux/x11vnc_server/</link>
+      <pubDate>Wed, 09 Aug 2023 14:46:18 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/x11vnc_server/</guid>
+      <description>安装配置 # 安装x11vnc apt install x11vnc # 设置开机自动启动连接密码,将密码储存在/etc/x11vnc.pass 下 x11vnc -storepasswd /etc/x11vnc.pass 查看认证服务 ps wwwwaux | grep auth 类似以下信息中的/var/</description>
+    </item>
+    <item>
+      <title>rsync 文件夹同步</title>
+      <link>https://blog.akvicor.com/posts/linux/rsync/</link>
+      <pubDate>Mon, 29 May 2023 09:54:45 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/rsync/</guid>
+      <description>描述 cp和scp是ubuntu中文件拷贝常用的两个命令，一般在同一台服务器上我们是用cp命令，跨服务时使用过scp命令，但是如果做文件同步的话，rsync要比上</description>
+    </item>
+    <item>
+      <title>Fail2ban</title>
+      <link>https://blog.akvicor.com/posts/linux/fail2ban/</link>
+      <pubDate>Thu, 11 May 2023 12:23:18 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/fail2ban/</guid>
+      <description>安装 Fail2ban apt-get install fail2ban Fail2ban 默认启用 ssh 的过滤器，可以在 /etc/fail2ban/jail.conf 查看，但是 Fail2ban 更新会覆盖此文件，建议复制一个 jail.local 进行编辑。 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local 此后建议编辑 jail.local 对于 jail.local，你能找到许多 unit 例如</description>
+    </item>
+    <item>
+      <title>Resize Partition</title>
+      <link>https://blog.akvicor.com/posts/linux/resize_partition/</link>
+      <pubDate>Thu, 04 May 2023 13:43:24 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/resize_partition/</guid>
+      <description>1.卸载磁盘 umount -l /data 若提示磁盘忙，使用fuser找出将正在使用磁盘的程序并结束掉。 fuser -m -v /data fuser -m -v -i -k /data 2.磁盘分区 使用fdisk命令重新调整磁盘分区大小 fdisk -l fdisk /dev/sdb p</description>
+    </item>
+    <item>
+      <title>增加SWAP分区</title>
+      <link>https://blog.akvicor.com/posts/linux/swap/</link>
+      <pubDate>Thu, 04 May 2023 09:22:13 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/swap/</guid>
+      <description>一般来说可以按照如下规则设置swap大小： 4G以内的物理内存，SWAP 设置为内存的2倍。 4-8G的物理内存，SWAP 等于内存大小。 8-64G 的物理内存，SWAP 设置为8</description>
+    </item>
+    <item>
+      <title>Music Player Control</title>
+      <link>https://blog.akvicor.com/posts/linux/music_player_control/</link>
+      <pubDate>Wed, 22 Mar 2023 11:21:42 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/music_player_control/</guid>
+      <description>通过命令行控制软件的声音 安装 sudo apt install playerctl 使用 控制当前 playerctl play playerctl pause playerctl play-pause # toggle playerctl stop playerctl next playerctl previous playerctl volume 控制指定软件 获取软件列表 playerctl status -l 控制指定软件，如网易云音乐 playerctl --player=netease-cloud-music play-pause</description>
+    </item>
+    <item>
+      <title>Fstab</title>
+      <link>https://blog.akvicor.com/posts/linux/fstab/</link>
+      <pubDate>Wed, 08 Mar 2023 08:21:29 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/fstab/</guid>
+      <description>系统挂载的一些限制 根目录/是必须挂载的，而且一定要先于其他mount point被挂载进来。 其他挂载点必须为已新建的目录，可任意指定，但一定要遵守必需的系统目录架</description>
+    </item>
+    <item>
+      <title>Creating ISO images with dd and mkisofs</title>
+      <link>https://blog.akvicor.com/posts/linux/create_iso_images/</link>
+      <pubDate>Mon, 27 Feb 2023 07:10:15 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/create_iso_images/</guid>
+      <description>IMG file Make dd if=/dev/zero of=fdimage.img count=2880 # or dd if=/dev/zero of=fdimage.img bs=1024 count=1440 Format mkfs.msdos fdimage.img Mount mount -o loop *.img /mnt Bootable 因为制作可启动镜像一定会用到虚拟机，推荐用 Virtualbox，先到网上下个 DOS 启动盘来引导。用 DOS 的 sys 命令传递系统</description>
+    </item>
+    <item>
+      <title>Create Systemd Service Unit</title>
+      <link>https://blog.akvicor.com/posts/linux/service/</link>
+      <pubDate>Mon, 27 Feb 2023 07:01:47 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/service/</guid>
+      <description>文件所在路径 vim /usr/lib/systemd/system/SERVICE_NAME.service 服务模板 [Unit] Description=Viry Service After=network.target auditd.service [Service] User=root Type=oneshot RemainAfterExit=true ExecStart=/viry/serv/serv.sh ExecStop=/bin/true [Install] WantedBy=multi-user.target Alias=viry.service serv.sh #!/bin/bash echo &amp;#34;Sync Time&amp;#34; ntpdate 172.16.1.1 hwclock -w TIME=$(TZ=UTC-8 date &amp;#34;+%Y-%m-%d %H:%M:%S&amp;#34;) LOG=&amp;#34;/viry/serv/serv.log&amp;#34; echo &amp;#34;Ready&amp;#34; echo &amp;#34;&amp;#34; &amp;gt;&amp;gt; $LOG echo $TIME &amp;gt;&amp;gt; $LOG echo &amp;#34;Start DEMO&amp;#34; echo &amp;#34;Start DEMO&amp;#34; &amp;gt;&amp;gt; $LOG sh /viry/serv/demo/demo.sh echo &amp;#34;Finished&amp;#34; echo &amp;#34;Finished&amp;#34; &amp;gt;&amp;gt; $LOG demo.sh #!/bin/bash cd /viry/serv/demo/exec/ screen_name=&amp;#34;demo&amp;#34; screen -s /usr/bin/bash -dmS $screen_name cmd1=&amp;#34;&amp;#34; cmd2=&amp;#34;./demo&amp;#34; screen -x</description>
+    </item>
+    <item>
+      <title>Xterm</title>
+      <link>https://blog.akvicor.com/posts/linux/xterm/</link>
+      <pubDate>Wed, 15 Feb 2023 12:10:02 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/xterm/</guid>
+      <description>vim ~/.Xresource 填写配置 xterm.termName: xterm-256color xterm*locale:true xterm.utf8: true xterm*utf8Title: true !fix alt key input !xterm*eightBitInput: false !xterm*altSendsEscape: true !xterm*scrollBar: true !xterm*rightScrollBar: true xterm*SaveLines: 4096 !xterm*background: black !xterm*foreground: green xterm*printAttributes: 0 xterm*printerCommand: cat &amp;gt; ~/xtermdump !xterm*VT100.translations: #override &amp;lt;Btn1UP&amp;gt;: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) xterm*VT100.translations: #override \ Ctrl &amp;lt;KeyPress&amp;gt; V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\ &amp;lt;BtnUp&amp;gt;: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\ Ctrl &amp;lt;KeyPress&amp;gt; P: print() \n xterm*faceName: Ubuntu Bold:antialias=True:pixelsize=12 xterm*faceNameDoublesize:Noto Sans Mono CJK SC:antialias=True:pixelsize=12</description>
+    </item>
+    <item>
+      <title>Sudo</title>
+      <link>https://blog.akvicor.com/posts/linux/sudo/</link>
+      <pubDate>Wed, 15 Feb 2023 12:09:06 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/sudo/</guid>
+      <description>apt install sudo cd /etc/sudoers.d vim user # Akvicor ALL=(ALL)NOPASSWD:ALL </description>
+    </item>
+    <item>
+      <title>Ufw</title>
+      <link>https://blog.akvicor.com/posts/linux/ufw/</link>
+      <pubDate>Wed, 15 Feb 2023 12:07:54 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/ufw/</guid>
+      <description>https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97 安装 默认UFW的规则是放通全部端口 apt-get install ufw 设置默认规则 首先设置拒绝所有传入并允许所有传出。 请勿运行以下命令后直接应用，否则会直接锁定你的服务器。确保在应用默认规</description>
+    </item>
+    <item>
+      <title>Networking timeout</title>
+      <link>https://blog.akvicor.com/posts/linux/networking_timeout/</link>
+      <pubDate>Wed, 15 Feb 2023 12:03:23 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/networking_timeout/</guid>
+      <description>1 vim /etc/systemd/system/network-online.target.wants/networking.service TimeoutStartSec=2sec 2 vim /etc/dhcp/dhclient.conf timeout 15 1 change auto eth0 to allow-hotplug eth0</description>
+    </item>
+    <item>
+      <title>Analyzeblame</title>
+      <link>https://blog.akvicor.com/posts/linux/analyzeblame/</link>
+      <pubDate>Wed, 15 Feb 2023 12:02:41 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/analyzeblame/</guid>
+      <description>开机时间 systemd-analyze</description>
+    </item>
+    <item>
+      <title>Netstat</title>
+      <link>https://blog.akvicor.com/posts/linux/netstat/</link>
+      <pubDate>Wed, 15 Feb 2023 12:01:26 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/netstat/</guid>
+      <description># 查看系统tcp连接中各个状态的连接数。 netstat -an|awk &amp;#39;/^tcp/ {++s[$NF]} END {for(a in s ) print a,s[a]}&amp;#39; # 查看和本机23端口建立连接并状态在established的所有ip netstat -an|grep 80|grep ESTA|awk &amp;#39;{print $5}&amp;#39;|awk &amp;#39;BEGIN {FS=&amp;#34;:&amp;#34;} {print $1 &amp;#34;\n&amp;#34;}&amp;#39;|sort|uniq -c</description>
+    </item>
+    <item>
+      <title>Iptables deny ip</title>
+      <link>https://blog.akvicor.com/posts/linux/iptables_deny_ip/</link>
+      <pubDate>Wed, 15 Feb 2023 11:28:58 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/iptables_deny_ip/</guid>
+      <description>only permit china ip systemctl stop firewalld.service systemctl disable firewalld.service yum install ipset yum install iptables-services 清空之前的规则 iptables -P INPUT ACCEPT iptables -F 创建一个名为cnip的规则 ipset -N cnip hash:net ipset save # 下载国家IP段，这里以中国为例 wget -P . http://www.ipdeny.com/ipblocks/data/countries/cn.zone # 将IP段添加到cnip</description>
+    </item>
+    <item>
+      <title>Debian 笔记本合盖和电源键作用</title>
+      <link>https://blog.akvicor.com/posts/linux/logind/</link>
+      <pubDate>Wed, 15 Feb 2023 11:23:37 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/logind/</guid>
+      <description>取消笔记本合盖后挂起 vim /etc/systemd/logind.conf 修改 # HandleLidSwitch=suspend HandleLidSwitch=ignore # HandlePowerKey=poweroff HandlePowerKey=ignore 修改屏幕保护</description>
+    </item>
+    <item>
+      <title>GDB Usage</title>
+      <link>https://blog.akvicor.com/posts/linux/gdb/</link>
+      <pubDate>Wed, 15 Feb 2023 11:20:25 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/gdb/</guid>
+      <description>连接远程调试 target remote localhost:1234 查看内存 x/&amp;lt;n/f/u&amp;gt; &amp;lt;addr&amp;gt; x /8xb 0xffff80000002fff0 # 以16进制方式查看0xffff80000002fff0处8字节内容 n 从当前地址往后请求的字节数，如果不指定的话，GDB默认</description>
+    </item>
+    <item>
+      <title>APT key deprecated</title>
+      <link>https://blog.akvicor.com/posts/linux/apt_key_deprecated/</link>
+      <pubDate>Wed, 15 Feb 2023 11:17:01 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/apt_key_deprecated/</guid>
+      <description>curl -s URL | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/NAME.gpg --import sudo chmod 644 /etc/apt/trusted.gpg.d/NAME.gpg google-chrome curl -s https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/google_linux_signing_key.gpg --import sudo chmod 644 /etc/apt/trusted.gpg.d/google_linux_signing_key.gpg </description>
+    </item>
+    <item>
+      <title>Alsa</title>
+      <link>https://blog.akvicor.com/posts/linux/alsa/</link>
+      <pubDate>Wed, 15 Feb 2023 10:46:31 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/alsa/</guid>
+      <description>声音控制 apt install alsa-tools amixer set &amp;#39;Master&amp;#39; unmute 更换默认card 找到对应card序号 cat /proc/asound/cards 创建此文件 /etc/asound.conf 添加以下内容 # 1 应改为对应card序号 defaults.pcm.card 1 defaults.ctl.card 1 查看cardID或名字 # 列出映射设备 aplay -l</description>
+    </item>
+    <item>
+      <title>Debian Zoneinfo</title>
+      <link>https://blog.akvicor.com/posts/linux/zoneinfo/</link>
+      <pubDate>Wed, 15 Feb 2023 10:21:29 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/zoneinfo/</guid>
+      <description># 使用UTC时间 cp /usr/share/zoneinfo/UTC /etc/localtime # 使用GMT-8时间，即北京时间 cp /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime # 查看当前时间 date &amp;#34;+%Y-%m-%d %H:%M:%S&amp;#34; TZ=UTC-8 date +%c%:::z # 同步时间到硬件 hwclock -w</description>
+    </item>
+    <item>
+      <title>Trust CA certificates</title>
+      <link>https://blog.akvicor.com/posts/linux/trust_ca/</link>
+      <pubDate>Thu, 26 Jan 2023 13:42:28 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/trust_ca/</guid>
+      <description>Debian # Debian/Ubuntu/Gentoo # - 安装 sudo cp root_ca.crt /usr/local/share/ca-certificates/root_ca.crt # update-ca-certificates 会添加 /etc/ca-certificates.conf 配置文件中指定的证书 # 另外所有 /usr/local/share/ca-certificates/*.crt 会被列为隐式信任 sudo update-ca-certificates # - 删除 sudo rm /usr/local/share/ca-certificates/root_ca.crt sudo update-ca-certificates --fresh RHEL # CentOS/Fedora/RHEL yum install ca-certificates # 启用动态 CA 配置功能： update-ca-trust force-enable cp root_ca.crt /etc/pki/ca-trust/source/anchors/ update-ca-trust MacOS # 安装</description>
+    </item>
+    <item>
+      <title>File Permission</title>
+      <link>https://blog.akvicor.com/posts/linux/file_permission/</link>
+      <pubDate>Fri, 19 Aug 2022 15:21:16 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/file_permission/</guid>
+      <description>修改文件或目录所有者 # 修改文件的所有者为root chown root &amp;lt;file&amp;gt; # 修改文件的所有者和所有组为root chown root: &amp;lt;file&amp;gt; # 修改文件的所有者为root，所有组为akvicor chown root:akvicor &amp;lt;file&amp;gt; # 修改</description>
+    </item>
+    <item>
+      <title>zsh</title>
+      <link>https://blog.akvicor.com/posts/linux/zsh/</link>
+      <pubDate>Tue, 09 Aug 2022 16:34:16 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/zsh/</guid>
+      <description>oh-my-zsh主题显示执行时间 oh-my-zsh主题显示执行时间 进入主题目录~/.oh-my-zsh/themes 在想要修改的主题文件中添加如下代码： function preexec() {</description>
+    </item>
+    <item>
+      <title>Linux User/Group</title>
+      <link>https://blog.akvicor.com/posts/linux/user_group/</link>
+      <pubDate>Tue, 09 Aug 2022 13:13:57 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/user_group/</guid>
+      <description>概念和相关文件 在 Linux 用户系统中存在两类组。第一类是主要用户组（主组），第二类是附加用户组（附属组）。 主组：也被称为primary group、first group或</description>
+    </item>
+    <item>
+      <title>Usbfs</title>
+      <link>https://blog.akvicor.com/posts/linux/usbfs/</link>
+      <pubDate>Tue, 09 Aug 2022 13:01:01 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/usbfs/</guid>
+      <description>赋予用户组操作usb设备的权限 创建用户组并添加用户到用户组 # 创建用户组 groupadd usbfs # 查看usbfs用户组的id # usbfs:x:1001: cat /dev/group | grep usbfs # 把akvicor添加到用户组 useradd -G usbfs akvicor # 或 vim</description>
+    </item>
+    <item>
+      <title>Debian Install</title>
+      <link>https://blog.akvicor.com/posts/linux/debian/</link>
+      <pubDate>Tue, 09 Aug 2022 12:14:48 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/debian/</guid>
+      <description>Debian安装说明 Debian 源 wget https://paste.akvicor.com/api/106 Debian 12 + i3 修改时区 # 修改时区 ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime # 同步硬件时间 hwclock -w 配置源 curl https://paste.akvicor.com/api/101 &amp;gt; /etc/apt/sources.list # 注释掉不需要用到的源，如 bookworm-proposed-up</description>
+    </item>
+    <item>
+      <title>Linux IP Local Port Range</title>
+      <link>https://blog.akvicor.com/posts/linux/ip_local_port_range/</link>
+      <pubDate>Mon, 08 Aug 2022 14:55:22 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/ip_local_port_range/</guid>
+      <description># 查看当前临时端口的范围 sysctl net.ipv4.ip_local_port_range cat /proc/sys/net/ipv4/ip_local_port_range # 暂时性修改临时端口的范围 echo 1024 65535 &amp;gt; /proc/sys/net/ipv4/ip_local_port_range sysctl -w net.ipv4.ip_local_port_range=&amp;#34;1024 64000&amp;#34; # 永久性修改临时端口范围 vim /etc/sysctl.conf # 编辑此文件并添加下面一行内容 net.ipv4.ip_local_port_range = 1024 65535</description>
+    </item>
+    <item>
+      <title>Xset</title>
+      <link>https://blog.akvicor.com/posts/linux/xset/</link>
+      <pubDate>Mon, 01 Aug 2022 14:33:25 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/xset/</guid>
+      <description>xset:用于设置显示器的各种用户属性选项。如果想要持久化设置，可以将设置写入.xinitrc文件中。 dpms（Display Power Manage System）和屏保是互相作用</description>
+    </item>
+    <item>
+      <title>Debian APT源</title>
+      <link>https://blog.akvicor.com/posts/linux/apt_sources/</link>
+      <pubDate>Thu, 14 Jul 2022 16:07:36 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/apt_sources/</guid>
+      <description>编辑 apt install apt-transport-https ca-certificates vim /etc/apt/sources.list Debian 11 # Official &amp;amp; Contrib &amp;amp; Non-free deb https://deb.debian.org/debian bullseye main contrib non-free deb-src https://deb.debian.org/debian bullseye main contrib non-free deb https://deb.debian.org/debian-security bullseye-security main contrib non-free deb-src https://deb.debian.org/debian-security bullseye-security main contrib non-free deb https://deb.debian.org/debian bullseye-updates main contrib non-free deb-src https://deb.debian.org/debian bullseye-updates main contrib non-free # Backports deb https://deb.debian.org/debian bullseye-backports main contrib non-free deb-src https://deb.debian.org/debian bullseye-backports main contrib non-free Debian 12 # apt install apt-transport-https ca-certificates deb https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware</description>
+    </item>
+    <item>
+      <title>开启SSH服务</title>
+      <link>https://blog.akvicor.com/posts/linux/ssh/</link>
+      <pubDate>Thu, 14 Jul 2022 15:30:03 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/ssh/</guid>
+      <description>安装SSH服务 apt-get install openssh-server 修改SSH配置文件 vim /etc/ssh/sshd_config 配置项 # 监听端口 Port 22 # 监听地址 ListenAddress 0.0.0.0 # 是否允许root用户登录 PermitRootLogin yes # 允许密码认证 PasswordAuthentication yes # 允许密钥认证 PubkeyAuthentication yes # 客户端保活 ClientAliveInterval 60 ClientAliveCountMax</description>
+    </item>
+    <item>
+      <title>Ubuntu Error: ENOSPC:System limit for number of file watchers reached</title>
+      <link>https://blog.akvicor.com/posts/linux/limit_for_number_of_file_watchers_reached/</link>
+      <pubDate>Fri, 03 Jan 2020 09:43:51 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/limit_for_number_of_file_watchers_reached/</guid>
+      <description>&lt;p&gt;Ubuntu Error: ENOSPC:System limit for number of file watchers reached&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xshell登录服务器提示符显示-bash-4.2#解决方法</title>
+      <link>https://blog.akvicor.com/posts/linux/xshell_bash/</link>
+      <pubDate>Sun, 29 Sep 2019 19:21:57 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/xshell_bash/</guid>
+      <description>&lt;p&gt;突然发现root登录的xshell的终端提示符显示的是-bash-4.2# 而不是root@主机名 + 路径的显示方式。搞了半天也不知道为什么出现这种情况。今天终于搞定这个问题，&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

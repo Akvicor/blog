@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/vim/</link>
+    <description>Recent content in Vim on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manual</title>
+      <link>https://blog.akvicor.com/posts/vim/manual/</link>
+      <pubDate>Sun, 21 Apr 2019 23:07:55 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/vim/manual/</guid>
+      <description>&lt;p&gt;Vim手册&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

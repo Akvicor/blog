@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/apache/</link>
+    <description>Recent content in Apache on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 15 Sep 2024 15:40:28 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/apache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>禁止某文件夹内运行PHP脚本、禁止访问文件或目录执行权限的设置方法</title>
+      <link>https://blog.akvicor.com/posts/apache/deny_access_exec/</link>
+      <pubDate>Sun, 29 Sep 2019 16:15:07 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/apache/deny_access_exec/</guid>
+      <description>&lt;p&gt;Apache禁止某文件夹内运行PHP脚本、禁止访问文件或目录执行权限的设置方法&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>添加重定向</title>
+      <link>https://blog.akvicor.com/posts/apache/rewrite/</link>
+      <pubDate>Mon, 11 Feb 2019 17:05:18 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/apache/rewrite/</guid>
+      <description>&lt;p&gt;给使用Appache网站添加重定向&lt;/p&gt;&#xA;&lt;p&gt;在网站根目录下建立&lt;code&gt;.htaccess&lt;/code&gt;文件&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

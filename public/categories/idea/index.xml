@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IDEA on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/idea/</link>
+    <description>Recent content in IDEA on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/idea/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重复代码提醒/Duplicated code fragment</title>
+      <link>https://blog.akvicor.com/posts/idea/duplicated_code/</link>
+      <pubDate>Sat, 06 Jul 2024 19:05:39 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/idea/duplicated_code/</guid>
+      <description>打开设置按照以下路径进入并关闭 Editor -&amp;gt; Inspections -&amp;gt; General -&amp;gt; Duplicated code fragment</description>
+    </item>
+    <item>
+      <title>型参提醒 Inlay hints</title>
+      <link>https://blog.akvicor.com/posts/idea/inlay_hints/</link>
+      <pubDate>Sat, 22 Jun 2024 20:19:09 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/idea/inlay_hints/</guid>
+      <description>打开设置搜索Inlay Hints, 或进入Setting/Editor/Inlay Hints, 按照需要关闭</description>
+    </item>
+    <item>
+      <title>GoLand</title>
+      <link>https://blog.akvicor.com/posts/idea/goland/</link>
+      <pubDate>Fri, 07 Oct 2022 23:11:43 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/idea/goland/</guid>
+      <description>Setting/Tools/Action and Save/Reformat Code: 自动格式化代码 Setting/Tools/Action and Save/Optimize imports: 自动优化import Setting/Editor/Inspections/Go/Code Style issues/Usage of Snake_Case: 关闭SnakeCase变量名 Setting/Editor/General/Code Folding/: 关闭代码折叠</description>
+    </item>
+    <item>
+      <title>IntelliJ IDEA Keymap</title>
+      <link>https://blog.akvicor.com/posts/idea/keymap/</link>
+      <pubDate>Sun, 29 Sep 2019 19:07:57 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/idea/keymap/</guid>
+      <description>&lt;p&gt;此快捷键说明我是翻译官方的快捷键说明的，方便查看，基于PHPStorm的官方Help来翻译的，其他系列的JetBrains软件应该都是一样的道理，其中如有错误，欢迎斧正。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PyCharm不识别turtle下的方法</title>
+      <link>https://blog.akvicor.com/posts/idea/pycharm_turtle/</link>
+      <pubDate>Mon, 27 May 2019 09:26:59 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/idea/pycharm_turtle/</guid>
+      <description>&lt;p&gt;PyCharm和turtle库有冲突，不能自己识别出turtle下的方法&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

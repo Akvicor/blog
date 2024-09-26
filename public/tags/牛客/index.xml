@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>牛客 on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/tags/%E7%89%9B%E5%AE%A2/</link>
+    <description>Recent content in 牛客 on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 15 Sep 2024 15:41:52 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/tags/%E7%89%9B%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second Large Rectangle</title>
+      <link>https://blog.akvicor.com/posts/cf/nc_c882_h/</link>
+      <pubDate>Sun, 21 Jul 2019 21:21:59 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/nc_c882_h/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/882/H&#34;&gt; 牛客-C882 H - Second Large Rectangle &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Equivalent Prefixes</title>
+      <link>https://blog.akvicor.com/posts/cf/nc_c881_a/</link>
+      <pubDate>Sun, 21 Jul 2019 11:09:17 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/nc_c881_a/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/881/A&#34;&gt; 牛客-C881 Equivalent Prefixes &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fraction Comparision</title>
+      <link>https://blog.akvicor.com/posts/cf/nc_c881_j/</link>
+      <pubDate>Sun, 21 Jul 2019 10:46:27 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/nc_c881_j/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/881/J&#34;&gt; 牛客-C881 J - Fraction Comparision &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ABBA</title>
+      <link>https://blog.akvicor.com/posts/cf/nc_c881_e/</link>
+      <pubDate>Sun, 21 Jul 2019 10:34:24 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/nc_c881_e/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/881/E&#34;&gt; 牛客-C881 E - ABBA &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Random Point in Triangle</title>
+      <link>https://blog.akvicor.com/posts/cf/nc_c881_f/</link>
+      <pubDate>Sun, 21 Jul 2019 09:06:12 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/cf/nc_c881_f/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/881/F&#34;&gt; 牛客-C881 F - Random Point in Triangle &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

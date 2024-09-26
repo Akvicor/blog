@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LaTeX on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/latex/</link>
+    <description>Recent content in LaTeX on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown 添加数学公式</title>
+      <link>https://blog.akvicor.com/posts/latex/markdown_math/</link>
+      <pubDate>Mon, 04 Mar 2019 20:26:14 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/latex/markdown_math/</guid>
+      <description>&lt;p&gt;一些扩展的&lt;code&gt;Markdown&lt;/code&gt;语法支持采用&lt;code&gt;LaTex&lt;/code&gt;语法写数学公式，而在网页中使用&lt;code&gt;Mathjax&lt;/code&gt;插件来显示数学公式。&lt;/p&gt;&#xA;&lt;p&gt;本教程介绍&lt;strong&gt;如何在Markdown中书写数学公式&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;插入数学公式&#34;&gt;插入数学公式&lt;/h2&gt;&#xA;&lt;p&gt;在Markdown中插入数学公式的语法是&lt;code&gt;$数学公式$&lt;/code&gt;和&lt;code&gt;$$数学公式$$&lt;/code&gt;。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;行内公式&lt;/strong&gt;是可以让公式在文中与文字或其他东西混编，不独占一行。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

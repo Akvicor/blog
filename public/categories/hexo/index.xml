@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hexo on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/hexo/</link>
+    <description>Recent content in Hexo on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>插入音乐/视频</title>
+      <link>https://blog.akvicor.com/posts/hexo/media/</link>
+      <pubDate>Wed, 27 Nov 2019 18:44:30 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/hexo/media/</guid>
+      <description>&lt;p&gt;Hexo 插件插入音乐/视频&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>支持数学公式</title>
+      <link>https://blog.akvicor.com/posts/hexo/math/</link>
+      <pubDate>Mon, 04 Mar 2019 20:26:14 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/hexo/math/</guid>
+      <description>$ npm install hexo-math --save 在站点配置文件_config.yml中添加： math: engine: &amp;#39;mathjax&amp;#39; # or &amp;#39;katex&amp;#39; mathjax: # src: custom_mathjax_source config: # MathJax config 在 next 主题配置文件中 themes/next-theme/_config.yml 中将 mathJax 设为 true: # MathJax Support mathjax: enable: true per_page: false cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 也可以在文章的开始集成插件</description>
+    </item>
+    <item>
+      <title>Hexo Install</title>
+      <link>https://blog.akvicor.com/posts/hexo/install/</link>
+      <pubDate>Sun, 10 Feb 2019 17:21:19 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/hexo/install/</guid>
+      <description>&lt;p&gt;搭建Hexo并安装Next主题&lt;/p&gt;&#xA;&lt;h2 id=&#34;本地&#34;&gt;本地&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;安装&lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node js&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;安装Hexo命令行工具&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install hexo-cli -g&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;生成一个本地的Hexo项目&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# 创建blog目录，并初始化hexo项目&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hexo init blog&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0086b3&#34;&gt;cd&lt;/span&gt; blog&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# 安装hexo依赖，hexo是基于nodejs开发的，npm是nodejs的包管理工具&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# 启动本地服务，打开localhost:4000测试是否成功&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hexo server&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

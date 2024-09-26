@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mail on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/mail/</link>
+    <description>Recent content in Mail on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/mail/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搭建邮件系统</title>
+      <link>https://blog.akvicor.com/posts/mail/install/</link>
+      <pubDate>Wed, 26 Jun 2024 21:22:50 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/mail/install/</guid>
+      <description>官方docker-compose文件生成 https://setup.mailu.io/2024.06/ 参考博客 https://www.ywbj.cc/?p=929 测试服务器是否开启25端口 telnet smtp.google.com 25 #谷歌邮箱地址 # 或者 telnet smtp.qq.com 25 #腾讯qq邮箱 如果已经开启则会显示Connecte</description>
+    </item>
+  </channel>
+</rss>

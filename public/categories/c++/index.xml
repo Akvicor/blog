@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;输出格式控制</title>
+      <link>https://blog.akvicor.com/posts/cpp/output_control/</link>
+      <pubDate>Tue, 28 May 2019 23:30:37 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/cpp/output_control/</guid>
+      <description>&lt;p&gt;叙述在输出数据时，为简便起见，往往不指定输出的格式，由系统根据数据的类型采取默认的格式，但有时希望数据按指定的格式输出，如要求以十六进制或八进制形式 输出一个 整数，对输出的小数只保留两位小数等。有两种方法可以达到此目的。&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;使用控制符的方法&lt;/li&gt;&#xA;&lt;li&gt;使用流对象的有关成员函数&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>Linux/Unix 环境下实现精确计算程序运行的时间</title>
+      <link>https://blog.akvicor.com/posts/cpp/calculate_program_running_time_in_linux/</link>
+      <pubDate>Mon, 27 May 2019 20:40:06 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/cpp/calculate_program_running_time_in_linux/</guid>
+      <description>&lt;p&gt;写程序时，程序的运行效率很重要，其往往是评价程序优劣性的直接标准。程序运行效率的最简单方法就是计算程序的运行时间。为了提高程序效率，使用适当的方法对程序的各个部分进行运行时间的计算是很有必要的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>添加万能头文件stdc&#43;&#43;.h</title>
+      <link>https://blog.akvicor.com/posts/cpp/stdc&#43;&#43;/</link>
+      <pubDate>Sat, 13 Apr 2019 15:08:08 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/cpp/stdc&#43;&#43;/</guid>
+      <description>&lt;p&gt;在Clion中使用万能头文件bits/stdc++.h&lt;/p&gt;&#xA;&lt;p&gt;大部分OJ都支持bits.stdc++.h头文件，也就是说刷题的时候，不需要include那么多头文件，就&lt;code&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;/code&gt;就能包括几乎所有刷题要用的头文件了。但是Mac上的自带的gcc是不支持这个头文件的，所以就需要自行安装。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

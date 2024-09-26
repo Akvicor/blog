@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/algorithm/</link>
+    <description>Recent content in Algorithm on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 15 Sep 2024 15:22:44 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>堆排序</title>
+      <link>https://blog.akvicor.com/posts/algorithm/heapsort/</link>
+      <pubDate>Thu, 23 Jan 2020 22:29:22 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/heapsort/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;排序算法&lt;/li&gt;&#xA;&lt;li&gt;不稳定排序&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&#xA;    &#xA;        $math_inline$O(n\log(n))$math_inline$&#xA;    &#xA;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>递归实现枚举</title>
+      <link>https://blog.akvicor.com/posts/algorithm/dfs_enum/</link>
+      <pubDate>Tue, 08 Oct 2019 20:49:54 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/dfs_enum/</guid>
+      <description>&lt;p&gt;枚举&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Strange Towers of Hanoi</title>
+      <link>https://blog.akvicor.com/posts/algorithm/strange_tower_of_hanoi/</link>
+      <pubDate>Mon, 30 Sep 2019 07:58:40 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/strange_tower_of_hanoi/</guid>
+      <description>&lt;p&gt;将汉诺塔中的3跟柱子改为4根，求盘子数为1到12时将全部盘子从第一根移动到最后一根需要移动的次数。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>二进制操作</title>
+      <link>https://blog.akvicor.com/posts/algorithm/bit_operation/</link>
+      <pubDate>Sat, 14 Sep 2019 08:42:05 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/bit_operation/</guid>
+      <description>&lt;p&gt;常用二进制操作&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>64位整数乘法</title>
+      <link>https://blog.akvicor.com/posts/algorithm/64bit_multiplication/</link>
+      <pubDate>Fri, 13 Sep 2019 22:26:09 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/64bit_multiplication/</guid>
+      <description>&lt;p&gt;快速乘&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>快速幂 a^b</title>
+      <link>https://blog.akvicor.com/posts/algorithm/quick_pow/</link>
+      <pubDate>Fri, 13 Sep 2019 21:44:30 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/quick_pow/</guid>
+      <description>&lt;p&gt;快速幂&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>容斥原理</title>
+      <link>https://blog.akvicor.com/posts/algorithm/inclusion_exclusion_principle/</link>
+      <pubDate>Thu, 15 Aug 2019 07:31:38 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/inclusion_exclusion_principle/</guid>
+      <description>&lt;p&gt;假设班里有&#xA;&#xA;    &#xA;        $math_inline$10$math_inline$&#xA;    &#xA;&#xA;个学生喜欢数学，&#xA;&#xA;    &#xA;        $math_inline$15$math_inline$&#xA;    &#xA;&#xA;个学生喜欢语文，&#xA;&#xA;    &#xA;        $math_inline$21$math_inline$&#xA;    &#xA;&#xA;个学生喜欢编程，班里至少喜欢一门学科的有多少个学生呢？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>欧拉函数证明</title>
+      <link>https://blog.akvicor.com/posts/algorithm/euler/</link>
+      <pubDate>Tue, 13 Aug 2019 09:25:22 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/euler/</guid>
+      <description>&lt;p&gt;给定任意正整数&#xA;&#xA;    &#xA;        $math_inline$n$math_inline$&#xA;    &#xA;&#xA;，那么在小于等于&#xA;&#xA;    &#xA;        $math_inline$n$math_inline$&#xA;    &#xA;&#xA;的所有正整数之中，有多少个与&#xA;&#xA;    &#xA;        $math_inline$n$math_inline$&#xA;    &#xA;&#xA;构成互质关系？&lt;/p&gt;&#xA;&lt;p&gt;计算这个值的方法就叫做欧拉函数&#xA;&#xA;    &#xA;        $math_inline$\phi(n)$math_inline$&#xA;    &#xA;&#xA;表示：在&#xA;&#xA;    &#xA;        $math_inline$1$math_inline$&#xA;    &#xA;&#xA;到&#xA;&#xA;    &#xA;        $math_inline$n$math_inline$&#xA;    &#xA;&#xA;之中，与n构成互质关系的数的数量。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>狄利克雷卷积</title>
+      <link>https://blog.akvicor.com/posts/algorithm/dirichlet_convolution/</link>
+      <pubDate>Wed, 07 Aug 2019 11:42:03 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/dirichlet_convolution/</guid>
+      <description>&lt;p&gt;Dirichlet卷积&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>莫比乌斯反演</title>
+      <link>https://blog.akvicor.com/posts/algorithm/mobius/</link>
+      <pubDate>Tue, 06 Aug 2019 17:34:22 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/mobius/</guid>
+      <description>&lt;p&gt;莫比乌斯反演是数论中的重要内容，对于一些函数&#xA;&#xA;    &#xA;        $math_inline$f(n)$math_inline$&#xA;    &#xA;&#xA;，如果很难直接求出它的值，而容易求出其倍数和或约数和&#xA;&#xA;    &#xA;        $math_inline$g(n)$math_inline$&#xA;    &#xA;&#xA;，那么可以通过莫比乌斯反演简化运算，求得&#xA;&#xA;    &#xA;        $math_inline$f(n)$math_inline$&#xA;    &#xA;&#xA;的值。&lt;/p&gt;&#xA;&lt;p&gt;开始学习莫比乌斯反演前我们需要一些前置知识：&lt;strong&gt;积性函数、Dirichlet卷积、莫比乌斯函数&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>初等数论四大定理</title>
+      <link>https://blog.akvicor.com/posts/algorithm/wilson_euler_chinese_remainder_fermat_little/</link>
+      <pubDate>Fri, 02 Aug 2019 19:54:53 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/wilson_euler_chinese_remainder_fermat_little/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;威尔逊定理&lt;/li&gt;&#xA;&lt;li&gt;欧拉定理（数论中的欧拉定理）&lt;/li&gt;&#xA;&lt;li&gt;中国剩余定理（又称孙子定理）&lt;/li&gt;&#xA;&lt;li&gt;费马小定理&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>逆元的求法（欧拉定理、阶乘逆元、费马小定理、模质数p的情况）</title>
+      <link>https://blog.akvicor.com/posts/algorithm/factorial_inverse/</link>
+      <pubDate>Thu, 01 Aug 2019 15:58:43 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/factorial_inverse/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;乘法逆元&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>网络流</title>
+      <link>https://blog.akvicor.com/posts/algorithm/flow/</link>
+      <pubDate>Sun, 28 Jul 2019 09:30:32 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/flow/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;最大流&lt;/li&gt;&#xA;&lt;li&gt;最小费用最大流&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>链式前向星</title>
+      <link>https://blog.akvicor.com/posts/algorithm/chain_forward_star/</link>
+      <pubDate>Fri, 26 Jul 2019 11:16:51 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/chain_forward_star/</guid>
+      <description>&lt;p&gt;前向星是一种特殊的边集数组中的每一条边按照起点从小到大排序，如果起点相同就按终点从小到大排序，并记录下某个点为起点的所有边在数组中的起始位置和存储长度，那么前向星就构造好了。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>最大子矩阵</title>
+      <link>https://blog.akvicor.com/posts/algorithm/maximum_submatrix/</link>
+      <pubDate>Mon, 22 Jul 2019 09:04:01 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/maximum_submatrix/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;最大矩阵&lt;/li&gt;&#xA;&lt;li&gt;最大正方形&lt;/li&gt;&#xA;&lt;li&gt;最大子矩阵和&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>直线划分平面</title>
+      <link>https://blog.akvicor.com/posts/algorithm/lines_dividing_planes/</link>
+      <pubDate>Fri, 31 May 2019 20:01:42 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/lines_dividing_planes/</guid>
+      <description>&lt;p&gt;如果一个平面中有n条直线，最多能将平面划分成多少区域。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>判断两个线段相交</title>
+      <link>https://blog.akvicor.com/posts/algorithm/line_intersect/</link>
+      <pubDate>Wed, 29 May 2019 13:20:20 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/line_intersect/</guid>
+      <description>&lt;p&gt;如何判断两条直线是否相交？&lt;/p&gt;&#xA;&lt;p&gt;这很容易。平面直线，无非就是两种关系：相交 或 平行。因此，只需判断它们是否平行即可。而直线平行，等价于它们的斜率相等，只需分别计算出它们的斜率，即可做出判断。&lt;/p&gt;&#xA;&lt;p&gt;但倘若我把“直线”换成“线段”呢——如何判断两条线段是否相交？&lt;/p&gt;&#xA;&lt;p&gt;这就有些难度了。和 直线 不同，线段 是有固定长度的，即使它们所属的两条直线相交，这两条线段也不一定相交。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>素数判定</title>
+      <link>https://blog.akvicor.com/posts/algorithm/prime/</link>
+      <pubDate>Tue, 28 May 2019 23:07:55 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/prime/</guid>
+      <description>&lt;p&gt;所谓素数，是指恰好有两个约数的正整数。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;埃氏筛法&lt;/li&gt;&#xA;&lt;li&gt;区间筛法&lt;/li&gt;&#xA;&lt;li&gt;Miller-Rabin素性测试&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>线段树</title>
+      <link>https://blog.akvicor.com/posts/algorithm/segment_tree/</link>
+      <pubDate>Tue, 28 May 2019 22:21:50 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/segment_tree/</guid>
+      <description>&lt;p&gt;线段树（segment tree），顾名思义， 是用来存放给定区间（segment, or interval）内对应信息的一种数据结构。与树状数组（binary indexed tree）相似，线段树也用来处理数组相应的区间查询（range query）和元素更新（update）操作。与树状数组不同的是，线段树不止可以适用于区间求和的查询，也可以进行区间最大值，区间最小值（Range Minimum/Maximum Query problem）或者区间异或值的查询。&lt;/p&gt;&#xA;&lt;p&gt;对应于树状数组，线段树进行更新（update）的操作为O(logn)，进行区间查询（range query）的操作也为O(logn)。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>最大子列和问题</title>
+      <link>https://blog.akvicor.com/posts/algorithm/maximum_slice/</link>
+      <pubDate>Mon, 27 May 2019 14:45:42 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/maximum_slice/</guid>
+      <description>&lt;p&gt;求取数组中最大连续子序列和，例如给定数组为A={1， 3， -2， 4， -5}， 则最大连续子序列和为&#xA;&#xA;    &#xA;        $math_inline$6$math_inline$&#xA;    &#xA;&#xA;，即 &#xA;&#xA;    &#xA;        $math_inline$1+3+(-2)+4=6$math_inline$&#xA;    &#xA;&#xA; 。&lt;/p&gt;&#xA;&lt;p&gt;方法一共有三种，复杂度分别为 &#xA;&#xA;    &#xA;        $math_inline$O(N^2)$math_inline$&#xA;    &#xA;&#xA;、&#xA;&#xA;    &#xA;        $math_inline$O(NlgN)$math_inline$&#xA;    &#xA;&#xA;、&#xA;&#xA;    &#xA;        $math_inline$O(N)$math_inline$&#xA;    &#xA;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>分解质因数</title>
+      <link>https://blog.akvicor.com/posts/algorithm/integer_factorization/</link>
+      <pubDate>Sun, 26 May 2019 14:55:04 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/integer_factorization/</guid>
+      <description>&lt;p&gt;每个合数都可以写成几个质数相乘的形式，其中每个质数都是这个合数的质因数。如果一个质数是某个数的因数，那么就说这个质数是这个数的质因数。而这个因数一定是一个质数。&lt;/p&gt;&#xA;&lt;p&gt;把一个合数用质因数相乘的形式表示出来，叫做分解质因数。如30=2×3×5 。分解质因数只针对合数。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;质数：&lt;/strong&gt;&#xA;质数（prime number）又称素数，有无限个。&lt;/p&gt;&#xA;&lt;p&gt;质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;合数：&lt;/strong&gt;&#xA;合数指自然数中除了能被1和本身整除外，还能被其他数（0除外）整除的数。与之相对的是质数，而1既不属于质数也不属于合数。最小的合数是4。其中，完全数与相亲数是以它为基础的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>约数定理（约数个数定理，约束和定理）</title>
+      <link>https://blog.akvicor.com/posts/algorithm/sum_of_the_positive_divisors/</link>
+      <pubDate>Sun, 26 May 2019 14:51:38 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/sum_of_the_positive_divisors/</guid>
+      <description>&lt;p&gt;约数个数定理可以计算出一个数约数的个数&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>高精度(Arbitrary-precision arithmetic)</title>
+      <link>https://blog.akvicor.com/posts/algorithm/arbitrary_precision/</link>
+      <pubDate>Thu, 23 May 2019 23:47:35 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/arbitrary_precision/</guid>
+      <description>&lt;p&gt;在运算过程中如果运算结果很大，普通的数据类型无法储存，就需要用到所谓的高精度算法，即用数组来存储整数，并模拟手算的方式进行四则运算。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>KMP 算法</title>
+      <link>https://blog.akvicor.com/posts/algorithm/kmp/</link>
+      <pubDate>Tue, 30 Apr 2019 14:13:35 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/kmp/</guid>
+      <description>&lt;p&gt;Knuth-Morris-Pratt 字符串查找算法，简称为 “KMP算法”，常用于在一个文本串S内查找一个模式串P 的出现位置，这个算法由Donald Knuth、Vaughan Pratt、James H. Morris三人于1977年联合发表，故取这3人的姓氏命名此算法。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>完全数</title>
+      <link>https://blog.akvicor.com/posts/algorithm/perfect_number/</link>
+      <pubDate>Sat, 20 Apr 2019 22:47:56 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/perfect_number/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;完全数&lt;/strong&gt;，又称&lt;strong&gt;完美数&lt;/strong&gt;或&lt;strong&gt;完备数&lt;/strong&gt;，是一些特殊的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E6%95%B0&#34;&gt;自然数&lt;/a&gt;：它所有的真&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%9B%A0%E5%AD%90&#34;&gt;因子&lt;/a&gt;（即除了自身以外的约数）的和，恰好等于它本身，完全数不可能是&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%A5%94%E5%BD%A2%E6%95%B8&#34;&gt;楔形数&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;例如：第一个完全数是6，它有约数1、2、3、6，除去它本身6外，其余3个数相加，1+2+3＝6，恰好等于本身。第二个完全数是28，它有约数1、2、4、7、14、28，除去它本身28外，其余5个数相加，1+2+4+7+14＝28，也恰好等于本身。后面的数是&lt;a href=&#34;https://zh.wikipedia.org/wiki/496&#34;&gt;496&lt;/a&gt;、&lt;a href=&#34;https://zh.wikipedia.org/wiki/8128&#34;&gt;8128&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%8D%81%E9%80%B2%E4%BD%8D&#34;&gt;十进制&lt;/a&gt;的5位数到7位数、9位数、11位数、13到18位数等位数都没有完全数，它们不是&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BA%8F%E6%95%B0&#34;&gt;亏数&lt;/a&gt;就是&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%81%8E%E5%89%A9%E6%95%B8&#34;&gt;过剩数&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Green公式-判断多边形边界曲线顺/逆时针</title>
+      <link>https://blog.akvicor.com/posts/algorithm/green_determine_clockwise/</link>
+      <pubDate>Sun, 14 Apr 2019 10:58:34 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/green_determine_clockwise/</guid>
+      <description>&lt;p&gt;判断一个多边形的边界曲线是否是顺时针或者逆时针&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>动态规划</title>
+      <link>https://blog.akvicor.com/posts/algorithm/dynamic_programming/</link>
+      <pubDate>Fri, 05 Apr 2019 10:41:44 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/dynamic_programming/</guid>
+      <description>&lt;p&gt;背包的状态转换方程 : &#xA;&#xA;    &#xA;        $math_inline$f[i,j] = Max\lbrace f[i-1,j-W_i]+Pi( j &gt;= W_i ),  f[i-1,j] \rbrace$math_inline$&#xA;    &#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&#xA;    &#xA;        $math_inline$f[i,j]$math_inline$&#xA;    &#xA;&#xA;表示在前i件物品中选择若干件放在承重为 j 的背包中，可以取得的最大价值。&#xA;Pi表示第i件物品的价值。&#xA;决策：为了背包中物品总价值最大化，第 i件物品应该放入背包中吗 ？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dijkstra(迪杰斯特拉)算法 单源最短路径算法</title>
+      <link>https://blog.akvicor.com/posts/algorithm/dijkstra/</link>
+      <pubDate>Wed, 03 Apr 2019 20:25:50 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/dijkstra/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2024/09/15/66e67546df179.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&lt;thead&gt;&#xA;&lt;tr&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;path&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;1&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;2&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;3&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;4&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;5&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;6&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;7&lt;/th&gt;&#xA;&lt;th style=&#34;text-align:center&#34;&gt;8&lt;/th&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/thead&gt;&#xA;&lt;tbody&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;∞&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;&#xA;&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;table&gt;&#xA;&lt;thead&gt;&#xA;&lt;tr&gt;&#xA;&lt;th&gt;dis&lt;/th&gt;&#xA;&lt;th&gt;1&lt;/th&gt;&#xA;&lt;th&gt;2&lt;/th&gt;&#xA;&lt;th&gt;3&lt;/th&gt;&#xA;&lt;th&gt;4&lt;/th&gt;&#xA;&lt;th&gt;5&lt;/th&gt;&#xA;&lt;th&gt;6&lt;/th&gt;&#xA;&lt;th&gt;7&lt;/th&gt;&#xA;&lt;th&gt;8&lt;/th&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/thead&gt;&#xA;&lt;tbody&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;估计值&lt;/td&gt;&#xA;&lt;td&gt;0&lt;/td&gt;&#xA;&lt;td&gt;3&lt;/td&gt;&#xA;&lt;td&gt;2&lt;/td&gt;&#xA;&lt;td&gt;3&lt;/td&gt;&#xA;&lt;td&gt;∞&lt;/td&gt;&#xA;&lt;td&gt;∞&lt;/td&gt;&#xA;&lt;td&gt;∞&lt;/td&gt;&#xA;&lt;td&gt;∞&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;code&gt;path&lt;/code&gt;代表地图 例如&lt;code&gt;path[i][j]&lt;/code&gt;代表从&lt;code&gt;i&lt;/code&gt;到&lt;code&gt;j&lt;/code&gt;的距离&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;dis&lt;/code&gt;代表从起点到达&lt;code&gt;i&lt;/code&gt;的距离，开始时初始化为最大，代表无穷远即未连同&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;vis&lt;/code&gt;代表当前节点&lt;code&gt;[i]&lt;/code&gt;是否访问过&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>并查集</title>
+      <link>https://blog.akvicor.com/posts/algorithm/union_find/</link>
+      <pubDate>Sun, 24 Mar 2019 20:55:12 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/union_find/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;并查集&lt;/strong&gt;是一种树型的数据结构，用于处理一些**不交集（Disjoint Sets）&lt;strong&gt;的合并及查询问题。有一个&lt;/strong&gt;联合-查找算法（union-find algorithm）**定义了两个用于此数据结构的操作：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Find：确定元素属于哪一个子集。它可以被用来确定两个元素是否属于同一子集。&lt;/li&gt;&#xA;&lt;li&gt;Union：将两个子集合并成同一个集合。&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>统计字符串中子串数目</title>
+      <link>https://blog.akvicor.com/posts/algorithm/count_substring/</link>
+      <pubDate>Fri, 22 Mar 2019 22:37:09 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/count_substring/</guid>
+      <description>&lt;p&gt;统计一个字符串在另一个字符串中出现的次数，包含重叠和非重叠两种情况&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>欧拉降幂 &amp;&amp; 快速幂</title>
+      <link>https://blog.akvicor.com/posts/algorithm/euler_quick_pow/</link>
+      <pubDate>Mon, 18 Feb 2019 16:52:05 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/algorithm/euler_quick_pow/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;欧拉φ函数&lt;/strong&gt;：在数论中，对正整数n，欧拉函数是小于或等于n的正整数中与n互质的数的数目。此函数以其首名研究者欧拉命名，它又称为φ函数、欧拉商数等。&lt;/p&gt;&#xA;&lt;p&gt;φ(1)=1;  φ(2)=1;  φ(3)=2;  φ(4)=2;  φ(9)=6&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

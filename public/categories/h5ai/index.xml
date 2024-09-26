@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>H5AI on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/h5ai/</link>
+    <description>Recent content in H5AI on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/h5ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>H5ai Install</title>
+      <link>https://blog.akvicor.com/posts/h5ai/install/</link>
+      <pubDate>Mon, 11 Feb 2019 17:09:05 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/h5ai/install/</guid>
+      <description>&lt;p&gt;h5ai是一款功能强大 php 文件目录列表程序，由德国开发者 Lars Jung 主导开发，它提供多种文件目录列表呈现方式，支持多种主流 Web 服务器，例如 Nginx、Apache、Cherokee、Lighttpd 等，支持多国语言，可以使用本程序在线预览文本、图片、音频、视频等。&lt;/p&gt;&#xA;&lt;p&gt;请注意，默认情况下，放到目录下的 .php 文件将会被直接执行，并不以文本显示。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

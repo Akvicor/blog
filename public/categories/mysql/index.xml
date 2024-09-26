@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MySQL on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/mysql/</link>
+    <description>Recent content in MySQL on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL Install</title>
+      <link>https://blog.akvicor.com/posts/mysql/install/</link>
+      <pubDate>Wed, 06 Nov 2019 20:44:19 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/mysql/install/</guid>
+      <description>Ubuntu 18.04 安装MySQL8 Ubuntu 下载 APT 包 CentOS 下载 APT 包 sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb sudo apt update sudo apt install mysql-server # 查看mysql是否安装成功 mysql -u root -p # 查看mysql字符集，mysql8字符集默认为utf-8。 show</description>
+    </item>
+    <item>
+      <title>Manual</title>
+      <link>https://blog.akvicor.com/posts/mysql/manual/</link>
+      <pubDate>Mon, 04 Mar 2019 20:38:32 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/mysql/manual/</guid>
+      <description>&lt;h2 id=&#34;基础&#34;&gt;基础&lt;/h2&gt;&#xA;&lt;h3 id=&#34;数据库database--schema&#34;&gt;数据库（Database / Schema）&lt;/h3&gt;&#xA;&lt;h3 id=&#34;表table&#34;&gt;表（Table）&lt;/h3&gt;&#xA;&lt;p&gt;数据库表是一系列二维数组的集合&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;行&lt;/strong&gt;被称为记录&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;列&lt;/strong&gt;被称为字段&lt;/p&gt;&#xA;&lt;h3 id=&#34;主键primary-key&#34;&gt;主键（Primary Key）&lt;/h3&gt;&#xA;&lt;p&gt;主键又称&lt;strong&gt;主码&lt;/strong&gt;，用于唯一的标识表中的每一条记录。&lt;/p&gt;&#xA;&lt;p&gt;可以定义表中的一列或多列为主键，主键列上不能有两行相同的值，也不能为空&lt;/p&gt;&#xA;&lt;h3 id=&#34;数据库系统&#34;&gt;数据库系统&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;数据库（DataBase / DB）：用于存储数据的地方&lt;/li&gt;&#xA;&lt;li&gt;数据库管理系统（DataBase Management System / DBMS）：用于管理数据库的软件&lt;/li&gt;&#xA;&lt;li&gt;数据库应用程序（DataBase Application）：为了提高数据库系统的处理能力所使用的管理数据库的软件补充。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;sql语言&#34;&gt;SQL语言&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;数据定义语言（DDL）：DROP、CREATE、ALTER&lt;/li&gt;&#xA;&lt;li&gt;数据操作语言（DML）：INSERT、UPDATE、DELETE&lt;/li&gt;&#xA;&lt;li&gt;数据查询语言（DQL）：SELECT&lt;/li&gt;&#xA;&lt;li&gt;数据控制语言（DCL）：GRANT、REVOKE、COMMIT、ROLLBACK&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>恢复MySQL数据库数据</title>
+      <link>https://blog.akvicor.com/posts/mysql/restore/</link>
+      <pubDate>Mon, 11 Feb 2019 17:48:06 +0000</pubDate>
+      <guid>https://blog.akvicor.com/posts/mysql/restore/</guid>
+      <description>&lt;p&gt;这种方法只有在数据文件ibd存在及知道表结构时才能使用&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
