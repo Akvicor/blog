@@ -14,4 +14,14 @@ date: 2022-07-14T10:53:05Z
 
 </div>
 
+## 🔖 *友链*
+
+<div class="bookmark">
+
+友链申请: 发邮件至 akvicor@akvicor.com
+
+- 折腾笔记 https://pbpz.net
+
+</div>
+
 

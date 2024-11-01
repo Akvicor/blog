@@ -151,7 +151,7 @@ enableGitInfo = true
     # hugo server -p=1314
     [params.utterances]
         # 是否启用评论插件
-        active = false
+        active = true
         # 输入你的仓库名称
         repo = "AkvicorEdwards/blog"
         issueTerm = "pathname"
