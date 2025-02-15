@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Air780e on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/tags/air780e/</link>
+    <description>Recent content in Air780e on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Feb 2025 16:59:28 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/tags/air780e/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Air780E&#43;树莓派短信收发平台</title>
+      <link>https://blog.akvicor.com/posts/project/sms/</link>
+      <pubDate>Sat, 15 Feb 2025 16:59:28 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/project/sms/</guid>
+      <description>苦于国内的短信平台都需要指定发送模板, 没法发送高度自定义的消息, 且模板审核过于麻烦, 因此想要自己开发一套用于发送短信的平台 受 此文章 的启发, 决定使用Air780E</description>
+    </item>
+  </channel>
+</rss>

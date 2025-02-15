@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wallet on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/tags/wallet/</link>
+    <description>Recent content in Wallet on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Feb 2025 23:49:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/tags/wallet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wallet 资金管理/订阅管理</title>
+      <link>https://blog.akvicor.com/posts/project/wallet/</link>
+      <pubDate>Sat, 15 Feb 2025 23:49:00 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/project/wallet/</guid>
+      <description>这是一篇指导如何使用和开发Wallet的博客 详细的内容以后再说吧, 今天连着开源了三个项目, 写了三篇博客, 燃尽了 相关项目 https://github.com/Akvicor/wallet 项目本体 界面预览 多用户 自定义银行,货币类</description>
+    </item>
+  </channel>
+</rss>

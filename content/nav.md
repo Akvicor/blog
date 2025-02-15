@@ -5,6 +5,8 @@ type: nav
 date: 2022-07-14T10:53:05Z
 ---
 
+![](https://img.akvicor.com/i/2025/02/16/67b0c8224bb97.gif)
+![](https://img.akvicor.com/i/2025/02/16/67b0c82167416.gif)
 
 <div class="nav">
 

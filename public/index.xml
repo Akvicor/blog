@@ -6,8 +6,29 @@
     <description>Recent content on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 05 Nov 2024 03:00:01 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2025 23:49:00 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wallet 资金管理/订阅管理</title>
+      <link>https://blog.akvicor.com/posts/project/wallet/</link>
+      <pubDate>Sat, 15 Feb 2025 23:49:00 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/project/wallet/</guid>
+      <description>这是一篇指导如何使用和开发Wallet的博客 详细的内容以后再说吧, 今天连着开源了三个项目, 写了三篇博客, 燃尽了 相关项目 https://github.com/Akvicor/wallet 项目本体 界面预览 多用户 自定义银行,货币类</description>
+    </item>
+    <item>
+      <title>MSG 信息发送平台攻略</title>
+      <link>https://blog.akvicor.com/posts/project/msg/</link>
+      <pubDate>Sat, 15 Feb 2025 20:57:00 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/project/msg/</guid>
+      <description>这是一篇指导如何使用和开发MSG的博客 概念介绍 平台: 例如SMS,邮箱,Telegram,微信 Bot: 每个bot都可以支持一个或多个平台, 但每种平台只能绑定一个 通知渠道</description>
+    </item>
+    <item>
+      <title>Air780E&#43;树莓派短信收发平台</title>
+      <link>https://blog.akvicor.com/posts/project/sms/</link>
+      <pubDate>Sat, 15 Feb 2025 16:59:28 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/project/sms/</guid>
+      <description>苦于国内的短信平台都需要指定发送模板, 没法发送高度自定义的消息, 且模板审核过于麻烦, 因此想要自己开发一套用于发送短信的平台 受 此文章 的启发, 决定使用Air780E</description>
+    </item>
     <item>
       <title>Linux虚拟串口 Serial port</title>
       <link>https://blog.akvicor.com/posts/linux/serial_port/</link>
