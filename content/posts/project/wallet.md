@@ -18,7 +18,8 @@ weight: 0
 
 ## 相关项目
 
-- [https://github.com/Akvicor/wallet](https://github.com/Akvicor/wallet) 项目本体
+- [项目代码 Github https://github.com/Akvicor/wallet](https://github.com/Akvicor/wallet)
+- [项目代码 Gitee https://gitee.com/Akvicor/wallet](https://gitee.com/Akvicor/wallet)
 
 ## 界面预览
 

@@ -12,7 +12,8 @@ weight: 0
 
 受 [此文章](https://www.chenxublog.com/2022/10/28/19-9-sms-forwarding-air780e-esp32c3.html) 的启发, 决定使用Air780E和树莓派制作一个能够**接收**和**发送**短信的程序
 
-[项目代码 https://github.com/Akvicor/sms](https://github.com/Akvicor/sms)
+- [项目代码 Github https://github.com/Akvicor/sms](https://github.com/Akvicor/sms)
+- [项目代码 Gitee https://gitee.com/Akvicor/sms](https://gitee.com/Akvicor/sms)
 
 ## 功能
 

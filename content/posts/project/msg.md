@@ -18,7 +18,11 @@ weight: 0
 
 ## 相关项目
 
-- [https://github.com/Akvicor/msg](https://github.com/Akvicor/msg) 项目本体
+- [项目代码 Github https://github.com/Akvicor/msg](https://github.com/Akvicor/msg)
+- [项目代码 Gitee https://gitee.com/Akvicor/msg](https://gitee.com/Akvicor/msg)
+
+相关
+
 - [https://github.com/Akvicor/gmsg](https://github.com/Akvicor/gmsg) 一个Go Mod, 可以快速调用已经搭建的MSG来发送信息
 - [https://github.com/Akvicor/msg-cmd](https://github.com/Akvicor/msg-cmd) 一个命令行应用, 可以快速调用已经搭建的MSG来发送信息
 - [https://github.com/Akvicor/sms](https://github.com/Akvicor/sms) SMS平台, 用来发送短信
