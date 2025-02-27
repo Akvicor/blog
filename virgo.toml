@@ -1,4 +1,4 @@
-baseURL = 'https://blog.kayuki.org/'
+baseURL = 'https://blog.akvicor.com/'
 languageCode = 'zh-cn'
 title = "Akvicor's Blog"
 
@@ -115,9 +115,13 @@ enableGitInfo = true
 
     [params.contact]
         ## 备案号，如果你不想显示，设置为 '' 空即可
-        # icp = ''
+        icp = ''
         ## 备案链接
-        # icplink = '//beian.miit.gov.cn'
+        icplink = '//beian.miit.gov.cn'
+        ## 萌备案号，如果你不想显示，设置为 '' 空即可
+        moeicp = '萌ICP备20250177号'
+        ## 萌备案链接
+        moeicplink = 'https://icp.gov.moe/?keyword=20250177'
         ## e.g. https://weibo.com/u/6867589681
         # weibo = '6867589681'
         ## 微信二维码地址
@@ -126,9 +130,9 @@ enableGitInfo = true
         # zhihu = 'Akvicor'
         ## e.g. https://www.jianshu.com/u/eebcc2974936
         # jianshu = 'eebcc2974936'
-        email = 'akvicor@gmail.com'
-        ## e.g. https://github.com/AkvicorEdwards
-        github = 'AkvicorEdwards'
+        email = 'akvicor@akvicor.com'
+        ## e.g. https://github.com/Akvicor
+        github = 'Akvicor'
         ## e.g. https://space.bilibili.com/12194502
         bilibili = '12194502'
         ## e.g. https://twitter.com/Akvicor
@@ -151,9 +155,9 @@ enableGitInfo = true
     # hugo server -p=1314
     [params.utterances]
         # 是否启用评论插件
-        active = false
+        active = true
         # 输入你的仓库名称
-        repo = "AkvicorEdwards/blog"
+        repo = "Akvicor/blog"
         issueTerm = "pathname"
         theme = "github-light"
         crossorigin = "anonymous"

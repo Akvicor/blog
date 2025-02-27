@@ -1,11 +1,17 @@
 <div class="container-footer">
     <!-- 文档页脚 -->
+    {{ if .Site.Params.contact.moeicp }}
+    <a href="{{ .Site.Params.contact.moeicplink }}" target="_blank">
+        {{ .Site.Params.contact.moeicp }}
+    </a>
+    {{ end }}
+    {{ if .Site.Params.contact.icp }}
     <a href="{{ .Site.Params.contact.icplink }}" target="_blank">
-        {{ with .Site.Params.contact.icp }}
-        {{ . }}
-        {{ else }}
+        {{ .Site.Params.contact.icp }}
+    </a>
+    {{ end }}
+    <a href="/" target="_blank">
         <span class="some">世界一、 幸せな女の子だ<span>
-        {{ end }}
     </a>
     <a id="s" href="/secrets">&nbsp;</a>
     <!-- {{- partial "partials/_media.html" . -}} -->

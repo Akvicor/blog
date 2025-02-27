@@ -1,4 +1,4 @@
-baseURL = "https://blog.kayuki.org/"
+baseURL = "https://blog.akvicor.com"
 languageCode = "en-us"
 title = "Akvicor's Blog"
 theme = "archie"
@@ -34,7 +34,7 @@ hasCJKLanguage = true
         # 是否启用评论插件
         active = true
         # 输入你的仓库名称
-        repo = "AkvicorEdwards/blog"
+        repo = "Akvicor/blog"
         issueTerm = "pathname"
         theme = "github-light"
         crossorigin = "anonymous"
