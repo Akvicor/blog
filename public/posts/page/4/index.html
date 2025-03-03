@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 259 篇文章</div>
+        <div class="count">共有 260 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,14 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/gpu_enable/">Linux服务器开启GPU/Emby启用硬件解码</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -182,14 +190,58 @@
                 </div>
                 
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/harbor/install/">纯净安装Harbor</a>
-                    </div>
-                </div>
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
+            <a href="https://blog.akvicor.com/posts/golang/http_get_post/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> HTTP GET/POST <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-01-20
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/golang">Golang</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">接收端 首先我们有这样一段测试代码来接收 POST 请求，并返回其接收到的字段信息。 package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; ) func urlencodedHandler(w http.ResponseWriter, r *http.Request) { err := r.ParseForm() if err != nil { log.Printf(&quot;r.ParseForm(): %v&quot;, err) return } result := &quot;&quot; for k, v := range r.Form { result += fmt.Sprintf(&quot;%s:%v\n&quot;, k, v) } fmt.Fprintf(w,</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/golang/http_get_post/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -692,58 +744,6 @@
 				
 				<div class="read-more">
 				  <a href="/posts/linux/search_and_delete/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/windows/thumbs/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 禁止Windows系统生成Thumbs.db缩略图缓存 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-09-19
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/windows">Windows</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">在Win10系统下，按住键盘的 “Win+R” 组合快捷键，系统将会打开“运行”命令对话窗口。 在打开的运行命令对话框中输入 “gpedit.msc” 命令，然后再点击“</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/thumbs/">查看更多…</a>
 				</div>
 				
             

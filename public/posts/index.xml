@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 17 Feb 2025 03:00:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Mar 2025 21:51:20 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux服务器开启GPU/Emby启用硬件解码</title>
+      <link>https://blog.akvicor.com/posts/linux/gpu_enable/</link>
+      <pubDate>Mon, 03 Mar 2025 21:51:20 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/gpu_enable/</guid>
+      <description>Emby的硬件解码需要订阅才能使用 安装驱动 # 安装显卡驱动 apt install intel-media-va-driver-non-free # 或开源 apt install intel-media-va-driver # 如果上述没有生效, 安装这个(不确定这个起作用没有) apt install i965-va-driver 配置grub vim /etc/default/grub 查看 GRUB_CMDLINE_LINUX 中是</description>
+    </item>
     <item>
       <title>Wallet 资金管理/订阅管理</title>
       <link>https://blog.akvicor.com/posts/project/wallet/</link>

@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 48 篇文章</div>
+        <div class="count">共有 49 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,14 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/gpu_enable/">Linux服务器开启GPU/Emby启用硬件解码</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -182,14 +190,58 @@
                 </div>
                 
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/harbor/install/">纯净安装Harbor</a>
-                    </div>
-                </div>
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
+            <a href="https://blog.akvicor.com/posts/linux/nvidia/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Nvidia 显卡驱动 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-01-03
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">Nvidia 驱动在Linux下, 必须安装 Xorg 查看显卡信息 lspci -k | grep -EA3 'VGA|3D|Display' lspci | grep VGA lspci | grep -i nvidia # 查看指定显卡的详细信息用以下指令 lspci -v -s 00:0f.0 # Nvidia自带一个命令行工具可以查看显存</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/nvidia/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -703,58 +755,6 @@
 		</div>
 	</div>
 </div><div class="summary">通过命令行控制软件的声音 安装 sudo apt install playerctl 使用 控制当前 playerctl play playerctl pause playerctl play-pause # toggle playerctl stop playerctl next playerctl previous playerctl volume 控制指定软件 获取软件列表 playerctl status -l 控制指定软件，如网易云音乐 playerctl &ndash;player=netease-cloud-music play-pause</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/fstab/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Fstab <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-03-08
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">系统挂载的一些限制 根目录/是必须挂载的，而且一定要先于其他mount point被挂载进来。 其他挂载点必须为已新建的目录，可任意指定，但一定要遵守必需的系统目录架</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/fstab/">查看更多…</a>
-				</div>
 				
             
 
