@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 260 篇文章</div>
+        <div class="count">共有 261 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -142,6 +142,14 @@
                 <div class="rec-post">
                     <div class="rec-post-item">
                         <a href="https://blog.akvicor.com/posts/linux/gpu_enable/">Linux服务器开启GPU/Emby启用硬件解码</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/vps/fix_google_cn/">修复Google/Youtube送中</a>
                     </div>
                 </div>
                 
@@ -182,14 +190,58 @@
                 </div>
                 
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/serial_port/">Linux虚拟串口 Serial port</a>
-                    </div>
-                </div>
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
+            <a href="https://blog.akvicor.com/posts/linux/resize_partition/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Resize Partition <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-05-04
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">1.卸载磁盘 umount -l /data 若提示磁盘忙，使用fuser找出将正在使用磁盘的程序并结束掉。 fuser -m -v /data fuser -m -v -i -k /data 2.磁盘分区 使用fdisk命令重新调整磁盘分区大小 fdisk -l fdisk /dev/sdb p</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/resize_partition/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -693,58 +745,6 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 		</div>
 	</div>
 </div><div class="summary">&lt;div class=&quot;wheelPlayer wheelAnimate&quot;&gt; &lt;div&gt;1&lt;/div&gt; &lt;div&gt;2&lt;/div&gt; &lt;div&gt;3&lt;/div&gt; &lt;/div&gt; .wheelPlayer{ padding: 20px 0; margin: auto; width: 350px; } .wheelPlayer div{ position: relative; height: 25px; line-height: 26px; width: 70px; text-align: center; border: 1px solid gray; } .wheelAnimate div{ animation: whellPlayer 9s infinite; -moz-animation: whellPlayer 9s infinite; -webkit-animation: whellPlayer 9s infinite; } .wheelPlayer div:nth-of-type(1){ animation-delay: -6s; -moz-animation-delay: -6s; -webkit-animation-delay: -6s; } .wheelPlayer div:nth-of-type(2){ animation-delay: -3s; -moz-animation-delay: -3s; -webkit-animation-delay: -3s; margin-top: -27px; } .wheelPlayer div:nth-of-type(3){ animation-delay: -0s; -moz-animation-delay: 0s; -webkit-animation-delay: 0s; margin-top: -27px; }</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/js/clipboard/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Clipboard <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-23
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/javascript">JavaScript</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">向剪切板写入 图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能,是异步的 document.body.addEventListener( 'click', async (e) =&gt; { await navigator.clipboard.writeText('Yo') } ) Clipboard.read()用于读取剪切板的数据，也</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/js/clipboard/">查看更多…</a>
-				</div>
 				
             
 

@@ -6,7 +6,7 @@
     <description>Recent content on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 03 Mar 2025 21:51:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Mar 2025 03:00:01 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux服务器开启GPU/Emby启用硬件解码</title>
@@ -14,6 +14,13 @@
       <pubDate>Mon, 03 Mar 2025 21:51:20 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/linux/gpu_enable/</guid>
       <description>Emby的硬件解码需要订阅才能使用 安装驱动 # 安装显卡驱动 apt install intel-media-va-driver-non-free # 或开源 apt install intel-media-va-driver # 如果上述没有生效, 安装这个(不确定这个起作用没有) apt install i965-va-driver 配置grub vim /etc/default/grub 查看 GRUB_CMDLINE_LINUX 中是</description>
+    </item>
+    <item>
+      <title>修复Google/Youtube送中</title>
+      <link>https://blog.akvicor.com/posts/vps/fix_google_cn/</link>
+      <pubDate>Sun, 02 Mar 2025 14:45:23 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/vps/fix_google_cn/</guid>
+      <description>如果IP被Google判定为中国, 可使用此方式修复, 视情况可能需要坚持很久 临时解决方案 访问 google.com 时，地址后加上ncr，即 google.com/ncr （ncr = no country redirect = 无国家/地区重定向） 在谷</description>
     </item>
     <item>
       <title>Wallet 资金管理/订阅管理</title>

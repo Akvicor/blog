@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPS on Akvicor&#39;s Blog</title>
+    <link>https://blog.akvicor.com/categories/vps/</link>
+    <description>Recent content in VPS on Akvicor&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 02 Mar 2025 14:45:23 +0800</lastBuildDate>
+    <atom:link href="https://blog.akvicor.com/categories/vps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复Google/Youtube送中</title>
+      <link>https://blog.akvicor.com/posts/vps/fix_google_cn/</link>
+      <pubDate>Sun, 02 Mar 2025 14:45:23 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/vps/fix_google_cn/</guid>
+      <description>如果IP被Google判定为中国, 可使用此方式修复, 视情况可能需要坚持很久 临时解决方案 访问 google.com 时，地址后加上ncr，即 google.com/ncr （ncr = no country redirect = 无国家/地区重定向） 在谷</description>
+    </item>
+  </channel>
+</rss>
