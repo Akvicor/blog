@@ -23,11 +23,11 @@
       <description>由于css中限制了标签的宽高, 如果标题过长会无法显示, 因此需要修改css中的属性 在virgo/assets/scss/partials/content/nav.</description>
     </item>
     <item>
-      <title>添加评论功能</title>
+      <title>添加评论功能 utterances和isso</title>
       <link>https://blog.akvicor.com/posts/hugo/add_comment/</link>
       <pubDate>Sat, 02 Mar 2024 17:48:55 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/hugo/add_comment/</guid>
-      <description>找到主题的layouts/_default/single.html文件 在{{ define &amp;quot;main&amp;quot; }}后面添加以下内容 {{ $IsNav := eq .Title &amp;#34;Nav&amp;#34;}} {{ $IsSearch := eq .Title &amp;#34;Search&amp;#34;}} {{ $IsArchive := eq .Title &amp;#34;Archive&amp;#34;}} {{ $IsAbout := eq .Title &amp;#34;About&amp;#34;}} {{ $IsSecrets := eq .Section &amp;#34;secrets&amp;#34;}}</description>
+      <description>utterances和isso两种评论系统搭建 isso 自建 数据存储在本地, 方便备份迁移 无需登陆 可配置审核等 搭建isso services: isso: container_name: isso image: ghcr.io/isso-comments/isso:release ports: - &amp;#34;8080:8080&amp;#34; restart: always volumes: - &amp;#34;/app/isso/data/config:/config&amp;#34; - &amp;#34;/app/isso/data/db:/db&amp;#34; 配置: /app/isso/data/config/isso.cfg # Isso example configuration</description>
     </item>
     <item>
       <title>Hide And Seek</title>

@@ -78,6 +78,10 @@
         {{- partial "partials/_comment.html" . -}}
     {{ end }}
 
+    {{ if and .IsPage $IsPostPage (not $IsSecrets) .Site.Params.isso.active (not $IS_DEV_ENV) }}
+        {{- partial "partials/_isso.html" . -}}
+    {{ end }}
+    
     <!-- {{ if  $IsAbout }}
         {{- partial "partials/_media.html" . -}}
     {{ end }} -->

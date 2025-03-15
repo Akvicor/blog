@@ -150,12 +150,16 @@ enableGitInfo = true
         ## 联系标语，不想显示，可以置空 'Find me via : )'
         slogan = ''
 
+    [params.isso]
+        # 是否启用评论插件
+        active = true
+
     # 在开发环境下（http://localhost:1313/），不再启用评论插件，
     # 如果想在开发环境下启用它，修改服务端口即可，如下
     # hugo server -p=1314
     [params.utterances]
         # 是否启用评论插件
-        active = true
+        active = false
         # 输入你的仓库名称
         repo = "Akvicor/blog"
         issueTerm = "pathname"

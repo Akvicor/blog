@@ -141,7 +141,15 @@
                 
                 <div class="rec-post">
                     <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                        <a href="https://blog.akvicor.com/posts/openwrt/install/">Install OpenWrt/QWRT</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
                     </div>
                 </div>
                 
@@ -157,7 +165,7 @@
                 
                 <div class="rec-post">
                     <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
                     </div>
                 </div>
                 
@@ -190,14 +198,6 @@
                 <div class="rec-post">
                     <div class="rec-post-item">
                         <a href="https://blog.akvicor.com/posts/project/msg/">MSG 信息发送平台攻略</a>
-                    </div>
-                </div>
-                
-            
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/project/wallet/">Wallet 资金管理/订阅管理</a>
                     </div>
                 </div>
                 
@@ -475,7 +475,7 @@
                 <span class="date">
                     
                     
-                    - 2024-09-18
+                    - 2025-03-16
                 </span>
             </div>
             
@@ -608,7 +608,7 @@
             
             <a href="https://blog.akvicor.com/posts/hugo/add_comment/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 添加评论功能 <sup></sup></span>
+                <span> 添加评论功能 utterances和isso <sup></sup></span>
             </a>
 
             
@@ -641,7 +641,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary">找到主题的layouts/_default/single.html文件 在{{ define &quot;main&quot; }}后面添加以下内容 {{ $IsNav := eq .Title &quot;Nav&quot;}} {{ $IsSearch := eq .Title &quot;Search&quot;}} {{ $IsArchive := eq .Title &quot;Archive&quot;}} {{ $IsAbout := eq .Title &quot;About&quot;}} {{ $IsSecrets := eq .Section &quot;secrets&quot;}}</div>
+</div><div class="summary">utterances和isso两种评论系统搭建 isso 自建 数据存储在本地, 方便备份迁移 无需登陆 可配置审核等 搭建isso services: isso: container_name: isso image: ghcr.io/isso-comments/isso:release ports: - &quot;8080:8080&quot; restart: always volumes: - &quot;/app/isso/data/config:/config&quot; - &quot;/app/isso/data/db:/db&quot; 配置: /app/isso/data/config/isso.cfg # Isso example configuration</div>
 				
 				
 				<div class="read-more">
