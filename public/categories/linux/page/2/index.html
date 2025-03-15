@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 49 篇文章</div>
+        <div class="count">共有 52 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,30 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/nfs/">NFS 挂载文件系统</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -178,18 +202,152 @@
                 </div>
                 
             
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
-                
+            <a href="https://blog.akvicor.com/posts/linux/synergy/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Synergy 多设备鼠标键盘共享 <sup></sup></span>
+            </a>
+
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/vps_init/">VPS Init</a>
-                    </div>
-                </div>
-                
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-03-11
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
             
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/touchpad/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Debian 触摸板 Touchpad <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-02-06
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">使触摸板敲击（不是按压）时也产生左键事件 sudo apt install xserver-xorg-input-synaptics sudo vim /etc/X11/xorg.conf.d/50-synaptics.conf 在文件中添加以下内容 Section &quot;InputClass&quot; Identifier &quot;touchpad catchall&quot; Driver &quot;synaptics&quot; MatchIsTouchpad &quot;on&quot; Option &quot;TapButton1&quot; &quot;1&quot; #单指敲击产生左键事件 Option &quot;TapButton2&quot; &quot;2&quot; #双指敲击产生中键事件 Option &quot;TapButton3&quot; &quot;3&quot; #三指</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/touchpad/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/pake_webpage_into_desktop_app/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Pake: 打包网页为桌面端应用 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-01-04
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><a href="https://github.com/tw93/Pake/tree/master">https://github.com/tw93/Pake/tree/master</a> 安装程序 npm install pake-cli -g 安装依赖 sudo apt install libwebkit2gtk-4.0-dev \ build-essential \ curl \ wget \ file \ libssl-dev \ libgtk-3-dev \ libayatana-appindicator3-dev \ librsvg2-dev # 安装rust curl &ndash;proto '=https' &ndash;tlsv1.2 -sSf <a href="https://sh.rustup.rs">https://sh.rustup.rs</a> | sh 打包网站 # 打包为appimage可执行程序 pake <a href="https://ha.akvicor.com">https://ha.akvicor.com</a> &ndash;name &quot;ha&quot; &ndash;targets appimage</div>
+				
+            
+
         </div>
         
     
@@ -604,157 +762,6 @@
 				<div class="read-more">
 				  <a href="/posts/linux/fail2ban/">查看更多…</a>
 				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/resize_partition/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Resize Partition <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-05-04
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">1.卸载磁盘 umount -l /data 若提示磁盘忙，使用fuser找出将正在使用磁盘的程序并结束掉。 fuser -m -v /data fuser -m -v -i -k /data 2.磁盘分区 使用fdisk命令重新调整磁盘分区大小 fdisk -l fdisk /dev/sdb p</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/resize_partition/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/swap/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 增加SWAP分区 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-05-04
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">一般来说可以按照如下规则设置swap大小： 4G以内的物理内存，SWAP 设置为内存的2倍。 4-8G的物理内存，SWAP 等于内存大小。 8-64G 的物理内存，SWAP 设置为8</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/swap/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/music_player_control/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Music Player Control <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-03-22
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">通过命令行控制软件的声音 安装 sudo apt install playerctl 使用 控制当前 playerctl play playerctl pause playerctl play-pause # toggle playerctl stop playerctl next playerctl previous playerctl volume 控制指定软件 获取软件列表 playerctl status -l 控制指定软件，如网易云音乐 playerctl &ndash;player=netease-cloud-music play-pause</div>
 				
             
 

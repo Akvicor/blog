@@ -20,7 +20,7 @@ weight: 0
 echo 0xDEADBEEF > /etc/config/google_fu_mode
 ```
 
-## ShadowSocksR Plus+ 添加Socks5
+## SSRP 添加Socks5
 
 ```shell
 opkg update

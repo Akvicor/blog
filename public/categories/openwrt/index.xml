@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/openwrt/install/</link>
       <pubDate>Sun, 24 Mar 2024 13:41:31 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/openwrt/install/</guid>
-      <description>扩充固件 将.img文件中的分区使用fdisk扩充7G 写入固件 启用魔法 echo 0xDEADBEEF &amp;gt; /etc/config/google_fu_mode ShadowSocksR Plus+ 添加Socks5 opkg update opkg install ipt2socks</description>
+      <description>扩充固件 将.img文件中的分区使用fdisk扩充7G 写入固件 启用魔法 echo 0xDEADBEEF &amp;gt; /etc/config/google_fu_mode SSRP 添加Socks5 opkg update opkg install ipt2socks</description>
     </item>
     <item>
       <title>PPTP VPN</title>

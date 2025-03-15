@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 261 篇文章</div>
+        <div class="count">共有 264 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,30 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/nfs/">NFS 挂载文件系统</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -178,18 +202,157 @@
                 </div>
                 
             
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
-                
+            <a href="https://blog.akvicor.com/posts/linux/iptables_deny_ip/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Iptables deny ip <sup></sup></span>
+            </a>
+
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/vps_init/">VPS Init</a>
-                    </div>
-                </div>
-                
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
             
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">only permit china ip systemctl stop firewalld.service systemctl disable firewalld.service yum install ipset yum install iptables-services 清空之前的规则 iptables -P INPUT ACCEPT iptables -F 创建一个名为cnip的规则 ipset -N cnip hash:net ipset save # 下载国家IP段，这里以中国为例 wget -P . <a href="http://www.ipdeny.com/ipblocks/data/countries/cn.zone">http://www.ipdeny.com/ipblocks/data/countries/cn.zone</a> # 将IP段添加到cnip</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/iptables_deny_ip/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/logind/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Debian 笔记本合盖和电源键作用 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">取消笔记本合盖后挂起 vim /etc/systemd/logind.conf 修改 # HandleLidSwitch=suspend HandleLidSwitch=ignore # HandlePowerKey=poweroff HandlePowerKey=ignore 修改屏幕保护</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/gdb/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> GDB Usage <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">连接远程调试 target remote localhost:1234 查看内存 x/&lt;n/f/u&gt; &lt;addr&gt; x /8xb 0xffff80000002fff0 # 以16进制方式查看0xffff80000002fff0处8字节内容 n 从当前地址往后请求的字节数，如果不指定的话，GDB默认</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/gdb/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -588,157 +751,6 @@
 				
 				<div class="read-more">
 				  <a href="/posts/ssl/alpha_ssl/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/openwrt/enable_https/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Enable HTTPS <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-01-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/openwrt">OpenWrt</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">修改uhttpd配置文件 /etc/config/uhttpd option cert /viry/cert/akvicor.com.crt option key /viry/cert/akvicor.com.key 重启uhttpd服务 /etc/init.d/uhttpd restart</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/trust_ca/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Trust CA certificates <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-01-26
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Debian # Debian/Ubuntu/Gentoo # - 安装 sudo cp root_ca.crt /usr/local/share/ca-certificates/root_ca.crt # update-ca-certificates 会添加 /etc/ca-certificates.conf 配置文件中指定的证书 # 另外所有 /usr/local/share/ca-certificates/*.crt 会被列为隐式信任 sudo update-ca-certificates # - 删除 sudo rm /usr/local/share/ca-certificates/root_ca.crt sudo update-ca-certificates &ndash;fresh RHEL # CentOS/Fedora/RHEL yum install ca-certificates # 启用动态 CA 配置功能： update-ca-trust force-enable cp root_ca.crt /etc/pki/ca-trust/source/anchors/ update-ca-trust MacOS # 安装</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/trust_ca/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/opensource/librespeed/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> LibreSpeed <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-11-17
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/open-source">Open Source</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Compile from source git clone github.com/librespeed/speedtest-go cd speedtest-go go build -ldflags &quot;-w -s&quot; -trimpath -o speedtest main.go Setting 将settings.toml文件中的assets_path设置为web/assets目录（也可以将assets目录和可执行文</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/opensource/librespeed/">查看更多…</a>
 				</div>
 				
             

@@ -6,8 +6,29 @@
     <description>Recent content in Linux on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 04 Mar 2025 03:00:01 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Mar 2025 01:14:41 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSHFS</title>
+      <link>https://blog.akvicor.com/posts/linux/sshfs/</link>
+      <pubDate>Sun, 16 Mar 2025 01:14:41 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/sshfs/</guid>
+      <description>远程挂载目录 安装 apt install sshfs 挂载 sshfs root@10.0.0.4:/storage /mnt/storage -o _netdev,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/root/.ssh/id_ed25519 开机自动挂载 # vim /etc/fstab 10.0.0.4:/storage /mnt/storage fuse.sshfs _netdev,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/root/.ssh/id_ed25519 0 0</description>
+    </item>
+    <item>
+      <title>NFS 挂载文件系统</title>
+      <link>https://blog.akvicor.com/posts/linux/nfs/</link>
+      <pubDate>Sun, 16 Mar 2025 00:57:15 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/nfs/</guid>
+      <description>NFS是一种没有加密的高性能的远程挂载工具, 如果在局域网中可以直接使用, 如果在公网环境下, 可以搭配Wireguard使用 安装 NFS服务器 假设IP: 10.0.0.4 apt install -y nfs-kernel-server 客户</description>
+    </item>
+    <item>
+      <title>Wireguard Mesh 组网</title>
+      <link>https://blog.akvicor.com/posts/linux/wireguard/</link>
+      <pubDate>Fri, 14 Mar 2025 17:07:53 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/linux/wireguard/</guid>
+      <description>有时候服务器之间需要加密传输数据(例如NFS挂载)，为了平衡延迟和速度，可以采用Wireguard来组建一个内网，这样业务数据可以通过内网IP高速和安全的传输 安</description>
+    </item>
     <item>
       <title>Linux服务器开启GPU/Emby启用硬件解码</title>
       <link>https://blog.akvicor.com/posts/linux/gpu_enable/</link>

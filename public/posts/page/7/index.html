@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 261 篇文章</div>
+        <div class="count">共有 264 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,30 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/nfs/">NFS 挂载文件系统</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -178,18 +202,157 @@
                 </div>
                 
             
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
-                
+            <a href="https://blog.akvicor.com/posts/linux/rsync/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> rsync 文件夹同步 <sup></sup></span>
+            </a>
+
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/vps_init/">VPS Init</a>
-                    </div>
-                </div>
-                
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-05-29
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
             
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">描述 cp和scp是ubuntu中文件拷贝常用的两个命令，一般在同一台服务器上我们是用cp命令，跨服务时使用过scp命令，但是如果做文件同步的话，rsync要比上</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/rsync/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/fail2ban/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Fail2ban <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-05-11
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">安装 Fail2ban apt-get install fail2ban Fail2ban 默认启用 ssh 的过滤器，可以在 /etc/fail2ban/jail.conf 查看，但是 Fail2ban 更新会覆盖此文件，建议复制一个 jail.local 进行编辑。 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local 此后建议编辑 jail.local 对于 jail.local，你能找到许多 unit 例如</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/fail2ban/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/openwrt/esxi/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> vmdk for ESXi <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-05-05
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/openwrt">OpenWrt</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">开启SSH 管理 -&gt; 服务 -&gt; TSM-SSH 使用SSH登录到ESXI 修改的固件vmdk大小 cd /vmfs/volumes/datastore1 ls *.vmdk vmkfstools -i openwrt.vmdk 123.vmdk vmkfstools -X 1024M 123.vmdk # 需大于源文件大小 添加硬盘 根据实际情况选择EFI或BIOS引导</div>
+				
+            
+
         </div>
         
     
@@ -594,157 +757,6 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 				<div class="read-more">
 				  <a href="/posts/c/data_structure_alignment/">查看更多…</a>
 				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/create_iso_images/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Creating ISO images with dd and mkisofs <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-27
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">IMG file Make dd if=/dev/zero of=fdimage.img count=2880 # or dd if=/dev/zero of=fdimage.img bs=1024 count=1440 Format mkfs.msdos fdimage.img Mount mount -o loop *.img /mnt Bootable 因为制作可启动镜像一定会用到虚拟机，推荐用 Virtualbox，先到网上下个 DOS 启动盘来引导。用 DOS 的 sys 命令传递系统</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/create_iso_images/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/service/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Create Systemd Service Unit <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-27
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">文件所在路径 vim /usr/lib/systemd/system/SERVICE_NAME.service 服务模板 [Unit] Description=Viry Service After=network.target auditd.service [Service] User=root Type=oneshot RemainAfterExit=true ExecStart=/viry/serv/serv.sh ExecStop=/bin/true [Install] WantedBy=multi-user.target Alias=viry.service serv.sh #!/bin/bash echo &quot;Sync Time&quot; ntpdate 172.16.1.1 hwclock -w TIME=$(TZ=UTC-8 date &quot;+%Y-%m-%d %H:%M:%S&quot;) LOG=&quot;/viry/serv/serv.log&quot; echo &quot;Ready&quot; echo &quot;&quot; &gt;&gt; $LOG echo $TIME &gt;&gt; $LOG echo &quot;Start DEMO&quot; echo &quot;Start DEMO&quot; &gt;&gt; $LOG sh /viry/serv/demo/demo.sh echo &quot;Finished&quot; echo &quot;Finished&quot; &gt;&gt; $LOG demo.sh #!/bin/bash cd /viry/serv/demo/exec/ screen_name=&quot;demo&quot; screen -s /usr/bin/bash -dmS $screen_name cmd1=&quot;&quot; cmd2=&quot;./demo&quot; screen -x</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/service/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/css/carousel/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> CSS-Only Carousel <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-25
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/css">CSS</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">&lt;div class=&quot;wheelPlayer wheelAnimate&quot;&gt; &lt;div&gt;1&lt;/div&gt; &lt;div&gt;2&lt;/div&gt; &lt;div&gt;3&lt;/div&gt; &lt;/div&gt; .wheelPlayer{ padding: 20px 0; margin: auto; width: 350px; } .wheelPlayer div{ position: relative; height: 25px; line-height: 26px; width: 70px; text-align: center; border: 1px solid gray; } .wheelAnimate div{ animation: whellPlayer 9s infinite; -moz-animation: whellPlayer 9s infinite; -webkit-animation: whellPlayer 9s infinite; } .wheelPlayer div:nth-of-type(1){ animation-delay: -6s; -moz-animation-delay: -6s; -webkit-animation-delay: -6s; } .wheelPlayer div:nth-of-type(2){ animation-delay: -3s; -moz-animation-delay: -3s; -webkit-animation-delay: -3s; margin-top: -27px; } .wheelPlayer div:nth-of-type(3){ animation-delay: -0s; -moz-animation-delay: 0s; -webkit-animation-delay: 0s; margin-top: -27px; }</div>
 				
             
 

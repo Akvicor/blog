@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 49 篇文章</div>
+        <div class="count">共有 52 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,30 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/nfs/">NFS 挂载文件系统</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -178,18 +202,158 @@
                 </div>
                 
             
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
-                
+            <a href="https://blog.akvicor.com/posts/linux/usbfs/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Usbfs <sup></sup></span>
+            </a>
+
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/vps_init/">VPS Init</a>
-                    </div>
-                </div>
-                
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-08-09
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
             
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">赋予用户组操作usb设备的权限 创建用户组并添加用户到用户组 # 创建用户组 groupadd usbfs # 查看usbfs用户组的id # usbfs:x:1001: cat /dev/group | grep usbfs # 把akvicor添加到用户组 useradd -G usbfs akvicor # 或 vim</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/usbfs/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/debian/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Debian Install <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-08-09
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">Debian安装说明 Debian 源 wget <a href="https://paste.akvicor.com/api/106">https://paste.akvicor.com/api/106</a> Debian 12 + i3 修改时区 # 修改时区 ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime # 同步硬件时间 hwclock -w 配置源 curl <a href="https://paste.akvicor.com/api/101">https://paste.akvicor.com/api/101</a> &gt; /etc/apt/sources.list # 注释掉不需要用到的源，如 bookworm-proposed-up</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/debian/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/ip_local_port_range/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Linux IP Local Port Range <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-08-08
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><h1 id="查看当前临时端口的范围-sysctl-netipv4ip_local_port_range-cat-procsysnetipv4ip_local_port_range--暂时性修改临时端口的范围-echo-1024-65535-gt-procsysnetipv4ip_local_port_range-sysctl--w-netipv4ip_local_port_range341024-6400034--永久性修改临时端口范围-vim-etcsysctlconf--编辑此文件并添加下面一行内容-netipv4ip_local_port_range--1024-65535">查看当前临时端口的范围 sysctl net.ipv4.ip_local_port_range cat /proc/sys/net/ipv4/ip_local_port_range # 暂时性修改临时端口的范围 echo 1024 65535 &gt; /proc/sys/net/ipv4/ip_local_port_range sysctl -w net.ipv4.ip_local_port_range=&quot;1024 64000&quot; # 永久性修改临时端口范围 vim /etc/sysctl.conf # 编辑此文件并添加下面一行内容 net.ipv4.ip_local_port_range = 1024 65535</h1>
+</div>
+				
+            
+
         </div>
         
     

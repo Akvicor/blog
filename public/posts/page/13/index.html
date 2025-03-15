@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 261 篇文章</div>
+        <div class="count">共有 264 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,30 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/nfs/">NFS 挂载文件系统</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -178,18 +202,171 @@
                 </div>
                 
             
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
-                
+            <a href="https://blog.akvicor.com/posts/archlinux/install/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Arch Linux Installation <sup></sup></span>
+            </a>
+
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/vps_init/">VPS Init</a>
-                    </div>
-                </div>
-                
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2020-02-14
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-15
+                </span>
+            </div>
             
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/arch-linux">Arch Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">Download ISO file <a href="https://www.archlinux.org/download/">https://www.archlinux.org/download/</a>
+<a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/">https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/</a>
+Prepare an installation medium dd bs=4M if=path/to/archlinux.iso of=/dev/sdb status=progress oflag=sync Boot the live environment Connect Network iwctl device list station [device] scan station [device] get-networks station [device] connect SSID # Check ip address # Update the system clock timedatectl set-ntp true timedatectl status Partition the disks lsblk -l cgdisk /dev/sda # Format # EFI <code>ef00</code> # Linux <code>8300</code> # SWAP <code>8200</code> mkfs.ext4 mkfs.vfat mkswap # Mount mount /dev/sda3 /mnt mkdir /mnt/boot mount /dev/sda1 /mnt/boot swapon /dev/sda2 Edit Mirrorlist vim /etc/pacman.</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/archlinux/install/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/algorithm/heapsort/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 堆排序 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2020-01-23
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/algorithm">Algorithm</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><ul>
+<li>排序算法</li>
+<li>不稳定排序</li>
+<li>
+<pre><code>    $math_inline$O(n\log(n))$math_inline$
+</code></pre>
+</li>
+</ul></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/algorithm/heapsort/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/proxy/proxychains/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 通过proxychain在命令行实现魔法 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2020-01-22
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/proxy">Proxy</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">在魔法环境下运行命令行命令，例如 <code>apt-get</code> <code>wget</code> <code>git</code> <code>curl</code></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/proxy/proxychains/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -604,164 +781,6 @@
 				
 				<div class="read-more">
 				  <a href="/posts/php/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/mysql/install/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> MySQL Install <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-11-06
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/mysql">MySQL</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Ubuntu 18.04 安装MySQL8 Ubuntu 下载 APT 包 CentOS 下载 APT 包 sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb sudo apt update sudo apt install mysql-server # 查看mysql是否安装成功 mysql -u root -p # 查看mysql字符集，mysql8字符集默认为utf-8。 show</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/mysql/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/nginx/install/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Nginx Install <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-11-06
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/nginx">Nginx</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Ubuntu 18.04 搭建Nginx服务 安装 Ubuntu可以从源直接安装nginx sudo apt-get update sudo apt-get install nginx 调整防火墙，以免出现各种问题 sudo ufw app list 获得应用程序配置文件的列表： 可用应用程序： CUPS Nginx</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/nginx/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/cf/comentoj_c72_4033/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 「火鼠的皮衣 -不焦躁的内心-」 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-10-28
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/cf">CF</a>
-			
-		</div>
-		<div class="tag">
-			
-			 - 
-			
-			<a href="/tags/comentoj">ComentOJ</a>
-			
-		</div>
-	</div>
-</div><div class="summary"><strong><a href="https://cometoj.com/contest/72/problem/%EF%BC%A4?problem_id=4033"> ComentOJ-C72-4033 「火鼠的皮衣 -不焦躁的内心-」 </a></strong></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/cf/comentoj_c72_4033/">查看更多…</a>
 				</div>
 				
             

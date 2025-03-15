@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 261 篇文章</div>
+        <div class="count">共有 264 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,30 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/nfs/">NFS 挂载文件系统</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -178,18 +202,157 @@
                 </div>
                 
             
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
-                
+            <a href="https://blog.akvicor.com/posts/linux/sshfs/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> SSHFS <sup></sup></span>
+            </a>
+
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/vps_init/">VPS Init</a>
-                    </div>
-                </div>
-                
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2025-03-16
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2025-03-16
+                </span>
+            </div>
             
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">远程挂载目录 安装 apt install sshfs 挂载 sshfs <a href="mailto:root@10.0.0.4">root@10.0.0.4</a>:/storage /mnt/storage -o _netdev,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/root/.ssh/id_ed25519 开机自动挂载 # vim /etc/fstab 10.0.0.4:/storage /mnt/storage fuse.sshfs _netdev,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/root/.ssh/id_ed25519 0 0</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/nfs/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> NFS 挂载文件系统 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2025-03-16
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2025-03-16
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">NFS是一种没有加密的高性能的远程挂载工具, 如果在局域网中可以直接使用, 如果在公网环境下, 可以搭配Wireguard使用 安装 NFS服务器 假设IP: 10.0.0.4 apt install -y nfs-kernel-server 客户</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/nfs/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/wireguard/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Wireguard Mesh 组网 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2025-03-14
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2025-03-14
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">有时候服务器之间需要加密传输数据(例如NFS挂载)，为了平衡延迟和速度，可以采用Wireguard来组建一个内网，这样业务数据可以通过内网IP高速和安全的传输 安</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/wireguard/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -620,152 +783,6 @@
 		</div>
 	</div>
 </div><div class="summary">2024-09-15 网站搬家中… 2024-09-17 部分 传送阵 因为年久失修已经不可使用</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/vps_init/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> VPS Init <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2024-08-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-23
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">修改时区 ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime 配置bash命令 alias l='ls -Al &ndash;color=auto' alias ll='ls -Alh &ndash;color=auto' 配置apt源 删除普通用户 userdel -r admin 安装工具 apt update apt install -y systemd-timesyncd vim curl wget gcc g++ git make screen telnet jq bc tcptrack 修改主机名 vim /etc/hosts vim /etc/hostname 配置ssh key mkdir .ssh chmod 600</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/vps_init/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/ssh_key/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> SSH 密钥 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2024-08-17
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Ed25519算法 ssh-keygen -t ed25519 -C &quot;your_<a href="mailto:email@example.com">email@example.com</a>&quot; 旧算法 ssh-keygen -t rsa -b 4096 -C &quot;your_<a href="mailto:email@example.com">email@example.com</a>&quot; 设置文件权限 chmod 700 ~/.ssh chmod 600 ~/.ssh/authorized_keys</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/hugo/summary/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Summary <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2024-08-11
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/hugo">Hugo</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Summary抽屉，可收起和展开 默认收起 A AAA 默认展开 B BBB</div>
 				
             
 

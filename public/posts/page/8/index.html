@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 261 篇文章</div>
+        <div class="count">共有 264 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,30 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/nfs/">NFS 挂载文件系统</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -178,18 +202,157 @@
                 </div>
                 
             
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
-                
+            <a href="https://blog.akvicor.com/posts/linux/create_iso_images/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Creating ISO images with dd and mkisofs <sup></sup></span>
+            </a>
+
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/vps_init/">VPS Init</a>
-                    </div>
-                </div>
-                
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-27
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
             
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">IMG file Make dd if=/dev/zero of=fdimage.img count=2880 # or dd if=/dev/zero of=fdimage.img bs=1024 count=1440 Format mkfs.msdos fdimage.img Mount mount -o loop *.img /mnt Bootable 因为制作可启动镜像一定会用到虚拟机，推荐用 Virtualbox，先到网上下个 DOS 启动盘来引导。用 DOS 的 sys 命令传递系统</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/create_iso_images/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/service/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Create Systemd Service Unit <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-27
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">文件所在路径 vim /usr/lib/systemd/system/SERVICE_NAME.service 服务模板 [Unit] Description=Viry Service After=network.target auditd.service [Service] User=root Type=oneshot RemainAfterExit=true ExecStart=/viry/serv/serv.sh ExecStop=/bin/true [Install] WantedBy=multi-user.target Alias=viry.service serv.sh #!/bin/bash echo &quot;Sync Time&quot; ntpdate 172.16.1.1 hwclock -w TIME=$(TZ=UTC-8 date &quot;+%Y-%m-%d %H:%M:%S&quot;) LOG=&quot;/viry/serv/serv.log&quot; echo &quot;Ready&quot; echo &quot;&quot; &gt;&gt; $LOG echo $TIME &gt;&gt; $LOG echo &quot;Start DEMO&quot; echo &quot;Start DEMO&quot; &gt;&gt; $LOG sh /viry/serv/demo/demo.sh echo &quot;Finished&quot; echo &quot;Finished&quot; &gt;&gt; $LOG demo.sh #!/bin/bash cd /viry/serv/demo/exec/ screen_name=&quot;demo&quot; screen -s /usr/bin/bash -dmS $screen_name cmd1=&quot;&quot; cmd2=&quot;./demo&quot; screen -x</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/service/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/css/carousel/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> CSS-Only Carousel <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-25
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/css">CSS</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">&lt;div class=&quot;wheelPlayer wheelAnimate&quot;&gt; &lt;div&gt;1&lt;/div&gt; &lt;div&gt;2&lt;/div&gt; &lt;div&gt;3&lt;/div&gt; &lt;/div&gt; .wheelPlayer{ padding: 20px 0; margin: auto; width: 350px; } .wheelPlayer div{ position: relative; height: 25px; line-height: 26px; width: 70px; text-align: center; border: 1px solid gray; } .wheelAnimate div{ animation: whellPlayer 9s infinite; -moz-animation: whellPlayer 9s infinite; -webkit-animation: whellPlayer 9s infinite; } .wheelPlayer div:nth-of-type(1){ animation-delay: -6s; -moz-animation-delay: -6s; -webkit-animation-delay: -6s; } .wheelPlayer div:nth-of-type(2){ animation-delay: -3s; -moz-animation-delay: -3s; -webkit-animation-delay: -3s; margin-top: -27px; } .wheelPlayer div:nth-of-type(3){ animation-delay: -0s; -moz-animation-delay: 0s; -webkit-animation-delay: 0s; margin-top: -27px; }</div>
+				
+            
+
         </div>
         
     
@@ -582,157 +745,6 @@ Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</d
 	</div>
 </div><div class="summary"><h1 id="查看系统tcp连接中各个状态的连接数-netstat--anawk-39tcp-snf-end-fora-in-s--print-asa39--查看和本机23端口建立连接并状态在established的所有ip-netstat--angrep-80grep-estaawk-39print-539awk-39begin-fs3434-print-1-34n3439sortuniq--c">查看系统tcp连接中各个状态的连接数。 netstat -an|awk '/^tcp/ {++s[$NF]} END {for(a in s ) print a,s[a]}' # 查看和本机23端口建立连接并状态在established的所有ip netstat -an|grep 80|grep ESTA|awk '{print $5}'|awk 'BEGIN {FS=&quot;:&quot;} {print $1 &quot;\n&quot;}'|sort|uniq -c</h1>
 </div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/iptables_deny_ip/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Iptables deny ip <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-15
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">only permit china ip systemctl stop firewalld.service systemctl disable firewalld.service yum install ipset yum install iptables-services 清空之前的规则 iptables -P INPUT ACCEPT iptables -F 创建一个名为cnip的规则 ipset -N cnip hash:net ipset save # 下载国家IP段，这里以中国为例 wget -P . <a href="http://www.ipdeny.com/ipblocks/data/countries/cn.zone">http://www.ipdeny.com/ipblocks/data/countries/cn.zone</a> # 将IP段添加到cnip</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/iptables_deny_ip/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/logind/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Debian 笔记本合盖和电源键作用 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-15
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">取消笔记本合盖后挂起 vim /etc/systemd/logind.conf 修改 # HandleLidSwitch=suspend HandleLidSwitch=ignore # HandlePowerKey=poweroff HandlePowerKey=ignore 修改屏幕保护</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/gdb/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> GDB Usage <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-15
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">连接远程调试 target remote localhost:1234 查看内存 x/&lt;n/f/u&gt; &lt;addr&gt; x /8xb 0xffff80000002fff0 # 以16进制方式查看0xffff80000002fff0处8字节内容 n 从当前地址往后请求的字节数，如果不指定的话，GDB默认</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/gdb/">查看更多…</a>
-				</div>
 				
             
 

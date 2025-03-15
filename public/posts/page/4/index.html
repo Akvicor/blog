@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 261 篇文章</div>
+        <div class="count">共有 264 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -137,6 +137,30 @@
         
         <div class="recentf">
             <div class="desc">📅  最近更新 </div>
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/sshfs/">SSHFS</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/nfs/">NFS 挂载文件系统</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard Mesh 组网</a>
+                    </div>
+                </div>
+                
             
                 
                 <div class="rec-post">
@@ -178,18 +202,157 @@
                 </div>
                 
             
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
-                
+            <a href="https://blog.akvicor.com/posts/linux/touchpad/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Debian 触摸板 Touchpad <sup></sup></span>
+            </a>
+
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/vps_init/">VPS Init</a>
-                    </div>
-                </div>
-                
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-02-06
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
             
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">使触摸板敲击（不是按压）时也产生左键事件 sudo apt install xserver-xorg-input-synaptics sudo vim /etc/X11/xorg.conf.d/50-synaptics.conf 在文件中添加以下内容 Section &quot;InputClass&quot; Identifier &quot;touchpad catchall&quot; Driver &quot;synaptics&quot; MatchIsTouchpad &quot;on&quot; Option &quot;TapButton1&quot; &quot;1&quot; #单指敲击产生左键事件 Option &quot;TapButton2&quot; &quot;2&quot; #双指敲击产生中键事件 Option &quot;TapButton3&quot; &quot;3&quot; #三指</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/touchpad/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/docker/registry_delete_img/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 暴力删除registry镜像文件 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-01-29
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/docker">Docker</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">暴力删除registry镜像文件 直接进入这个目录删除仓库 /HHD4/docker/docker_hub/docker/registry/v2/repositories 进入docker实例执行垃圾回收 /bin/registry garbage-collect /etc/docker/registry/config.yml 重启registry</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/golang/gorm/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Gorm 数据库操作 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-01-26
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/golang">Golang</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">RawMessage Scan&amp;Value json.RawMessage 以[]byte形式存储json数据，但在父结构体marshal和unmarshal时不会重复序列化，仅仅将数据复制到新json字符串中 通过继承Scanne</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/golang/gorm/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -593,158 +756,6 @@
 				<div class="read-more">
 				  <a href="/posts/linux/screen/">查看更多…</a>
 				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/pptp_vpn/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> PPTP VPN <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-12-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h1 id="安装pptp客户端-apt-get-install-pptp-linux-编辑配置文件-vim-etcpppchap-secrets--secrets-for-authentication-using-chap--client-server-secret-ip-addresses-your_username-pptp-your_password-homeakvicorcom-在-etcppppeers-下新建一个vpn配置文件文件名就是vpn的名字-vim-etcppppeerspptp-pty-34pptp-homeakvicorcom---nolaunchpppd34-name-akvicor-remotename-pptp-require-mppe-128-file-etcpppoptionspptp-ipparam-pptp-添加">安装PPTP客户端 apt-get install pptp-linux 编辑配置文件 vim /etc/ppp/chap-secrets # Secrets for authentication using CHAP # client server secret IP addresses your_username PPTP your_password home.akvicor.com 在 /etc/ppp/peers/ 下新建一个VPN配置文件，文件名就是VPN的名字 vim /etc/ppp/peers/PPTP pty &quot;pptp home.akvicor.com &ndash;nolaunchpppd&quot; name Akvicor remotename PPTP require-mppe-128 file /etc/ppp/options.pptp ipparam PPTP 添加</h1>
-</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/pptp_vpn/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/ha/install/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Home Assistant Install <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-12-12
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/home-assistant">Home Assistant</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">官方指导链接 <a href="https://github.com/home-assistant/supervised-installer">https://github.com/home-assistant/supervised-installer</a> 安装基础工具 apt update apt upgrade apt install vim screen gcc g++ golang ca-certificates curl gnupg 安装Docker # Add Docker's official GPG key: sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL <a href="https://download.docker.com/linux/debian/gpg">https://download.docker.com/linux/debian/gpg</a> | sudo gpg &ndash;dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a+r /etc/apt/keyrings/docker.gpg # Add the repository to Apt sources: echo \ &quot;deb [arch=$(dpkg</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/ha/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/golang/private_go_module/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 拉取私有Go Module <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-11-30
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/golang">Golang</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">若拉取时提示无法验证包，可以添加以下环境变量以信任此地址 关闭指定域名的包验证 export GONOSUMDB=git.akvicor.com 关闭所有域名的包验证 export GOSUMDB=off</div>
 				
             
 
