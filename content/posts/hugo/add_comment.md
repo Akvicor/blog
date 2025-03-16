@@ -74,7 +74,6 @@ approve-if-email-previously-approved = false
 purge-after = 30d
 
 [smtp]
-# 这边是邮件通知配置，我使用的是163邮件。看字段名基本上不用解释。只有那个from字段有点疑惑，定位了很久。
 host = smtp.xxxx.com
 port = 465
 security = ssl

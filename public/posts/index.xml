@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Akvicor&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 16 Mar 2025 03:00:02 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Mar 2025 04:41:53 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修改Docker容器占用的IP段</title>
+      <link>https://blog.akvicor.com/posts/docker/network/</link>
+      <pubDate>Sun, 16 Mar 2025 04:41:53 +0800</pubDate>
+      <guid>https://blog.akvicor.com/posts/docker/network/</guid>
+      <description>docker默认情况下会使用整个172.16.0.0/12网段, 很明显对于个人用户, docker占用了太多的内网IP, 容易与其他内网网段冲突 1. 停用所有镜像 # 停止</description>
+    </item>
     <item>
       <title>SSHFS</title>
       <link>https://blog.akvicor.com/posts/linux/sshfs/</link>

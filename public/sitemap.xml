@@ -3,15 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.akvicor.com/</loc>
-    <lastmod>2025-03-16T03:00:02+08:00</lastmod>
+    <lastmod>2025-03-16T04:41:53+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/categories/</loc>
-    <lastmod>2025-03-16T03:00:02+08:00</lastmod>
+    <lastmod>2025-03-16T04:41:53+08:00</lastmod>
   </url><url>
-    <loc>https://blog.akvicor.com/categories/linux/</loc>
-    <lastmod>2025-03-16T03:00:02+08:00</lastmod>
+    <loc>https://blog.akvicor.com/categories/docker/</loc>
+    <lastmod>2025-03-16T04:41:53+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/</loc>
+    <lastmod>2025-03-16T04:41:53+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/docker/network/</loc>
+    <lastmod>2025-03-16T04:41:53+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/categories/linux/</loc>
     <lastmod>2025-03-16T03:00:02+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/linux/sshfs/</loc>
@@ -87,7 +93,7 @@
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/categories/hugo/</loc>
-    <lastmod>2024-09-18T00:08:45+08:00</lastmod>
+    <lastmod>2025-03-16T04:35:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/hugo/summary/</loc>
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
@@ -165,7 +171,7 @@
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/hugo/add_comment/</loc>
-    <lastmod>2024-09-18T00:08:45+08:00</lastmod>
+    <lastmod>2025-03-16T04:35:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/categories/wiki/</loc>
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
@@ -180,9 +186,6 @@
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/linux/touchpad/</loc>
-    <lastmod>2024-09-18T00:08:45+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.akvicor.com/categories/docker/</loc>
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/docker/registry_delete_img/</loc>

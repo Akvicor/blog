@@ -210,9 +210,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/php/install/">
+            <a href="https://blog.akvicor.com/posts/ssl/pem/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> PHP Install <sup></sup></span>
+                <span> 生成cert.pem和key.pem <sup></sup></span>
             </a>
 
             
@@ -220,7 +220,7 @@
                 <span class="date">
                     
                     
-                    2019-11-06
+                    0001-01-01
                 </span>
                 <span class="date">
                     
@@ -236,7 +236,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/php">PHP</a>
+			<a href="/categories/ssl">SSL</a>
 			
 		</div>
 		<div class="tag">
@@ -245,542 +245,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Ubuntu 18.04 安装PHP7并配置Nginx 安装 sudo apt-get install software-properties-common python-software-properties sudo add-apt-repository ppa:ondrej/php sudo apt-get update sudo apt-get -y install php7.3 # 安装常用扩展 sudo -y apt-get install php7.3-fpm php7.3-mysql php7.3-curl php7.3-json php7.3-mbstring php7.3-xml php7.3-intl # 安装其他扩展（按需安装） sudo apt-get install php7.3-gd sudo apt-get install php7.3-soap sudo apt-get install php7.3-gmp sudo apt-get install</div>
+</div><div class="summary">#1、生成RSA密钥的方法 openssl genrsa -des3 -out key.pem 2048 #这个命令会生成一个2048位的密钥，同时有一个des3方法加密的密码，如果你不想要每次都输入密码，可以改成： openssl genrsa -out key.pem 2048 #</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/php/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/mysql/install/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> MySQL Install <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-11-06
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/mysql">MySQL</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Ubuntu 18.04 安装MySQL8 Ubuntu 下载 APT 包 CentOS 下载 APT 包 sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb sudo apt update sudo apt install mysql-server # 查看mysql是否安装成功 mysql -u root -p # 查看mysql字符集，mysql8字符集默认为utf-8。 show</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/mysql/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/nginx/install/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Nginx Install <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-11-06
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/nginx">Nginx</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Ubuntu 18.04 搭建Nginx服务 安装 Ubuntu可以从源直接安装nginx sudo apt-get update sudo apt-get install nginx 调整防火墙，以免出现各种问题 sudo ufw app list 获得应用程序配置文件的列表： 可用应用程序： CUPS Nginx</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/nginx/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/cf/comentoj_c72_4033/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 「火鼠的皮衣 -不焦躁的内心-」 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-10-28
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/cf">CF</a>
-			
-		</div>
-		<div class="tag">
-			
-			 - 
-			
-			<a href="/tags/comentoj">ComentOJ</a>
-			
-		</div>
-	</div>
-</div><div class="summary"><strong><a href="https://cometoj.com/contest/72/problem/%EF%BC%A4?problem_id=4033"> ComentOJ-C72-4033 「火鼠的皮衣 -不焦躁的内心-」 </a></strong></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/cf/comentoj_c72_4033/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/cf/comentoj_c72_4032/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 「佛御石之钵 -不碎的意志-」(困难版) <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-10-28
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/cf">CF</a>
-			
-		</div>
-		<div class="tag">
-			
-			 - 
-			
-			<a href="/tags/comentoj">ComentOJ</a>
-			
-			<a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86">并查集</a>
-			
-		</div>
-	</div>
-</div><div class="summary"><strong><a href="https://cometoj.com/contest/72/problem/%EF%BC%A32?problem_id=4032"> ComentOJ-C72-4032 「佛御石之钵 -不碎的意志-」(困难版) </a></strong></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/cf/comentoj_c72_4032/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/algorithm/dfs_enum/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 递归实现枚举 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-10-08
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/algorithm">Algorithm</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">枚举</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/dfs_enum/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/proxy/check_ip_ban/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 检测IP地址 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-10-07
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/proxy">Proxy</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><ul>
-<li>当使用国外服务器搭建网站的时候, 可能遇到一些网站屏蔽了网站IP, 因此需要检测一下是否被屏蔽</li>
-<li>当使用国外服务器搭建网站的时候经常会碰到一些 IP 因为被墙导致网站不能访问，所以可以先检测一下 IP 是否被墙。</li>
-</ul></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/proxy/check_ip_ban/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/algorithm/strange_tower_of_hanoi/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Strange Towers of Hanoi <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-09-30
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/algorithm">Algorithm</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">将汉诺塔中的3跟柱子改为4根，求盘子数为1到12时将全部盘子从第一根移动到最后一根需要移动的次数。</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/algorithm/strange_tower_of_hanoi/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/idea/keymap/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> IntelliJ IDEA Keymap <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-09-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/idea">IDEA</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">此快捷键说明我是翻译官方的快捷键说明的，方便查看，基于PHPStorm的官方Help来翻译的，其他系列的JetBrains软件应该都是一样的道理，其中如有错误，欢迎斧正。</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/idea/keymap/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/apache/deny_access_exec/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 禁止某文件夹内运行PHP脚本、禁止访问文件或目录执行权限的设置方法 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-09-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/apache">Apache</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Apache禁止某文件夹内运行PHP脚本、禁止访问文件或目录执行权限的设置方法</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/apache/deny_access_exec/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/gitkraken/cannot_associate_program_with_context_menu_action/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> cannot associate program with context menu action <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2019-09-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/gitkraken">GitKraken</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><p>I installed a program called GitKraken and it&rsquo;s pretty nice; But one thing it does during installation is to forcefully add a context menu item to open the current folder in it.</p>
-<p>Unfortunately, since day 1, this has been broken. I&rsquo;ve tried setting the association manually and it doesn&rsquo;t work. Setting an association with the program doesn&rsquo;t yield any different results. Is there anything else that can be done? I&rsquo;ve even tried removing it from the registry.</p>
-<p>This is all happening on Windows 10 x64.</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/gitkraken/cannot_associate_program_with_context_menu_action/">查看更多…</a>
+				  <a href="/posts/ssl/pem/">查看更多…</a>
 				</div>
 				
             
@@ -797,28 +266,28 @@
         <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/13/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+        <a href="/posts/page/24/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/12/" aria-label="Page 12" class="page-link" role="button">12</a>
+        <a href="/posts/page/21/" aria-label="Page 21" class="page-link" role="button">21</a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/13/" aria-label="Page 13" class="page-link" role="button">13</a>
+        <a href="/posts/page/22/" aria-label="Page 22" class="page-link" role="button">22</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/23/" aria-label="Page 23" class="page-link" role="button">23</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/24/" aria-label="Page 24" class="page-link" role="button">24</a>
       </li>
       <li class="page-item active">
-        <a aria-current="page" aria-label="Page 14" class="page-link" role="button">14</a>
+        <a aria-current="page" aria-label="Page 25" class="page-link" role="button">25</a>
       </li>
-      <li class="page-item">
-        <a href="/posts/page/15/" aria-label="Page 15" class="page-link" role="button">15</a>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
       </li>
-      <li class="page-item">
-        <a href="/posts/page/16/" aria-label="Page 16" class="page-link" role="button">16</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/15/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>
