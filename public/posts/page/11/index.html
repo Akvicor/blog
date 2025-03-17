@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 265 篇文章</div>
+        <div class="count">共有 266 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -141,7 +141,7 @@
                 
                 <div class="rec-post">
                     <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/docker/network/">修改Docker容器占用的IP段</a>
+                        <a href="https://blog.akvicor.com/posts/linux/ufw_forward/">Linux UFW端口转发</a>
                     </div>
                 </div>
                 
@@ -150,6 +150,14 @@
                 <div class="rec-post">
                     <div class="rec-post-item">
                         <a href="https://blog.akvicor.com/posts/hugo/add_comment/">添加评论功能 utterances和isso</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/docker/network/">修改Docker容器占用的IP段</a>
                     </div>
                 </div>
                 
@@ -194,14 +202,53 @@
                 </div>
                 
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/gpu_enable/">Linux服务器开启GPU/Emby启用硬件解码</a>
-                    </div>
-                </div>
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
+            <a href="https://blog.akvicor.com/posts/windows/fix_windows_and_linux_showing_different_times_when_dual_booting/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Fix Windows and Linux Showing Different Times When Dual Booting <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-10-04
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/windows">Windows</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">Make Windows Use UTC Time Filename: Make Windows Use UTC Time.reg Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation] &quot;RealTimeIsUniversal&quot;=dword:00000001 以管理员身份打开 「PowerShell」，输入以下命令 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1 Make Windows Use Local Time Filename: Make Windows Use Local Time.reg Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation] &quot;RealTimeIsUniversal&quot;=-</div>
+				
+            
+
         </div>
         
     
@@ -715,58 +762,6 @@
 	</div>
 </div><div class="summary"><h1 id="查看当前临时端口的范围-sysctl-netipv4ip_local_port_range-cat-procsysnetipv4ip_local_port_range--暂时性修改临时端口的范围-echo-1024-65535-gt-procsysnetipv4ip_local_port_range-sysctl--w-netipv4ip_local_port_range341024-6400034--永久性修改临时端口范围-vim-etcsysctlconf--编辑此文件并添加下面一行内容-netipv4ip_local_port_range--1024-65535">查看当前临时端口的范围 sysctl net.ipv4.ip_local_port_range cat /proc/sys/net/ipv4/ip_local_port_range # 暂时性修改临时端口的范围 echo 1024 65535 &gt; /proc/sys/net/ipv4/ip_local_port_range sysctl -w net.ipv4.ip_local_port_range=&quot;1024 64000&quot; # 永久性修改临时端口范围 vim /etc/sysctl.conf # 编辑此文件并添加下面一行内容 net.ipv4.ip_local_port_range = 1024 65535</h1>
 </div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/xset/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Xset <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-08-01
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">xset:用于设置显示器的各种用户属性选项。如果想要持久化设置，可以将设置写入.xinitrc文件中。 dpms（Display Power Manage System）和屏保是互相作用</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/xset/">查看更多…</a>
-				</div>
 				
             
 

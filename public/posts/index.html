@@ -129,7 +129,7 @@
     </div>
 
      
-        <div class="count">共有 265 篇文章</div>
+        <div class="count">共有 266 篇文章</div>
     
     
     <div class="list list-single-col">
@@ -141,7 +141,7 @@
                 
                 <div class="rec-post">
                     <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/docker/network/">修改Docker容器占用的IP段</a>
+                        <a href="https://blog.akvicor.com/posts/linux/ufw_forward/">Linux UFW端口转发</a>
                     </div>
                 </div>
                 
@@ -150,6 +150,14 @@
                 <div class="rec-post">
                     <div class="rec-post-item">
                         <a href="https://blog.akvicor.com/posts/hugo/add_comment/">添加评论功能 utterances和isso</a>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="rec-post">
+                    <div class="rec-post-item">
+                        <a href="https://blog.akvicor.com/posts/docker/network/">修改Docker容器占用的IP段</a>
                     </div>
                 </div>
                 
@@ -194,14 +202,58 @@
                 </div>
                 
             
-                
-                <div class="rec-post">
-                    <div class="rec-post-item">
-                        <a href="https://blog.akvicor.com/posts/linux/gpu_enable/">Linux服务器开启GPU/Emby启用硬件解码</a>
-                    </div>
-                </div>
-                
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
             
+            <a href="https://blog.akvicor.com/posts/linux/ufw_forward/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Linux UFW端口转发 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2025-03-17
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2025-03-17
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">编辑 /etc/default/ufw 找到 18行左右的 DEFAULT_FORWARD_POLICY，将值改为true vim /etc/default/ufw 编辑 /etc/sysctl.conf 将 net.ipv4.ip_forward=1 注释去掉，并确保值为1 vim /etc/sysctl.conf sysctl -p 编辑 /etc/ufw/before.rules 在 *filter 上方，一般在最顶部，添</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/ufw_forward/">查看更多…</a>
+				</div>
+				
+            
+
         </div>
         
     
@@ -225,7 +277,7 @@
                 <span class="date">
                     
                     
-                    - 2025-03-16
+                    - 2025-03-17
                 </span>
             </div>
             
@@ -735,58 +787,6 @@
 				
 				<div class="read-more">
 				  <a href="/posts/linux/serial_port/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/harbor/install/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 纯净安装Harbor <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2024-09-21
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-21
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/harbor">Harbor</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">鉴于Harbor官方的安装无比混乱, 因此记录如何将有用的东西提取出来, 最终形成data目录, config目录, docker-compose.yml文件. 修复因端</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/harbor/install/">查看更多…</a>
 				</div>
 				
             
