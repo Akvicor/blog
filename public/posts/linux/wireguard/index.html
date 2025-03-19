@@ -13,7 +13,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<script defer src="https://analy.akvicor.com/script.js" data-website-id="c0cbafdd-207e-431e-a252-4a64c31d98b9"></script>
     
-    <link rel="stylesheet" href="https://blog.akvicor.com/style.min.4151072d6fc9fe1a3df6b17d57d2d8ca2e6573201efdbc03d4e8e48525582b64.css">
+    <link rel="stylesheet" href="https://blog.akvicor.com/style.min.3acf5e51a9f409d16acec003b620bc77f2bf308e2a40b5221d228bb9a57f9eee.css">
     
     <script type="text/javascript" src="/main.js" defer></script>
     <script src="/js/hide_and_seek.js"></script>
@@ -159,11 +159,11 @@
         <span>
             
             <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
-            1015 字</span>&nbsp;
+            927 字</span>&nbsp;
         <span>
             
             <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
-            3 分钟</span>
+            2 分钟</span>
             <div class="container-ctgtag">
 	<div class="taxonomy">
 		
@@ -193,6 +193,7 @@
         
         <nav id="TableOfContents">
   <ul>
+    <li><a href="#注意">注意</a></li>
     <li><a href="#安装">安装</a></li>
     <li><a href="#生成密钥">生成密钥</a></li>
     <li><a href="#启动">启动</a></li>
@@ -200,8 +201,12 @@
     <li><a href="#测试">测试</a></li>
     <li><a href="#配置文件">配置文件</a>
       <ul>
-        <li><a href="#1-均有公网ip">1. 均有公网IP</a></li>
-        <li><a href="#2-部分服务器处于nat">2. 部分服务器处于NAT</a></li>
+        <li><a href="#示例服务器">示例服务器</a></li>
+        <li><a href="#a---公网服务器">A - 公网服务器</a></li>
+        <li><a href="#b---公网服务器">B - 公网服务器</a></li>
+        <li><a href="#c---公网服务器---中转节点">C - 公网服务器 - 中转节点</a></li>
+        <li><a href="#d---nat下服务器">D - NAT下服务器</a></li>
+        <li><a href="#e---nat下服务器">E - NAT下服务器</a></li>
       </ul>
     </li>
   </ul>
@@ -210,6 +215,12 @@
 
     <div class='content  content '>
         <p>有时候服务器之间需要加密传输数据(例如<a href="https://blog.akvicor.com/posts/linux/nfs/">NFS挂载</a>)，为了平衡延迟和速度，可以采用Wireguard来组建一个内网，这样业务数据可以通过内网IP高速和安全的传输</p>
+<h2 id="注意">注意</h2>
+<ul>
+<li><strong>Wireguard有加密但无混淆，特征较为明显，谨慎用于其他用途</strong></li>
+<li><strong>Wireguard使用UDP传输，部分云服务商限制了UDP会导致性能较差</strong></li>
+<li>这套配置中的中转节点并非必须, 但由于海外和国内网络互联较差, 使用了一个带优化线路的中转节点来中转国内和海外服务器, 降低连接延迟, 提高传输速度</li>
+</ul>
 <h2 id="安装">安装</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y wireguard
 </span></span></code></pre></div><h2 id="生成密钥">生成密钥</h2>
@@ -224,20 +235,28 @@
 </span></span></code></pre></div><h2 id="开放防火墙如果没有启用防火墙则跳过">开放防火墙(如果没有启用防火墙则跳过)</h2>
 <p>如果想通过内网IP来访问, 那么需要在防火墙中配置允许这个内网IP段访问</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 通过ufw开放</span>
-</span></span><span style="display:flex;"><span>ufw allow from 10.0.0.0/24 to any comment wg0
+</span></span><span style="display:flex;"><span>ufw allow from 10.0.0.0/16 to any comment wg0
 </span></span></code></pre></div><h2 id="测试">测试</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping 10.0.0.1
 </span></span><span style="display:flex;"><span>ping 10.0.0.2
+</span></span><span style="display:flex;"><span>ping 10.0.0.100
 </span></span><span style="display:flex;"><span>ping 10.0.0.3
 </span></span><span style="display:flex;"><span>ping 10.0.0.4
 </span></span></code></pre></div><h2 id="配置文件">配置文件</h2>
 <p><strong>/etc/wireguard/wg0.conf</strong></p>
-<h3 id="1-均有公网ip">1. 均有公网IP</h3>
+<h3 id="示例服务器">示例服务器</h3>
+<ul>
+<li>ABC在公网</li>
+<li>DE在某个NAT下的内网（如家里的设备</li>
+<li>AB互相直连访问</li>
+<li>DE互相直连访问</li>
+<li>AB和DE互相通过C中转访问</li>
+</ul>
 <table>
 <thead>
 <tr>
 <th>服务器</th>
-<th>公网 IP</th>
+<th>公网/NAT IP</th>
 <th>内网 WireGuard IP</th>
 </tr>
 </thead>
@@ -255,190 +274,202 @@
 <tr>
 <td>C</td>
 <td>X.X.X.C</td>
-<td>10.0.0.3</td>
+<td>10.0.0.100</td>
 </tr>
 <tr>
 <td>D</td>
 <td>X.X.X.D</td>
+<td>10.0.0.3</td>
+</tr>
+<tr>
+<td>E</td>
+<td>X.X.X.E</td>
 <td>10.0.0.4</td>
 </tr>
 </tbody>
 </table>
-<h4 id="a">A</h4>
+<h3 id="a---公网服务器">A - 公网服务器</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /etc/wireguard/wg0.conf
-</span></span></code></pre></div><p>内容</p>
+</span></span></code></pre></div><ul>
+<li>直连C, 同时将<code>10.0.0.0/16</code>网段的请求转发到C</li>
+<li>直连B</li>
+<li>通过C中转连接DE</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Interface]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerA私钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.1/24</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;A&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.1/16</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">ListenPort</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">51820</span>
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># center    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerB公钥&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;C&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.C:51820</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.0/16</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">15</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># direct    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;B&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.B:51820</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.2/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerC公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.C:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.3/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerD公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.D:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.4/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span></code></pre></div><h4 id="b">B</h4>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">15</span>
+</span></span></code></pre></div><h3 id="b---公网服务器">B - 公网服务器</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /etc/wireguard/wg0.conf
-</span></span></code></pre></div><p>内容</p>
+</span></span></code></pre></div><ul>
+<li>直连C, 同时将<code>10.0.0.0/16</code>网段的请求转发到C</li>
+<li>直连A</li>
+<li>通过C中转连接DE</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Interface]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerB私钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.2/24</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;B&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.2/16</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">ListenPort</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">51820</span>
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># center    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerA公钥&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;C&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.C:51820</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.0/16</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">15</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># direct    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;A&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.A:51820</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.1/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerC公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.C:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.3/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerD公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.D:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.4/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span></code></pre></div><h4 id="c">C</h4>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">15</span>
+</span></span></code></pre></div><h3 id="c---公网服务器---中转节点">C - 公网服务器 - 中转节点</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /etc/wireguard/wg0.conf
-</span></span></code></pre></div><p>内容</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Interface]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerC私钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.3/24</span>
+</span></span></code></pre></div><ul>
+<li>中转ABDE节点</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># center    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># C</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Interface]</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;C&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.100/16</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">ListenPort</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">51820</span>
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PostUp</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">sysctl -w net.ipv4.ip_forward=1; iptables -A FORWARD -i wg0 -j ACCEPT</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PostDown</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">sysctl -w net.ipv4.ip_forward=0; iptables -D FORWARD -i wg0 -j ACCEPT</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># direct    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># redir     #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># A</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerA公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.A:51820</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;A&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.1/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># B</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerB公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.B:51820</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;B&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.2/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># D</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerD公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.D:51820</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;D&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.3/32</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># E</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;E&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.4/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span></code></pre></div><h4 id="d">D</h4>
+</span></span></code></pre></div><h3 id="d---nat下服务器">D - NAT下服务器</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /etc/wireguard/wg0.conf
-</span></span></code></pre></div><p>内容</p>
+</span></span></code></pre></div><ul>
+<li>直连C, 同时将<code>10.0.0.0/16</code>网段的请求转发到C</li>
+<li>直连E</li>
+<li>通过C中转连接AB</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Interface]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerD私钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.4/24</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;D&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.3/16</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">ListenPort</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">51820</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerA公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.A:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.1/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># center    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerB公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.B:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.2/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerC公钥&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;C&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.C:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.3/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span></code></pre></div><h3 id="2-部分服务器处于nat">2. 部分服务器处于NAT</h3>
-<table>
-<thead>
-<tr>
-<th>服务器</th>
-<th>公网 IP</th>
-<th>内网 WireGuard IP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>E</td>
-<td>NAT</td>
-<td>10.0.0.5</td>
-</tr>
-</tbody>
-</table>
-<p>在本示例中通过A中继访问</p>
-<h4 id="a-1">A</h4>
+</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.0/16</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">15</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># direct    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;E&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.E:51820</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.4/32</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">15</span>
+</span></span></code></pre></div><h3 id="e---nat下服务器">E - NAT下服务器</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /etc/wireguard/wg0.conf
-</span></span></code></pre></div><p>内容</p>
+</span></span></code></pre></div><ul>
+<li>直连C, 同时将<code>10.0.0.0/16</code>网段的请求转发到C</li>
+<li>直连D</li>
+<li>通过C中转连接AB</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Interface]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerA私钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.1/24</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;E&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.4/16</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">ListenPort</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">51820</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 允许 IP 转发</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PostUp</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">sysctl -w net.ipv4.ip_forward=1</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PostDown</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">sysctl -w net.ipv4.ip_forward=0</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># center    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># B 服务器</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerB公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.B:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.2/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># C 服务器</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerC公钥&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;C&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.C:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.3/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.0/16</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">15</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># D 服务器</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># direct    #</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#############</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerD公钥&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;D&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.D:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.4/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># E 服务器（无公网 IP，需要 A 作为中转）</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerE公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.5/32</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
-</span></span></code></pre></div><h4 id="e">E</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /etc/wireguard/wg0.conf
-</span></span></code></pre></div><p>内容</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Interface]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PrivateKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerE私钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.5/24</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 连接 A（E 无公网 IP，必须主动连接）</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[Peer]</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PublicKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&lt;ServerA公钥&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">Endpoint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">X.X.X.A:51820</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.0/24</span>
-</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">25</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">AllowedIPs</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">10.0.0.3/32</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PersistentKeepalive</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">15</span>
 </span></span></code></pre></div>
     </div>
 
     
 
     
+
+    <blockquote class="post-copyright">
+    <p>
+        除另有声明外<span class="biaodian cjk bd-end bd-cop bd-jiya">，</span>本博客文章均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/">知识共享 (Creative Commons) 署名 4.0 国际许可协议</a> 进行许可<span class="biaodian cjk bd-end bd-cop bd-jiya">。</span>转载请注明原作者与文章出处<span class="biaodian cjk bd-end bd-cop bd-jiya">。</span>
+    </p>
+</blockquote>
+
 
     <div class="container-prevnext">
     <div><a href="https://blog.akvicor.com/posts/linux/nfs/">← NFS 挂载文件系统</a></div>

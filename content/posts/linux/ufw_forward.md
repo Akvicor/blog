@@ -44,4 +44,3 @@ COMMIT
 ```bash
 ufw reload
 ```
-

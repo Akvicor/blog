@@ -10,6 +10,12 @@ weight: 0
 
 有时候服务器之间需要加密传输数据(例如[NFS挂载](https://blog.akvicor.com/posts/linux/nfs/))，为了平衡延迟和速度，可以采用Wireguard来组建一个内网，这样业务数据可以通过内网IP高速和安全的传输
 
+## 注意
+
+- **Wireguard有加密但无混淆，特征较为明显，谨慎用于其他用途**
+- **Wireguard使用UDP传输，部分云服务商限制了UDP会导致性能较差**
+- 这套配置中的中转节点并非必须, 但由于海外和国内网络互联较差, 使用了一个带优化线路的中转节点来中转国内和海外服务器, 降低连接延迟, 提高传输速度
+
 ## 安装
 
 ```bash
@@ -39,7 +45,7 @@ wg show
 
 ```bash
 # 通过ufw开放
-ufw allow from 10.0.0.0/24 to any comment wg0
+ufw allow from 10.0.0.0/16 to any comment wg0
 ```
 
 ## 测试
@@ -47,228 +53,227 @@ ufw allow from 10.0.0.0/24 to any comment wg0
 ```bash
 ping 10.0.0.1
 ping 10.0.0.2
+ping 10.0.0.100
 ping 10.0.0.3
 ping 10.0.0.4
 ```
-
 
 ## 配置文件
 
 **/etc/wireguard/wg0.conf**
 
-### 1. 均有公网IP
+### 示例服务器
 
-| 服务器 | 公网 IP   | 内网 WireGuard IP |
-|--------|-----------|------------------|
-| A      | X.X.X.A   | 10.0.0.1         |
-| B      | X.X.X.B   | 10.0.0.2         |
-| C      | X.X.X.C   | 10.0.0.3         |
-| D      | X.X.X.D   | 10.0.0.4         |
+- ABC在公网
+- DE在某个NAT下的内网（如家里的设备
+- AB互相直连访问
+- DE互相直连访问
+- AB和DE互相通过C中转访问
 
-#### A
+| 服务器  | 公网/NAT IP      | 内网 WireGuard IP |
+|--------|-----------------|--------------------|
+| A      | X.X.X.A         | 10.0.0.1         |
+| B      | X.X.X.B         | 10.0.0.2         |
+| C      | X.X.X.C         | 10.0.0.100       |
+| D      | X.X.X.D         | 10.0.0.3         |
+| E      | X.X.X.E         | 10.0.0.4         |
+
+### A - 公网服务器
 
 ```bash
 vim /etc/wireguard/wg0.conf
 ```
 
-内容
+- 直连C, 同时将`10.0.0.0/16`网段的请求转发到C
+- 直连B
+- 通过C中转连接DE
 
 ```ini
 [Interface]
-PrivateKey = <ServerA私钥>
-Address = 10.0.0.1/24
+PrivateKey = <A>
+Address = 10.0.0.1/16
 ListenPort = 51820
 
+#############
+# center    #
+#############
+
 [Peer]
-PublicKey = <ServerB公钥>
+PublicKey = <C>
+Endpoint = X.X.X.C:51820
+AllowedIPs = 10.0.0.0/16
+PersistentKeepalive = 15
+
+#############
+# direct    #
+#############
+
+[Peer]
+PublicKey = <B>
 Endpoint = X.X.X.B:51820
 AllowedIPs = 10.0.0.2/32
-PersistentKeepalive = 25
-
-[Peer]
-PublicKey = <ServerC公钥>
-Endpoint = X.X.X.C:51820
-AllowedIPs = 10.0.0.3/32
-PersistentKeepalive = 25
-
-[Peer]
-PublicKey = <ServerD公钥>
-Endpoint = X.X.X.D:51820
-AllowedIPs = 10.0.0.4/32
-PersistentKeepalive = 25
+PersistentKeepalive = 15
 ```
 
-#### B
+### B - 公网服务器
 
 ```bash
 vim /etc/wireguard/wg0.conf
 ```
 
-内容
+- 直连C, 同时将`10.0.0.0/16`网段的请求转发到C
+- 直连A
+- 通过C中转连接DE
 
 ```ini
 [Interface]
-PrivateKey = <ServerB私钥>
-Address = 10.0.0.2/24
+PrivateKey = <B>
+Address = 10.0.0.2/16
 ListenPort = 51820
 
+#############
+# center    #
+#############
+
 [Peer]
-PublicKey = <ServerA公钥>
+PublicKey = <C>
+Endpoint = X.X.X.C:51820
+AllowedIPs = 10.0.0.0/16
+PersistentKeepalive = 15
+
+#############
+# direct    #
+#############
+
+[Peer]
+PublicKey = <A>
 Endpoint = X.X.X.A:51820
 AllowedIPs = 10.0.0.1/32
-PersistentKeepalive = 25
-
-[Peer]
-PublicKey = <ServerC公钥>
-Endpoint = X.X.X.C:51820
-AllowedIPs = 10.0.0.3/32
-PersistentKeepalive = 25
-
-[Peer]
-PublicKey = <ServerD公钥>
-Endpoint = X.X.X.D:51820
-AllowedIPs = 10.0.0.4/32
-PersistentKeepalive = 25
+PersistentKeepalive = 15
 ```
 
-#### C
+### C - 公网服务器 - 中转节点
 
 ```bash
 vim /etc/wireguard/wg0.conf
 ```
 
-内容
+- 中转ABDE节点
 
 ```ini
+#############
+# center    #
+#############
+
+# C
 [Interface]
-PrivateKey = <ServerC私钥>
-Address = 10.0.0.3/24
+PrivateKey = <C>
+Address = 10.0.0.100/16
 ListenPort = 51820
 
+PostUp = sysctl -w net.ipv4.ip_forward=1; iptables -A FORWARD -i wg0 -j ACCEPT
+PostDown = sysctl -w net.ipv4.ip_forward=0; iptables -D FORWARD -i wg0 -j ACCEPT
+
+#############
+# direct    #
+#############
+
+#############
+# redir     #
+#############
+
+# A
 [Peer]
-PublicKey = <ServerA公钥>
-Endpoint = X.X.X.A:51820
+PublicKey = <A>
 AllowedIPs = 10.0.0.1/32
-PersistentKeepalive = 25
 
+# B
 [Peer]
-PublicKey = <ServerB公钥>
-Endpoint = X.X.X.B:51820
+PublicKey = <B>
 AllowedIPs = 10.0.0.2/32
-PersistentKeepalive = 25
 
+# D
 [Peer]
-PublicKey = <ServerD公钥>
-Endpoint = X.X.X.D:51820
+PublicKey = <D>
+AllowedIPs = 10.0.0.3/32
+
+# E
+[Peer]
+PublicKey = <E>
 AllowedIPs = 10.0.0.4/32
-PersistentKeepalive = 25
 ```
 
-#### D
+### D - NAT下服务器
 
 ```bash
 vim /etc/wireguard/wg0.conf
 ```
 
-内容
+- 直连C, 同时将`10.0.0.0/16`网段的请求转发到C
+- 直连E
+- 通过C中转连接AB
 
 ```ini
 [Interface]
-PrivateKey = <ServerD私钥>
-Address = 10.0.0.4/24
+PrivateKey = <D>
+Address = 10.0.0.3/16
 ListenPort = 51820
 
-[Peer]
-PublicKey = <ServerA公钥>
-Endpoint = X.X.X.A:51820
-AllowedIPs = 10.0.0.1/32
-PersistentKeepalive = 25
+#############
+# center    #
+#############
 
 [Peer]
-PublicKey = <ServerB公钥>
-Endpoint = X.X.X.B:51820
-AllowedIPs = 10.0.0.2/32
-PersistentKeepalive = 25
-
-[Peer]
-PublicKey = <ServerC公钥>
+PublicKey = <C>
 Endpoint = X.X.X.C:51820
-AllowedIPs = 10.0.0.3/32
-PersistentKeepalive = 25
+AllowedIPs = 10.0.0.0/16
+PersistentKeepalive = 15
+
+#############
+# direct    #
+#############
+
+[Peer]
+PublicKey = <E>
+Endpoint = X.X.X.E:51820
+AllowedIPs = 10.0.0.4/32
+PersistentKeepalive = 15
 ```
 
-### 2. 部分服务器处于NAT
-
-| 服务器 | 公网 IP   | 内网 WireGuard IP |
-|--------|-----------|------------------|
-| E      | NAT       | 10.0.0.5         |
-
-在本示例中通过A中继访问
-
-#### A
+### E - NAT下服务器
 
 ```bash
 vim /etc/wireguard/wg0.conf
 ```
 
-内容
+- 直连C, 同时将`10.0.0.0/16`网段的请求转发到C
+- 直连D
+- 通过C中转连接AB
 
 ```ini
 [Interface]
-PrivateKey = <ServerA私钥>
-Address = 10.0.0.1/24
+PrivateKey = <E>
+Address = 10.0.0.4/16
 ListenPort = 51820
 
-# 允许 IP 转发
-PostUp = sysctl -w net.ipv4.ip_forward=1
-PostDown = sysctl -w net.ipv4.ip_forward=0
+#############
+# center    #
+#############
 
-# B 服务器
 [Peer]
-PublicKey = <ServerB公钥>
-Endpoint = X.X.X.B:51820
-AllowedIPs = 10.0.0.2/32
-PersistentKeepalive = 25
-
-# C 服务器
-[Peer]
-PublicKey = <ServerC公钥>
+PublicKey = <C>
 Endpoint = X.X.X.C:51820
-AllowedIPs = 10.0.0.3/32
-PersistentKeepalive = 25
+AllowedIPs = 10.0.0.0/16
+PersistentKeepalive = 15
 
-# D 服务器
+#############
+# direct    #
+#############
+
 [Peer]
-PublicKey = <ServerD公钥>
+PublicKey = <D>
 Endpoint = X.X.X.D:51820
-AllowedIPs = 10.0.0.4/32
-PersistentKeepalive = 25
-
-# E 服务器（无公网 IP，需要 A 作为中转）
-[Peer]
-PublicKey = <ServerE公钥>
-AllowedIPs = 10.0.0.5/32
-PersistentKeepalive = 25
-```
-
-#### E
-
-```bash
-vim /etc/wireguard/wg0.conf
-```
-
-内容
-
-```ini
-[Interface]
-PrivateKey = <ServerE私钥>
-Address = 10.0.0.5/24
-
-# 连接 A（E 无公网 IP，必须主动连接）
-[Peer]
-PublicKey = <ServerA公钥>
-Endpoint = X.X.X.A:51820
-AllowedIPs = 10.0.0.0/24
-PersistentKeepalive = 25
+AllowedIPs = 10.0.0.3/32
+PersistentKeepalive = 15
 ```
 

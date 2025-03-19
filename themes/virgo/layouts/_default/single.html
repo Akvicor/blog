@@ -70,6 +70,10 @@
         {{- partial "partials/_archive.html" . -}}
     {{ end }}
 
+    {{ if and .Site.Params.isShowCopyright .IsPage $IsPostPage (not $IsSecrets) }}
+        {{- partial "partials/_copyright.html" . -}}
+    {{ end }}
+
     {{ if and .Site.Params.isShowPrevNextLink .IsPage $IsPostPage (not $IsSecrets) }}
         {{- partial "partials/_prevnext.html" . -}}
     {{ end }}

@@ -28,6 +28,9 @@ enableGitInfo = true
     # 文章列表页单列显示
     isSingleColumnOfPostList = true
 
+    # 是否显示共享协议
+    isShowCopyright = true
+
     # 是否显示相邻页链接
     isShowPrevNextLink = true
 
