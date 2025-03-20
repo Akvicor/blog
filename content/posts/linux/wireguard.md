@@ -14,7 +14,21 @@ weight: 0
 
 - **Wireguard有加密但无混淆，特征较为明显，谨慎用于其他用途**
 - **Wireguard使用UDP传输，部分云服务商限制了UDP会导致性能较差**
-- 这套配置中的中转节点并非必须, 但由于海外和国内网络互联较差, 使用了一个带优化线路的中转节点来中转国内和海外服务器, 降低连接延迟, 提高传输速度
+- 由于海外和国内网络互联较差, 使用了一个带优化线路的中转节点来中转国内和海外服务器, 降低连接延迟, 提高传输速度
+
+## ~~特性~~
+
+### ListenPort 监听和发送端口的问题
+
+当给Interface配置ListenPort之后，这个端口既承担了监听端口的功能，又承担了对外发送端口的功能，这会导致一些问题
+
+当我给家里的各个设备（经过NAT后由同一个公网IP发送）分配好IP, 并且每台设备ListenPort都相同。然后就出问题了
+
+家里的设备互相能访问，那些配置了IP和端口的Peer也能直连访问，但是中转服务器和那些需要中转的服务器就访问不了了（有时候家里部分设备能访问，但我猜可能是他们提前把端口抢过来了）
+
+然后通过`wg show`查看中转，发现他们连接到中转服务器的端口就是ListenPort监听的端口，也就是说他们**接收和发送都用的同一个UDP端口**，这可能会导致端口冲突
+
+因此，要么NAT下设备**不配置ListenPort**, 要么**配置不同的ListenPort**
 
 ## 安装
 
@@ -235,7 +249,7 @@ PersistentKeepalive = 15
 
 [Peer]
 PublicKey = <E>
-Endpoint = X.X.X.E:51820
+Endpoint = X.X.X.E:51821
 AllowedIPs = 10.0.0.4/32
 PersistentKeepalive = 15
 ```
@@ -254,7 +268,7 @@ vim /etc/wireguard/wg0.conf
 [Interface]
 PrivateKey = <E>
 Address = 10.0.0.4/16
-ListenPort = 51820
+ListenPort = 51821
 
 #############
 # center    #
