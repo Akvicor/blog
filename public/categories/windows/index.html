@@ -245,7 +245,13 @@
 			
 		</div>
 	</div>
-</div><div class="summary">右键菜单改回Win10(展开) reg add &quot;HKCU\Software\Classes\CLSID{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot; /f /ve taskkill /f /im explorer.exe &amp; start explorer.exe 右键菜单改回Win11(折叠) reg delete &quot;HKCU\Software\Classes\CLSID{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}&quot; /f taskkill /f /im explorer.exe &amp; start explorer.exe</div>
+</div><div class="summary"><h2 id="右键菜单改回win10展开">右键菜单改回Win10(展开)</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>reg add <span style="color:#0a3069">&#34;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&#34;</span> /f /ve
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>taskkill /f /im explorer.exe <span style="color:#1f2328">&amp;</span> <span style="color:#cf222e">start</span> explorer.exe
+</span></span></code></pre></div><h2 id="右键菜单改回win11折叠">右键菜单改回Win11(折叠)</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>reg delete <span style="color:#0a3069">&#34;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}&#34;</span> /f
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>taskkill /f /im explorer.exe <span style="color:#1f2328">&amp;</span> <span style="color:#cf222e">start</span> explorer.exe
+</span></span></code></pre></div></div>
 				
             
 
@@ -292,12 +298,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">在Win10系统下，按住键盘的 “Win+R” 组合快捷键，系统将会打开“运行”命令对话窗口。 在打开的运行命令对话框中输入 “gpedit.msc” 命令，然后再点击“</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/thumbs/">查看更多…</a>
-				</div>
+</div><div class="summary"><ol>
+<li>在Win10系统下，按住键盘的 <strong>“Win+R”</strong> 组合快捷键，系统将会打开“运行”命令对话窗口。</li>
+<li>在打开的运行命令对话框中输入 <strong>“gpedit.msc”</strong> 命令，然后再点击“确定”按钮。</li>
+<li>点击确定按钮后，这个时候会打开 <strong>“本地组策略编辑器”</strong> 对话窗口，</li>
+<li>在本地组策略编辑器窗口的左侧小窗口中，依次展开 <strong>“用户配置&ndash;&gt;管理模版&ndash;&gt;Windows组件”</strong> 选项。</li>
+<li>在“Windows组件”选项右侧窗口，找到 <strong>“文件资源管理器”</strong> 选项选中并双击鼠标左键将其打开。</li>
+<li>进去到文件资源管理器中，找到 <strong>“关闭隐藏的 thumbs.db 文件中的缩略图缓存”</strong> 并双击鼠标左键将其打开。</li>
+<li>在打开的“关闭隐藏的 thumbs.db 文件中的缩略图缓存”对话窗口中，将其设置更改为 <strong>“已启用”</strong> 选项，然后在点击“应用&ndash;&gt;确定”按钮退出即可。</li>
+</ol></div>
 				
             
 
@@ -344,12 +353,23 @@
 			
 		</div>
 	</div>
-</div><div class="summary">缺少Google API 密钥，因此Chromium 的部分功能将无法使用 1. 设置环境变量，屏蔽提示 (会导致无法登录Google) setx GOOGLE_API_KEY &quot;no&quot; setx GOOGLE_DEFAULT_CLIENT_ID &quot;no&quot; setx GOOGLE_DEFAULT_CLIENT_SECRET &quot;no&quot; 2. 配置Google API Key <a href="https://cloud.google.com/console">https://cloud.google.com/console</a></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/chromium_tips/">查看更多…</a>
-				</div>
+</div><div class="summary"><h2 id="缺少google-api-密钥因此chromium-的部分功能将无法使用">缺少Google API 密钥，因此Chromium 的部分功能将无法使用</h2>
+<h3 id="1-设置环境变量屏蔽提示-会导致无法登录google">1. 设置环境变量，屏蔽提示 (会导致无法登录Google)</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>setx GOOGLE_API_KEY <span style="color:#0a3069">&#34;no&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>setx GOOGLE_DEFAULT_CLIENT_ID <span style="color:#0a3069">&#34;no&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>setx GOOGLE_DEFAULT_CLIENT_SECRET <span style="color:#0a3069">&#34;no&#34;</span>
+</span></span></code></pre></div><h3 id="2-配置google-api-key">2. 配置Google API Key</h3>
+<ol>
+<li><a href="https://cloud.google.com/console">https://cloud.google.com/console</a></li>
+<li>创建或选择已有项目 -&gt; 左侧边栏 API和服务 -&gt; 凭证</li>
+<li>创建凭证(类型为 “API 密钥”,名称随意, 不使用密钥限制,记住生成的key)</li>
+<li>再创建一个凭证(类型为 “OAuth 客户端 ID”, 名称随意, 应用类型选择 “其他”, 记住生成的 “客户端 ID” 和 “客户端密钥”)</li>
+<li>格式填写自己的 API Key</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>setx GOOGLE_API_KEY 生成的API密钥
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>setx GOOGLE_DEFAULT_CLIENT_ID 生成的客户端ID
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>setx GOOGLE_DEFAULT_CLIENT_SECRET 生成的客户端密钥
+</span></span></code></pre></div></div>
 				
             
 
@@ -396,7 +416,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Hiberfil.sys文件位于系统盘的根目录下，这是一个受保护的操作系统文件，它是 win10 休眠功能（Hibernation）中将内存数据与会话数据保存到电脑硬盘、以</div>
+</div><div class="summary">Hiberfil.sys文件位于系统盘的根目录下，这是一个受保护的操作系统文件，它是 win10 休眠功能（Hibernation）中将内存数据与会话数据保存到电脑硬盘、以便于win10计算机断电重新启动后可以快速恢复会话所需的内存镜像文件。在离开计算机一段时间后，计算机将会进入休眠状态。计算机休眠文件就是hiberfil.sys，一般情况它会占用很大存储空间。</div>
 				
 				
 				<div class="read-more">
@@ -448,12 +468,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary">单击 “开始”，指向 “运行”，键入 regedit，然后单击 “确定”。 在注册表编辑器中，找到以下注册表子项： HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2 右键单击要删除的映射驱动器。 例如，右键单击 ##Serv</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/network_connection_does_not_exist/">查看更多…</a>
-				</div>
+</div><div class="summary"><ol>
+<li>单击 “开始”，指向 “运行”，键入 <code>regedit</code>，然后单击 “确定”。</li>
+<li>在注册表编辑器中，找到以下注册表子项： <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2</code></li>
+<li>右键单击要删除的映射驱动器。 例如，右键单击 ##Server_Name#Share_Name，然后单击 “删除”。</li>
+</ol></div>
 				
             
 
@@ -500,15 +519,38 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Environment Add MinGW environment to Path: C:\MinGW\bin
-Open Notepad++ Plug-&gt;Plugin Manager-&gt;Show Plugin Manager
-at Available, double click ‘downloading list’
-Search ‘Nppexec’, install and restart
-Open Console Plug-&gt;NppExec-&gt;Show Console
-Compile Plug-&gt;NppExec-&gt;Execute
-Compile input: g++ $(FULL_CURRENT_PATH) -g -o $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: Compile Run input: $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: Run GDB input: gdb $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: GDB Add to Macros submenu Plug-&gt;NppExec-&gt;Advanced Options
-at Associated script:
-Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</div>
+</div><div class="summary"><h2 id="environment">Environment</h2>
+<p>Add MinGW environment to Path: <code>C:\MinGW\bin</code></p>
+<h2 id="open-notepad">Open Notepad++</h2>
+<p>Plug-&gt;Plugin Manager-&gt;Show Plugin Manager</p>
+<p>at Available, double click &lsquo;downloading list&rsquo;</p>
+<p>Search &lsquo;Nppexec&rsquo;, install and restart</p>
+<h2 id="open-console">Open Console</h2>
+<p>Plug-&gt;NppExec-&gt;Show Console</p>
+<h2 id="compile">Compile</h2>
+<p>Plug-&gt;NppExec-&gt;Execute</p>
+<h3 id="compile-1">Compile</h3>
+<ul>
+<li>input: <code>g++ $(FULL_CURRENT_PATH) -g -o $(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>Compile</code></li>
+</ul>
+<h3 id="run">Run</h3>
+<ul>
+<li>input: <code>$(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>Run</code></li>
+</ul>
+<h3 id="gdb">GDB</h3>
+<ul>
+<li>input: <code>gdb $(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>GDB</code></li>
+</ul>
+<h2 id="add-to-macros-submenu">Add to Macros submenu</h2>
+<p>Plug-&gt;NppExec-&gt;Advanced Options</p>
+<p>at Associated script:</p>
+<ul>
+<li>Add-&gt; Compile and Run and GBD</li>
+<li>Menu items -&gt; Place to the Macros submenu</li>
+</ul></div>
 				
             
 
@@ -555,7 +597,300 @@ Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</d
 			
 		</div>
 	</div>
-</div><div class="summary">Windows <a href="https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations">https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations</a> Windows Server 2022 操作系统版本 KMS 客户端安装程序密钥 Windows Server 2022 Datacenter WX4NM-KYWYW-QJJR4-XV3QB-6VM33 Windows Server 2022 Standard VDYBN-27WPP-V4HQT-9VMD4-VMK7H Windows Server 2019 操作系统版本 KMS 客户端安装程序密钥 Windows Server 2019 Datacenter WMDGN-G9PQG-XVVXX-R3X43-63DFG Windows Server 2019 Standard N69G4-B89J2-4G8F4-WWYCC-J464C Windows Server 2019 Essentials WVDHN-86M7X-466P6-VHXV7-YY726 Windows Server 2016 操作系统版本 KMS 客户端安装</div>
+</div><div class="summary"><h2 id="windows">Windows</h2>
+<p><a href="https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations">https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations</a></p>
+<h3 id="windows-server-2022">Windows Server 2022</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows Server 2022 Datacenter</td>
+          <td>WX4NM-KYWYW-QJJR4-XV3QB-6VM33</td>
+      </tr>
+      <tr>
+          <td>Windows Server 2022 Standard</td>
+          <td>VDYBN-27WPP-V4HQT-9VMD4-VMK7H</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-server-2019">Windows Server 2019</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows Server 2019 Datacenter</td>
+          <td>WMDGN-G9PQG-XVVXX-R3X43-63DFG</td>
+      </tr>
+      <tr>
+          <td>Windows Server 2019 Standard</td>
+          <td>N69G4-B89J2-4G8F4-WWYCC-J464C</td>
+      </tr>
+      <tr>
+          <td>Windows Server 2019 Essentials</td>
+          <td>WVDHN-86M7X-466P6-VHXV7-YY726</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-server-2016">Windows Server 2016</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows Server 2016 Datacenter</td>
+          <td>CB7KF-BWN84-R7R2Y-793K2-8XDDG</td>
+      </tr>
+      <tr>
+          <td>Windows Server 2016 Standard</td>
+          <td>WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</td>
+      </tr>
+      <tr>
+          <td>Windows Server 2016 Essentials</td>
+          <td>JCKRF-N37P4-C2D82-9YXRT-4M63B</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-11">Windows 11</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows 11 专业版</td>
+          <td>W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
+      </tr>
+      <tr>
+          <td>Windows 11 专业版 N</td>
+          <td>MH37W-N47XK-V7XM9-C7227-GCQG9</td>
+      </tr>
+      <tr>
+          <td>Windows 11 专业工作站版</td>
+          <td>NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
+      </tr>
+      <tr>
+          <td>Windows 11 专业工作站版 N</td>
+          <td>9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
+      </tr>
+      <tr>
+          <td>Windows 11 专业教育版</td>
+          <td>6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
+      </tr>
+      <tr>
+          <td>Windows 11 专业教育版 N</td>
+          <td>YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
+      </tr>
+      <tr>
+          <td>Windows 11 教育版</td>
+          <td>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
+      </tr>
+      <tr>
+          <td>Windows 11 教育版 N</td>
+          <td>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
+      </tr>
+      <tr>
+          <td>Windows 11 企业版</td>
+          <td>NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
+      </tr>
+      <tr>
+          <td>Windows 11 企业版 N</td>
+          <td>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
+      </tr>
+      <tr>
+          <td>Windows 11 企业版 G</td>
+          <td>YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
+      </tr>
+      <tr>
+          <td>Windows 11 企业版 G N</td>
+          <td>44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-10">Windows 10</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows 10 专业版</td>
+          <td>W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
+      </tr>
+      <tr>
+          <td>Windows 10 专业版 N</td>
+          <td>MH37W-N47XK-V7XM9-C7227-GCQG9</td>
+      </tr>
+      <tr>
+          <td>Windows 10 专业工作站版</td>
+          <td>NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
+      </tr>
+      <tr>
+          <td>Windows 10 专业工作站版 N</td>
+          <td>9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
+      </tr>
+      <tr>
+          <td>Windows 10 专业教育版</td>
+          <td>6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
+      </tr>
+      <tr>
+          <td>Windows 10 专业教育版 N</td>
+          <td>YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
+      </tr>
+      <tr>
+          <td>Windows 10 教育版</td>
+          <td>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
+      </tr>
+      <tr>
+          <td>Windows 10 教育版 N</td>
+          <td>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
+      </tr>
+      <tr>
+          <td>Windows 10 企业版</td>
+          <td>NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
+      </tr>
+      <tr>
+          <td>Windows 10 企业版 N</td>
+          <td>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
+      </tr>
+      <tr>
+          <td>Windows 10 企业版 G</td>
+          <td>YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
+      </tr>
+      <tr>
+          <td>Windows 10 企业版 G N</td>
+          <td>44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-10-ltsc-2021">Windows 10 LTSC 2021</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows 10 企业版 LTSC 2021</td>
+          <td>M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
+      </tr>
+      <tr>
+          <td>Windows 10 企业版 N LTSC 2021</td>
+          <td>92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-10-ltsc-2019">Windows 10 LTSC 2019</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows 10 企业版 LTSC 2019</td>
+          <td>M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
+      </tr>
+      <tr>
+          <td>Windows 10 企业版 N LTSC 2019</td>
+          <td>92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-10-ltsb-2016">Windows 10 LTSB 2016</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows 10 企业版 LTSB 2016</td>
+          <td>DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</td>
+      </tr>
+      <tr>
+          <td>Windows 10 企业版 N LTSB 2016</td>
+          <td>QFFDN-GRT3P-VKWWX-X7T3R-8B639</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-7">Windows 7</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows 7 专业版</td>
+          <td>FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</td>
+      </tr>
+      <tr>
+          <td>Windows 7 专业版 N</td>
+          <td>MRPKT-YTG23-K7D7T-X2JMM-QY7MG</td>
+      </tr>
+      <tr>
+          <td>Windows 7 专业版 E</td>
+          <td>W82YF-2Q76Y-63HXB-FGJG9-GF7QX</td>
+      </tr>
+      <tr>
+          <td>Windows 7 企业版</td>
+          <td>33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</td>
+      </tr>
+      <tr>
+          <td>Windows 7 企业版 N</td>
+          <td>YDRBP-3D83W-TY26F-D46B2-XCKRJ</td>
+      </tr>
+      <tr>
+          <td>Windows 7 企业版 E</td>
+          <td>C29WB-22CC8-VJ326-GHFJW-H9DH4</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="windows-xp">Windows XP</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作系统版本</th>
+          <th>KMS 客户端安装程序密钥</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Windows XP 专业版</td>
+          <td>MRX3F-47B9T-2487J-KWKMF-RPWBY</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="office">Office</h2>
+<p><a href="https://learn.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks?redirectedfrom=MSDN">https://learn.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks?redirectedfrom=MSDN</a></p></div>
 				
 				
 				<div class="read-more">
@@ -607,7 +942,27 @@ Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</d
 			
 		</div>
 	</div>
-</div><div class="summary">KMS激活Windows 首先用管理员权限打开命令提示符 卸载当前系统秘钥：slmgr.vbs /upk 写入KMS的GVLK秘钥：slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 写入KMS服务器地址：slm</div>
+</div><div class="summary"><h2 id="kms激活windows">KMS激活Windows</h2>
+<ol>
+<li>首先用管理员权限打开命令提示符</li>
+<li>卸载当前系统秘钥：<code>slmgr.vbs /upk</code></li>
+<li>写入KMS的GVLK秘钥：<code>slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code></li>
+<li>写入KMS服务器地址：<code>slmgr /skms home.akvicor.com</code></li>
+<li>连接KMS服务器激活：<code>slmgr /ato</code></li>
+<li>查看激活状态：<code>slmgr.vbs -dlv</code></li>
+</ol>
+<h2 id="kms激活office">KMS激活Office</h2>
+<ol>
+<li>首先用管理员权限打开命令提示符</li>
+<li>切换到Office的安装路径，例如：<code>C:\Program Files\Microsoft Office\Office16</code></li>
+<li>查看当前密钥最后五位数：<code>cscript ospp.vbs /dstatus</code></li>
+<li>卸载当前密钥：<code>cscript ospp.vbs /unpkey:XXXXX</code></li>
+<li>安装KMS密钥：<code>cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code></li>
+<li>设置激活KMS服务器：<code>cscript ospp.vbs /sethst:home.akvicor.com</code></li>
+<li>执行激活命令：<code>cscript ospp.vbs /act</code></li>
+</ol>
+<h2 id="download-office">Download Office</h2>
+<p>Office Deployment Tool简称ODT，是微软官方提供的Office部署工具。下载地址为：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a>或<a href="http://pi.akvicor.com:7021/file?f=1284">http://pi.akvicor.com:7021/file?f=1284</a></p></div>
 				
 				
 				<div class="read-more">
@@ -659,7 +1014,21 @@ Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</d
 			
 		</div>
 	</div>
-</div><div class="summary">Make Windows Use UTC Time Filename: Make Windows Use UTC Time.reg Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation] &quot;RealTimeIsUniversal&quot;=dword:00000001 以管理员身份打开 「PowerShell」，输入以下命令 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1 Make Windows Use Local Time Filename: Make Windows Use Local Time.reg Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation] &quot;RealTimeIsUniversal&quot;=-</div>
+</div><div class="summary"><h2 id="make-windows-use-utc-time">Make Windows Use UTC Time</h2>
+<p>Filename: <code>Make Windows Use UTC Time.reg</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-reg" data-lang="reg"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Windows Registry Editor Version 5.00
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#cf222e">[</span><span style="color:#6639ba">HKEY_LOCAL_MACHINE</span><span style="color:#cf222e">\System\CurrentControlSet\Control\TimeZoneInformation]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">&#34;RealTimeIsUniversal&#34;</span><span style="color:#0550ae">=</span><span style="color:#953800">dword</span><span style="color:#1f2328">:</span><span style="color:#0550ae">00000001</span>
+</span></span></code></pre></div><p>以管理员身份打开 「PowerShell」，输入以下命令</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Reg add HKLM<span style="color:#1f2328">\</span>SYSTEM<span style="color:#1f2328">\</span>CurrentControlSet<span style="color:#1f2328">\</span>Control<span style="color:#1f2328">\</span>TimeZoneInformation <span style="color:#1f2328">/</span>v RealTimeIsUniversal <span style="color:#1f2328">/</span>t REG_DWORD <span style="color:#1f2328">/</span>d <span style="color:#0550ae">1</span>
+</span></span></code></pre></div><h2 id="make-windows-use-local-time">Make Windows Use Local Time</h2>
+<p>Filename: <code>Make Windows Use Local Time.reg</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-reg" data-lang="reg"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Windows Registry Editor Version 5.00
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#cf222e">[</span><span style="color:#6639ba">HKEY_LOCAL_MACHINE</span><span style="color:#cf222e">\System\CurrentControlSet\Control\TimeZoneInformation]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">&#34;RealTimeIsUniversal&#34;</span><span style="color:#0550ae">=-</span>
+</span></span></code></pre></div></div>
 				
             
 
@@ -706,12 +1075,40 @@ Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</d
 			
 		</div>
 	</div>
-</div><div class="summary">每隔30秒钟检查一次网络状态，如果网络异常则重启网卡，然后刷新DNS缓存。 @echo off echo &quot;正在监听网络状态&hellip;.&quot; cd C:\opt\netcheck :begin ping akvicor.com &gt; ping.txt rem echo %errorlevel% if %ERRORLEVEL% == 1 goto ping2 goto loop</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/auto_restart_network_interface/">查看更多…</a>
-				</div>
+</div><div class="summary"><p>每隔30秒钟检查一次网络状态，如果网络异常则重启网卡，然后刷新DNS缓存。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">@</span><span style="color:#cf222e">echo</span> off
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#cf222e">echo</span> <span style="color:#0a3069">&#34;正在监听网络状态....&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#cf222e">cd</span> C:\opt\netcheck
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#1f2328">:</span><span style="color:#900;font-weight:bold">begin</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>ping akvicor.com <span style="color:#1f2328">&gt;</span> ping.txt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#57606a">rem echo %errorlevel%</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#cf222e">if</span> <span style="color:#953800">%ERRORLEVEL%</span> <span style="color:#0550ae">==</span> 1 <span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">ping2</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">loop</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#1f2328">:</span><span style="color:#900;font-weight:bold">ping2</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>ping baidu.com <span style="color:#1f2328">&gt;</span> ping.txt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#cf222e">if</span> <span style="color:#953800">%ERRORLEVEL%</span> <span style="color:#0550ae">==</span> 1 <span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">reboot</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">loop</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#1f2328">:</span><span style="color:#900;font-weight:bold">reboot</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;网络异常&#34;</span> <span style="color:#1f2328">&gt;&gt;</span> errlog.log
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;正在停用网卡&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>netsh interface set interface <span style="color:#0a3069">&#34;WLAN&#34;</span> disabled
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>timeout /T 3 /NOBREAK
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;正在启用网卡&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>netsh interface set interface <span style="color:#0a3069">&#34;WLAN&#34;</span> enable
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;网卡已重新启动....&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;网卡已重新启动&#34;</span> <span style="color:#1f2328">&gt;&gt;</span> errlog.log
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">loop</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#1f2328">:</span><span style="color:#900;font-weight:bold">loop</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>ipconfig /flushdns <span style="color:#1f2328">&gt;</span> nul
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>timeout /T 30 <span style="color:#1f2328">&gt;</span> nul
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span><span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">begin</span>
+</span></span></code></pre></div></div>
 				
             
 
@@ -758,12 +1155,15 @@ Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</d
 			
 		</div>
 	</div>
-</div><div class="summary">:: 查看Windows系统TCP端口范围 netsh int ipv4 show dynamicportrange protocol=udp :: 修改Windows系统TCP端口范围 netsh int ipv4 set dynamicport tcp start=30000 num=35535 :: 查看Windows系统UDP端口范围 netsh int ipv4 show dynamicportrange protocol=udp :: 修改</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/ip_local_port_range/">查看更多…</a>
-				</div>
+</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">:</span><span style="color:#57606a">: 查看Windows系统TCP端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>netsh int ipv4 show dynamicportrange protocol=udp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#1f2328">:</span><span style="color:#57606a">: 修改Windows系统TCP端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>netsh int ipv4 set dynamicport tcp start=30000 num=35535
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">:</span><span style="color:#57606a">: 查看Windows系统UDP端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>netsh int ipv4 show dynamicportrange protocol=udp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#1f2328">:</span><span style="color:#57606a">: 修改Windows系统UDP端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>netsh int ipv4 set dynamicport udp start=30000 num=35535
+</span></span></code></pre></div></div>
 				
             
 

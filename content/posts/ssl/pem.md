@@ -1,6 +1,6 @@
 ---
 title: "生成cert.pem和key.pem"
-date: 2022-07-27T23:23:31 +08:00
+date: 2022-07-27 23:23:31 +08:00
 draft: false
 categories: [SSL]
 tags: []

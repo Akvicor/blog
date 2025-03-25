@@ -159,7 +159,7 @@
         <span>
             
             <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
-            3848 字</span>&nbsp;
+            3875 字</span>&nbsp;
         <span>
             
             <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
@@ -243,15 +243,15 @@
 <p>登陆后运行：<code>screen -S lnmp</code></p>
 <p>如果提示screen: command not found 命令不存在可以执行：<code>yum install screen</code> 或 <code>apt-get install screen</code>安装，详细内容参考screen教程。</p>
 <h3 id="下载并安装lnmp一键安装包">下载并安装LNMP一键安装包：</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz <span style="color:#000;font-weight:bold">&amp;&amp;</span> tar zxf lnmp1.6.tar.gz <span style="color:#000;font-weight:bold">&amp;&amp;</span> <span style="color:#0086b3">cd</span> lnmp1.6 <span style="color:#000;font-weight:bold">&amp;&amp;</span> ./install.sh lnmp
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz <span style="color:#0550ae">&amp;&amp;</span> tar zxf lnmp1.6.tar.gz <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#6639ba">cd</span> lnmp1.6 <span style="color:#0550ae">&amp;&amp;</span> ./install.sh lnmp
 </span></span></code></pre></div><p>如提示wget: command not found ，使用<code>yum install wget</code> 或 <code>apt-get install wget</code> 命令安装。</p>
 <h2 id="php模块扩展">PHP模块/扩展</h2>
 <p>安装前
 安装前建议先执行 <code>/usr/local/php/bin/php -m</code> (此命令显示目前已经安装好的PHP模块)看一下，要安装的模块是否已安装。然后下载当前PHP版本的源码并解压。</p>
 <p>大部分php扩展/模块的安装就是三个步骤，在源码目录下执行：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/usr/local/php/bin/phpize
-</span></span><span style="display:flex;"><span>./configure --with-php-config<span style="color:#000;font-weight:bold">=</span>/usr/local/php/bin/php-config
-</span></span><span style="display:flex;"><span>make <span style="color:#000;font-weight:bold">&amp;&amp;</span> make install
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/usr/local/php/bin/phpize
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>./configure --with-php-config<span style="color:#0550ae">=</span>/usr/local/php/bin/php-config
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>make <span style="color:#0550ae">&amp;&amp;</span> make install
 </span></span></code></pre></div><p>有些模块可能会稍微有差异，具体看模块的安装文件就可以。</p>
 <p>本文以imap和exif模块为例，进入php源码目录下ext，里面会有大部分模块的源码，这里都是php自带模块，第三方模块的话需要自己找第三方模块的源码。</p>
 <h3 id="安装imap模块">安装imap模块</h3>
@@ -263,19 +263,19 @@
 <p>则执行：<code>cd /root/lnmp1.3-full/src/php-5.4.45/ext/</code> 一般安装完LNMP php源码都是自动删除了的，需要自己进入src目录下解压。</p>
 <p>我们要安装imap模块，执行<code>cd imap/</code></p>
 <p>再执行 <code>/usr/local/php/bin/phpize</code> 会返回如下信息：</p>
-<pre tabindex="0"><code>Configuring for:
-PHP Api Version:         20041225
-Zend Module Api No:      20060613
-Zend Extension Api No:   220060519
-</code></pre><p>再执行以下命令：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>./configure --with-php-config<span style="color:#000;font-weight:bold">=</span>/usr/local/php/bin/php-config --with-kerberos --with-imap-ssl
-</span></span><span style="display:flex;"><span>make <span style="color:#000;font-weight:bold">&amp;&amp;</span> make install
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Configuring for:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>PHP Api Version:         20041225
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Zend Module Api No:      20060613
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Zend Extension Api No:   220060519
+</span></span></code></pre></div><p>再执行以下命令：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>./configure --with-php-config<span style="color:#0550ae">=</span>/usr/local/php/bin/php-config --with-kerberos --with-imap-ssl
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>make <span style="color:#0550ae">&amp;&amp;</span> make install
 </span></span></code></pre></div><p>执行完返回：</p>
-<pre tabindex="0"><code>Build complete.
-Don&#39;t forget to run &#39;make test&#39;.
-
-Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20060613/
-</code></pre><p>表示已经成功，再修改<code>/usr/local/php/etc/php.ini</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Build complete.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Don&#39;t forget to run &#39;make test&#39;.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20060613/
+</span></span></code></pre></div><p>表示已经成功，再修改<code>/usr/local/php/etc/php.ini</code></p>
 <p>查找：<code>extension_dir</code> 再下面一行添加上<code>extension = &quot;imap.so&quot;</code></p>
 <p>保存，执行<code>/etc/init.d/php-fpm restart</code> 重启。</p>
 <h3 id="安装exif模块">安装exif模块</h3>
@@ -284,68 +284,68 @@ Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non
 <p>则执行：<code>cd /root/lnmp1.3-full/src/php-5.4.45/ext/</code></p>
 <p>我们要安装exif模块，执行<code>cd exif/</code></p>
 <p>再执行 <code>/usr/local/php/bin/phpize</code> 会返回如下信息：</p>
-<pre tabindex="0"><code>Configuring for:
-PHP Api Version:         20041225
-Zend Module Api No:      20060613
-Zend Extension Api No:   220060519
-</code></pre><p>再执行以下命令：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>./configure --with-php-config<span style="color:#000;font-weight:bold">=</span>/usr/local/php/bin/php-config
-</span></span><span style="display:flex;"><span>make <span style="color:#000;font-weight:bold">&amp;&amp;</span> make install
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Configuring for:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>PHP Api Version:         20041225
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Zend Module Api No:      20060613
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Zend Extension Api No:   220060519
+</span></span></code></pre></div><p>再执行以下命令：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>./configure --with-php-config<span style="color:#0550ae">=</span>/usr/local/php/bin/php-config
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>make <span style="color:#0550ae">&amp;&amp;</span> make install
 </span></span></code></pre></div><p>执行完返回：</p>
-<pre tabindex="0"><code>Build complete.
-Don&#39;t forget to run &#39;make test&#39;.
-
-Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20060613/
-</code></pre><p>表示已经成功，再修改<code>/usr/local/php/etc/php.ini</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Build complete.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Don&#39;t forget to run &#39;make test&#39;.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20060613/
+</span></span></code></pre></div><p>表示已经成功，再修改<code>/usr/local/php/etc/php.ini</code></p>
 <p>查找：<code>extension = </code>再最后一个<code>extension= </code>后面添加上<code>extension = &quot;exif.so&quot;</code></p>
 <p>保存，执行<code>/etc/init.d/php-fpm restart</code> 重启。</p>
 <p>**使用：**在<code>/home/wwwroot/</code>下面创建一个<code>exif.php</code>的文件，内容如下：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;?</span>php
-</span></span><span style="display:flex;"><span><span style="color:#008080">$exif</span> <span style="color:#000;font-weight:bold">=</span> read_exif_data (<span style="color:#d14">&#39;IMG_0001.JPG&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">while</span>(<span style="color:#000;font-weight:bold">list</span>(<span style="color:#008080">$k</span>,<span style="color:#008080">$v</span>)<span style="color:#000;font-weight:bold">=</span>each(<span style="color:#008080">$exif</span>)) {
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">echo</span> <span style="color:#d14">&#34;</span><span style="color:#d14">$k</span><span style="color:#d14">: </span><span style="color:#d14">$v</span><span style="color:#d14">&lt;br&gt;</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">?&gt;</span><span style="color:#a61717;background-color:#e3d2d2">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#0550ae">&lt;?</span><span style="color:#1f2328">php</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#953800">$exif</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">read_exif_data</span> <span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;IMG_0001.JPG&#39;</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#cf222e">while</span><span style="color:#1f2328">(</span><span style="color:#cf222e">list</span><span style="color:#1f2328">(</span><span style="color:#953800">$k</span><span style="color:#1f2328">,</span><span style="color:#953800">$v</span><span style="color:#1f2328">)</span><span style="color:#0550ae">=</span><span style="color:#1f2328">each</span><span style="color:#1f2328">(</span><span style="color:#953800">$exif</span><span style="color:#1f2328">))</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#cf222e">echo</span> <span style="color:#0a3069">&#34;</span><span style="color:#0a3069">$k</span><span style="color:#0a3069">: </span><span style="color:#0a3069">$v</span><span style="color:#0a3069">&lt;br&gt;</span><span style="color:#0a3069">\n</span><span style="color:#0a3069">&#34;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a">?&gt;</span><span style="color:#f6f8fa;background-color:#82071e">
 </span></span></span></code></pre></div><h2 id="安装位置信息">安装位置信息</h2>
 <p>##LNMP相关软件安装目录</p>
-<pre tabindex="0"><code>Nginx 目录: /usr/local/nginx/
-MySQL 目录 : /usr/local/mysql/
-MySQL数据库所在目录：/usr/local/mysql/var/
-MariaDB 目录 : /usr/local/mariadb/
-MariaDB数据库所在目录：/usr/local/mariadb/var/
-PHP目录 : /usr/local/php/
-多PHP版本目录 : /usr/local/php5.5/ 其他版本前面5.5的版本号换成其他即可
-PHPMyAdmin目录 : 0.9版本为/home/wwwroot/phpmyadmin/ 1.0及以后版本为 /home/wwwroot/default/phpmyadmin/ 强烈建议将此目录重命名为其不容易猜到的名字。phpmyadmin可自己从官网下载新版替换。
-默认网站目录 : 0.9版本为 /home/wwwroot/ 1.0及以后版本为 /home/wwwroot/default/
-Nginx日志目录：/home/wwwlogs/
-/root/vhost.sh添加的虚拟主机配置文件所在目录：/usr/local/nginx/conf/vhost/
-PureFtpd 目录：/usr/local/pureftpd/
-PureFtpd web管理目录： 0.9版为/home/wwwroot/default/ftp/ 1.0版为 /home/wwwroot/default/ftp/
-Proftpd 目录：/usr/local/proftpd/
-Redis 目录：/usr/local/redis/
-</code></pre><h3 id="lnmp相关配置文件位置">LNMP相关配置文件位置</h3>
-<pre tabindex="0"><code>Nginx主配置(默认虚拟主机)文件：/usr/local/nginx/conf/nginx.conf
-添加的虚拟主机配置文件：/usr/local/nginx/conf/vhost/域名.conf
-MySQL配置文件：/etc/my.cnf
-PHP配置文件：/usr/local/php/etc/php.ini
-php-fpm配置文件：/usr/local/php/etc/php-fpm.conf
-PureFtpd配置文件：/usr/local/pureftpd/pure-ftpd.conf 1.3及更高版本：/usr/local/pureftpd/etc/pure-ftpd.conf
-PureFtpd MySQL配置文件：/usr/local/pureftpd/pureftpd-mysql.conf
-Proftpd配置文件：/usr/local/proftpd/etc/proftpd.conf 1.2及之前版本为/usr/local/proftpd/proftpd.conf
-Proftpd 用户配置文件：/usr/local/proftpd/etc/vhost/用户名.conf
-Redis 配置文件：/usr/local/redis/etc/redis.conf
-</code></pre><h3 id="lnmpa相关目录文件位置">LNMPA相关目录文件位置</h3>
-<pre tabindex="0"><code>Apache目录：/usr/local/apache/
-Apache配置文件：/usr/local/apache/conf/httpd.conf
-Apache虚拟主机配置文件目录：/usr/local/apache/conf/vhost/
-Apache默认虚拟主机配置文件：/usr/local/apache/conf/extra/httpd-vhosts.conf
-虚拟主机配置文件名称：/usr/local/apache/conf/vhost/域名.conf
-</code></pre><h2 id="安装php模块拓展">安装PHP模块/拓展</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>Nginx <span style="color:#f6f8fa;background-color:#82071e">目录</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>nginx<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>MySQL <span style="color:#f6f8fa;background-color:#82071e">目录</span> <span style="color:#1f2328">:</span> <span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>mysql<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>MySQL数据库所在目录<span style="color:#f6f8fa;background-color:#82071e">：</span><span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>mysql<span style="color:#0550ae">/</span><span style="color:#cf222e">var</span><span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>MariaDB <span style="color:#f6f8fa;background-color:#82071e">目录</span> <span style="color:#1f2328">:</span> <span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>mariadb<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>MariaDB数据库所在目录<span style="color:#f6f8fa;background-color:#82071e">：</span><span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>mariadb<span style="color:#0550ae">/</span><span style="color:#cf222e">var</span><span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>PHP目录 <span style="color:#1f2328">:</span> <span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>php<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#f6f8fa;background-color:#82071e">多</span>PHP版本目录 <span style="color:#1f2328">:</span> <span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>php5<span style="color:#0550ae">.</span><span style="color:#0550ae">5</span><span style="color:#0550ae">/</span> <span style="color:#f6f8fa;background-color:#82071e">其他版本前面</span><span style="color:#0550ae">5.5</span><span style="color:#f6f8fa;background-color:#82071e">的版本号换成其他即可</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>PHPMyAdmin目录 <span style="color:#1f2328">:</span> <span style="color:#0550ae">0.9</span><span style="color:#f6f8fa;background-color:#82071e">版本为</span><span style="color:#0550ae">/</span>home<span style="color:#0550ae">/</span>wwwroot<span style="color:#0550ae">/</span>phpmyadmin<span style="color:#0550ae">/</span> <span style="color:#0550ae">1.0</span><span style="color:#f6f8fa;background-color:#82071e">及以后版本为</span> <span style="color:#0550ae">/</span>home<span style="color:#0550ae">/</span>wwwroot<span style="color:#0550ae">/</span>default<span style="color:#0550ae">/</span>phpmyadmin<span style="color:#0550ae">/</span> <span style="color:#f6f8fa;background-color:#82071e">强烈建议将此目录重命名为其不容易猜到的名字。</span>phpmyadmin可自己从官网下载新版替换<span style="color:#f6f8fa;background-color:#82071e">。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#f6f8fa;background-color:#82071e">默认网站目录</span> <span style="color:#1f2328">:</span> <span style="color:#0550ae">0.9</span><span style="color:#f6f8fa;background-color:#82071e">版本为</span> <span style="color:#0550ae">/</span>home<span style="color:#0550ae">/</span>wwwroot<span style="color:#0550ae">/</span> <span style="color:#0550ae">1.0</span><span style="color:#f6f8fa;background-color:#82071e">及以后版本为</span> <span style="color:#0550ae">/</span>home<span style="color:#0550ae">/</span>wwwroot<span style="color:#0550ae">/</span>default<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>Nginx日志目录<span style="color:#f6f8fa;background-color:#82071e">：</span><span style="color:#0550ae">/</span>home<span style="color:#0550ae">/</span>wwwlogs<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#0550ae">/</span>root<span style="color:#0550ae">/</span>vhost<span style="color:#0550ae">.</span>sh添加的虚拟主机配置文件所在目录<span style="color:#f6f8fa;background-color:#82071e">：</span><span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>nginx<span style="color:#0550ae">/</span>conf<span style="color:#0550ae">/</span>vhost<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>PureFtpd <span style="color:#f6f8fa;background-color:#82071e">目录：</span><span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>pureftpd<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>PureFtpd web管理目录<span style="color:#f6f8fa;background-color:#82071e">：</span> <span style="color:#0550ae">0.9</span><span style="color:#f6f8fa;background-color:#82071e">版为</span><span style="color:#0550ae">/</span>home<span style="color:#0550ae">/</span>wwwroot<span style="color:#0550ae">/</span>default<span style="color:#0550ae">/</span>ftp<span style="color:#0550ae">/</span> <span style="color:#0550ae">1.0</span><span style="color:#f6f8fa;background-color:#82071e">版为</span> <span style="color:#0550ae">/</span>home<span style="color:#0550ae">/</span>wwwroot<span style="color:#0550ae">/</span>default<span style="color:#0550ae">/</span>ftp<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>Proftpd <span style="color:#f6f8fa;background-color:#82071e">目录：</span><span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>proftpd<span style="color:#0550ae">/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>Redis <span style="color:#f6f8fa;background-color:#82071e">目录：</span><span style="color:#0550ae">/</span>usr<span style="color:#0550ae">/</span>local<span style="color:#0550ae">/</span>redis<span style="color:#0550ae">/</span>
+</span></span></code></pre></div><h3 id="lnmp相关配置文件位置">LNMP相关配置文件位置</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>Nginx主配置(默认虚拟主机)文件：/usr/local/nginx/conf/nginx.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>添加的虚拟主机配置文件：/usr/local/nginx/conf/vhost/域名.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>MySQL配置文件：/etc/my.cnf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>PHP配置文件：/usr/local/php/etc/php.ini
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>php-fpm配置文件：/usr/local/php/etc/php-fpm.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>PureFtpd配置文件：/usr/local/pureftpd/pure-ftpd.conf 1.3及更高版本：/usr/local/pureftpd/etc/pure-ftpd.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>PureFtpd MySQL配置文件：/usr/local/pureftpd/pureftpd-mysql.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>Proftpd配置文件：/usr/local/proftpd/etc/proftpd.conf 1.2及之前版本为/usr/local/proftpd/proftpd.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>Proftpd 用户配置文件：/usr/local/proftpd/etc/vhost/用户名.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>Redis 配置文件：/usr/local/redis/etc/redis.conf
+</span></span></code></pre></div><h3 id="lnmpa相关目录文件位置">LNMPA相关目录文件位置</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Apache目录：/usr/local/apache/
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Apache配置文件：/usr/local/apache/conf/httpd.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Apache虚拟主机配置文件目录：/usr/local/apache/conf/vhost/
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Apache默认虚拟主机配置文件：/usr/local/apache/conf/extra/httpd-vhosts.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>虚拟主机配置文件名称：/usr/local/apache/conf/vhost/域名.conf
+</span></span></code></pre></div><h2 id="安装php模块拓展">安装PHP模块/拓展</h2>
 <p>安装前建议先执行 <code>/usr/local/php/bin/php -m</code> (此命令显示目前已经安装好的PHP模块)看一下，要安装的模块是否已安装。然后下载当前PHP版本的源码并解压。</p>
 <p>大部分php扩展/模块的安装就是三个步骤，在源码目录下执行：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/local/php/bin/phpize
-</span></span><span style="display:flex;"><span>./configure --with-php-config<span style="color:#000;font-weight:bold">=</span>/usr/local/php/bin/php-config
-</span></span><span style="display:flex;"><span>make <span style="color:#000;font-weight:bold">&amp;&amp;</span> make install
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/usr/local/php/bin/phpize
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>./configure --with-php-config<span style="color:#0550ae">=</span>/usr/local/php/bin/php-config
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>make <span style="color:#0550ae">&amp;&amp;</span> make install
 </span></span></code></pre></div><p>有些模块可能会稍微有差异，具体看模块的安装文件就可以。</p>
 <p>本文以imap和exif模块为例，进入php源码目录下ext，里面会有大部分模块的源码，这里都是php自带模块，第三方模块的话需要自己找第三方模块的源码。</p>
 <h3 id="安装imap模块-1">安装imap模块</h3>
@@ -357,19 +357,19 @@ Apache默认虚拟主机配置文件：/usr/local/apache/conf/extra/httpd-vhosts
 <p>则执行：<code>cd /root/lnmp1.3-full/src/php-5.4.45/ext/</code> 一般安装完LNMP php源码都是自动删除了的，需要自己进入src目录下解压。</p>
 <p>我们要安装imap模块，执行<code>cd imap/</code></p>
 <p>再执行 <code>/usr/local/php/bin/phpize</code> 会返回如下信息：</p>
-<pre tabindex="0"><code>Configuring for:
-PHP Api Version:         20041225
-Zend Module Api No:      20060613
-Zend Extension Api No:   220060519
-</code></pre><p>再执行以下命令：</p>
-<pre tabindex="0"><code>[root@vpser imap]# ./configure --with-php-config=/usr/local/php/bin/php-config --with-kerberos --with-imap-ssl
-[root@vpser imap]# make &amp;&amp; make install
-</code></pre><p>执行完返回：</p>
-<pre tabindex="0"><code>Build complete.
-Don&#39;t forget to run &#39;make test&#39;.
-
-Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20060613/
-</code></pre><p>表示已经成功，再修改 <code>/usr/local/php/etc/php.ini</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Configuring for:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>PHP Api Version:         20041225
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Zend Module Api No:      20060613
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Zend Extension Api No:   220060519
+</span></span></code></pre></div><p>再执行以下命令：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[root@vpser imap]# ./configure --with-php-config=/usr/local/php/bin/php-config --with-kerberos --with-imap-ssl
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[root@vpser imap]# make &amp;&amp; make install
+</span></span></code></pre></div><p>执行完返回：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Build complete.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Don&#39;t forget to run &#39;make test&#39;.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20060613/
+</span></span></code></pre></div><p>表示已经成功，再修改 <code>/usr/local/php/etc/php.ini</code></p>
 <p>查找：<code>extension_dir</code> 再下面一行添加上 <code>extension = &quot;imap.so&quot;</code></p>
 <p>保存，执行 <code>/etc/init.d/php-fpm restart</code> 重启。</p>
 <p>在浏览器里面输入http://ip/p.php，打开探针，安装IMAP模块前：</p>
@@ -382,29 +382,29 @@ Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non
 <p>则执行：<code>cd /root/lnmp1.3-full/src/php-5.4.45/ext/</code></p>
 <p>我们要安装exif模块，执行 <code>cd exif/</code></p>
 <p>再执行 <code>/usr/local/php/bin/phpize</code> 会返回如下信息：</p>
-<pre tabindex="0"><code>Configuring for:
-PHP Api Version:         20041225
-Zend Module Api No:      20060613
-Zend Extension Api No:   220060519
-</code></pre><p>再执行以下命令：</p>
-<pre tabindex="0"><code>[root@vpser imap]# ./configure --with-php-config=/usr/local/php/bin/php-config
-[root@vpser imap]# make &amp;&amp; make install
-</code></pre><p>执行完返回：</p>
-<pre tabindex="0"><code>Build complete.
-Don&#39;t forget to run &#39;make test&#39;.
-
-Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20060613/
-</code></pre><p>表示已经成功，再修改 <code>/usr/local/php/etc/php.ini</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Configuring for:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>PHP Api Version:         20041225
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Zend Module Api No:      20060613
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Zend Extension Api No:   220060519
+</span></span></code></pre></div><p>再执行以下命令：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[root@vpser imap]# ./configure --with-php-config=/usr/local/php/bin/php-config
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[root@vpser imap]# make &amp;&amp; make install
+</span></span></code></pre></div><p>执行完返回：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Build complete.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Don&#39;t forget to run &#39;make test&#39;.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Installing shared extensions:     /usr/local/php/lib/php/extensions/no-debug-non-zts-20060613/
+</span></span></code></pre></div><p>表示已经成功，再修改 <code>/usr/local/php/etc/php.ini</code></p>
 <p>查找：<code>extension = </code>再最后一个<code>extension= </code>后面添加上<code>extension = &quot;exif.so&quot;</code></p>
 <p>保存，执行<code>/etc/init.d/php-fpm restart</code> 重启。</p>
 <p>在<code>/home/wwwroot/</code>下面创建一个<code>exif.php</code>的文件，内容如下：</p>
-<pre tabindex="0"><code>&lt;?php
-$exif = read_exif_data (&#39;IMG_0001.JPG&#39;);
-while(list($k,$v)=each($exif)) {
-echo &#34;$k: $v&lt;br&gt;\n&#34;;
-}
-?&gt;
-</code></pre><p>其中IMG_0001.JPG为照片文件。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;?php
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>$exif = read_exif_data (&#39;IMG_0001.JPG&#39;);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>while(list($k,$v)=each($exif)) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>echo &#34;$k: $v&lt;br&gt;\n&#34;;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>?&gt;
+</span></span></code></pre></div><p>其中IMG_0001.JPG为照片文件。</p>
 <p>未安装exif模块前：</p>
 <p><img src="https://lsky.kayuki.org/i/2023/08/05/64cdeea9d269d.jpg" alt="image"></p>
 <p>安装exif模块后：</p>

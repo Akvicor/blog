@@ -203,7 +203,7 @@
         <p>此方法仅适合刚把镜像写入磁盘还未启动以及还未将镜像写入磁盘这两种情况，一旦系统启动，squashfs分区大小就已经确定了，如果要更改只能使用losetup挂载并执行resize.f2fs扩展大小。</p>
 <h2 id="1-扩展镜像文件">1. 扩展镜像文件</h2>
 <p>如果要修改的是IMG文件，需要先使用dd命令扩展文件的大小，如果IMG已经写入了磁盘则直接从第2步开始</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>dd <span style="color:#000;font-weight:bold">if</span><span style="color:#000;font-weight:bold">=</span>/dev/zero <span style="color:#008080">bs</span><span style="color:#000;font-weight:bold">=</span>1M <span style="color:#008080">count</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">1024</span> &gt;&gt; openwrt-squashfs.img
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>dd <span style="color:#cf222e">if</span><span style="color:#0550ae">=</span>/dev/zero <span style="color:#953800">bs</span><span style="color:#0550ae">=</span>1M <span style="color:#953800">count</span><span style="color:#0550ae">=</span><span style="color:#0550ae">1024</span> &gt;&gt; openwrt-squashfs.img
 </span></span></code></pre></div><h2 id="2-使用fdisk编辑">2. 使用fdisk编辑</h2>
 <p>输入命令 <code>fdisk openwrt-squashfs.img</code> 并按回车进入分区状态，如果IMG已经写入了磁盘则将文件路径改为磁盘路径即可，例如<code>fdisk /dev/sda</code></p>
 <ol>

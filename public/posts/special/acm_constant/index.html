@@ -159,7 +159,7 @@
         <span>
             
             <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
-            4949 字</span>&nbsp;
+            5004 字</span>&nbsp;
         <span>
             
             <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
@@ -237,190 +237,190 @@
 <p>那么什么是卡常数呢，简单来说就是你和某神犇算法思路一样，结果他的AC了，你的TLE，复杂来说就是程序被卡常数，一般指程序虽然渐进复杂度可以接受，但是由于实现/算法本身的时间常数因子较大，使得无法在OI/ACM等算法竞赛规定的时限内运行结束。</p>
 <p>下面就是介绍各种各样的非（花）常（里）实（胡）用（哨）的优化方法的，若本文某些地方有错误或不明确的地方还请指出。=7=</p>
 <h2 id="常见">常见</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">~</span>i <span style="color:#998;font-style:italic">// i是-1则返回0，否则返回其他值
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>i<span style="color:#000;font-weight:bold">=-</span><span style="color:#099">1</span>  <span style="color:#000;font-weight:bold">~</span>i<span style="color:#000;font-weight:bold">==</span><span style="color:#099">0</span>
-</span></span><span style="display:flex;"><span>i<span style="color:#000;font-weight:bold">=</span>other <span style="color:#000;font-weight:bold">~</span>i<span style="color:#000;font-weight:bold">!=</span><span style="color:#099">0</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>i<span style="color:#000;font-weight:bold">^</span><span style="color:#099">1</span> <span style="color:#998;font-style:italic">// 常用与成对的索引，比如网络流中的 正边 和 反边
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>i<span style="color:#000;font-weight:bold">=</span><span style="color:#099">0</span> i<span style="color:#000;font-weight:bold">^</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>
-</span></span><span style="display:flex;"><span>i<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span> i<span style="color:#000;font-weight:bold">^</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">0</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>i<span style="color:#000;font-weight:bold">=</span><span style="color:#099">2</span> i<span style="color:#000;font-weight:bold">^</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">3</span>
-</span></span><span style="display:flex;"><span>i<span style="color:#000;font-weight:bold">=</span><span style="color:#099">3</span> i<span style="color:#000;font-weight:bold">^</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">2</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#0550ae">~</span>i <span style="color:#57606a">// i是-1则返回0，否则返回其他值
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>i<span style="color:#0550ae">=-</span><span style="color:#0550ae">1</span>  <span style="color:#0550ae">~</span>i<span style="color:#0550ae">==</span><span style="color:#0550ae">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>i<span style="color:#0550ae">=</span>other <span style="color:#0550ae">~</span>i<span style="color:#0550ae">!=</span><span style="color:#0550ae">0</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>i<span style="color:#0550ae">^</span><span style="color:#0550ae">1</span> <span style="color:#57606a">// 常用与成对的索引，比如网络流中的 正边 和 反边
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>i<span style="color:#0550ae">=</span><span style="color:#0550ae">0</span> i<span style="color:#0550ae">^</span><span style="color:#0550ae">1</span><span style="color:#0550ae">=</span><span style="color:#0550ae">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>i<span style="color:#0550ae">=</span><span style="color:#0550ae">1</span> i<span style="color:#0550ae">^</span><span style="color:#0550ae">1</span><span style="color:#0550ae">=</span><span style="color:#0550ae">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>i<span style="color:#0550ae">=</span><span style="color:#0550ae">2</span> i<span style="color:#0550ae">^</span><span style="color:#0550ae">1</span><span style="color:#0550ae">=</span><span style="color:#0550ae">3</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>i<span style="color:#0550ae">=</span><span style="color:#0550ae">3</span> i<span style="color:#0550ae">^</span><span style="color:#0550ae">1</span><span style="color:#0550ae">=</span><span style="color:#0550ae">2</span>
 </span></span></code></pre></div><h2 id="优化io">优化I/O</h2>
 <p>网上有很多说关于cin和scanf的介绍，以及关闭流输入等等优化方法，但这些都还是有可能成为卡常数的地方，那么这个时候，我们就可以自己写输出输出函数了。</p>
 <p><strong>下面一个简单的对读入数字的优化：</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">inline</span> <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">read</span>(<span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">&amp;</span>sum) {
-</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">char</span> ch <span style="color:#000;font-weight:bold">=</span> getchar();
-</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">int</span> tf <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>    sum <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">while</span>((ch <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14">&#39;0&#39;</span> <span style="color:#000;font-weight:bold">||</span> ch <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#d14">&#39;9&#39;</span>) <span style="color:#000;font-weight:bold">&amp;&amp;</span> (ch <span style="color:#000;font-weight:bold">!=</span> <span style="color:#d14">&#39;-&#39;</span>)) ch <span style="color:#000;font-weight:bold">=</span> getchar();
-</span></span><span style="display:flex;"><span>    tf <span style="color:#000;font-weight:bold">=</span> ((ch <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#39;-&#39;</span>) <span style="color:#000;font-weight:bold">&amp;&amp;</span> (ch <span style="color:#000;font-weight:bold">=</span> getchar()));
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">while</span>(ch <span style="color:#000;font-weight:bold">&gt;=</span> <span style="color:#d14">&#39;0&#39;</span> <span style="color:#000;font-weight:bold">&amp;&amp;</span> ch <span style="color:#000;font-weight:bold">&lt;=</span> <span style="color:#d14">&#39;9&#39;</span>) sum <span style="color:#000;font-weight:bold">=</span> sum <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">10</span><span style="color:#000;font-weight:bold">+</span> (ch <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">48</span>), ch <span style="color:#000;font-weight:bold">=</span> getchar();
-</span></span><span style="display:flex;"><span>    (tf) <span style="color:#000;font-weight:bold">&amp;&amp;</span> (sum <span style="color:#000;font-weight:bold">=-</span> sum);
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">inline</span> <span style="color:#cf222e">void</span> <span style="color:#6639ba">read</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> <span style="color:#0550ae">&amp;</span>sum<span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#cf222e">char</span> ch <span style="color:#0550ae">=</span> getchar<span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#cf222e">int</span> tf <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    sum <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>    <span style="color:#cf222e">while</span><span style="color:#1f2328">((</span>ch <span style="color:#0550ae">&lt;</span> <span style="color:#0a3069">&#39;0&#39;</span> <span style="color:#0550ae">||</span> ch <span style="color:#0550ae">&gt;</span> <span style="color:#0a3069">&#39;9&#39;</span><span style="color:#1f2328">)</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">(</span>ch <span style="color:#0550ae">!=</span> <span style="color:#0a3069">&#39;-&#39;</span><span style="color:#1f2328">))</span> ch <span style="color:#0550ae">=</span> getchar<span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>    tf <span style="color:#0550ae">=</span> <span style="color:#1f2328">((</span>ch <span style="color:#0550ae">==</span> <span style="color:#0a3069">&#39;-&#39;</span><span style="color:#1f2328">)</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">(</span>ch <span style="color:#0550ae">=</span> getchar<span style="color:#1f2328">()));</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>    <span style="color:#cf222e">while</span><span style="color:#1f2328">(</span>ch <span style="color:#0550ae">&gt;=</span> <span style="color:#0a3069">&#39;0&#39;</span> <span style="color:#0550ae">&amp;&amp;</span> ch <span style="color:#0550ae">&lt;=</span> <span style="color:#0a3069">&#39;9&#39;</span><span style="color:#1f2328">)</span> sum <span style="color:#0550ae">=</span> sum <span style="color:#0550ae">*</span> <span style="color:#0550ae">10</span><span style="color:#0550ae">+</span> <span style="color:#1f2328">(</span>ch <span style="color:#0550ae">-</span> <span style="color:#0550ae">48</span><span style="color:#1f2328">),</span> ch <span style="color:#0550ae">=</span> getchar<span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>    <span style="color:#1f2328">(</span>tf<span style="color:#1f2328">)</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">(</span>sum <span style="color:#0550ae">=-</span> sum<span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div><p>因为getchar()是比scanf和cin快很多的，所以可以用这种方式优化很多，当然也可以写对其他各种类型输入的优化。</p>
 <p>然后就是进阶版优化，cstdio库里面有一个非常快而且和freopen和fopen完美兼容的函数就是fread，而且是整段读取，函数原型为：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#099">1</span> size_t <span style="color:#900;font-weight:bold">fread</span>(<span style="color:#458;font-weight:bold">void</span> <span style="color:#000;font-weight:bold">*</span>buffer,size_t size,size_t count,FILE <span style="color:#000;font-weight:bold">*</span>stream);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#0550ae">1</span> size_t <span style="color:#6639ba">fread</span><span style="color:#1f2328">(</span><span style="color:#cf222e">void</span> <span style="color:#0550ae">*</span>buffer<span style="color:#1f2328">,</span>size_t size<span style="color:#1f2328">,</span>size_t count<span style="color:#1f2328">,</span>FILE <span style="color:#0550ae">*</span>stream<span style="color:#1f2328">);</span>
 </span></span></code></pre></div><p>作用：从stream中读取count个大小为size个字节的数据，放到数组buffer中，返回成功了多少个大小为为size个字节的数据。</p>
 <p><strong>所以我们的代码可以更加优化为：</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">inline</span> <span style="color:#458;font-weight:bold">char</span> <span style="color:#900;font-weight:bold">nc</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">static</span> <span style="color:#458;font-weight:bold">char</span> buf[<span style="color:#099">1000000</span>], <span style="color:#000;font-weight:bold">*</span>p1 <span style="color:#000;font-weight:bold">=</span> buf, <span style="color:#000;font-weight:bold">*</span>p2 <span style="color:#000;font-weight:bold">=</span> buf;
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">return</span> p1 <span style="color:#000;font-weight:bold">==</span> p2 <span style="color:#000;font-weight:bold">&amp;&amp;</span> (p2 <span style="color:#000;font-weight:bold">=</span> (p1 <span style="color:#000;font-weight:bold">=</span> buf) <span style="color:#000;font-weight:bold">+</span> fread (buf, <span style="color:#099">1</span>, <span style="color:#099">1000000</span>, stdin), p1 <span style="color:#000;font-weight:bold">==</span> p2) <span style="color:#000;font-weight:bold">?</span> <span style="color:#900;font-weight:bold">EOF</span> : <span style="color:#000;font-weight:bold">*</span>p1<span style="color:#000;font-weight:bold">++</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//#define nc getchar
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">inline</span> <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">read</span>(<span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">&amp;</span>sum) {
-</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">char</span> ch <span style="color:#000;font-weight:bold">=</span> nc();
-</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">int</span> tf <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>    sum <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">while</span>((ch <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#d14">&#39;0&#39;</span> <span style="color:#000;font-weight:bold">||</span> ch <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#d14">&#39;9&#39;</span>) <span style="color:#000;font-weight:bold">&amp;&amp;</span> (ch <span style="color:#000;font-weight:bold">!=</span> <span style="color:#d14">&#39;-&#39;</span>)) ch <span style="color:#000;font-weight:bold">=</span> nc();
-</span></span><span style="display:flex;"><span>    tf <span style="color:#000;font-weight:bold">=</span> ((ch <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#39;-&#39;</span>) <span style="color:#000;font-weight:bold">&amp;&amp;</span> (ch <span style="color:#000;font-weight:bold">=</span> nc()));
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">while</span>(ch <span style="color:#000;font-weight:bold">&gt;=</span> <span style="color:#d14">&#39;0&#39;</span> <span style="color:#000;font-weight:bold">&amp;&amp;</span> ch <span style="color:#000;font-weight:bold">&lt;=</span> <span style="color:#d14">&#39;9&#39;</span>) sum <span style="color:#000;font-weight:bold">=</span> sum <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">10</span><span style="color:#000;font-weight:bold">+</span> (ch <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">48</span>), ch <span style="color:#000;font-weight:bold">=</span> nc();
-</span></span><span style="display:flex;"><span>    (tf) <span style="color:#000;font-weight:bold">&amp;&amp;</span> (sum <span style="color:#000;font-weight:bold">=-</span> sum);
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#cf222e">inline</span> <span style="color:#cf222e">char</span> <span style="color:#6639ba">nc</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#cf222e">static</span> <span style="color:#cf222e">char</span> buf<span style="color:#1f2328">[</span><span style="color:#0550ae">1000000</span><span style="color:#1f2328">],</span> <span style="color:#0550ae">*</span>p1 <span style="color:#0550ae">=</span> buf<span style="color:#1f2328">,</span> <span style="color:#0550ae">*</span>p2 <span style="color:#0550ae">=</span> buf<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#cf222e">return</span> p1 <span style="color:#0550ae">==</span> p2 <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">(</span>p2 <span style="color:#0550ae">=</span> <span style="color:#1f2328">(</span>p1 <span style="color:#0550ae">=</span> buf<span style="color:#1f2328">)</span> <span style="color:#0550ae">+</span> fread <span style="color:#1f2328">(</span>buf<span style="color:#1f2328">,</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">1000000</span><span style="color:#1f2328">,</span> stdin<span style="color:#1f2328">),</span> p1 <span style="color:#0550ae">==</span> p2<span style="color:#1f2328">)</span> <span style="color:#0550ae">?</span> <span style="color:#900;font-weight:bold">EOF</span> <span style="color:#1f2328">:</span> <span style="color:#0550ae">*</span>p1<span style="color:#0550ae">++</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#57606a">//#define nc getchar
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#57606a"></span><span style="color:#cf222e">inline</span> <span style="color:#cf222e">void</span> <span style="color:#6639ba">read</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> <span style="color:#0550ae">&amp;</span>sum<span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#cf222e">char</span> ch <span style="color:#0550ae">=</span> nc<span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#cf222e">int</span> tf <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    sum <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#cf222e">while</span><span style="color:#1f2328">((</span>ch <span style="color:#0550ae">&lt;</span> <span style="color:#0a3069">&#39;0&#39;</span> <span style="color:#0550ae">||</span> ch <span style="color:#0550ae">&gt;</span> <span style="color:#0a3069">&#39;9&#39;</span><span style="color:#1f2328">)</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">(</span>ch <span style="color:#0550ae">!=</span> <span style="color:#0a3069">&#39;-&#39;</span><span style="color:#1f2328">))</span> ch <span style="color:#0550ae">=</span> nc<span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    tf <span style="color:#0550ae">=</span> <span style="color:#1f2328">((</span>ch <span style="color:#0550ae">==</span> <span style="color:#0a3069">&#39;-&#39;</span><span style="color:#1f2328">)</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">(</span>ch <span style="color:#0550ae">=</span> nc<span style="color:#1f2328">()));</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#cf222e">while</span><span style="color:#1f2328">(</span>ch <span style="color:#0550ae">&gt;=</span> <span style="color:#0a3069">&#39;0&#39;</span> <span style="color:#0550ae">&amp;&amp;</span> ch <span style="color:#0550ae">&lt;=</span> <span style="color:#0a3069">&#39;9&#39;</span><span style="color:#1f2328">)</span> sum <span style="color:#0550ae">=</span> sum <span style="color:#0550ae">*</span> <span style="color:#0550ae">10</span><span style="color:#0550ae">+</span> <span style="color:#1f2328">(</span>ch <span style="color:#0550ae">-</span> <span style="color:#0550ae">48</span><span style="color:#1f2328">),</span> ch <span style="color:#0550ae">=</span> nc<span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#1f2328">(</span>tf<span style="color:#1f2328">)</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">(</span>sum <span style="color:#0550ae">=-</span> sum<span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div><p>但要注意，由于这种方法是整段读取的，这也造就了它两个巨大的Bug：</p>
 <ol>
 <li>不能用键盘输入。数据还没输入，程序怎么整段读取。如果你需要在电脑上用键盘输入调试，请把第5行的注释取消。</li>
 <li>不能和<code>scanf</code>，<code>getchar</code>等其他读入方法混合使用。因为<code>fread</code>是整段读取的，也就是说所有数据都被读取了，其他函数根本读取不到任何东西(只能从你的读取大小后面开始读)，因此，所有类型的变量读入都必须自己写，上面的<code>read</code>函数只支持<code>int</code>类型。</li>
 </ol>
 <table>
-<thead>
-<tr>
-<th>#</th>
-<th>Language</th>
-<th>[0,2)</th>
-<th>[0,8)</th>
-<th>[0,2^{15}))</th>
-<th>[0,2^{31})</th>
-<th>[0,2^{63})</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fread</td>
-<td>G++ 5.4.0 (-O2)</td>
-<td>13</td>
-<td>13</td>
-<td>39</td>
-<td>70</td>
-<td>111</td>
-</tr>
-<tr>
-<td>getchar</td>
-<td>G++ 5.4.0 (-O2)</td>
-<td>58</td>
-<td>73</td>
-<td>137</td>
-<td>243</td>
-<td>423</td>
-</tr>
-<tr>
-<td>cin（关闭同步）</td>
-<td>G++ 5.4.0 (-O2)</td>
-<td>161</td>
-<td>147</td>
-<td>205</td>
-<td>270</td>
-<td>394</td>
-</tr>
-<tr>
-<td>cin</td>
-<td>G++ 5.4.0 (-O2)</td>
-<td>442</td>
-<td>429</td>
-<td>706</td>
-<td>1039</td>
-<td>1683</td>
-</tr>
-<tr>
-<td>scanf</td>
-<td>G++ 5.4.0 (-O2)</td>
-<td>182</td>
-<td>175</td>
-<td>256</td>
-<td>368</td>
-<td>574</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>Language</th>
+          <th>[0,2)</th>
+          <th>[0,8)</th>
+          <th>[0,2^{15}))</th>
+          <th>[0,2^{31})</th>
+          <th>[0,2^{63})</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>fread</td>
+          <td>G++ 5.4.0 (-O2)</td>
+          <td>13</td>
+          <td>13</td>
+          <td>39</td>
+          <td>70</td>
+          <td>111</td>
+      </tr>
+      <tr>
+          <td>getchar</td>
+          <td>G++ 5.4.0 (-O2)</td>
+          <td>58</td>
+          <td>73</td>
+          <td>137</td>
+          <td>243</td>
+          <td>423</td>
+      </tr>
+      <tr>
+          <td>cin（关闭同步）</td>
+          <td>G++ 5.4.0 (-O2)</td>
+          <td>161</td>
+          <td>147</td>
+          <td>205</td>
+          <td>270</td>
+          <td>394</td>
+      </tr>
+      <tr>
+          <td>cin</td>
+          <td>G++ 5.4.0 (-O2)</td>
+          <td>442</td>
+          <td>429</td>
+          <td>706</td>
+          <td>1039</td>
+          <td>1683</td>
+      </tr>
+      <tr>
+          <td>scanf</td>
+          <td>G++ 5.4.0 (-O2)</td>
+          <td>182</td>
+          <td>175</td>
+          <td>256</td>
+          <td>368</td>
+          <td>574</td>
+      </tr>
+  </tbody>
 </table>
 <p><code>fread</code>以压倒性的优势碾压了其他所有方法，还可以注意到关流同步的cin比scanf快，关于为什么不使用位运算的问题下面会说。</p>
 <p>然后就是输出的优化，同理，putchar()会比printf快，所以，输出数字可以优化成：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// 优化前输出1-10000000：4.336秒
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// 优化后输出1-10000000：1.897秒
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">print</span>( <span style="color:#458;font-weight:bold">int</span> k ){
-</span></span><span style="display:flex;"><span>    num <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">while</span>( k <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">0</span> ) ch[<span style="color:#000;font-weight:bold">++</span>num] <span style="color:#000;font-weight:bold">=</span> k <span style="color:#000;font-weight:bold">%</span> <span style="color:#099">10</span>, k <span style="color:#000;font-weight:bold">/=</span> <span style="color:#099">10</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">while</span>( num ) 
-</span></span><span style="display:flex;"><span>        putchar( ch[num<span style="color:#000;font-weight:bold">--</span>]<span style="color:#000;font-weight:bold">+</span><span style="color:#099">48</span> );
-</span></span><span style="display:flex;"><span>    putchar( <span style="color:#099">32</span> );
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">// 优化前输出1-10000000：4.336秒
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a">// 优化后输出1-10000000：1.897秒
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#57606a"></span><span style="color:#cf222e">void</span> <span style="color:#6639ba">print</span><span style="color:#1f2328">(</span> <span style="color:#cf222e">int</span> k <span style="color:#1f2328">){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    num <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#cf222e">while</span><span style="color:#1f2328">(</span> k <span style="color:#0550ae">&gt;</span> <span style="color:#0550ae">0</span> <span style="color:#1f2328">)</span> ch<span style="color:#1f2328">[</span><span style="color:#0550ae">++</span>num<span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> k <span style="color:#0550ae">%</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">,</span> k <span style="color:#0550ae">/=</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#cf222e">while</span><span style="color:#1f2328">(</span> num <span style="color:#1f2328">)</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>        putchar<span style="color:#1f2328">(</span> ch<span style="color:#1f2328">[</span>num<span style="color:#0550ae">--</span><span style="color:#1f2328">]</span><span style="color:#0550ae">+</span><span style="color:#0550ae">48</span> <span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    putchar<span style="color:#1f2328">(</span> <span style="color:#0550ae">32</span> <span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div><p>如果输出负数以及其他，就自己写一个或者百度啦，我这里就不贴了。其实大多数还是对读入进行优化，输出一般用printf就可以了。</p>
 <h2 id="位运算">位运算</h2>
 <p>很多人都肯定很喜欢用位运算吧，因为觉得位运算是基于二进制操作，肯定比普通加减乘除快很多，但是真的是所有的位运算操作都比常规操作快么。</p>
 <h3 id="乘和除的位运算">乘和除的位运算</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>x <span style="color:#000;font-weight:bold">&lt;&lt;</span> <span style="color:#099">1</span>;
-</span></span><span style="display:flex;"><span>x <span style="color:#000;font-weight:bold">*=</span> <span style="color:#099">2</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>x <span style="color:#0550ae">&lt;&lt;</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>x <span style="color:#0550ae">*=</span> <span style="color:#0550ae">2</span><span style="color:#1f2328">;</span>
 </span></span></code></pre></div><p>例如上面这两句，都是把x乘2，但真的用位运算会快么，其实他们理论上是一样的，在被g++翻译成汇编后，两者的语句都是</p>
-<pre tabindex="0"><code class="language-assembly" data-lang="assembly">addl    %eax, %eax1
-</code></pre><p>它等价于 x = x + x。所以在这里位运算并没有任何优化。那么把乘数扩大呢，比如乘10，x *= 10的汇编语言为</p>
-<pre tabindex="0"><code class="language-assembly" data-lang="assembly">leal    (%eax,%eax,4), %eax
-addl    %eax, %eax
-</code></pre><p>翻译过来就是</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>x <span style="color:#000;font-weight:bold">=</span> x <span style="color:#000;font-weight:bold">+</span> x<span style="color:#000;font-weight:bold">*</span><span style="color:#099">4</span>;
-</span></span><span style="display:flex;"><span>x <span style="color:#000;font-weight:bold">=</span> x <span style="color:#000;font-weight:bold">+</span> x;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>addl    %eax, %eax1
+</span></span></code></pre></div><p>它等价于 x = x + x。所以在这里位运算并没有任何优化。那么把乘数扩大呢，比如乘10，x *= 10的汇编语言为</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>leal    (%eax,%eax,4), %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>addl    %eax, %eax
+</span></span></code></pre></div><p>翻译过来就是</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>x <span style="color:#0550ae">=</span> x <span style="color:#0550ae">+</span> x<span style="color:#0550ae">*</span><span style="color:#0550ae">4</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>x <span style="color:#0550ae">=</span> x <span style="color:#0550ae">+</span> x<span style="color:#1f2328">;</span>
 </span></span></code></pre></div><p>而那些喜欢用(x &laquo; 3 + x &laquo; 1)的人自己斟酌！</p>
 <p>但是位运算在某些地方是非常有用的，比如除法，右移的汇编代码为</p>
-<pre tabindex="0"><code class="language-assembly" data-lang="assembly">movl    _x, %eax
-sarl    %eax
-movl    %eax, _x
-movl    _x, %eax
-</code></pre><p>而除二的汇编代码为</p>
-<pre tabindex="0"><code class="language-assembly" data-lang="assembly">movl    _x, %eax
-movl    %eax, %edx  //(del)
-shrl    $31, %edx  //(del)
-addl    %edx, %eax  //(del)
-sarl    %eax
-movl    %eax, _x
-movl    _x, %eax
-</code></pre><p>可以看到，右移会比除快很多。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>movl    _x, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sarl    %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>movl    %eax, _x
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>movl    _x, %eax
+</span></span></code></pre></div><p>而除二的汇编代码为</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>movl    _x, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>movl    %eax, %edx  //(del)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>shrl    $31, %edx  //(del)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>addl    %edx, %eax  //(del)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>sarl    %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>movl    %eax, _x
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>movl    _x, %eax
+</span></span></code></pre></div><p>可以看到，右移会比除快很多。</p>
 <h3 id="2和1">%2和&amp;1</h3>
 <p>这个其实可想而知&amp;1快，还是看下汇编代码吧，%2的汇编代码为</p>
-<pre tabindex="0"><code class="language-assembly" data-lang="assembly">movl    _x, %eax
-movl    $LC0, (%esp)
-movl    %eax, %edx  //(del)
-shrl    $31, %edx  //(del)
-addl    %edx, %eax  //(del)
-andl    $1, %eax
-subl    %edx, %eax  //(del)
-movl    %eax, 4(%esp)
-movl    %eax, _x
-</code></pre><p>&amp;1的汇编代码为</p>
-<pre tabindex="0"><code class="language-assembly" data-lang="assembly">movl    _x, %eax
-movl    $LC0, (%esp)
-andl    $1, %eax
-movl    %eax, 4(%esp)
-movl    %eax, _x
-</code></pre><hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>movl    _x, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>movl    $LC0, (%esp)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>movl    %eax, %edx  //(del)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>shrl    $31, %edx  //(del)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>addl    %edx, %eax  //(del)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>andl    $1, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>subl    %edx, %eax  //(del)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>movl    %eax, 4(%esp)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>movl    %eax, _x
+</span></span></code></pre></div><p>&amp;1的汇编代码为</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>movl    _x, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>movl    $LC0, (%esp)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>andl    $1, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>movl    %eax, 4(%esp)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>movl    %eax, _x
+</span></span></code></pre></div><hr>
 <h3 id="和swap">^和swap</h3>
 <p>最开始学C语言两个变量交换都是先学三变量交换法，再学^这种操作，下面是(a ^= b ^= a ^= b)的汇编代码</p>
-<pre tabindex="0"><code class="language-assembly" data-lang="assembly">movl    _b, %edx
-movl    _a, %eax
-xorl    %edx, %eax
-xorl    %eax, %edx
-xorl    %edx, %eax
-movl    %eax, _a
-xorl    %eax, %eax
-movl    %edx, _b
-</code></pre><p>再来看看(int t = a;a = b,b = t;)的汇编代码</p>
-<pre tabindex="0"><code class="language-assembly" data-lang="assembly">movl    _a, %eax
-movl    _b, %edx
-movl    %eax, _b
-xorl    %eax, %eax
-movl    %edx, _a
-</code></pre><p>谁慢谁快一眼就知道了，以后swap再无Xor。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>movl    _b, %edx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>movl    _a, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>xorl    %edx, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>xorl    %eax, %edx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>xorl    %edx, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>movl    %eax, _a
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>xorl    %eax, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>movl    %edx, _b
+</span></span></code></pre></div><p>再来看看(int t = a;a = b,b = t;)的汇编代码</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>movl    _a, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>movl    _b, %edx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>movl    %eax, _b
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>xorl    %eax, %eax
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>movl    %edx, _a
+</span></span></code></pre></div><p>谁慢谁快一眼就知道了，以后swap再无Xor。</p>
 <h3 id="其他位运算技巧">其他位运算技巧</h3>
 <p>网上有很多奇奇怪怪的位运算技巧，但有一些真的令人很无语，没有优化不说，大大降低了代码可读性，在我看来，都是些花里胡哨的操作，比如取绝对值(n ^ (n &raquo; 31)) - (n &raquo; 31)，取两个数的最大值b &amp; ((a - b) &raquo; 31) | a &amp; ( ~(a - b) &raquo; 31)，取两个数的最小值a &amp; ((a - b) &raquo; 31) | b &amp; ( ~(a-b) &raquo; 31 )。恕我愚钝，这些代码一眼看上去根本不知道在干嘛，还有那个取绝对值的和abs(x)，谁快都不用说了。</p>
 <p>但是位运算还是有很多好（骚）操作的，例如：</p>
@@ -447,25 +447,25 @@ if就像一个铁路分叉道口，在CPU底层这种通讯及其不好的地方
 <p>这个东西还是有必要提一下，当switch没有default的时候，switch会比if-else快，因为他是直接跳转而不是逐条判断，但加了default之后，switch也就变成了无脑判断模式，至于为什么会这样，各位就自行研究咯=7=</p>
 <h3 id="短路运算符">短路运算符</h3>
 <p>我们知道&amp;&amp;和||是两个短路运算符，什么叫短路运算符，就是一旦可以确定了表达式的真假值时候，就直接返回真假值了，比如下面代码</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> n <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>n <span style="color:#000;font-weight:bold">&amp;&amp;</span> <span style="color:#000;font-weight:bold">++</span>n;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//这里n的值还是0
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">!</span>n <span style="color:#000;font-weight:bold">||</span> <span style="color:#000;font-weight:bold">++</span>n;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//这里n的值还是0
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">int</span> n <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>n <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#0550ae">++</span>n<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#57606a">//这里n的值还是0
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#0550ae">!</span>n <span style="color:#0550ae">||</span> <span style="color:#0550ae">++</span>n<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span><span style="color:#57606a">//这里n的值还是0
 </span></span></span></code></pre></div><p>但是上面的两句代码等同于什么呢？等于</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> n <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span>(n){
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">++</span>n;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span>(<span style="color:#000;font-weight:bold">!</span>(<span style="color:#000;font-weight:bold">!</span>n)){
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">++</span>n;
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">int</span> n <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#cf222e">if</span><span style="color:#1f2328">(</span>n<span style="color:#1f2328">){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#0550ae">++</span>n<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#cf222e">if</span><span style="color:#1f2328">(</span><span style="color:#0550ae">!</span><span style="color:#1f2328">(</span><span style="color:#0550ae">!</span>n<span style="color:#1f2328">)){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>    <span style="color:#0550ae">++</span>n<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div><p>利用这个特色（你才特色），我们有些时候就可以不需要在做if的无脑判断了，也就是</p>
 <ul>
 <li>
@@ -476,13 +476,13 @@ if就像一个铁路分叉道口，在CPU底层这种通讯及其不好的地方
 </li>
 </ul>
 <p>但这些并不是短路运算符的精髓，短路运算符的精髓不仅在于优化时间，更是可以防止程序出错。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#458;font-weight:bold">double</span> t <span style="color:#000;font-weight:bold">=</span> rand();
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> (t <span style="color:#000;font-weight:bold">/</span> RAND_MAX <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">0.2</span> <span style="color:#000;font-weight:bold">&amp;&amp;</span> t <span style="color:#000;font-weight:bold">!=</span> <span style="color:#099">0</span>)
-</span></span><span style="display:flex;"><span>    printf (<span style="color:#d14">&#34;%d&#34;</span>, t);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">double</span> t <span style="color:#000;font-weight:bold">=</span> rand();
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> (t <span style="color:#000;font-weight:bold">!=</span> <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">&amp;&amp;</span> t <span style="color:#000;font-weight:bold">/</span> RAND_MAX <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">0.2</span>)
-</span></span><span style="display:flex;"><span>    printf (<span style="color:#d14">&#34;%d&#34;</span>, t);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">double</span> t <span style="color:#0550ae">=</span> rand<span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span>t <span style="color:#0550ae">/</span> RAND_MAX <span style="color:#0550ae">&lt;</span> <span style="color:#0550ae">0.2</span> <span style="color:#0550ae">&amp;&amp;</span> t <span style="color:#0550ae">!=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    printf <span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;%d&#34;</span><span style="color:#1f2328">,</span> t<span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#cf222e">double</span> t <span style="color:#0550ae">=</span> rand<span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span>t <span style="color:#0550ae">!=</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">&amp;&amp;</span> t <span style="color:#0550ae">/</span> RAND_MAX <span style="color:#0550ae">&lt;</span> <span style="color:#0550ae">0.2</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>    printf <span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;%d&#34;</span><span style="color:#1f2328">,</span> t<span style="color:#1f2328">);</span>
 </span></span></code></pre></div><p>这两种判断，谁快谁慢。但对于CPU来说很有区别。第一段代码中的t/RAND_MAX&lt;0.2为true的概率约为 20%，但t!=0为true的概率约为1/RAND_MAX，明显小于20%</p>
 <p>因此，如果把计算一个不含逻辑运算符布尔表达式的计算次数设为 1 次，设计算了 X 次，则对于第 1 段代码，X 的数学期望为  6/5 次，但对于第二段代码，X 的数学期望2*(RAND_MAX-1) / RAND_MAX为 ，远远大于第一段代码。</p>
 <p>不仅不同位置会优化时间，更是会防止程序错误，例如kuangbin搜索专题有题是Catch the Cow，就是搜索，不过判断走没走过得判断vis[n]和n &lt; 1e6，我最最开始写的vis[n] &amp;&amp; n &lt; 1e6，提交上去RE了，看了很久才发现是这里的原因，得先判断n &lt; 1e6，再做下一步操作。</p>
@@ -495,23 +495,23 @@ int x=(1,2,3,4,5);
 <h2 id="卡编译">卡编译</h2>
 <h3 id="c内联函数inline">C++内联函数<code>inline</code>：</h3>
 <p>由编译器在编译时会在主程序中把函数的内容直接展开替换，减少了内存访问，但是这并不是适用于各种复杂以及递归式的函数，复杂函数编译器会自动忽略inline</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">max</span>(<span style="color:#458;font-weight:bold">int</span> a, <span style="color:#458;font-weight:bold">int</span> b){<span style="color:#000;font-weight:bold">return</span> a<span style="color:#000;font-weight:bold">&gt;</span>b<span style="color:#000;font-weight:bold">?</span><span style="color:#900;font-weight:bold">a</span>:b;}<span style="color:#998;font-style:italic">//原函数
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">inline</span> <span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">max</span>(<span style="color:#458;font-weight:bold">int</span> a, <span style="color:#458;font-weight:bold">int</span> b){<span style="color:#000;font-weight:bold">return</span> a<span style="color:#000;font-weight:bold">&gt;</span>b<span style="color:#000;font-weight:bold">?</span><span style="color:#900;font-weight:bold">a</span>:b;}<span style="color:#998;font-style:italic">//直接加inline就好了。
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">int</span> <span style="color:#6639ba">max</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> a<span style="color:#1f2328">,</span> <span style="color:#cf222e">int</span> b<span style="color:#1f2328">){</span><span style="color:#cf222e">return</span> a<span style="color:#0550ae">&gt;</span>b<span style="color:#0550ae">?</span><span style="color:#900;font-weight:bold">a</span><span style="color:#1f2328">:</span>b<span style="color:#1f2328">;}</span><span style="color:#57606a">//原函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"></span><span style="color:#cf222e">inline</span> <span style="color:#cf222e">int</span> <span style="color:#6639ba">max</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> a<span style="color:#1f2328">,</span> <span style="color:#cf222e">int</span> b<span style="color:#1f2328">){</span><span style="color:#cf222e">return</span> a<span style="color:#0550ae">&gt;</span>b<span style="color:#0550ae">?</span><span style="color:#900;font-weight:bold">a</span><span style="color:#1f2328">:</span>b<span style="color:#1f2328">;}</span><span style="color:#57606a">//直接加inline就好了。
 </span></span></span></code></pre></div><h3 id="cpu寄存器变量register">CPU寄存器变量<code>register</code>：</h3>
 <p>对于一些频繁使用的变量，可以声明时加上该关键字，运行时<strong>可能</strong>会把该变量放到CPU寄存器中，只是可能，因为寄存器的空间是有限的，不保证有效。特别是你变量多的时候，一般还是丢到内存里面的。
 比较下面两段程序：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">register</span> <span style="color:#458;font-weight:bold">int</span> a<span style="color:#000;font-weight:bold">=</span><span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span>(<span style="color:#000;font-weight:bold">register</span> <span style="color:#458;font-weight:bold">int</span> i<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>;i<span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#099">999999999</span>;i<span style="color:#000;font-weight:bold">++</span>)a<span style="color:#000;font-weight:bold">++</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">int</span> a<span style="color:#000;font-weight:bold">=</span><span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> i<span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>;i<span style="color:#000;font-weight:bold">&lt;=</span><span style="color:#099">999999999</span>;i<span style="color:#000;font-weight:bold">++</span>)a<span style="color:#000;font-weight:bold">++</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">register</span> <span style="color:#cf222e">int</span> a<span style="color:#0550ae">=</span><span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#cf222e">for</span><span style="color:#1f2328">(</span><span style="color:#cf222e">register</span> <span style="color:#cf222e">int</span> i<span style="color:#0550ae">=</span><span style="color:#0550ae">1</span><span style="color:#1f2328">;</span>i<span style="color:#0550ae">&lt;=</span><span style="color:#0550ae">999999999</span><span style="color:#1f2328">;</span>i<span style="color:#0550ae">++</span><span style="color:#1f2328">)</span>a<span style="color:#0550ae">++</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#cf222e">int</span> a<span style="color:#0550ae">=</span><span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#cf222e">for</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> i<span style="color:#0550ae">=</span><span style="color:#0550ae">1</span><span style="color:#1f2328">;</span>i<span style="color:#0550ae">&lt;=</span><span style="color:#0550ae">999999999</span><span style="color:#1f2328">;</span>i<span style="color:#0550ae">++</span><span style="color:#1f2328">)</span>a<span style="color:#0550ae">++</span><span style="color:#1f2328">;</span>
 </span></span></code></pre></div><p>优化：0.2826 second
 不优化：1.944 second</p>
 <h2 id="卡算法">卡算法</h2>
 <h3 id="取模优化">取模优化</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#998;font-style:italic">//设模数为 mod
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">inline</span> <span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">inc</span>(<span style="color:#458;font-weight:bold">int</span> x,<span style="color:#458;font-weight:bold">int</span> v,<span style="color:#458;font-weight:bold">int</span> mod){x<span style="color:#000;font-weight:bold">+=</span>v;<span style="color:#000;font-weight:bold">return</span> x<span style="color:#000;font-weight:bold">&gt;=</span>mod<span style="color:#000;font-weight:bold">?</span>x<span style="color:#000;font-weight:bold">-</span><span style="color:#900;font-weight:bold">mod</span>:x;}<span style="color:#998;font-style:italic">//代替取模+
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">inline</span> <span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">dec</span>(<span style="color:#458;font-weight:bold">int</span> x,<span style="color:#458;font-weight:bold">int</span> v,<span style="color:#458;font-weight:bold">int</span> mod){x<span style="color:#000;font-weight:bold">-=</span>v;<span style="color:#000;font-weight:bold">return</span> x<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#099">0</span><span style="color:#000;font-weight:bold">?</span>x<span style="color:#000;font-weight:bold">+</span><span style="color:#900;font-weight:bold">mod</span>:x;}<span style="color:#998;font-style:italic">//代替取模-
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">//设模数为 mod
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"></span><span style="color:#cf222e">inline</span> <span style="color:#cf222e">int</span> <span style="color:#6639ba">inc</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> x<span style="color:#1f2328">,</span><span style="color:#cf222e">int</span> v<span style="color:#1f2328">,</span><span style="color:#cf222e">int</span> mod<span style="color:#1f2328">){</span>x<span style="color:#0550ae">+=</span>v<span style="color:#1f2328">;</span><span style="color:#cf222e">return</span> x<span style="color:#0550ae">&gt;=</span>mod<span style="color:#0550ae">?</span>x<span style="color:#0550ae">-</span><span style="color:#900;font-weight:bold">mod</span><span style="color:#1f2328">:</span>x<span style="color:#1f2328">;}</span><span style="color:#57606a">//代替取模+
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"></span><span style="color:#cf222e">inline</span> <span style="color:#cf222e">int</span> <span style="color:#6639ba">dec</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> x<span style="color:#1f2328">,</span><span style="color:#cf222e">int</span> v<span style="color:#1f2328">,</span><span style="color:#cf222e">int</span> mod<span style="color:#1f2328">){</span>x<span style="color:#0550ae">-=</span>v<span style="color:#1f2328">;</span><span style="color:#cf222e">return</span> x<span style="color:#0550ae">&lt;</span><span style="color:#0550ae">0</span><span style="color:#0550ae">?</span>x<span style="color:#0550ae">+</span><span style="color:#900;font-weight:bold">mod</span><span style="color:#1f2328">:</span>x<span style="color:#1f2328">;}</span><span style="color:#57606a">//代替取模-
 </span></span></span></code></pre></div><h3 id="加法优化">加法优化</h3>
 <p>用++i代替i++，后置++需要保存临时变量以返回之前的值，在 STL 中非常慢。</p>
 <h3 id="结构优化">结构优化</h3>
@@ -520,23 +520,23 @@ int x=(1,2,3,4,5);
 <h3 id="stl优化">STL优化</h3>
 <p>STL快但是也包含了很多可能你用不到的东西，所以最快的就是你自己手写STL=7=，反正我写不来。</p>
 <h3 id="循环展开">循环展开</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span> <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">Init</span>(<span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span>d, <span style="color:#458;font-weight:bold">int</span> n){
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> n; i<span style="color:#000;font-weight:bold">++</span>)
-</span></span><span style="display:flex;"><span>        d[i] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">Init</span>(<span style="color:#458;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">*</span>d, <span style="color:#458;font-weight:bold">int</span> n){
-</span></span><span style="display:flex;"><span>    <span style="color:#458;font-weight:bold">int</span> il   
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">for</span>(<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> n; i<span style="color:#000;font-weight:bold">+=</span> <span style="color:#099">4</span>){    <span style="color:#998;font-style:italic">//每次迭代处理4个元素
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>        d[i] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>        d[i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>        d[i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">2</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>        d[i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">3</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">for</span>(; i <span style="color:#000;font-weight:bold">&lt;</span> n; i<span style="color:#000;font-weight:bold">++</span>)<span style="color:#998;font-style:italic">//将剩余未处理的元素再依次初始化
-</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>        d[i] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span> <span style="color:#cf222e">void</span> <span style="color:#6639ba">Init</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> <span style="color:#0550ae">*</span>d<span style="color:#1f2328">,</span> <span style="color:#cf222e">int</span> n<span style="color:#1f2328">){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#cf222e">for</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> i <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span> i <span style="color:#0550ae">&lt;</span> n<span style="color:#1f2328">;</span> i<span style="color:#0550ae">++</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        d<span style="color:#1f2328">[</span>i<span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#cf222e">void</span> <span style="color:#6639ba">Init</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> <span style="color:#0550ae">*</span>d<span style="color:#1f2328">,</span> <span style="color:#cf222e">int</span> n<span style="color:#1f2328">){</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#cf222e">int</span> il   
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#cf222e">for</span><span style="color:#1f2328">(</span><span style="color:#cf222e">int</span> i <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span> i <span style="color:#0550ae">&lt;</span> n<span style="color:#1f2328">;</span> i<span style="color:#0550ae">+=</span> <span style="color:#0550ae">4</span><span style="color:#1f2328">){</span>    <span style="color:#57606a">//每次迭代处理4个元素
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#57606a"></span>        d<span style="color:#1f2328">[</span>i<span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>        d<span style="color:#1f2328">[</span>i <span style="color:#0550ae">+</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        d<span style="color:#1f2328">[</span>i <span style="color:#0550ae">+</span> <span style="color:#0550ae">2</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>        d<span style="color:#1f2328">[</span>i <span style="color:#0550ae">+</span> <span style="color:#0550ae">3</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    <span style="color:#cf222e">for</span><span style="color:#1f2328">(;</span> i <span style="color:#0550ae">&lt;</span> n<span style="color:#1f2328">;</span> i<span style="color:#0550ae">++</span><span style="color:#1f2328">)</span><span style="color:#57606a">//将剩余未处理的元素再依次初始化
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#57606a"></span>        d<span style="color:#1f2328">[</span>i<span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div><p>都是同一个操作，但你们觉得谁快呢，用下面的比第一段代码快了不止一倍，循环展开也许只是表面，在缓存和寄存器允许的情况下一条语句内大量的展开运算会刺激 CPU 并发</p>
 <ul>
 <li>减少了不直接有助于程序结果的操作的数量，例如循环索引计算和分支条件。</li>

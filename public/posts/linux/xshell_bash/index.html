@@ -197,12 +197,12 @@
     <div class='content  content '>
         <p>突然发现root登录的xshell的终端提示符显示的是-bash-4.2# 而不是root@主机名 + 路径的显示方式。搞了半天也不知道为什么出现这种情况。今天终于搞定这个问题，</p>
 <p>原因是root在/root下面的几个配置文件丢失，丢失文件如下：</p>
-<pre tabindex="0"><code>.bash_profile 
-.bashrc 
-</code></pre><p>以上这些文件是每个用户都必备的文件。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>.bash_profile 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>.bashrc 
+</span></span></code></pre></div><p>以上这些文件是每个用户都必备的文件。</p>
 <p>使用以下命令从主默认文件重新拷贝一份配置信息到/root目录下</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp /etc/skel/.bashrc /root/
-</span></span><span style="display:flex;"><span>cp /etc/skel/.bash_profile /root/
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cp /etc/skel/.bashrc /root/
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>cp /etc/skel/.bash_profile /root/
 </span></span></code></pre></div><p>关掉终端，重新打开就可以了</p>
     </div>
 

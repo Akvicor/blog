@@ -4,7 +4,7 @@
     <title>Air780e on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/tags/air780e/</link>
     <description>Recent content in Air780e on Akvicor&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 17 Feb 2025 03:00:02 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/tags/air780e/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/project/sms/</link>
       <pubDate>Sat, 15 Feb 2025 16:59:28 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/project/sms/</guid>
-      <description>苦于国内的短信平台都需要指定发送模板, 没法发送高度自定义的消息, 且模板审核过于麻烦, 因此想要自己开发一套用于发送短信的平台 受 此文章 的启发, 决定使用Air780E</description>
+      <description>&lt;p&gt;苦于国内的短信平台都需要指定发送模板, 没法发送高度自定义的消息, 且模板审核过于麻烦, 因此想要自己开发一套用于发送短信的平台&lt;/p&gt;&#xA;&lt;p&gt;受 &lt;a href=&#34;https://www.chenxublog.com/2022/10/28/19-9-sms-forwarding-air780e-esp32c3.html&#34;&gt;此文章&lt;/a&gt; 的启发, 决定使用Air780E和树莓派制作一个能够&lt;strong&gt;接收&lt;/strong&gt;和&lt;strong&gt;发送&lt;/strong&gt;短信的程序&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

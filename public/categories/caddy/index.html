@@ -245,7 +245,19 @@
 			
 		</div>
 	</div>
-</div><div class="summary">官方安装文档https://caddyserver.com/docs/install Debian, Ubuntu, Raspbian apt install -y debian-keyring debian-archive-keyring apt-transport-https curl curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg &ndash;dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list apt update apt install caddy Compile go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest ~/go/bin/xcaddy build &ndash;with github.com/mholt/caddy-webdav &ndash;with</div>
+</div><div class="summary"><p>官方安装文档<a href="https://caddyserver.com/docs/install">https://caddyserver.com/docs/install</a></p>
+<h1 id="debian-ubuntu-raspbian">Debian, Ubuntu, Raspbian</h1>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>curl -1sLf <span style="color:#0a3069">&#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#39;</span> <span style="color:#1f2328">|</span> gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>curl -1sLf <span style="color:#0a3069">&#39;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#39;</span> <span style="color:#1f2328">|</span> tee /etc/apt/sources.list.d/caddy-stable.list
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>apt update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>apt install caddy
+</span></span></code></pre></div><h2 id="compile">Compile</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>~/go/bin/xcaddy build --with github.com/mholt/caddy-webdav --with github.com/aksdb/caddy-cgi/v2
+</span></span></code></pre></div><h2 id="module">Module</h2>
+<h3 id="cgi">cgi</h3>
+<p>cgi模块：CGI能够让浏览者与服务器进行交互</p></div>
 				
 				
 				<div class="read-more">

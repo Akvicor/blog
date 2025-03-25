@@ -210,6 +210,65 @@
         <div class="item" >
            
             
+            <a href="https://blog.akvicor.com/posts/aos32/gb2312/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> AOS32 显示中文字符GB2312 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-27
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/aos32">AOS32</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><p><a href="https://via.akvicor.com/file?f=1392">aos32-gb2312.tgz</a></p>
+<p>一个GB2312汉字是由两个字节编码的，范围为A1A1~FEFE。A1-A9为符号区，B0到F7为汉字区。每一个区有94个字符。</p>
+<h1 id="点阵结构">点阵结构</h1>
+<p>从图片可以看出：</p>
+<ul>
+<li>日文编码的第一个字节为点阵的左半部分，第二个字节为点阵的右半部分。</li>
+</ul>
+<p><img src="https://img.akvicor.com/i/2024/09/15/66e68e9f894dd.png" alt="日文EUC" title="日文EUC"></p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/aos32/gb2312/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
             <a href="https://blog.akvicor.com/posts/opensource/mathtex/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
                 <span> Mathtex <sup></sup></span>
@@ -245,7 +304,33 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><a href="https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access">https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access</a> 安装TexLive，使用 which latex 和 which dvipng 检查是否安装 按照注释中操作 &lt;?php # Place this file in extension directory as Mtag.php # Add the following line to LocalSettings.php: # include './extensions/Mtag.php'; # Mediawiki will render as LaTeX the code within &lt;m&gt; &lt;/m&gt; tags. $wgExtensionFunctions[] = &quot;wfMtag&quot;; function wfMtag() { global $wgParser; $wgParser-&gt;setHook( &quot;m&quot;, &quot;returnMtagged&quot; ); } function returnMtagged( $code, $argv)</div>
+</div><div class="summary"><p><a href="https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access">https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access</a></p>
+<p>安装TexLive，使用 which latex 和 which dvipng 检查是否安装</p>
+<h2 id="按照注释中操作">按照注释中操作</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#0550ae">&lt;?</span><span style="color:#1f2328">php</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a"># Place this file in extension directory as Mtag.php
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#57606a"># Add the following line to LocalSettings.php:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#57606a"># include &#39;./extensions/Mtag.php&#39;;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#57606a"># Mediawiki will render as LaTeX the code within &lt;m&gt; &lt;/m&gt; tags.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#953800">$wgExtensionFunctions</span><span style="color:#1f2328">[]</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;wfMtag&#34;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#cf222e">function</span> <span style="color:#6639ba">wfMtag</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#cf222e">global</span> <span style="color:#953800">$wgParser</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#953800">$wgParser</span><span style="color:#0550ae">-&gt;</span><span style="color:#1f2328">setHook</span><span style="color:#1f2328">(</span> <span style="color:#0a3069">&#34;m&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;returnMtagged&#34;</span> <span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#cf222e">function</span> <span style="color:#6639ba">returnMtagged</span><span style="color:#1f2328">(</span> <span style="color:#953800">$code</span><span style="color:#1f2328">,</span> <span style="color:#953800">$argv</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#57606a"># if you have mathtex.cgi installed:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#57606a"></span>    <span style="color:#953800">$txt</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;&lt;img src=&#34;/cgi-bin/mathtex.cgi?&#39;</span><span style="color:#0550ae">.</span><span style="color:#953800">$code</span><span style="color:#0550ae">.</span><span style="color:#0a3069">&#39;&#34;&gt;&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#57606a"># OR if you want to temporarily test a public mathtex.cgi:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#57606a">#    $txt=&#39;&lt;img src=&#34;http://www.forkosh.com/mathtex.cgi?&#39;.$code.&#39;&#34;&gt;&#39;;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#cf222e">return</span> <span style="color:#953800">$txt</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#57606a">?&gt;</span><span style="color:#f6f8fa;background-color:#82071e">
+</span></span></span></code></pre></div><h2 id="下载并解压-mathtexzip">下载并解压 Mathtex.zip</h2>
+<p><a href="https://via.akvicor.com/file?f=1241">https://via.akvicor.com/file?f=1241</a></p></div>
 				
 				
 				<div class="read-more">
@@ -297,8 +382,8 @@
 			
 		</div>
 	</div>
-</div><div class="summary">The CPU in modern computer hardware performs reads and writes to memory most efficiently when the data is naturally aligned, which generally means that the data’s memory address is a multiple of the data size. For instance, in a 32-bit architecture, the data may be aligned if the data is stored in four consecutive bytes and the first byte lies on a 4-byte boundary.
-If the highest and lowest bytes in a datum are not within the same memory word the computer must split the datum access into multiple memory accesses.</div>
+</div><div class="summary"><p>The CPU in modern computer hardware performs reads and writes to memory most efficiently when the data is naturally aligned, which generally means that the data&rsquo;s memory address is a multiple of the data size. For instance, in a 32-bit architecture, the data may be aligned if the data is stored in four consecutive bytes and the first byte lies on a 4-byte boundary.</p>
+<p>If the highest and lowest bytes in a datum are not within the same memory word the computer must split the datum access into multiple memory accesses. This requires a lot of complex circuitry to generate the memory accesses and coordinate them. To handle the case where the memory words are in different memory pages the processor must either verify that both pages are present before executing the instruction or be able to handle a TLB miss or a page fault on any memory access during the instruction execution.</p></div>
 				
 				
 				<div class="read-more">
@@ -350,7 +435,17 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 			
 		</div>
 	</div>
-</div><div class="summary">IMG file Make dd if=/dev/zero of=fdimage.img count=2880 # or dd if=/dev/zero of=fdimage.img bs=1024 count=1440 Format mkfs.msdos fdimage.img Mount mount -o loop *.img /mnt Bootable 因为制作可启动镜像一定会用到虚拟机，推荐用 Virtualbox，先到网上下个 DOS 启动盘来引导。用 DOS 的 sys 命令传递系统</div>
+</div><div class="summary"><h2 id="img-file">IMG file</h2>
+<h3 id="make">Make</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>dd <span style="color:#cf222e">if</span><span style="color:#0550ae">=</span>/dev/zero <span style="color:#953800">of</span><span style="color:#0550ae">=</span>fdimage.img <span style="color:#953800">count</span><span style="color:#0550ae">=</span><span style="color:#0550ae">2880</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># or</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>dd <span style="color:#cf222e">if</span><span style="color:#0550ae">=</span>/dev/zero <span style="color:#953800">of</span><span style="color:#0550ae">=</span>fdimage.img <span style="color:#953800">bs</span><span style="color:#0550ae">=</span><span style="color:#0550ae">1024</span> <span style="color:#953800">count</span><span style="color:#0550ae">=</span><span style="color:#0550ae">1440</span>
+</span></span></code></pre></div><h3 id="format">Format</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkfs.msdos fdimage.img
+</span></span></code></pre></div><h3 id="mount">Mount</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mount -o loop *.img /mnt
+</span></span></code></pre></div><h3 id="bootable">Bootable</h3>
+<p>因为制作可启动镜像一定会用到虚拟机，推荐用 Virtualbox，先到网上下个 DOS 启动盘来引导。用 DOS 的 sys 命令传递系统。推荐使用 FreeDOS，属自由软件。也可用 dd 命令 来传递引导引导信息，并复制启动启动时所需文件来做启动盘。以 FreeDOS 为例，传递启动信息用以下命令，其中下载的启动盘为balder10.img 文件</p></div>
 				
 				
 				<div class="read-more">
@@ -402,12 +497,62 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 			
 		</div>
 	</div>
-</div><div class="summary">文件所在路径 vim /usr/lib/systemd/system/SERVICE_NAME.service 服务模板 [Unit] Description=Viry Service After=network.target auditd.service [Service] User=root Type=oneshot RemainAfterExit=true ExecStart=/viry/serv/serv.sh ExecStop=/bin/true [Install] WantedBy=multi-user.target Alias=viry.service serv.sh #!/bin/bash echo &quot;Sync Time&quot; ntpdate 172.16.1.1 hwclock -w TIME=$(TZ=UTC-8 date &quot;+%Y-%m-%d %H:%M:%S&quot;) LOG=&quot;/viry/serv/serv.log&quot; echo &quot;Ready&quot; echo &quot;&quot; &gt;&gt; $LOG echo $TIME &gt;&gt; $LOG echo &quot;Start DEMO&quot; echo &quot;Start DEMO&quot; &gt;&gt; $LOG sh /viry/serv/demo/demo.sh echo &quot;Finished&quot; echo &quot;Finished&quot; &gt;&gt; $LOG demo.sh #!/bin/bash cd /viry/serv/demo/exec/ screen_name=&quot;demo&quot; screen -s /usr/bin/bash -dmS $screen_name cmd1=&quot;&quot; cmd2=&quot;./demo&quot; screen -x</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/service/">查看更多…</a>
-				</div>
+</div><div class="summary"><h2 id="文件所在路径">文件所在路径</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /usr/lib/systemd/system/SERVICE_NAME.service
+</span></span></code></pre></div><h2 id="服务模板">服务模板</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[Unit]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>Description=Viry Service
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>After=network.target auditd.service
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>[Service]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>User=root
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>Type=oneshot
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>RemainAfterExit=true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>ExecStart=/viry/serv/serv.sh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>ExecStop=/bin/true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>[Install]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>WantedBy=multi-user.target
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>Alias=viry.service
+</span></span></code></pre></div><h2 id="servsh">serv.sh</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">#!/bin/bash
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Sync Time&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>ntpdate 172.16.1.1
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>hwclock -w
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#953800">TIME</span><span style="color:#0550ae">=</span><span style="color:#cf222e">$(</span><span style="color:#953800">TZ</span><span style="color:#0550ae">=</span>UTC-8 date <span style="color:#0a3069">&#34;+%Y-%m-%d %H:%M:%S&#34;</span><span style="color:#cf222e">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#953800">LOG</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;/viry/serv/serv.log&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Ready&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;&#34;</span> &gt;&gt; <span style="color:#953800">$LOG</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#6639ba">echo</span> <span style="color:#953800">$TIME</span> &gt;&gt; <span style="color:#953800">$LOG</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Start DEMO&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Start DEMO&#34;</span> &gt;&gt; <span style="color:#953800">$LOG</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>sh /viry/serv/demo/demo.sh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Finished&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Finished&#34;</span> &gt;&gt; <span style="color:#953800">$LOG</span>
+</span></span></code></pre></div><h2 id="demosh">demo.sh</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">#!/bin/bash
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#6639ba">cd</span> /viry/serv/demo/exec/
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#953800">screen_name</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;demo&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>screen -s /usr/bin/bash -dmS <span style="color:#953800">$screen_name</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#953800">cmd1</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#953800">cmd2</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;./demo&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>screen -x -S <span style="color:#953800">$screen_name</span> -p <span style="color:#0550ae">0</span> -X stuff <span style="color:#0a3069">&#34;</span><span style="color:#953800">$cmd1</span><span style="color:#0a3069">\n&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>screen -x -S <span style="color:#953800">$screen_name</span> -p <span style="color:#0550ae">0</span> -X stuff <span style="color:#0a3069">&#34;</span><span style="color:#953800">$cmd2</span><span style="color:#0a3069">\n&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Demo Started&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#6639ba">exit</span> <span style="color:#0550ae">0</span>
+</span></span></code></pre></div></div>
 				
             
 
@@ -454,7 +599,48 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 			
 		</div>
 	</div>
-</div><div class="summary">&lt;div class=&quot;wheelPlayer wheelAnimate&quot;&gt; &lt;div&gt;1&lt;/div&gt; &lt;div&gt;2&lt;/div&gt; &lt;div&gt;3&lt;/div&gt; &lt;/div&gt; .wheelPlayer{ padding: 20px 0; margin: auto; width: 350px; } .wheelPlayer div{ position: relative; height: 25px; line-height: 26px; width: 70px; text-align: center; border: 1px solid gray; } .wheelAnimate div{ animation: whellPlayer 9s infinite; -moz-animation: whellPlayer 9s infinite; -webkit-animation: whellPlayer 9s infinite; } .wheelPlayer div:nth-of-type(1){ animation-delay: -6s; -moz-animation-delay: -6s; -webkit-animation-delay: -6s; } .wheelPlayer div:nth-of-type(2){ animation-delay: -3s; -moz-animation-delay: -3s; -webkit-animation-delay: -3s; margin-top: -27px; } .wheelPlayer div:nth-of-type(3){ animation-delay: -0s; -moz-animation-delay: 0s; -webkit-animation-delay: 0s; margin-top: -27px; }</div>
+</div><div class="summary"><p><img src="https://img.akvicor.com/i/2024/09/17/66e99811091b8.gif" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;wheelPlayer wheelAnimate&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>1<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>2<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>3<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>   <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>   <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">auto</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>   <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">350</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>   <span style="color:#cf222e">position</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">relative</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>   <span style="color:#cf222e">height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">25</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>   <span style="color:#cf222e">line-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">26</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>   <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">70</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>   <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>   <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">1</span><span style="color:#cf222e">px</span> <span style="color:#cf222e">solid</span> <span style="color:#cf222e">gray</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelAnimate</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>   <span style="color:#cf222e">animation</span><span style="color:#1f2328">:</span> whellPlayer <span style="color:#0550ae">9</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">infinite</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>   <span style="color:#cf222e">-moz-</span><span style="color:#cf222e">animation</span><span style="color:#1f2328">:</span> whellPlayer <span style="color:#0550ae">9</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">infinite</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>   <span style="color:#cf222e">-webkit-</span><span style="color:#cf222e">animation</span><span style="color:#1f2328">:</span> whellPlayer <span style="color:#0550ae">9</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">infinite</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">:</span><span style="color:#0550ae">nth-of-type</span><span style="color:#0550ae">(</span><span style="color:#0550ae">1</span><span style="color:#0550ae">)</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>   <span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-6</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>   <span style="color:#cf222e">-moz-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-6</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>   <span style="color:#cf222e">-webkit-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-6</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">:</span><span style="color:#0550ae">nth-of-type</span><span style="color:#0550ae">(</span><span style="color:#0550ae">2</span><span style="color:#0550ae">)</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>   <span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-3</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>   <span style="color:#cf222e">-moz-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-3</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>   <span style="color:#cf222e">-webkit-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-3</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>   <span style="color:#cf222e">margin-top</span><span style="color:#1f2328">:</span>  <span style="color:#0550ae">-27</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">:</span><span style="color:#0550ae">nth-of-type</span><span style="color:#0550ae">(</span><span style="color:#0550ae">3</span><span style="color:#0550ae">)</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>   <span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-0</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>   <span style="color:#cf222e">-moz-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>   <span style="color:#cf222e">-webkit-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>   <span style="color:#cf222e">margin-top</span><span style="color:#1f2328">:</span>  <span style="color:#0550ae">-27</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div></div>
 				
             
 
@@ -501,7 +687,14 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 			
 		</div>
 	</div>
-</div><div class="summary">向剪切板写入 图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能,是异步的 document.body.addEventListener( 'click', async (e) =&gt; { await navigator.clipboard.writeText('Yo') } ) Clipboard.read()用于读取剪切板的数据，也</div>
+</div><div class="summary"><p>向剪切板写入 图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能,是异步的</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">body</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#cf222e">async</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">e</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#cf222e">await</span> <span style="color:#1f2328">navigator</span><span style="color:#1f2328">.</span><span style="color:#1f2328">clipboard</span><span style="color:#1f2328">.</span><span style="color:#1f2328">writeText</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;Yo&#39;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#1f2328">)</span>
+</span></span></code></pre></div><p>Clipboard.read()用于读取剪切板的数据，也是异步的成功返回数据</p></div>
 				
 				
 				<div class="read-more">
@@ -553,7 +746,36 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 			
 		</div>
 	</div>
-</div><div class="summary">vim ~/.Xresource 填写配置 xterm.termName: xterm-256color xterm<em>locale:true xterm.utf8: true xterm</em>utf8Title: true !fix alt key input !xterm<em>eightBitInput: false !xterm</em>altSendsEscape: true !xterm<em>scrollBar: true !xterm</em>rightScrollBar: true xterm<em>SaveLines: 4096 !xterm</em>background: black !xterm<em>foreground: green xterm</em>printAttributes: 0 xterm<em>printerCommand: cat &gt; ~/xtermdump !xterm</em>VT100.translations: #override &lt;Btn1UP&gt;: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) xterm<em>VT100.translations: #override \ Ctrl &lt;KeyPress&gt; V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\ &lt;BtnUp&gt;: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\ Ctrl &lt;KeyPress&gt; P: print() \n xterm</em>faceName: Ubuntu Bold:antialias=True:pixelsize=12 xterm*faceNameDoublesize:Noto Sans Mono CJK SC:antialias=True:pixelsize=12</div>
+</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim ~/.Xresource
+</span></span></code></pre></div><p>填写配置</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>xterm.termName: xterm-256color
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>xterm*locale:true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>xterm.utf8: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>xterm*utf8Title: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>!fix alt key input 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>!xterm*eightBitInput: false
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>!xterm*altSendsEscape: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>!xterm*scrollBar: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>!xterm*rightScrollBar: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>xterm*SaveLines: 4096
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>!xterm*background: black
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>!xterm*foreground: green
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>xterm*printAttributes: 0
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>xterm*printerCommand: cat &gt; ~/xtermdump
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>!xterm*VT100.translations: #override &lt;Btn1UP&gt;: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>xterm*VT100.translations: #override \
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>        Ctrl &lt;KeyPress&gt; V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>        &lt;BtnUp&gt;: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        Ctrl &lt;KeyPress&gt; P: print() \n
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>xterm*faceName: Ubuntu Bold:antialias=True:pixelsize=12
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>xterm*faceNameDoublesize:Noto Sans Mono CJK SC:antialias=True:pixelsize=12
+</span></span></code></pre></div></div>
 				
             
 
@@ -600,7 +822,11 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 			
 		</div>
 	</div>
-</div><div class="summary">apt install sudo cd /etc/sudoers.d vim user # Akvicor ALL=(ALL)NOPASSWD:ALL</div>
+</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install sudo
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">cd</span> /etc/sudoers.d
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>vim user
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># Akvicor ALL=(ALL)NOPASSWD:ALL</span>
+</span></span></code></pre></div></div>
 				
             
 
@@ -647,7 +873,13 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 			
 		</div>
 	</div>
-</div><div class="summary"><a href="https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97">https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97</a> 安装 默认UFW的规则是放通全部端口 apt-get install ufw 设置默认规则 首先设置拒绝所有传入并允许所有传出。 请勿运行以下命令后直接应用，否则会直接锁定你的服务器。确保在应用默认规</div>
+</div><div class="summary"><p><a href="https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97">https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97</a></p>
+<h2 id="安装">安装</h2>
+<p>默认UFW的规则是放通全部端口</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt-get install ufw
+</span></span></code></pre></div><h2 id="设置默认规则">设置默认规则</h2>
+<p>首先设置拒绝所有传入并允许所有传出。</p>
+<p>请勿运行以下命令后直接应用，否则会直接锁定你的服务器。确保在应用默认规则前放通了SSH和其他关键服务的端口。</p></div>
 				
 				
 				<div class="read-more">
@@ -699,62 +931,38 @@ If the highest and lowest bytes in a datum are not within the same memory word t
 			
 		</div>
 	</div>
-</div><div class="summary">Environment Add MinGW environment to Path: C:\MinGW\bin
-Open Notepad++ Plug-&gt;Plugin Manager-&gt;Show Plugin Manager
-at Available, double click ‘downloading list’
-Search ‘Nppexec’, install and restart
-Open Console Plug-&gt;NppExec-&gt;Show Console
-Compile Plug-&gt;NppExec-&gt;Execute
-Compile input: g++ $(FULL_CURRENT_PATH) -g -o $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: Compile Run input: $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: Run GDB input: gdb $(CURRENT_DIRECTORY)$(NAME_PART).exe click save, input: GDB Add to Macros submenu Plug-&gt;NppExec-&gt;Advanced Options
-at Associated script:
-Add-&gt; Compile and Run and GBD Menu items -&gt; Place to the Macros submenu</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/networking_timeout/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Networking timeout <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-15
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">1 vim /etc/systemd/system/network-online.target.wants/networking.service TimeoutStartSec=2sec 2 vim /etc/dhcp/dhclient.conf timeout 15 1 change auto eth0 to allow-hotplug eth0</div>
+</div><div class="summary"><h2 id="environment">Environment</h2>
+<p>Add MinGW environment to Path: <code>C:\MinGW\bin</code></p>
+<h2 id="open-notepad">Open Notepad++</h2>
+<p>Plug-&gt;Plugin Manager-&gt;Show Plugin Manager</p>
+<p>at Available, double click &lsquo;downloading list&rsquo;</p>
+<p>Search &lsquo;Nppexec&rsquo;, install and restart</p>
+<h2 id="open-console">Open Console</h2>
+<p>Plug-&gt;NppExec-&gt;Show Console</p>
+<h2 id="compile">Compile</h2>
+<p>Plug-&gt;NppExec-&gt;Execute</p>
+<h3 id="compile-1">Compile</h3>
+<ul>
+<li>input: <code>g++ $(FULL_CURRENT_PATH) -g -o $(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>Compile</code></li>
+</ul>
+<h3 id="run">Run</h3>
+<ul>
+<li>input: <code>$(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>Run</code></li>
+</ul>
+<h3 id="gdb">GDB</h3>
+<ul>
+<li>input: <code>gdb $(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>GDB</code></li>
+</ul>
+<h2 id="add-to-macros-submenu">Add to Macros submenu</h2>
+<p>Plug-&gt;NppExec-&gt;Advanced Options</p>
+<p>at Associated script:</p>
+<ul>
+<li>Add-&gt; Compile and Run and GBD</li>
+<li>Menu items -&gt; Place to the Macros submenu</li>
+</ul></div>
 				
             
 

@@ -245,12 +245,20 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Ubuntu 18.04 安装MySQL8 Ubuntu 下载 APT 包 CentOS 下载 APT 包 sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb sudo apt update sudo apt install mysql-server # 查看mysql是否安装成功 mysql -u root -p # 查看mysql字符集，mysql8字符集默认为utf-8。 show</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/mysql/install/">查看更多…</a>
-				</div>
+</div><div class="summary"><h2 id="ubuntu-1804">Ubuntu 18.04</h2>
+<p>安装MySQL8</p>
+<ul>
+<li>Ubuntu <a href="https://dev.mysql.com/downloads/repo/apt/">下载 APT 包</a></li>
+<li>CentOS <a href="https://dev.mysql.com/downloads/repo/yum/">下载 APT 包</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo apt update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>sudo apt install mysql-server
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># 查看mysql是否安装成功</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>mysql -u root -p
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a"># 查看mysql字符集，mysql8字符集默认为utf-8。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>show variables like <span style="color:#0a3069">&#39;%char%&#39;</span><span style="color:#1f2328">;</span> 
+</span></span></code></pre></div></div>
 				
             
 

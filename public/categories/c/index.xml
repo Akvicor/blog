@@ -4,7 +4,7 @@
     <title>C on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/c/</link>
     <description>Recent content in C on Akvicor&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 15 Sep 2024 15:40:28 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/c/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/c/data_structure_alignment/</link>
       <pubDate>Mon, 27 Feb 2023 07:14:03 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/c/data_structure_alignment/</guid>
-      <description>The CPU in modern computer hardware performs reads and writes to memory most efficiently when the data is naturally aligned, which generally means that the data&amp;rsquo;s memory address is a multiple of the data size. For instance, in a 32-bit architecture, the data may be aligned if the data is stored in four consecutive bytes and the first byte lies on a 4-byte boundary.&#xA;If the highest and lowest bytes in a datum are not within the same memory word the computer must split the datum access into multiple memory accesses.</description>
+      <description>&lt;p&gt;The CPU in modern computer hardware performs reads and writes to memory most efficiently when the data is naturally aligned, which generally means that the data&amp;rsquo;s memory address is a multiple of the data size. For instance, in a 32-bit architecture, the data may be aligned if the data is stored in four consecutive bytes and the first byte lies on a 4-byte boundary.&lt;/p&gt;&#xA;&lt;p&gt;If the highest and lowest bytes in a datum are not within the same memory word the computer must split the datum access into multiple memory accesses. This requires a lot of complex circuitry to generate the memory accesses and coordinate them. To handle the case where the memory words are in different memory pages the processor must either verify that both pages are present before executing the instruction or be able to handle a TLB miss or a page fault on any memory access during the instruction execution.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

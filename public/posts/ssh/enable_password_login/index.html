@@ -203,17 +203,17 @@
 <ol start="2">
 <li><strong>切换到root用户</strong></li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 执行</span>
-</span></span><span style="display:flex;"><span>sudo su
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 编辑文件</span>
-</span></span><span style="display:flex;"><span>vi /etc/ssh/sshd_config
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 执行</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo su
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 编辑文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>vi /etc/ssh/sshd_config
 </span></span></code></pre></div><p>找到以下部分</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Authentication:</span>
-</span></span><span style="display:flex;"><span>LoginGraceTime <span style="color:#099">120</span>
-</span></span><span style="display:flex;"><span>PermitRootLogin yes //默认为no，需要开启root用户访问改为yes
-</span></span><span style="display:flex;"><span>StrictModes yes
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Change to no to disable tunnelled clear text passwords</span>
-</span></span><span style="display:flex;"><span>PasswordAuthentication yes //默认为no，改为yes开启密码登陆
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># Authentication:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>LoginGraceTime <span style="color:#0550ae">120</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>PermitRootLogin yes //默认为no，需要开启root用户访问改为yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>StrictModes yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#57606a"># Change to no to disable tunnelled clear text passwords</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>PasswordAuthentication yes //默认为no，改为yes开启密码登陆
 </span></span></code></pre></div><p>重启SSH服务使修改生效</p>
 <p><code>/etc/init.d/ssh restart</code></p>
     </div>

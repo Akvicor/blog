@@ -203,21 +203,21 @@
     <div class='content  content '>
         <h2 id="编辑-etcdefaultufw">编辑 <code>/etc/default/ufw</code></h2>
 <p>找到 18行左右的 <code>DEFAULT_FORWARD_POLICY</code>，将值改为<code>true</code></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /etc/default/ufw
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/default/ufw
 </span></span></code></pre></div><h2 id="编辑-etcsysctlconf">编辑 <code>/etc/sysctl.conf</code></h2>
 <p>将 <code>net.ipv4.ip_forward=1</code> 注释去掉，并确保值为1</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /etc/sysctl.conf
-</span></span><span style="display:flex;"><span>sysctl -p
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/sysctl.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sysctl -p
 </span></span></code></pre></div><h2 id="编辑-etcufwbeforerules">编辑 <code>/etc/ufw/before.rules</code></h2>
 <p>在 <code>*filter</code> 上方，一般在最顶部，添加如下命令</p>
 <p>如果要支持<code>UDP</code>的话就再复制一份, 然后将<code>tcp</code>改成<code>udp</code>即可</p>
-<pre tabindex="0"><code class="language-conf" data-lang="conf">*nat
-:POSTROUTING ACCEPT [0:0]
--A PREROUTING -p tcp --dport 监听端口 -j DNAT --to-destination 目标转发IP地址:目标转发端口
--A POSTROUTING -j MASQUERADE
-COMMIT
-</code></pre><p>重启ufw即可</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufw reload
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>*nat
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>:POSTROUTING ACCEPT [0:0]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>-A PREROUTING -p tcp --dport 监听端口 -j DNAT --to-destination 目标转发IP地址:目标转发端口
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>-A POSTROUTING -j MASQUERADE
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>COMMIT
+</span></span></code></pre></div><p>重启ufw即可</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ufw reload
 </span></span></code></pre></div>
     </div>
 

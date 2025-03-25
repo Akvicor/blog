@@ -329,6 +329,12 @@
     <loc>https://blog.akvicor.com/posts/aos/unreal_mode/</loc>
     <lastmod>2024-09-15T15:34:58+08:00</lastmod>
   </url><url>
+    <loc>https://blog.akvicor.com/categories/aos32/</loc>
+    <lastmod>2024-09-15T15:38:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/aos32/gb2312/</loc>
+    <lastmod>2024-09-15T15:38:12+08:00</lastmod>
+  </url><url>
     <loc>https://blog.akvicor.com/posts/opensource/mathtex/</loc>
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url><url>
@@ -498,6 +504,9 @@
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/efi/refind/</loc>
+    <lastmod>2024-09-18T00:08:45+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.akvicor.com/posts/ssl/pem/</loc>
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/hugo/install/</loc>
@@ -1056,15 +1065,6 @@
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url><url>
     <loc>https://blog.akvicor.com/posts/ssh/known_hosts_changed/</loc>
-    <lastmod>2024-09-18T00:08:45+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.akvicor.com/categories/aos32/</loc>
-    <lastmod>2024-09-15T15:38:12+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.akvicor.com/posts/aos32/gb2312/</loc>
-    <lastmod>2024-09-15T15:38:12+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.akvicor.com/posts/ssl/pem/</loc>
     <lastmod>2024-09-18T00:08:45+08:00</lastmod>
   </url>
 </urlset>

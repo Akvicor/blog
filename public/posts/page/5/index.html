@@ -245,7 +245,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">修改键盘重复频率和延迟 XServer startup options As alternative to this tool, you can set defaults for the X Server at startup. For the keyboard repeat rate: /etc/X11/xinit/xserverrc X -ardelay 200 -arinterval 30 # (interval is 1000/rate_in_hz) For this to configure, you need the privileges to edit X launch properties (probably in your login tool like lightdm). XServer configuration file XServer since version 21.1.0 supports the option AutoRepeat. Basically you need an xorg</div>
+</div><div class="summary"><p>修改键盘重复频率和延迟</p>
+<h2 id="xserver-startup-options">XServer startup options</h2>
+<p>As alternative to this tool, you can set defaults for the X Server at startup.</p>
+<p>For the keyboard repeat rate:</p>
+<p><code>/etc/X11/xinit/xserverrc</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>X -ardelay <span style="color:#0550ae">200</span> -arinterval <span style="color:#0550ae">30</span>  <span style="color:#57606a"># (interval is 1000/rate_in_hz)</span>
+</span></span></code></pre></div><p>For this to configure, you need the privileges to edit X launch properties (probably in your login tool like lightdm).</p>
+<h2 id="xserver-configuration-file">XServer configuration file</h2>
+<p>XServer since version 21.1.0 supports the option AutoRepeat. Basically you need an xorg config section like this (the second value again 1000/rate_in_hz):</p></div>
 				
 				
 				<div class="read-more">
@@ -297,7 +305,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">可以使用xset命令进行操作 xset dpms force off # 关闭屏幕 xset s 300 #设置屏保时间为300秒，时间单位为秒 xset s 0 #关闭屏幕保护 xset dpms 600 900 1200 # 三个数值分别为Standby、Susp</div>
+</div><div class="summary"><p>可以使用xset命令进行操作</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>xset dpms force off <span style="color:#57606a"># 关闭屏幕</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>xset s <span style="color:#0550ae">300</span> <span style="color:#57606a">#设置屏保时间为300秒，时间单位为秒</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>xset s <span style="color:#0550ae">0</span> <span style="color:#57606a">#关闭屏幕保护</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>xset dpms <span style="color:#0550ae">600</span> <span style="color:#0550ae">900</span> <span style="color:#0550ae">1200</span> <span style="color:#57606a"># 三个数值分别为Standby、Suspend、Off，具体什么意思就不多说了，单位秒</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>xset -dpms <span style="color:#57606a">#关闭电源管理</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>xset -q <span style="color:#57606a"># 查看设置情况。</span>
+</span></span></code></pre></div><p>也可以编辑xorg.conf(或者在<code>/etc/X11/xorg.conf.d/</code>添加<code>.conf</code>结尾的配置文件)，添加如下选项把xscreen saver直接关闭:</p></div>
 				
 				
 				<div class="read-more">
@@ -349,8 +365,13 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h1 id="安装pptp客户端-apt-get-install-pptp-linux-编辑配置文件-vim-etcpppchap-secrets--secrets-for-authentication-using-chap--client-server-secret-ip-addresses-your_username-pptp-your_password-homeakvicorcom-在-etcppppeers-下新建一个vpn配置文件文件名就是vpn的名字-vim-etcppppeerspptp-pty-34pptp-homeakvicorcom---nolaunchpppd34-name-akvicor-remotename-pptp-require-mppe-128-file-etcpppoptionspptp-ipparam-pptp-添加">安装PPTP客户端 apt-get install pptp-linux 编辑配置文件 vim /etc/ppp/chap-secrets # Secrets for authentication using CHAP # client server secret IP addresses your_username PPTP your_password home.akvicor.com 在 /etc/ppp/peers/ 下新建一个VPN配置文件，文件名就是VPN的名字 vim /etc/ppp/peers/PPTP pty &quot;pptp home.akvicor.com &ndash;nolaunchpppd&quot; name Akvicor remotename PPTP require-mppe-128 file /etc/ppp/options.pptp ipparam PPTP 添加</h1>
-</div>
+</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 安装PPTP客户端</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt-get install pptp-linux
+</span></span></code></pre></div><p>编辑配置文件 <code>vim /etc/ppp/chap-secrets</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># Secrets for authentication using CHAP
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span># client	server	secret			IP addresses
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>your_username PPTP your_password home.akvicor.com
+</span></span></code></pre></div><p>在 <code>/etc/ppp/peers/</code> 下新建一个VPN配置文件，文件名就是VPN的名字 <code>vim /etc/ppp/peers/PPTP</code></p></div>
 				
 				
 				<div class="read-more">
@@ -402,7 +423,29 @@
 			
 		</div>
 	</div>
-</div><div class="summary">官方指导链接 <a href="https://github.com/home-assistant/supervised-installer">https://github.com/home-assistant/supervised-installer</a> 安装基础工具 apt update apt upgrade apt install vim screen gcc g++ golang ca-certificates curl gnupg 安装Docker # Add Docker's official GPG key: sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL <a href="https://download.docker.com/linux/debian/gpg">https://download.docker.com/linux/debian/gpg</a> | sudo gpg &ndash;dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a+r /etc/apt/keyrings/docker.gpg # Add the repository to Apt sources: echo \ &quot;deb [arch=$(dpkg</div>
+</div><div class="summary"><p>官方指导链接 <a href="https://github.com/home-assistant/supervised-installer">https://github.com/home-assistant/supervised-installer</a></p>
+<h2 id="安装基础工具">安装基础工具</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt upgrade
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>apt install vim screen gcc g++ golang ca-certificates curl gnupg
+</span></span></code></pre></div><h2 id="安装docker">安装Docker</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># Add Docker&#39;s official GPG key:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>sudo apt-get update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>sudo apt-get install ca-certificates curl gnupg
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>sudo install -m <span style="color:#0550ae">0755</span> -d /etc/apt/keyrings
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>curl -fsSL https://download.docker.com/linux/debian/gpg <span style="color:#1f2328">|</span> sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>sudo chmod a+r /etc/apt/keyrings/docker.gpg
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#57606a"># Add the repository to Apt sources:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#0a3069"></span>  <span style="color:#0a3069">&#34;deb [arch=</span><span style="color:#cf222e">$(</span>dpkg --print-architecture<span style="color:#cf222e">)</span><span style="color:#0a3069"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#0a3069">  </span><span style="color:#cf222e">$(</span>. /etc/os-release <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;</span><span style="color:#953800">$VERSION_CODENAME</span><span style="color:#0a3069">&#34;</span><span style="color:#cf222e">)</span><span style="color:#0a3069"> stable&#34;</span> <span style="color:#1f2328">|</span> <span style="color:#0a3069">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#0a3069"></span>  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>sudo apt-get update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</span></span></code></pre></div><h2 id="安装-home-assistant-supervised">安装 Home Assistant Supervised</h2>
+<p>运行于root用户下</p></div>
 				
 				
 				<div class="read-more">
@@ -454,7 +497,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary">若拉取时提示无法验证包，可以添加以下环境变量以信任此地址 关闭指定域名的包验证 export GONOSUMDB=git.akvicor.com 关闭所有域名的包验证 export GOSUMDB=off</div>
+</div><div class="summary"><p>若拉取时提示无法验证包，可以添加以下环境变量以信任此地址</p>
+<h2 id="关闭指定域名的包验证">关闭指定域名的包验证</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">export</span> GONOSUMDB<span style="color:#0550ae">=</span>git<span style="color:#0550ae">.</span>akvicor<span style="color:#0550ae">.</span>com
+</span></span></code></pre></div><h2 id="关闭所有域名的包验证">关闭所有域名的包验证</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">export</span> GOSUMDB<span style="color:#0550ae">=</span>off
+</span></span></code></pre></div></div>
 				
             
 
@@ -501,7 +549,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary">删除指定目录下指定文件 find /path -name .svn | xargs rm -rf 删除指定名称的文件或文件夹: find -type d | grep .svn$ | xargs rm -r 分析： find -type d | grep .svn$ 通过此命令查找文件夹 过滤正则表达式中的目录 | xargs rm -r 执行删</div>
+</div><div class="summary"><p>删除指定目录下指定文件</p>
+<p><code>find /path -name .svn | xargs rm -rf</code></p>
+<p>删除指定名称的文件或文件夹: find -type d | grep .svn$ | xargs rm -r</p>
+<p>分析：</p>
+<p><code>find -type d | grep .svn$</code> 通过此命令查找文件夹 过滤正则表达式中的目录
+<code>| xargs rm -r</code> 执行删除指令</p></div>
 				
 				
 				<div class="read-more">
@@ -553,12 +606,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">在Win10系统下，按住键盘的 “Win+R” 组合快捷键，系统将会打开“运行”命令对话窗口。 在打开的运行命令对话框中输入 “gpedit.msc” 命令，然后再点击“</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/thumbs/">查看更多…</a>
-				</div>
+</div><div class="summary"><ol>
+<li>在Win10系统下，按住键盘的 <strong>“Win+R”</strong> 组合快捷键，系统将会打开“运行”命令对话窗口。</li>
+<li>在打开的运行命令对话框中输入 <strong>“gpedit.msc”</strong> 命令，然后再点击“确定”按钮。</li>
+<li>点击确定按钮后，这个时候会打开 <strong>“本地组策略编辑器”</strong> 对话窗口，</li>
+<li>在本地组策略编辑器窗口的左侧小窗口中，依次展开 <strong>“用户配置&ndash;&gt;管理模版&ndash;&gt;Windows组件”</strong> 选项。</li>
+<li>在“Windows组件”选项右侧窗口，找到 <strong>“文件资源管理器”</strong> 选项选中并双击鼠标左键将其打开。</li>
+<li>进去到文件资源管理器中，找到 <strong>“关闭隐藏的 thumbs.db 文件中的缩略图缓存”</strong> 并双击鼠标左键将其打开。</li>
+<li>在打开的“关闭隐藏的 thumbs.db 文件中的缩略图缓存”对话窗口中，将其设置更改为 <strong>“已启用”</strong> 选项，然后在点击“应用&ndash;&gt;确定”按钮退出即可。</li>
+</ol></div>
 				
             
 
@@ -605,7 +661,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">安装配置 # 安装x11vnc apt install x11vnc # 设置开机自动启动连接密码,将密码储存在/etc/x11vnc.pass 下 x11vnc -storepasswd /etc/x11vnc.pass 查看认证服务 ps wwwwaux | grep auth 类似以下信息中的/var/</div>
+</div><div class="summary"><h2 id="安装配置">安装配置</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 安装x11vnc</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt install x11vnc
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 设置开机自动启动连接密码,将密码储存在/etc/x11vnc.pass 下</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>x11vnc -storepasswd /etc/x11vnc.pass
+</span></span></code></pre></div><h2 id="查看认证服务">查看认证服务</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ps wwwwaux <span style="color:#1f2328">|</span> grep auth
+</span></span></code></pre></div><p>类似以下信息中的<code>/var/run/lightdm/root/:0</code></p></div>
 				
 				
 				<div class="read-more">
@@ -657,12 +720,23 @@
 			
 		</div>
 	</div>
-</div><div class="summary">缺少Google API 密钥，因此Chromium 的部分功能将无法使用 1. 设置环境变量，屏蔽提示 (会导致无法登录Google) setx GOOGLE_API_KEY &quot;no&quot; setx GOOGLE_DEFAULT_CLIENT_ID &quot;no&quot; setx GOOGLE_DEFAULT_CLIENT_SECRET &quot;no&quot; 2. 配置Google API Key <a href="https://cloud.google.com/console">https://cloud.google.com/console</a></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/chromium_tips/">查看更多…</a>
-				</div>
+</div><div class="summary"><h2 id="缺少google-api-密钥因此chromium-的部分功能将无法使用">缺少Google API 密钥，因此Chromium 的部分功能将无法使用</h2>
+<h3 id="1-设置环境变量屏蔽提示-会导致无法登录google">1. 设置环境变量，屏蔽提示 (会导致无法登录Google)</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>setx GOOGLE_API_KEY <span style="color:#0a3069">&#34;no&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>setx GOOGLE_DEFAULT_CLIENT_ID <span style="color:#0a3069">&#34;no&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>setx GOOGLE_DEFAULT_CLIENT_SECRET <span style="color:#0a3069">&#34;no&#34;</span>
+</span></span></code></pre></div><h3 id="2-配置google-api-key">2. 配置Google API Key</h3>
+<ol>
+<li><a href="https://cloud.google.com/console">https://cloud.google.com/console</a></li>
+<li>创建或选择已有项目 -&gt; 左侧边栏 API和服务 -&gt; 凭证</li>
+<li>创建凭证(类型为 “API 密钥”,名称随意, 不使用密钥限制,记住生成的key)</li>
+<li>再创建一个凭证(类型为 “OAuth 客户端 ID”, 名称随意, 应用类型选择 “其他”, 记住生成的 “客户端 ID” 和 “客户端密钥”)</li>
+<li>格式填写自己的 API Key</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>setx GOOGLE_API_KEY 生成的API密钥
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>setx GOOGLE_DEFAULT_CLIENT_ID 生成的客户端ID
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>setx GOOGLE_DEFAULT_CLIENT_SECRET 生成的客户端密钥
+</span></span></code></pre></div></div>
 				
             
 
@@ -709,7 +783,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary">编写 将js文件放在主题的static/js文件夹中，css文件放在主题的static/css文件夹中 在layouts/partials/head.html中添加</div>
+</div><div class="summary"><h1 id="编写">编写</h1>
+<p>将js文件放在主题的static/js文件夹中，css文件放在主题的static/css文件夹中</p>
+<p>在layouts/partials/head.html中添加</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    &lt;script src=&#34;/js/hide_and_seek.js&#34;&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/hide_and_seek.css&#34;&gt;
+</span></span></code></pre></div><p>编写<code>hide_and_seek.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p></div>
 				
 				
 				<div class="read-more">
@@ -761,7 +840,13 @@
 			
 		</div>
 	</div>
-</div><div class="summary">当页面失去焦点时改变标题，恢复焦点时恢复标题 将js文件放在主题的static/js文件夹中 在layouts/partials/head.html中添加 {{ if .Site.Params.funnyTitle | default</div>
+</div><div class="summary"><p>当页面失去焦点时改变标题，恢复焦点时恢复标题</p>
+<p>将js文件放在主题的static/js文件夹中</p>
+<p>在layouts/partials/head.html中添加</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    {{ if .Site.Params.funnyTitle | default false }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    &lt;script src=&#34;/js/funny_title.js&#34;&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    {{- end -}}
+</span></span></code></pre></div><p>此时在hugo.toml中添加以下内容开启</p></div>
 				
 				
 				<div class="read-more">

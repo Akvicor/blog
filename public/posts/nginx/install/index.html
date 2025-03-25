@@ -159,7 +159,7 @@
         <span>
             
             <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
-            1908 字</span>&nbsp;
+            1931 字</span>&nbsp;
         <span>
             
             <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
@@ -213,113 +213,113 @@
 <p>搭建Nginx服务</p>
 <h3 id="安装">安装</h3>
 <p>Ubuntu可以从源直接安装nginx</p>
-<pre tabindex="0"><code>sudo apt-get update
-sudo apt-get install nginx
-</code></pre><h3 id="调整防火墙以免出现各种问题">调整防火墙，以免出现各种问题</h3>
-<pre tabindex="0"><code>sudo ufw app list
-</code></pre><p>获得应用程序配置文件的列表：</p>
-<pre tabindex="0"><code>可用应用程序：
-CUPS
-Nginx Full
-Nginx HTTP
-Nginx HTTPS
-OpenSSH
-</code></pre><p>正如你所看到的，Nginx有三个配置文件可用：<code>Nginx Full</code>、<code>Nginx HTTP</code>、<code>Nginx HTTPS</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt-get update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo apt-get install nginx
+</span></span></code></pre></div><h3 id="调整防火墙以免出现各种问题">调整防火墙，以免出现各种问题</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo ufw app list
+</span></span></code></pre></div><p>获得应用程序配置文件的列表：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>可用应用程序：
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>CUPS
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Nginx Full
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Nginx HTTP
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Nginx HTTPS
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>OpenSSH
+</span></span></code></pre></div><p>正如你所看到的，Nginx有三个配置文件可用：<code>Nginx Full</code>、<code>Nginx HTTP</code>、<code>Nginx HTTPS</code></p>
 <ul>
 <li><code>Nginx Full</code> ：此配置文件打开端口80（正常，未加密的网络流量）和端口443（TLS / SSL加密流量）</li>
 <li><code>Nginx HTTP</code> ：此配置文件仅打开端口80（正常，未加密的网络流量）</li>
 <li><code>Nginx HTTPS</code> ：此配置文件仅打开端口443（TLS / SSL加密流量）</li>
 </ul>
-<pre tabindex="0"><code>sudo ufw allow &#39;Nginx HTTP&#39;
-sudo ufw allow &#39;Nginx HTTPS&#39;
-</code></pre><p>输入以下命令以启动防火墙，据知有部分用户是没有启动防火墙的，还是建议开启</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo ufw <span style="color:#0086b3">enable</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo ufw allow &#39;Nginx HTTP&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo ufw allow &#39;Nginx HTTPS&#39;
+</span></span></code></pre></div><p>输入以下命令以启动防火墙，据知有部分用户是没有启动防火墙的，还是建议开启</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo ufw <span style="color:#6639ba">enable</span>
 </span></span></code></pre></div><p>输入以下命令以查看防火墙状态：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo ufw status
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo ufw status
 </span></span></code></pre></div><h3 id="检查您的web服务器是否在运行">检查您的Web服务器是否在运行</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl status nginx
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo systemctl status nginx
 </span></span></code></pre></div><h3 id="检查是否可以访问默认网页在浏览器输入">检查是否可以访问默认网页，在浏览器输入：</h3>
-<pre tabindex="0"><code>http://本地IP地址
-</code></pre><h3 id="管理nginx进程">管理nginx进程</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl stop nginx
-</span></span><span style="display:flex;"><span>sudo systemctl start nginx
-</span></span><span style="display:flex;"><span>sudo systemctl restart nginx
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 如果您只是简单地进行配置更改，Nginx通常可以重新加载而不会丢失连接。</span>
-</span></span><span style="display:flex;"><span>sudo systemctl reload nginx
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 默认情况下，Nginx配置为在服务器引导时自动启动。 如果这不是您想要的，可以通过输入以下命令来禁用此行为：</span>
-</span></span><span style="display:flex;"><span>sudo systemctl disable nginx
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 要重新启用服务以在启动时启动，您可以键入：sudo systemctl enable nginx</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>http://本地IP地址
+</span></span></code></pre></div><h3 id="管理nginx进程">管理nginx进程</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo systemctl stop nginx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo systemctl start nginx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>sudo systemctl restart nginx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># 如果您只是简单地进行配置更改，Nginx通常可以重新加载而不会丢失连接。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>sudo systemctl reload nginx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a"># 默认情况下，Nginx配置为在服务器引导时自动启动。 如果这不是您想要的，可以通过输入以下命令来禁用此行为：</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>sudo systemctl disable nginx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span><span style="color:#57606a"># 要重新启用服务以在启动时启动，您可以键入：sudo systemctl enable nginx</span>
 </span></span></code></pre></div><h3 id="设置服务器块">设置服务器块</h3>
 <p>Ubuntu 18.04上的<code>Nginx</code>默认启用了一个服务器模块，该模块被配置为在 <code>/var/www/html</code> 目录下提供文档。 虽然这适用于单个站点，但如果您托管多个站点，它可能会变得很笨重。 我们不必修改<code>/var/www/html</code> ，而是在<code>/var/www</code>为我们的<code>example.com</code>网站创建一个目录结构，并将<code>/var/www/html</code>保留为默认目录，如果客户端请求没有匹配任何其他网站。</p>
 <p>按如下所示为<code>example.com</code>创建目录，使用-p标志创建任何必需的父目录：</p>
-<pre tabindex="0"><code>sudo mkdir -p /var/www/example.com/html
-</code></pre><p>接下来，使用$USER环境变量分配目录的所有权：</p>
-<pre tabindex="0"><code>sudo chown -R $USER:$USER /var/www/example.com/html/
-</code></pre><p>如果你没有修改你的umask值，你的web根目录的权限应该是正确的，但是你可以通过输入：</p>
-<pre tabindex="0"><code>sudo chmod -R 755 /var/www/example.com/
-</code></pre><p>接下来，使用Vim或您最喜欢的编辑器创建一个index.html页面示例：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /var/www/example.com/html/index.html
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo mkdir <span style="color:#0550ae">-</span>p <span style="color:#0550ae">/</span><span style="color:#cf222e">var</span><span style="color:#0550ae">/</span>www<span style="color:#0550ae">/</span>example<span style="color:#0550ae">.</span>com<span style="color:#0550ae">/</span>html
+</span></span></code></pre></div><p>接下来，使用$USER环境变量分配目录的所有权：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo chown <span style="color:#0550ae">-</span>R <span style="color:#0550ae">$</span>USER<span style="color:#1f2328">:</span><span style="color:#0550ae">$</span>USER <span style="color:#0550ae">/</span><span style="color:#cf222e">var</span><span style="color:#0550ae">/</span>www<span style="color:#0550ae">/</span>example<span style="color:#0550ae">.</span>com<span style="color:#0550ae">/</span>html<span style="color:#0550ae">/</span>
+</span></span></code></pre></div><p>如果你没有修改你的umask值，你的web根目录的权限应该是正确的，但是你可以通过输入：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo chmod <span style="color:#0550ae">-</span>R <span style="color:#0550ae">755</span> <span style="color:#0550ae">/</span><span style="color:#cf222e">var</span><span style="color:#0550ae">/</span>www<span style="color:#0550ae">/</span>example<span style="color:#0550ae">.</span>com<span style="color:#0550ae">/</span>
+</span></span></code></pre></div><p>接下来，使用Vim或您最喜欢的编辑器创建一个index.html页面示例：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /var/www/example.com/html/index.html
 </span></span></code></pre></div><p>在里面，添加下面的示例HTML：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080">html</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">title</span>&gt;Welcome to Example.com!&lt;/<span style="color:#000080">title</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">body</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#000080">h1</span>&gt;Success!  The example.com server block is working!&lt;/<span style="color:#000080">h1</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">html</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">html</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>Welcome to Example.com!<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>Success!  The example.com server block is working!<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">html</span><span style="color:#1f2328">&gt;</span>
 </span></span></code></pre></div><p>为了让<code>Nginx</code>提供这些内容，有必要创建一个具有正确指令的服务器块。 我们不要直接修改默认配置文件，而是在<code>/etc/nginx/sites-available/example.com</code>上创建一个新文件：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vim /etc/nginx/sites-available/example.com
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo vim /etc/nginx/sites-available/example.com
 </span></span></code></pre></div><p>粘贴到以下配置块中，该块类似于默认值，但已更新为我们的新目录和域名：</p>
-<pre tabindex="0"><code>server {
-        listen 80;
-        listen [::]:80;
- 
-        root /var/www/example.com/html;
-        index index.html index.htm index.nginx-debian.html;
- 
-        server_name example.com www.example.com;
- 
-        location / {
-                try_files $uri $uri/ =404;
-        }
-}
-</code></pre><p>请注意，我们已将root配置更新到我们的新目录，并将<code>server_name</code>为我们的域名。 </p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>server <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>        listen <span style="color:#0550ae">80</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        listen <span style="color:#1f2328">[::]:</span><span style="color:#0550ae">80</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>        root <span style="color:#0550ae">/</span><span style="color:#cf222e">var</span><span style="color:#0550ae">/</span>www<span style="color:#0550ae">/</span>example<span style="color:#0550ae">.</span>com<span style="color:#0550ae">/</span>html<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        index index<span style="color:#0550ae">.</span>html index<span style="color:#0550ae">.</span>htm index<span style="color:#0550ae">.</span>nginx<span style="color:#0550ae">-</span>debian<span style="color:#0550ae">.</span>html<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        server_name example<span style="color:#0550ae">.</span>com www<span style="color:#0550ae">.</span>example<span style="color:#0550ae">.</span>com<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        location <span style="color:#0550ae">/</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>                try_files <span style="color:#0550ae">$</span>uri <span style="color:#0550ae">$</span>uri<span style="color:#0550ae">/</span> <span style="color:#0550ae">=</span><span style="color:#0550ae">404</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p>请注意，我们已将root配置更新到我们的新目录，并将<code>server_name</code>为我们的域名。 </p>
 <p>接下来，让我们通过创建一个链接到启动sites-enabled目录来启用该文件，该目录是Nginx在启动过程中读取的：</p>
-<pre tabindex="0"><code>sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
-</code></pre><p>现在启用两个服务器模块并将其配置为基于<code>listen</code>和<code>server_name</code>指令响应请求（您可以阅读关于Nginx如何处理这些指令的更多信息）：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+</span></span></code></pre></div><p>现在启用两个服务器模块并将其配置为基于<code>listen</code>和<code>server_name</code>指令响应请求（您可以阅读关于Nginx如何处理这些指令的更多信息）：</p>
 <ul>
 <li>example.com ：将响应example.com和www.example.com请求。</li>
 <li>default ：将响应端口80上与其他两个块不匹配的任何请求。</li>
 </ul>
 <p>为了避免添加额外的服务器名称可能导致的哈希桶内存问题，有必要调整<code>/etc/nginx/nginx.conf</code>文件中的单个值。 </p>
-<pre tabindex="0"><code>sudo vim /etc/nginx/nginx.conf
-</code></pre><p>找到<code>server_names_hash_bucket_size</code>指令并删除#符号以取消注释该行：</p>
-<pre tabindex="0"><code>...
-http {
-    ...
-    server_names_hash_bucket_size 64;
-    ...
-}
-...
-</code></pre><p>接下来，测试以确保您的Nginx文件中没有语法错误：</p>
-<pre tabindex="0"><code>sudo nginx -t
-
-nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-nginx: configuration file /etc/nginx/nginx.conf test is successful
-</code></pre><p>如果没有任何问题，请重新启动Nginx以启用您的更改：</p>
-<pre tabindex="0"><code>sudo systemctl restart nginx
-</code></pre><p>Nginx现在应该为您的域名提供服务。 你可以通过导航到<code>http://example.com</code>来测试它</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo vim /etc/nginx/nginx.conf
+</span></span></code></pre></div><p>找到<code>server_names_hash_bucket_size</code>指令并删除#符号以取消注释该行：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>http {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    ...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    server_names_hash_bucket_size 64;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>    ...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>...
+</span></span></code></pre></div><p>接下来，测试以确保您的Nginx文件中没有语法错误：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo nginx -t
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>nginx: configuration file /etc/nginx/nginx.conf test is successful
+</span></span></code></pre></div><p>如果没有任何问题，请重新启动Nginx以启用您的更改：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo systemctl restart nginx
+</span></span></code></pre></div><p>Nginx现在应该为您的域名提供服务。 你可以通过导航到<code>http://example.com</code>来测试它</p>
 <h3 id="重要的nginx文件和目录">重要的Nginx文件和目录</h3>
 <p>nginx服务器配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/etc/nginx <span style="color:#998;font-style:italic"># Nginx配置目录。 所有的Nginx配置文件都驻留在这里。</span>
-</span></span><span style="display:flex;"><span>/etc/nginx/nginx.conf <span style="color:#998;font-style:italic"># 主要的Nginx配置文件。 这可以修改，以更改Nginx全局配置。</span>
-</span></span><span style="display:flex;"><span>/etc/nginx/sites-available/ <span style="color:#998;font-style:italic"># 可存储每个站点服务器块的目录。 除非将Nginx链接到sites-enabled了sites-enabled目录，否则Nginx不会使用此目录中的配置文件。 通常，所有服务器块配置都在此目录中完成，然后通过链接到其他目录启用。</span>
-</span></span><span style="display:flex;"><span>/etc/nginx/sites-enabled/ <span style="color:#998;font-style:italic"># 存储启用的每个站点服务器块的目录。 通常，这些是通过链接到sites-available目录中的配置文件创建的。</span>
-</span></span><span style="display:flex;"><span>/etc/nginx/snippets <span style="color:#998;font-style:italic"># 这个目录包含可以包含在Nginx配置其他地方的配置片段。 可重复配置的片段可以重构为片段。</span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># nginx服务器日志文件：</span>
-</span></span><span style="display:flex;"><span>/var/log/nginx/access.log <span style="color:#998;font-style:italic"># 除非Nginx配置为其他方式，否则每个对您的Web服务器的请求都会记录在此日志文件中。</span>
-</span></span><span style="display:flex;"><span>/var/log/nginx/error.log <span style="color:#998;font-style:italic"># 任何Nginx错误都会记录在这个日志中。 </span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/etc/nginx <span style="color:#57606a"># Nginx配置目录。 所有的Nginx配置文件都驻留在这里。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>/etc/nginx/nginx.conf <span style="color:#57606a"># 主要的Nginx配置文件。 这可以修改，以更改Nginx全局配置。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>/etc/nginx/sites-available/ <span style="color:#57606a"># 可存储每个站点服务器块的目录。 除非将Nginx链接到sites-enabled了sites-enabled目录，否则Nginx不会使用此目录中的配置文件。 通常，所有服务器块配置都在此目录中完成，然后通过链接到其他目录启用。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>/etc/nginx/sites-enabled/ <span style="color:#57606a"># 存储启用的每个站点服务器块的目录。 通常，这些是通过链接到sites-available目录中的配置文件创建的。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>/etc/nginx/snippets <span style="color:#57606a"># 这个目录包含可以包含在Nginx配置其他地方的配置片段。 可重复配置的片段可以重构为片段。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a"># nginx服务器日志文件：</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>/var/log/nginx/access.log <span style="color:#57606a"># 除非Nginx配置为其他方式，否则每个对您的Web服务器的请求都会记录在此日志文件中。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>/var/log/nginx/error.log <span style="color:#57606a"># 任何Nginx错误都会记录在这个日志中。 </span>
 </span></span></code></pre></div>
     </div>
 

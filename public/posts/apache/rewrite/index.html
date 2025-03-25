@@ -198,17 +198,17 @@
         <p>给使用Appache网站添加重定向</p>
 <p>在网站根目录下建立<code>.htaccess</code>文件</p>
 <p>开启rewrite</p>
-<pre tabindex="0"><code>RewriteEngine On
-</code></pre><p>默认跳转https</p>
-<pre tabindex="0"><code>RewriteCond %{SERVER_PORT} !^443$
-RewriteRule ^(.*)?$ https://%{SERVER_NAME}/$1 [L,R]
-</code></pre><p>隐藏<code>.php</code>后缀</p>
-<pre tabindex="0"><code>RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^.]+)$ $1.php [NC,L]
-</code></pre><p>隐藏<code>.html</code>后缀</p>
-<pre tabindex="0"><code>RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^.]+)$ $1.html [NC,L]
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>RewriteEngine On
+</span></span></code></pre></div><p>默认跳转https</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>RewriteCond %{SERVER_PORT} !^443$
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>RewriteRule ^(.*)?$ https://%{SERVER_NAME}/$1 [L,R]
+</span></span></code></pre></div><p>隐藏<code>.php</code>后缀</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>RewriteCond %{REQUEST_FILENAME} !-f
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>RewriteRule ^([^.]+)$ $1.php [NC,L]
+</span></span></code></pre></div><p>隐藏<code>.html</code>后缀</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>RewriteCond %{REQUEST_FILENAME} !-f
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>RewriteRule ^([^.]+)$ $1.html [NC,L]
+</span></span></code></pre></div>
     </div>
 
     

@@ -196,11 +196,11 @@
 
     <div class='content  content '>
         <p>使用golang编译程序遇到的问题</p>
-<pre tabindex="0"><code># runtime/cgo
-/usr/bin/ld: cannot find -lpthread
-collect2: error: ld returned 1 exit status
-</code></pre><p>pthread primitives are part of the core libc.so library. to satisfy <code>-lpthread</code>, create an empty AR archive somewhere in the library search path.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ar -rc /usr/lib/libpthread.a
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># runtime/cgo
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>/usr/bin/ld: cannot find -lpthread
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>collect2: error: ld returned 1 exit status
+</span></span></code></pre></div><p>pthread primitives are part of the core libc.so library. to satisfy <code>-lpthread</code>, create an empty AR archive somewhere in the library search path.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ar -rc /usr/lib/libpthread.a
 </span></span></code></pre></div>
     </div>
 

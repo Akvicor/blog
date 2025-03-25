@@ -7,8 +7,10 @@ theme = 'virgo'
 
 hasCJKLanguage = true
 summaryLength = 80
-paginate = 11
 enableGitInfo = true
+
+[pagination]
+    pagerSize = 11
 
 [params]
     author = 'Akvicor'
@@ -176,8 +178,15 @@ enableGitInfo = true
         preserveTOC = true
     [markup.highlight]
         # 代码块显示风格、行号显示
+        codeFences = true
+        guessSyntax = true
+        hl_Lines = ""
+        lineNoStart = 1
+        lineNos = true
+        lineNumbersInTable = false
+        noClasses = true
         style = "github"
-        lineNos = false
+        tabWidth = 2
     [markup.tableOfContents]
         endLevel = 3
         ordered = false

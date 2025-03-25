@@ -206,81 +206,81 @@
 <p>cp和scp是ubuntu中文件拷贝常用的两个命令，一般在同一台服务器上我们是用cp命令，跨服务时使用过scp命令，但是如果做文件同步的话，rsync要比上述两个命令更好用一些，跨不跨服务器都是如此。</p>
 <h2 id="使用">使用</h2>
 <p>因为rsync可以只同步需要更新的文件，而不是将所有的指定路径内的文件都拷贝一份，然后再目标路径下去覆盖源文件，比如本地的/mnt/tem文件夹要和远程xx.xx.xx.123的/mnt/tem路径做同步，可以使用：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>rsync -avu --progress /mnt/tem/ xx@xx.xx.xx.123:/mnt/tem
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>rsync -avu --progress /mnt/tem/ xx@xx.xx.xx.123:/mnt/tem
 </span></span></code></pre></div><p>rsync命令会根据源目录是否使用斜杠<code>/</code>，而又不同的处理方式。</p>
 <p>如果在源目录尾部添加斜杠，rsync会将目录的内容复制到目标目录。在省略斜杠，rsync则会将源目录复制到目标目录。</p>
 <h2 id="参数">参数</h2>
 <p><strong>常用</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>-v 详细输出
-</span></span><span style="display:flex;"><span>-a 归档模式，表示以递归方式传输文件，并保持所有文件属性，如果文件属性变了，认为是不同文件
-</span></span><span style="display:flex;"><span>-u 选项忽略重复的数据
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>-v 详细输出
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>-a 归档模式，表示以递归方式传输文件，并保持所有文件属性，如果文件属性变了，认为是不同文件
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>-u 选项忽略重复的数据
 </span></span></code></pre></div><p><strong>全部</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>-v, --verbose 详细模式输出。
-</span></span><span style="display:flex;"><span>-q, --quiet 精简输出模式。
-</span></span><span style="display:flex;"><span>-c, --checksum 打开校验开关，强制对文件传输进行校验。
-</span></span><span style="display:flex;"><span>-a, --archive 归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD。
-</span></span><span style="display:flex;"><span>-r, --recursive 对子目录以递归模式处理。
-</span></span><span style="display:flex;"><span>-R, --relative 使用相对路径信息。
-</span></span><span style="display:flex;"><span>-b, --backup 创建备份，也就是对于目的已经存在有同样的文件名时，将老的文件重新命名为~filename。可以使用--suffix选项来指定不同的备份文件前缀。
-</span></span><span style="display:flex;"><span>--backup-dir 将备份文件<span style="color:#000;font-weight:bold">(</span>如~filename<span style="color:#000;font-weight:bold">)</span>存放在在目录下。
-</span></span><span style="display:flex;"><span>-suffix<span style="color:#000;font-weight:bold">=</span>SUFFIX 定义备份文件前缀。
-</span></span><span style="display:flex;"><span>-u, --update 仅仅进行更新，也就是跳过所有已经存在于DST，并且文件时间晚于要备份的文件，不覆盖更新的文件。
-</span></span><span style="display:flex;"><span>-l, --links 保留软链结。
-</span></span><span style="display:flex;"><span>-L, --copy-links 想对待常规文件一样处理软链结。
-</span></span><span style="display:flex;"><span>--copy-unsafe-links 仅仅拷贝指向SRC路径目录树以外的链结。
-</span></span><span style="display:flex;"><span>--safe-links 忽略指向SRC路径目录树以外的链结。
-</span></span><span style="display:flex;"><span>-H, --hard-links 保留硬链结。
-</span></span><span style="display:flex;"><span>-p, --perms 保持文件权限。
-</span></span><span style="display:flex;"><span>-o, --owner 保持文件属主信息。
-</span></span><span style="display:flex;"><span>-g, --group 保持文件属组信息。
-</span></span><span style="display:flex;"><span>-D, --devices 保持设备文件信息。
-</span></span><span style="display:flex;"><span>-t, --times 保持文件时间信息。
-</span></span><span style="display:flex;"><span>-S, --sparse 对稀疏文件进行特殊处理以节省DST的空间。
-</span></span><span style="display:flex;"><span>-n, --dry-run现实哪些文件将被传输。
-</span></span><span style="display:flex;"><span>-w, --whole-file 拷贝文件，不进行增量检测。
-</span></span><span style="display:flex;"><span>-x, --one-file-system 不要跨越文件系统边界。
-</span></span><span style="display:flex;"><span>-B, --block-size<span style="color:#000;font-weight:bold">=</span>SIZE 检验算法使用的块尺寸，默认是700字节。
-</span></span><span style="display:flex;"><span>-e, --rsh<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">command</span> 指定使用rsh、ssh方式进行数据同步。
-</span></span><span style="display:flex;"><span>--rsync-path<span style="color:#000;font-weight:bold">=</span>PATH 指定远程服务器上的rsync命令所在路径信息。
-</span></span><span style="display:flex;"><span>-C, --cvs-exclude 使用和CVS一样的方法自动忽略文件，用来排除那些不希望传输的文件。
-</span></span><span style="display:flex;"><span>--existing 仅仅更新那些已经存在于DST的文件，而不备份那些新创建的文件。
-</span></span><span style="display:flex;"><span>--delete 删除那些DST中SRC没有的文件。
-</span></span><span style="display:flex;"><span>--delete-excluded 同样删除接收端那些被该选项指定排除的文件。
-</span></span><span style="display:flex;"><span>--delete-after 传输结束以后再删除。
-</span></span><span style="display:flex;"><span>--ignore-errors 及时出现IO错误也进行删除。
-</span></span><span style="display:flex;"><span>--max-delete<span style="color:#000;font-weight:bold">=</span>NUM 最多删除NUM个文件。
-</span></span><span style="display:flex;"><span>--partial 保留那些因故没有完全传输的文件，以是加快随后的再次传输。
-</span></span><span style="display:flex;"><span>--force 强制删除目录，即使不为空。
-</span></span><span style="display:flex;"><span>--numeric-ids 不将数字的用户和组id匹配为用户名和组名。
-</span></span><span style="display:flex;"><span>--timeout<span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">time</span> ip超时时间，单位为秒。
-</span></span><span style="display:flex;"><span>-I, --ignore-times 不跳过那些有同样的时间和长度的文件。
-</span></span><span style="display:flex;"><span>--size-only 当决定是否要备份文件时，仅仅察看文件大小而不考虑文件时间。
-</span></span><span style="display:flex;"><span>--modify-window<span style="color:#000;font-weight:bold">=</span>NUM 决定文件是否时间相同时使用的时间戳窗口，默认为0。
-</span></span><span style="display:flex;"><span>-T --temp-dir<span style="color:#000;font-weight:bold">=</span>DIR 在DIR中创建临时文件。
-</span></span><span style="display:flex;"><span>--compare-dest<span style="color:#000;font-weight:bold">=</span>DIR 同样比较DIR中的文件来决定是否需要备份。
-</span></span><span style="display:flex;"><span>-P 等同于 --partial。
-</span></span><span style="display:flex;"><span>--progress 显示备份过程。
-</span></span><span style="display:flex;"><span>-z, --compress 对备份的文件在传输时进行压缩处理。
-</span></span><span style="display:flex;"><span>--exclude<span style="color:#000;font-weight:bold">=</span>PATTERN 指定排除不需要传输的文件模式。
-</span></span><span style="display:flex;"><span>--include<span style="color:#000;font-weight:bold">=</span>PATTERN 指定不排除而需要传输的文件模式。
-</span></span><span style="display:flex;"><span>--exclude-from<span style="color:#000;font-weight:bold">=</span>FILE 排除FILE中指定模式的文件。
-</span></span><span style="display:flex;"><span>--include-from<span style="color:#000;font-weight:bold">=</span>FILE 不排除FILE指定模式匹配的文件。
-</span></span><span style="display:flex;"><span>--version 打印版本信息。
-</span></span><span style="display:flex;"><span>--address 绑定到特定的地址。
-</span></span><span style="display:flex;"><span>--config<span style="color:#000;font-weight:bold">=</span>FILE 指定其他的配置文件，不使用默认的rsyncd.conf文件。
-</span></span><span style="display:flex;"><span>--port<span style="color:#000;font-weight:bold">=</span>PORT 指定其他的rsync服务端口。
-</span></span><span style="display:flex;"><span>--blocking-io 对远程shell使用阻塞IO。
-</span></span><span style="display:flex;"><span>-stats 给出某些文件的传输状态。
-</span></span><span style="display:flex;"><span>--progress 在传输时现实传输过程。
-</span></span><span style="display:flex;"><span>--log-format<span style="color:#000;font-weight:bold">=</span>formAT 指定日志文件格式。
-</span></span><span style="display:flex;"><span>--password-file<span style="color:#000;font-weight:bold">=</span>FILE 从FILE中得到密码。
-</span></span><span style="display:flex;"><span>--bwlimit<span style="color:#000;font-weight:bold">=</span>KBPS 限制I/O带宽，KBytes per second。
-</span></span><span style="display:flex;"><span>-h, --help 显示帮助信息。
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>-v, --verbose 详细模式输出。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>-q, --quiet 精简输出模式。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>-c, --checksum 打开校验开关，强制对文件传输进行校验。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>-a, --archive 归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>-r, --recursive 对子目录以递归模式处理。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>-R, --relative 使用相对路径信息。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>-b, --backup 创建备份，也就是对于目的已经存在有同样的文件名时，将老的文件重新命名为~filename。可以使用--suffix选项来指定不同的备份文件前缀。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>--backup-dir 将备份文件<span style="color:#0550ae">(</span>如~filename<span style="color:#0550ae">)</span>存放在在目录下。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>-suffix<span style="color:#0550ae">=</span>SUFFIX 定义备份文件前缀。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>-u, --update 仅仅进行更新，也就是跳过所有已经存在于DST，并且文件时间晚于要备份的文件，不覆盖更新的文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>-l, --links 保留软链结。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>-L, --copy-links 想对待常规文件一样处理软链结。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>--copy-unsafe-links 仅仅拷贝指向SRC路径目录树以外的链结。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>--safe-links 忽略指向SRC路径目录树以外的链结。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>-H, --hard-links 保留硬链结。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>-p, --perms 保持文件权限。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>-o, --owner 保持文件属主信息。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>-g, --group 保持文件属组信息。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>-D, --devices 保持设备文件信息。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>-t, --times 保持文件时间信息。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>-S, --sparse 对稀疏文件进行特殊处理以节省DST的空间。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>-n, --dry-run现实哪些文件将被传输。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>-w, --whole-file 拷贝文件，不进行增量检测。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>-x, --one-file-system 不要跨越文件系统边界。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>-B, --block-size<span style="color:#0550ae">=</span>SIZE 检验算法使用的块尺寸，默认是700字节。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>-e, --rsh<span style="color:#0550ae">=</span><span style="color:#6639ba">command</span> 指定使用rsh、ssh方式进行数据同步。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>--rsync-path<span style="color:#0550ae">=</span>PATH 指定远程服务器上的rsync命令所在路径信息。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>-C, --cvs-exclude 使用和CVS一样的方法自动忽略文件，用来排除那些不希望传输的文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>--existing 仅仅更新那些已经存在于DST的文件，而不备份那些新创建的文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>--delete 删除那些DST中SRC没有的文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>--delete-excluded 同样删除接收端那些被该选项指定排除的文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>--delete-after 传输结束以后再删除。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>--ignore-errors 及时出现IO错误也进行删除。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>--max-delete<span style="color:#0550ae">=</span>NUM 最多删除NUM个文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>--partial 保留那些因故没有完全传输的文件，以是加快随后的再次传输。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>--force 强制删除目录，即使不为空。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>--numeric-ids 不将数字的用户和组id匹配为用户名和组名。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>--timeout<span style="color:#0550ae">=</span><span style="color:#6639ba">time</span> ip超时时间，单位为秒。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span>-I, --ignore-times 不跳过那些有同样的时间和长度的文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span>--size-only 当决定是否要备份文件时，仅仅察看文件大小而不考虑文件时间。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>--modify-window<span style="color:#0550ae">=</span>NUM 决定文件是否时间相同时使用的时间戳窗口，默认为0。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>-T --temp-dir<span style="color:#0550ae">=</span>DIR 在DIR中创建临时文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span>--compare-dest<span style="color:#0550ae">=</span>DIR 同样比较DIR中的文件来决定是否需要备份。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>-P 等同于 --partial。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>--progress 显示备份过程。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span>-z, --compress 对备份的文件在传输时进行压缩处理。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>--exclude<span style="color:#0550ae">=</span>PATTERN 指定排除不需要传输的文件模式。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span>--include<span style="color:#0550ae">=</span>PATTERN 指定不排除而需要传输的文件模式。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span>--exclude-from<span style="color:#0550ae">=</span>FILE 排除FILE中指定模式的文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span>--include-from<span style="color:#0550ae">=</span>FILE 不排除FILE指定模式匹配的文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>--version 打印版本信息。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span>--address 绑定到特定的地址。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span>--config<span style="color:#0550ae">=</span>FILE 指定其他的配置文件，不使用默认的rsyncd.conf文件。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span>--port<span style="color:#0550ae">=</span>PORT 指定其他的rsync服务端口。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span>--blocking-io 对远程shell使用阻塞IO。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span><span>-stats 给出某些文件的传输状态。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span><span>--progress 在传输时现实传输过程。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span><span>--log-format<span style="color:#0550ae">=</span>formAT 指定日志文件格式。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span>--password-file<span style="color:#0550ae">=</span>FILE 从FILE中得到密码。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span>--bwlimit<span style="color:#0550ae">=</span>KBPS 限制I/O带宽，KBytes per second。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span>-h, --help 显示帮助信息。
 </span></span></code></pre></div><h2 id="使用crontab">使用crontab</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 同步远程目录，同时指定ssh密码</span>
-</span></span><span style="display:flex;"><span>*/1 * * * * sshpass -p <span style="color:#d14">&#39;mypassword&#39;</span> rsync -avu --progress --delete /path/to/source/ cynocu@192.168.1.1:/path/to/destination/
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 同步本地目录</span>
-</span></span><span style="display:flex;"><span><span style="color:#099">10</span> */1 * * * rsync -avu --progress --delete /HHD5/Sync/ /HHD4/SyncMirror/
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 同步远程目录，同时指定ssh密码</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>*/1 * * * * sshpass -p <span style="color:#0a3069">&#39;mypassword&#39;</span> rsync -avu --progress --delete /path/to/source/ cynocu@192.168.1.1:/path/to/destination/
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 同步本地目录</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#0550ae">10</span> */1 * * * rsync -avu --progress --delete /HHD5/Sync/ /HHD4/SyncMirror/
 </span></span></code></pre></div>
     </div>
 

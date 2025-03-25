@@ -159,7 +159,7 @@
         <span>
             
             <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
-            627 字</span>&nbsp;
+            649 字</span>&nbsp;
         <span>
             
             <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
@@ -201,49 +201,49 @@
 
     <div class='content  content '>
         <p>使触摸板敲击（不是按压）时也产生左键事件</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install xserver-xorg-input-synaptics
-</span></span><span style="display:flex;"><span>sudo vim /etc/X11/xorg.conf.d/50-synaptics.conf
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt install xserver-xorg-input-synaptics
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo vim /etc/X11/xorg.conf.d/50-synaptics.conf
 </span></span></code></pre></div><p>在文件中添加以下内容</p>
-<pre tabindex="0"><code class="language-conf" data-lang="conf">Section &#34;InputClass&#34;
-    Identifier &#34;touchpad catchall&#34;
-    Driver &#34;synaptics&#34;
-    MatchIsTouchpad &#34;on&#34;
-
-    Option &#34;TapButton1&#34; &#34;1&#34;            #单指敲击产生左键事件
-    Option &#34;TapButton2&#34; &#34;2&#34;            #双指敲击产生中键事件
-    Option &#34;TapButton3&#34; &#34;3&#34;            #三指敲击产生右键事件
-
-    Option &#34;VertEdgeScroll&#34; &#34;on&#34;       #滚动操作：横向、纵向、环形
-    Option &#34;VertTwoFingerScroll&#34; &#34;on&#34;
-    Option &#34;HorizEdgeScroll&#34; &#34;on&#34;
-    Option &#34;HorizTwoFingerScroll&#34; &#34;on&#34;
-    Option &#34;CircularScrolling&#34; &#34;on&#34;
-    Option &#34;CircScrollTrigger&#34; &#34;2&#34;
-
-    Option &#34;EmulateTwoFingerMinZ&#34; &#34;40&#34; #精确度
-    Option &#34;EmulateTwoFingerMinW&#34; &#34;8&#34;
-    Option &#34;CoastingSpeed&#34; &#34;20&#34;        #触发快速滚动的滚动速度
-
-    Option &#34;PalmDetect&#34; &#34;1&#34;            #避免手掌触发触摸板
-    Option &#34;PalmMinWidth&#34; &#34;3&#34;          #认定为手掌的最小宽度
-    Option &#34;PalmMinZ&#34; &#34;200&#34;            #认定为手掌的最小压力值
-EndSection
-</code></pre><h2 id="键入时禁止触摸板">键入时禁止触摸板</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>Section &#34;InputClass&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    Identifier &#34;touchpad catchall&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    Driver &#34;synaptics&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    MatchIsTouchpad &#34;on&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    Option &#34;TapButton1&#34; &#34;1&#34;            #单指敲击产生左键事件
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    Option &#34;TapButton2&#34; &#34;2&#34;            #双指敲击产生中键事件
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    Option &#34;TapButton3&#34; &#34;3&#34;            #三指敲击产生右键事件
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    Option &#34;VertEdgeScroll&#34; &#34;on&#34;       #滚动操作：横向、纵向、环形
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    Option &#34;VertTwoFingerScroll&#34; &#34;on&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    Option &#34;HorizEdgeScroll&#34; &#34;on&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    Option &#34;HorizTwoFingerScroll&#34; &#34;on&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    Option &#34;CircularScrolling&#34; &#34;on&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    Option &#34;CircScrollTrigger&#34; &#34;2&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>    Option &#34;EmulateTwoFingerMinZ&#34; &#34;40&#34; #精确度
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    Option &#34;EmulateTwoFingerMinW&#34; &#34;8&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    Option &#34;CoastingSpeed&#34; &#34;20&#34;        #触发快速滚动的滚动速度
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    Option &#34;PalmDetect&#34; &#34;1&#34;            #避免手掌触发触摸板
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    Option &#34;PalmMinWidth&#34; &#34;3&#34;          #认定为手掌的最小宽度
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>    Option &#34;PalmMinZ&#34; &#34;200&#34;            #认定为手掌的最小压力值
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>EndSection
+</span></span></code></pre></div><h2 id="键入时禁止触摸板">键入时禁止触摸板</h2>
 <p>键入时禁止触摸板可以避免焦点变化，影响当前的输入。 对于使用 startx 来启动的桌面系统，可以修改其 .xinitrc 初始化配置文件来完成：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>syndaemon -t -k -i <span style="color:#099">2</span> -d &amp;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>syndaemon -t -k -i <span style="color:#0550ae">2</span> -d <span style="color:#1f2328">&amp;</span>
 </span></span></code></pre></div><p>其中的 <code>-i 2</code> 表示两秒空闲，即键盘事件后的两秒内不允许响应触摸板 Tap。更多信息请参照手册页：</p>
-<pre tabindex="0"><code>man syndaemon
-</code></pre><h2 id="外接鼠标时禁用触摸板">外接鼠标时禁用触摸板</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>man syndaemon
+</span></span></code></pre></div><h2 id="外接鼠标时禁用触摸板">外接鼠标时禁用触摸板</h2>
 <p>在 arch linux 中，使用 udev 监测硬件的热拔插，通过修改其规则文件，来响应外接鼠标事件，从而禁用和启用触摸板。如下的规则文件，调用了 synclient。</p>
-<pre tabindex="0"><code>#file: /etc/udev/rules.d/01-touchpad.rules
-ACTION==&#34;add&#34;, SUBSYSTEM==&#34;input&#34;, KERNEL==&#34;mouse[0-9]&#34;, ENV{DISPLAY}=&#34;:0.0&#34;, ENV{XAUTHORITY}=&#34;/home/harttle/.Xauthority&#34;, ENV{ID_CLASS}=&#34;mouse&#34;, RUN+=&#34;/usr/bin/synclient TouchpadOff=1&#34;
-ACTION==&#34;remove&#34;, SUBSYSTEM==&#34;input&#34;, KERNEL==&#34;mouse[0-9]&#34;, ENV{DISPLAY}=&#34;:0.0&#34;, ENV{XAUTHORITY}=&#34;/home/harttle/.Xauthority&#34;, ENV{ID_CLASS}=&#34;mouse&#34;, RUN+=&#34;/usr/bin/synclient TouchpadOff=0&#34;
-</code></pre><p>注意：该文件中每个操作必须单独一行，可以使用 <code>\</code> 来折行；<code>SUBSYSTEM</code> 与 <code>KERNEL</code> 指定了设备 <code>/dev/input/mouse[0-9]</code>（archwiki的中文页面中此处有误，我会找时间去修改）。了解更多 <code>udev rules</code> 语法：https://wiki.archlinux.org/index.php/Udev</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>#file: /etc/udev/rules.d/01-touchpad.rules
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ACTION==&#34;add&#34;, SUBSYSTEM==&#34;input&#34;, KERNEL==&#34;mouse[0-9]&#34;, ENV{DISPLAY}=&#34;:0.0&#34;, ENV{XAUTHORITY}=&#34;/home/harttle/.Xauthority&#34;, ENV{ID_CLASS}=&#34;mouse&#34;, RUN+=&#34;/usr/bin/synclient TouchpadOff=1&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>ACTION==&#34;remove&#34;, SUBSYSTEM==&#34;input&#34;, KERNEL==&#34;mouse[0-9]&#34;, ENV{DISPLAY}=&#34;:0.0&#34;, ENV{XAUTHORITY}=&#34;/home/harttle/.Xauthority&#34;, ENV{ID_CLASS}=&#34;mouse&#34;, RUN+=&#34;/usr/bin/synclient TouchpadOff=0&#34;
+</span></span></code></pre></div><p>注意：该文件中每个操作必须单独一行，可以使用 <code>\</code> 来折行；<code>SUBSYSTEM</code> 与 <code>KERNEL</code> 指定了设备 <code>/dev/input/mouse[0-9]</code>（archwiki的中文页面中此处有误，我会找时间去修改）。了解更多 <code>udev rules</code> 语法：https://wiki.archlinux.org/index.php/Udev</p>
 <p>开机时鼠标检测</p>
 <p><code>PS/2</code> 鼠标在开机时不会触发 <code>udev</code> 规则。我们做一个桌面环境的启动脚本，在 <code>.xinitrc</code>，<code>profile</code> 中调用，或者放在 <code>KDE</code> 的 <code>Autostart</code> 中：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#!/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#008080">ids</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">`</span>ls /dev/input/by-id | grep -E <span style="color:#d14">&#39;.*-mouse&#39;</span><span style="color:#d14">`</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">[</span> <span style="color:#d14">&#34;</span><span style="color:#008080">$ids</span><span style="color:#d14">&#34;</span> <span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">&amp;&amp;</span> synclient <span style="color:#008080">TouchpadOff</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">#!/bin/bash
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"></span><span style="color:#953800">ids</span><span style="color:#0550ae">=</span><span style="color:#0a3069">`</span>ls /dev/input/by-id <span style="color:#1f2328">|</span> grep -E <span style="color:#0a3069">&#39;.*-mouse&#39;</span><span style="color:#0a3069">`</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#0550ae">[</span> <span style="color:#0a3069">&#34;</span><span style="color:#953800">$ids</span><span style="color:#0a3069">&#34;</span> <span style="color:#0550ae">]</span> <span style="color:#0550ae">&amp;&amp;</span> synclient <span style="color:#953800">TouchpadOff</span><span style="color:#0550ae">=</span><span style="color:#0550ae">1</span>
 </span></span></code></pre></div>
     </div>
 

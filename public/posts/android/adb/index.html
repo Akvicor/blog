@@ -159,7 +159,7 @@
         <span>
             
             <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
-            1967 字</span>&nbsp;
+            2023 字</span>&nbsp;
         <span>
             
             <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
@@ -271,402 +271,402 @@
         <h2 id="what-is-adb">What Is ADB</h2>
 <p>Android Debug Bridge (adb) is a command line tool that lets you communicate with an emulator or connected Android device. You can find the adb tool in <em>android sdk/platform-tools</em> or Download <a href="http://adbshell.com/downloads">ADB Kits</a>.</p>
 <h2 id="adb-debugging">ADB Debugging</h2>
-<pre tabindex="0"><code>adb devices
-adb forward
-adb kill-server
-</code></pre><h3 id="adb-devices">adb devices</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb devices
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb forward
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>adb kill-server
+</span></span></code></pre></div><h3 id="adb-devices">adb devices</h3>
 <p>Prints a list of all attached emulator/device</p>
-<pre tabindex="0"><code>adb devices
-</code></pre><p>In response, return serial number and state</p>
-<pre tabindex="0"><code>e4b25377        device
-emulator-5554  device
-</code></pre><h3 id="adb-forward">adb forward</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb devices
+</span></span></code></pre></div><p>In response, return serial number and state</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>e4b25377        device
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>emulator-5554  device
+</span></span></code></pre></div><h3 id="adb-forward">adb forward</h3>
 <p>forward socket connections</p>
-<pre tabindex="0"><code>adb forward &lt;local&gt; &lt;remote&gt;
-</code></pre><p>adb forward tcp:8000 tcp:9000 set up forwarding of host port 8000 to emulator/device port 9000</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb forward &lt;local&gt; &lt;remote&gt;
+</span></span></code></pre></div><p>adb forward tcp:8000 tcp:9000 set up forwarding of host port 8000 to emulator/device port 9000</p>
 <p><strong>Prerequisites: Enable USB debugging on the device.</strong></p>
 <h3 id="adb-kill-server">adb kill-server</h3>
 <p>terminates the adb server process</p>
-<pre tabindex="0"><code>adb kill-server
-</code></pre><p><strong>Notes: kill the server if it is running. (terminal adb.exe process)</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb kill-server
+</span></span></code></pre></div><p><strong>Notes: kill the server if it is running. (terminal adb.exe process)</strong></p>
 <h2 id="wireless">Wireless</h2>
-<pre tabindex="0"><code>adb connect &lt;host&gt;[:&lt;port&gt;]
-adb usb
-</code></pre><h3 id="adb-connect">adb connect</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb connect &lt;host&gt;[:&lt;port&gt;]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb usb
+</span></span></code></pre></div><h3 id="adb-connect">adb connect</h3>
 <p>use ADB over Wi-Fi</p>
-<pre tabindex="0"><code>adb connect &lt;host&gt;[:&lt;port&gt;]
-</code></pre><h4 id="step-1">STEP 1.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb connect &lt;host&gt;[:&lt;port&gt;]
+</span></span></code></pre></div><h4 id="step-1">STEP 1.</h4>
 <p>Connect to the device over USB.</p>
 <h4 id="step-2">STEP 2.</h4>
-<pre tabindex="0"><code>adb devices
-</code></pre><p>List of devices attached
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb devices
+</span></span></code></pre></div><p>List of devices attached
 ######## device</p>
 <p>Notes: STEP 1,2 is required</p>
 <h4 id="step-3">STEP 3.</h4>
-<pre tabindex="0"><code>adb tcpip 5555
-</code></pre><p>restarting in TCP mode port: 5555</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb tcpip 5555
+</span></span></code></pre></div><p>restarting in TCP mode port: 5555</p>
 <h4 id="step-4">STEP 4.</h4>
 <p>Find out the IP address of the Android device: Settings -&gt; About -&gt; Status -&gt; IP address. Remember the IP address, of the form #.#.#.#.</p>
 <h4 id="step-5">STEP 5.</h4>
-<pre tabindex="0"><code>adb connect #.#.#.#
-</code></pre><p>connected to #.#.#.#:5555</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb connect #.#.#.#
+</span></span></code></pre></div><p>connected to #.#.#.#:5555</p>
 <h4 id="step-6">STEP 6.</h4>
 <p>Remove USB cable from device, and confirm you can still access device:</p>
-<pre tabindex="0"><code>adb devices
-</code></pre><p>List of devices attached
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb devices
+</span></span></code></pre></div><p>List of devices attached
 #.#.#.#:5555 device</p>
 <p><strong>Notes: Make sure that your host is still connected to the same Wi-Fi network your Android device is.</strong></p>
 <h3 id="adb-usb">adb usb</h3>
 <p>restarting ADB in USB mode.</p>
 <p>See also: <a href="http://adbshell.com/commands/adb-connect">adb connect</a></p>
 <h2 id="package-manager">Package Manager</h2>
-<pre tabindex="0"><code>adb install [option] &lt;path&gt;
-adb uninstall [options] &lt;PACKAGE&gt;
-adb shell pm list packages [options] &lt;FILTER&gt;
-adb shell pm path &lt;PACKAGE&gt;
-adb shell pm clear &lt;PACKAGE&gt;
-</code></pre><h3 id="adb-install">adb install</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb install [option] &lt;path&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb uninstall [options] &lt;PACKAGE&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>adb shell pm list packages [options] &lt;FILTER&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>adb shell pm path &lt;PACKAGE&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>adb shell pm clear &lt;PACKAGE&gt;
+</span></span></code></pre></div><h3 id="adb-install">adb install</h3>
 <p>Pushes an Android application (specified as a full path to an .apk file) to an emulator/device.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb install test<span style="color:#000;font-weight:bold">.</span>apk
-</span></span><span style="display:flex;"><span>adb install <span style="color:#000;font-weight:bold">-</span>l test<span style="color:#000;font-weight:bold">.</span>apk
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># forward lock application</span>
-</span></span><span style="display:flex;"><span>adb install <span style="color:#000;font-weight:bold">-</span>r test<span style="color:#000;font-weight:bold">.</span>apk
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># replace existing application</span>
-</span></span><span style="display:flex;"><span>adb install <span style="color:#000;font-weight:bold">-</span>t test<span style="color:#000;font-weight:bold">.</span>apk
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># allow test packages</span>
-</span></span><span style="display:flex;"><span>adb install <span style="color:#000;font-weight:bold">-</span>s test<span style="color:#000;font-weight:bold">.</span>apk
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># install application on sdcard</span>
-</span></span><span style="display:flex;"><span>adb install <span style="color:#000;font-weight:bold">-</span>d test<span style="color:#000;font-weight:bold">.</span>apk
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># allow version code downgrade</span>
-</span></span><span style="display:flex;"><span>adb install <span style="color:#000;font-weight:bold">-</span>p test<span style="color:#000;font-weight:bold">.</span>apk
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># partial application install</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>adb install test<span style="color:#0550ae">.</span>apk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>adb install <span style="color:#0550ae">-</span>l test<span style="color:#0550ae">.</span>apk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	<span style="color:#57606a"># forward lock application</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>adb install <span style="color:#0550ae">-</span>r test<span style="color:#0550ae">.</span>apk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>	<span style="color:#57606a"># replace existing application</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>adb install <span style="color:#0550ae">-</span>t test<span style="color:#0550ae">.</span>apk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>	<span style="color:#57606a"># allow test packages</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>adb install <span style="color:#0550ae">-</span>s test<span style="color:#0550ae">.</span>apk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>	<span style="color:#57606a"># install application on sdcard</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>adb install <span style="color:#0550ae">-</span>d test<span style="color:#0550ae">.</span>apk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	<span style="color:#57606a"># allow version code downgrade</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>adb install <span style="color:#0550ae">-</span>p test<span style="color:#0550ae">.</span>apk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>	<span style="color:#57606a"># partial application install</span>
 </span></span></code></pre></div><h2 id="adb-uninstall">adb uninstall</h2>
 <p>Removes a package from the emulator/device.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb uninstall com<span style="color:#000;font-weight:bold">.</span>test<span style="color:#000;font-weight:bold">.</span>app
-</span></span><span style="display:flex;"><span>adb uninstall <span style="color:#000;font-weight:bold">-</span>k com<span style="color:#000;font-weight:bold">.</span>test<span style="color:#000;font-weight:bold">.</span>app
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Keep the data and cache directories around after package removal.</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb uninstall com<span style="color:#0550ae">.</span>test<span style="color:#0550ae">.</span>app
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb uninstall <span style="color:#0550ae">-</span>k com<span style="color:#0550ae">.</span>test<span style="color:#0550ae">.</span>app
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>	<span style="color:#57606a"># Keep the data and cache directories around after package removal.</span>
 </span></span></code></pre></div><h3 id="adb-shell-pm-list-packages">adb shell pm list packages</h3>
 <p>Prints all packages, optionally only those whose package name contains the text in &lt;FILTER&gt;.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages
-</span></span><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages <span style="color:#000;font-weight:bold">-</span>f
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># See their associated file.</span>
-</span></span><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages <span style="color:#000;font-weight:bold">-</span>d
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Filter to only show disabled packages.</span>
-</span></span><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages <span style="color:#000;font-weight:bold">-</span>e
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Filter to only show enabled packages.</span>
-</span></span><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages <span style="color:#000;font-weight:bold">-</span>s
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Filter to only show system packages.</span>
-</span></span><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages <span style="color:#000;font-weight:bold">-</span><span style="color:#099">3</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Filter to only show third party packages.</span>
-</span></span><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages <span style="color:#000;font-weight:bold">-</span>i
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># See the installer for the packages.</span>
-</span></span><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages <span style="color:#000;font-weight:bold">-</span>u
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Also include uninstalled packages.</span>
-</span></span><span style="display:flex;"><span>adb shell pm <span style="color:#0086b3">list</span> packages <span style="color:#000;font-weight:bold">--</span>user <span style="color:#000;font-weight:bold">&lt;</span>USER_ID<span style="color:#000;font-weight:bold">&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># The user space to query.</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>adb shell pm <span style="color:#6639ba">list</span> packages
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>adb shell pm <span style="color:#6639ba">list</span> packages <span style="color:#0550ae">-</span>f
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	<span style="color:#57606a"># See their associated file.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>adb shell pm <span style="color:#6639ba">list</span> packages <span style="color:#0550ae">-</span>d
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>	<span style="color:#57606a"># Filter to only show disabled packages.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>adb shell pm <span style="color:#6639ba">list</span> packages <span style="color:#0550ae">-</span>e
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>	<span style="color:#57606a"># Filter to only show enabled packages.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>adb shell pm <span style="color:#6639ba">list</span> packages <span style="color:#0550ae">-</span>s
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>	<span style="color:#57606a"># Filter to only show system packages.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>adb shell pm <span style="color:#6639ba">list</span> packages <span style="color:#0550ae">-</span><span style="color:#0550ae">3</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	<span style="color:#57606a"># Filter to only show third party packages.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>adb shell pm <span style="color:#6639ba">list</span> packages <span style="color:#0550ae">-</span>i
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>	<span style="color:#57606a"># See the installer for the packages.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>adb shell pm <span style="color:#6639ba">list</span> packages <span style="color:#0550ae">-</span>u
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>	<span style="color:#57606a"># Also include uninstalled packages.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>adb shell pm <span style="color:#6639ba">list</span> packages <span style="color:#0550ae">--</span>user <span style="color:#0550ae">&lt;</span>USER_ID<span style="color:#0550ae">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>	<span style="color:#57606a"># The user space to query.</span>
 </span></span></code></pre></div><h3 id="adb-shell-pm-path">adb shell pm path</h3>
 <p>Print the path to the APK of the given &lt;PACKAGE&gt;.</p>
-<pre tabindex="0"><code>adb shell pm path com.android.phone
-</code></pre><p>package:/system/priv-app/TeleService/TeleService.apk</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell pm path com.android.phone
+</span></span></code></pre></div><p>package:/system/priv-app/TeleService/TeleService.apk</p>
 <h3 id="adb-shell-pm-clear">adb shell pm clear</h3>
 <p>Deletes all data associated with a package.</p>
-<pre tabindex="0"><code>adb shell pm clear com.test.abc
-</code></pre><p><strong>Notes: clearing app data, cache</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell pm clear com.test.abc
+</span></span></code></pre></div><p><strong>Notes: clearing app data, cache</strong></p>
 <h2 id="file-manager">File Manager</h2>
-<pre tabindex="0"><code>adb pull &lt;remote&gt; [local]
-adb push &lt;local&gt; &lt;remote&gt;
-adb shell ls
-adb shell cd
-adb shell rm
-adb shell mkdir
-adb shell touch
-adb shell pwd
-adb shell cp
-adb shell mv
-</code></pre><h3 id="adb-pull">adb pull</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>adb pull &lt;remote&gt; [local]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>adb push &lt;local&gt; &lt;remote&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>adb shell ls
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>adb shell cd
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>adb shell rm
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>adb shell mkdir
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>adb shell touch
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>adb shell pwd
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>adb shell cp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>adb shell mv
+</span></span></code></pre></div><h3 id="adb-pull">adb pull</h3>
 <p>Download a specified file from an emulator/device to your computer.</p>
-<pre tabindex="0"><code>adb pull /sdcard/demo.mp4
-</code></pre><p>download /sdcard/demo.mp4  to &lt;android-sdk-path&gt;/platform-tools directory.</p>
-<pre tabindex="0"><code>adb pull /sdcard/demo.mp4 e:\
-</code></pre><p>download /sdcard/demo.mp4 to drive E.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb pull /sdcard/demo.mp4
+</span></span></code></pre></div><p>download /sdcard/demo.mp4  to &lt;android-sdk-path&gt;/platform-tools directory.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb pull /sdcard/demo.mp4 e:\
+</span></span></code></pre></div><p>download /sdcard/demo.mp4 to drive E.</p>
 <h3 id="adb-push">adb push</h3>
 <p>Upload a specified file from your computer to an emulator/device.</p>
-<pre tabindex="0"><code>adb push test.apk /sdcard
-</code></pre><p>Copies &lt;android-sdk-path&gt;/platform-tools/test.apk to /sdcard directory.</p>
-<pre tabindex="0"><code>adb push d:\test.apk /sdcard
-</code></pre><p>Copies d:\test.apk to /sdcard directory.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb push test.apk /sdcard
+</span></span></code></pre></div><p>Copies &lt;android-sdk-path&gt;/platform-tools/test.apk to /sdcard directory.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb push d:\test.apk /sdcard
+</span></span></code></pre></div><p>Copies d:\test.apk to /sdcard directory.</p>
 <h3 id="adb-shell-ls">adb shell ls</h3>
 <p>list directory contents</p>
-<pre tabindex="0"><code>ls [options] &lt;directory&gt;
-</code></pre><h4 id="step-1-1">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell
-</code></pre><h4 id="step-2-1">STEP 2.</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ls
-</span></span><span style="display:flex;"><span>ls <span style="color:#000;font-weight:bold">-</span>a
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># do not hide entries starting with</span>
-</span></span><span style="display:flex;"><span>ls <span style="color:#000;font-weight:bold">-</span>i
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># print index number of each file</span>
-</span></span><span style="display:flex;"><span>ls <span style="color:#000;font-weight:bold">-</span>s
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># print size of each file, in blocks</span>
-</span></span><span style="display:flex;"><span>ls <span style="color:#000;font-weight:bold">-</span>n
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># list numeric UIDs and GIDs</span>
-</span></span><span style="display:flex;"><span>ls <span style="color:#000;font-weight:bold">-</span>R
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># list subdirectories recursively</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ls [options] &lt;directory&gt;
+</span></span></code></pre></div><h4 id="step-1-1">STEP 1.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><h4 id="step-2-1">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>ls
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>ls <span style="color:#0550ae">-</span>a
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	<span style="color:#57606a"># do not hide entries starting with</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>ls <span style="color:#0550ae">-</span>i
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>	<span style="color:#57606a"># print index number of each file</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>ls <span style="color:#0550ae">-</span>s
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>	<span style="color:#57606a"># print size of each file, in blocks</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>ls <span style="color:#0550ae">-</span>n
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>	<span style="color:#57606a"># list numeric UIDs and GIDs</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>ls <span style="color:#0550ae">-</span>R
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	<span style="color:#57606a"># list subdirectories recursively</span>
 </span></span></code></pre></div><p>Notes: <em>press Ctrl-C to stop</em></p>
 <h3 id="adb-shell-cd">adb shell cd</h3>
 <p>change directory</p>
-<pre tabindex="0"><code>cd &lt;directory&gt;
-</code></pre><h4 id="step-1-2">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell
-</code></pre><h4 id="step-2-2">STEP 2.</h4>
-<pre tabindex="0"><code>cd /system
-</code></pre><h3 id="adb-shell-rm">adb shell rm</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cd &lt;directory&gt;
+</span></span></code></pre></div><h4 id="step-1-2">STEP 1.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><h4 id="step-2-2">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cd /system
+</span></span></code></pre></div><h3 id="adb-shell-rm">adb shell rm</h3>
 <p>remove files or directories</p>
-<pre tabindex="0"><code>rm [options] &lt;files or directory&gt;
-</code></pre><p>STEP 1.</p>
-<pre tabindex="0"><code>adb shell
-</code></pre><p>STEP 2.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>rm [options] &lt;files or directory&gt;
+</span></span></code></pre></div><p>STEP 1.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><p>STEP 2.</p>
 <p>rm /sdcard/test.txt</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rm <span style="color:#000;font-weight:bold">-</span>f <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>test<span style="color:#000;font-weight:bold">.</span>txt
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># force remove without prompt</span>
-</span></span><span style="display:flex;"><span>rm <span style="color:#000;font-weight:bold">-</span>r <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>tmp
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># remove the contents of directories recursively</span>
-</span></span><span style="display:flex;"><span>rm <span style="color:#000;font-weight:bold">-</span>d <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>tmp
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># remove directory, even if it is a non-empty directory</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>rm <span style="color:#0550ae">-</span>f <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>test<span style="color:#0550ae">.</span>txt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># force remove without prompt</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>rm <span style="color:#0550ae">-</span>r <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>tmp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>	<span style="color:#57606a"># remove the contents of directories recursively</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>rm <span style="color:#0550ae">-</span>d <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>tmp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>	<span style="color:#57606a"># remove directory, even if it is a non-empty directory</span>
 </span></span></code></pre></div><p><strong>Notes: rm -d equal rmdir command</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rm <span style="color:#000;font-weight:bold">-</span>i <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>test<span style="color:#000;font-weight:bold">.</span>txt
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># prompt before any removal</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>rm <span style="color:#0550ae">-</span>i <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>test<span style="color:#0550ae">.</span>txt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># prompt before any removal</span>
 </span></span></code></pre></div><h3 id="adb-shell-mkdir">adb shell mkdir</h3>
 <p>make directories</p>
-<pre tabindex="0"><code>mkdir [options] &lt;directory name&gt;
-</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mkdir <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>tmp
-</span></span><span style="display:flex;"><span>mkdir <span style="color:#000;font-weight:bold">-</span>m <span style="color:#099">777</span> <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>tmp
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># set permission mode</span>
-</span></span><span style="display:flex;"><span>mkdir <span style="color:#000;font-weight:bold">-</span>p <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>tmp<span style="color:#000;font-weight:bold">/</span>sub1<span style="color:#000;font-weight:bold">/</span>sub2
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># create parent directories as needed</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir [options] &lt;directory name&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>tmp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>mkdir <span style="color:#0550ae">-</span>m <span style="color:#0550ae">777</span> <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>tmp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>	<span style="color:#57606a"># set permission mode</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>mkdir <span style="color:#0550ae">-</span>p <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>tmp<span style="color:#0550ae">/</span>sub1<span style="color:#0550ae">/</span>sub2
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>	<span style="color:#57606a"># create parent directories as needed</span>
 </span></span></code></pre></div><h3 id="adb-shell-touch">adb shell touch</h3>
 <p>create empty file or change file timestamps</p>
-<pre tabindex="0"><code>touch [options] &lt;file&gt;
-</code></pre><p>STEP 1.</p>
-<pre tabindex="0"><code>adb shell
-</code></pre><p>STEP 2.</p>
-<pre tabindex="0"><code>touch /sdcard/tmp/test.txt
-</code></pre><p>ls /sdcard/tmp</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>touch [options] &lt;file&gt;
+</span></span></code></pre></div><p>STEP 1.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><p>STEP 2.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>touch /sdcard/tmp/test.txt
+</span></span></code></pre></div><p>ls /sdcard/tmp</p>
 <h3 id="adb-shell-pwd">adb shell pwd</h3>
 <p>print current working directory location.</p>
-<pre tabindex="0"><code>pwd
-</code></pre><h3 id="adb-shell-cp">adb shell cp</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>pwd
+</span></span></code></pre></div><h3 id="adb-shell-cp">adb shell cp</h3>
 <p>copy files and directories</p>
-<pre tabindex="0"><code>cp [options] &lt;source&gt; &lt;dest&gt;
-</code></pre><p>STEP 1.</p>
-<pre tabindex="0"><code>adb shell
-</code></pre><p>STEP 2.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cp [options] &lt;source&gt; &lt;dest&gt;
+</span></span></code></pre></div><p>STEP 1.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><p>STEP 2.</p>
 <p>cp /sdcard/test.txt /sdcard/demo.txt</p>
 <h3 id="adb-shell-mv">adb shell mv</h3>
 <p>move or rename files</p>
-<pre tabindex="0"><code>mv [options] &lt;source&gt; &lt;dest&gt;
-</code></pre><p>STEP 1.</p>
-<pre tabindex="0"><code>adb shell
-</code></pre><p>STEP 2.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mv <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>tmp <span style="color:#000;font-weight:bold">/</span>system<span style="color:#000;font-weight:bold">/</span>tmp 
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># move</span>
-</span></span><span style="display:flex;"><span>mv <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>tmp <span style="color:#000;font-weight:bold">/</span>sdcard<span style="color:#000;font-weight:bold">/</span>test
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># rename</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mv [options] &lt;source&gt; &lt;dest&gt;
+</span></span></code></pre></div><p>STEP 1.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><p>STEP 2.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mv <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>tmp <span style="color:#0550ae">/</span>system<span style="color:#0550ae">/</span>tmp 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># move</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>mv <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>tmp <span style="color:#0550ae">/</span>sdcard<span style="color:#0550ae">/</span>test
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>	<span style="color:#57606a"># rename</span>
 </span></span></code></pre></div><h2 id="network">Network</h2>
-<pre tabindex="0"><code>adb shell netstat
-adb shell ping
-adb shell netcfg
-adb shell ip
-</code></pre><h3 id="adb-shell-netstat">adb shell netstat</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell netstat
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb shell ping
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>adb shell netcfg
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>adb shell ip
+</span></span></code></pre></div><h3 id="adb-shell-netstat">adb shell netstat</h3>
 <p>network statistics</p>
-<pre tabindex="0"><code>netstat
-</code></pre><p>STEP 1.</p>
-<pre tabindex="0"><code>adb shell
-</code></pre><p>STEP 2.</p>
-<pre tabindex="0"><code>netstat
-</code></pre><h3 id="adb-shell-ping">adb shell ping</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>netstat
+</span></span></code></pre></div><p>STEP 1.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><p>STEP 2.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>netstat
+</span></span></code></pre></div><h3 id="adb-shell-ping">adb shell ping</h3>
 <p>test the connection and latency between two network connection.</p>
 <p>ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
 [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
 [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
 [-w deadline] [-W timeout] [hop1 &hellip;] destination</p>
 <h4 id="step-1-3">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell
-</code></pre><h4 id="step-2-3">STEP 2.</h4>
-<pre tabindex="0"><code>ping www.google.com
-</code></pre><p>Notes: press Ctrl-C to stop ping</p>
-<pre tabindex="0"><code>ping www.google.com -c 4
-</code></pre><h3 id="adb-shell-netcfg">adb shell netcfg</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><h4 id="step-2-3">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ping www.google.com
+</span></span></code></pre></div><p>Notes: press Ctrl-C to stop ping</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ping www.google.com -c 4
+</span></span></code></pre></div><h3 id="adb-shell-netcfg">adb shell netcfg</h3>
 <p>configure and manage network connections via profiles</p>
-<pre tabindex="0"><code>netcfg [&lt;interface&gt; {dhcp|up|down}]
-</code></pre><h4 id="step-1-4">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell
-</code></pre><h4 id="step-2-4">STEP 2.</h4>
-<pre tabindex="0"><code>netcfg
-</code></pre><h3 id="adb-shell-ip">adb shell ip</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>netcfg [&lt;interface&gt; {dhcp|up|down}]
+</span></span></code></pre></div><h4 id="step-1-4">STEP 1.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><h4 id="step-2-4">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>netcfg
+</span></span></code></pre></div><h3 id="adb-shell-ip">adb shell ip</h3>
 <p>show, manipulate routing, devices, policy routing and tunnels</p>
-<pre tabindex="0"><code>ip [ OPTIONS ] OBJECT
-</code></pre><p>OBJECT := { link | addr | addrlabel | route | rule | neigh | ntable |tunnel | tuntap | maddr | mroute | mrule | monitor | xfrm |netns | l2tp }</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ip [ OPTIONS ] OBJECT
+</span></span></code></pre></div><p>OBJECT := { link | addr | addrlabel | route | rule | neigh | ntable |tunnel | tuntap | maddr | mroute | mrule | monitor | xfrm |netns | l2tp }</p>
 <p>OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |-f[amily] { inet | inet6 | ipx | dnet | link } |-l[oops] { maximum-addr-flush-attempts } |-o[neline] | -t[imestamp] | -b[atch] [filename] |-rc[vbuf] [size]}</p>
 <h4 id="step-1-5">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell
-</code></pre><h4 id="step-2-5">STEP 2.</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ip <span style="color:#000;font-weight:bold">-</span>f inet addr show wlan0 
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># show WiFi IP Address</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><h4 id="step-2-5">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ip <span style="color:#0550ae">-</span>f inet addr show wlan0 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># show WiFi IP Address</span>
 </span></span></code></pre></div><h2 id="logcat">Logcat</h2>
-<pre tabindex="0"><code>adb logcat
-adb shell dumpsys
-adb shell dumpstate
-</code></pre><p>Prints log data to the screen.</p>
-<pre tabindex="0"><code>adb logcat [option] [filter-specs]
-</code></pre><pre tabindex="0"><code>adb logcat
-</code></pre><p>Notes: press Ctrl-C to stop monitor</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">*</span>:V
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># lowest priority, filter to only show Verbose level</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">*</span>:D
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># filter to only show Debug level</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">*</span>:I
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># filter to only show Info level</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">*</span>:W
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># filter to only show Warning level</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">*</span>:E
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># filter to only show Error level</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">*</span>:F
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># filter to only show Fatal level</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">*</span>:S
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Silent, highest priority, on which nothing is ever printed</span>
-</span></span></code></pre></div><pre tabindex="0"><code>adb logcat -b &lt;Buffer&gt;
-</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>b radio
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># View the buffer that contains radio/telephony related messages.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>b event
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># View the buffer containing events-related messages.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>b main
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># default</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>c
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Clears the entire log and exits.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>d
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Dumps the log to the screen and exits.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>f test<span style="color:#000;font-weight:bold">.</span>logs
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Writes log message output to test.logs .</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>g
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Prints the size of the specified log buffer and exits.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>n <span style="color:#000;font-weight:bold">&lt;</span>count<span style="color:#000;font-weight:bold">&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Sets the maximum number of rotated logs to &lt;count&gt;. </span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb logcat
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb shell dumpsys
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>adb shell dumpstate
+</span></span></code></pre></div><p>Prints log data to the screen.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb logcat [option] [filter-specs]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb logcat
+</span></span></code></pre></div><p>Notes: press Ctrl-C to stop monitor</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>adb logcat <span style="color:#0550ae">*</span><span style="color:#1f2328">:</span>V
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>	<span style="color:#57606a"># lowest priority, filter to only show Verbose level</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>adb logcat <span style="color:#0550ae">*</span><span style="color:#1f2328">:</span>D
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>	<span style="color:#57606a"># filter to only show Debug level</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>adb logcat <span style="color:#0550ae">*</span><span style="color:#1f2328">:</span>I
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>	<span style="color:#57606a"># filter to only show Info level</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>adb logcat <span style="color:#0550ae">*</span><span style="color:#1f2328">:</span>W
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>	<span style="color:#57606a"># filter to only show Warning level</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>adb logcat <span style="color:#0550ae">*</span><span style="color:#1f2328">:</span>E
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>	<span style="color:#57606a"># filter to only show Error level</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>adb logcat <span style="color:#0550ae">*</span><span style="color:#1f2328">:</span>F
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>	<span style="color:#57606a"># filter to only show Fatal level</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>adb logcat <span style="color:#0550ae">*</span><span style="color:#1f2328">:</span>S
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>	<span style="color:#57606a"># Silent, highest priority, on which nothing is ever printed</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb logcat -b &lt;Buffer&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>adb logcat <span style="color:#0550ae">-</span>b radio
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>	<span style="color:#57606a"># View the buffer that contains radio/telephony related messages.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>adb logcat <span style="color:#0550ae">-</span>b event
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>	<span style="color:#57606a"># View the buffer containing events-related messages.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>adb logcat <span style="color:#0550ae">-</span>b main
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>	<span style="color:#57606a"># default</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>adb logcat <span style="color:#0550ae">-</span>c
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>	<span style="color:#57606a"># Clears the entire log and exits.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>adb logcat <span style="color:#0550ae">-</span>d
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>	<span style="color:#57606a"># Dumps the log to the screen and exits.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>adb logcat <span style="color:#0550ae">-</span>f test<span style="color:#0550ae">.</span>logs
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>	<span style="color:#57606a"># Writes log message output to test.logs .</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>adb logcat <span style="color:#0550ae">-</span>g
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>	<span style="color:#57606a"># Prints the size of the specified log buffer and exits.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>adb logcat <span style="color:#0550ae">-</span>n <span style="color:#0550ae">&lt;</span>count<span style="color:#0550ae">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>	<span style="color:#57606a"># Sets the maximum number of rotated logs to &lt;count&gt;. </span>
 </span></span></code></pre></div><p>Notes: The default value is 4. Requires the -r option.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>r <span style="color:#000;font-weight:bold">&lt;</span>kbytes<span style="color:#000;font-weight:bold">&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Rotates the log file every &lt;kbytes&gt; of output.</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb logcat <span style="color:#0550ae">-</span>r <span style="color:#0550ae">&lt;</span>kbytes<span style="color:#0550ae">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># Rotates the log file every &lt;kbytes&gt; of output.</span>
 </span></span></code></pre></div><p>Notes: The default value is 16. Requires the -f option.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>s
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Sets the default filter spec to silent.</span>
-</span></span></code></pre></div><pre tabindex="0"><code>adb logcat -v &lt;format&gt;
-</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>v brief
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Display priority/tag and PID of the process issuing the message (default format).</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>v process
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Display PID only.)</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>v tag
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Display the priority/tag only.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>v raw
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Display the raw log message, with no other metadata fields.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>v time
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Display the date, invocation time, priority/tag, and PID of the process issuing the message.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>v threadtime
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Display the date, invocation time, priority, tag, and the PID and TID of the thread issuing the message.</span>
-</span></span><span style="display:flex;"><span>adb logcat <span style="color:#000;font-weight:bold">-</span>v long
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># Display all metadata fields and separate messages with blank lines.</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb logcat <span style="color:#0550ae">-</span>s
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># Sets the default filter spec to silent.</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb logcat -v &lt;format&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>adb logcat <span style="color:#0550ae">-</span>v brief
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>	<span style="color:#57606a"># Display priority/tag and PID of the process issuing the message (default format).</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>adb logcat <span style="color:#0550ae">-</span>v process
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>	<span style="color:#57606a"># Display PID only.)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>adb logcat <span style="color:#0550ae">-</span>v tag
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>	<span style="color:#57606a"># Display the priority/tag only.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>adb logcat <span style="color:#0550ae">-</span>v raw
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>	<span style="color:#57606a"># Display the raw log message, with no other metadata fields.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>adb logcat <span style="color:#0550ae">-</span>v time
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>	<span style="color:#57606a"># Display the date, invocation time, priority/tag, and PID of the process issuing the message.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>adb logcat <span style="color:#0550ae">-</span>v threadtime
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>	<span style="color:#57606a"># Display the date, invocation time, priority, tag, and the PID and TID of the thread issuing the message.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>adb logcat <span style="color:#0550ae">-</span>v long
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>	<span style="color:#57606a"># Display all metadata fields and separate messages with blank lines.</span>
 </span></span></code></pre></div><h3 id="adb-shell-dumpsys">adb shell dumpsys</h3>
 <p>dumps system data</p>
-<pre tabindex="0"><code>adb shell dumpsys [options]
-</code></pre><pre tabindex="0"><code>adb shell dumpsys
-</code></pre><p>adb shell dumpsys meminfo</p>
-<pre tabindex="0"><code>adb shell dumpsys battery
-</code></pre><p>Notes: A mobile device with Developer Options enabled running Android 5.0 or higher.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb shell dumpsys batterystats
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># collects battery data from your device</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell dumpsys [options]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell dumpsys
+</span></span></code></pre></div><p>adb shell dumpsys meminfo</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell dumpsys battery
+</span></span></code></pre></div><p>Notes: A mobile device with Developer Options enabled running Android 5.0 or higher.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell dumpsys batterystats
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># collects battery data from your device</span>
 </span></span></code></pre></div><p>**Notes: <a href="https://github.com/google/battery-historian">Battery Historian</a> converts that data into an HTML visualization. ** STEP 1 <em>adb shell dumpsys batterystats &gt; batterystats.txt</em> <strong>STEP 2</strong> <em>python historian.py batterystats.txt &gt; batterystats.html</em></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb shell dumpsys batterystats <span style="color:#000;font-weight:bold">--</span>reset
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># erases old collection data</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell dumpsys batterystats <span style="color:#0550ae">--</span>reset
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># erases old collection data</span>
 </span></span></code></pre></div><p>adb shell dumpsys activity</p>
 <p>adb shell dumpsys gfxinfo com.android.phone <em>measuring com.android.phone ui performance</em></p>
 <h3 id="adb-shell-dumpstate">adb shell dumpstate</h3>
 <p>dumps state</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>adb shell dumpstate
-</span></span><span style="display:flex;"><span>adb shell dumpstate <span style="color:#000;font-weight:bold">&gt;</span> state<span style="color:#000;font-weight:bold">.</span>logs
-</span></span><span style="display:flex;"><span>	<span style="color:#998;font-style:italic"># dumps state to a file</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell dumpstate
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb shell dumpstate <span style="color:#0550ae">&gt;</span> state<span style="color:#0550ae">.</span>logs
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>	<span style="color:#57606a"># dumps state to a file</span>
 </span></span></code></pre></div><h2 id="screenshot">Screenshot</h2>
-<pre tabindex="0"><code>adb shell screencap
-adb shell screenrecord [4.4+]
-</code></pre><h3 id="adb-shell-screencap">adb shell screencap</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screencap
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb shell screenrecord [4.4+]
+</span></span></code></pre></div><h3 id="adb-shell-screencap">adb shell screencap</h3>
 <p>taking a screenshot of a device display.</p>
-<pre tabindex="0"><code>adb shell screencap &lt;filename&gt;
-</code></pre><pre tabindex="0"><code>adb shell screencap /sdcard/screen.png
-</code></pre><p>download the file from the device</p>
-<pre tabindex="0"><code>adb pull /sdcard/screen.png
-</code></pre><h3 id="adb-shell-screenrecord">adb shell screenrecord</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screencap &lt;filename&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screencap /sdcard/screen.png
+</span></span></code></pre></div><p>download the file from the device</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb pull /sdcard/screen.png
+</span></span></code></pre></div><h3 id="adb-shell-screenrecord">adb shell screenrecord</h3>
 <p>recording the display of devices running Android 4.4 (API level 19) and higher.</p>
-<pre tabindex="0"><code>adb shell screenrecord [options] &lt;filename&gt;
-</code></pre><pre tabindex="0"><code>adb shell screenrecord /sdcard/demo.mp4
-</code></pre><p>(press Ctrl-C to stop recording)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screenrecord [options] &lt;filename&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screenrecord /sdcard/demo.mp4
+</span></span></code></pre></div><p>(press Ctrl-C to stop recording)</p>
 <p>download the file from the device</p>
-<pre tabindex="0"><code>adb pull /sdcard/demo.mp4
-</code></pre><p><strong>Notes: Stop the screen recording by pressing Ctrl-C, otherwise the recording stops automatically at three minutes or the time limit set by &ndash;time-limit.</strong></p>
-<pre tabindex="0"><code>adb shell screenrecord --size &lt;WIDTHxHEIGHT&gt;
-</code></pre><p>Sets the video size: 1280x720. The default value is the device&rsquo;s native display resolution (if supported), 1280x720 if not. For best results, use a size supported by your device&rsquo;s Advanced Video Coding (AVC) encoder.</p>
-<pre tabindex="0"><code>adb shell screenrecord --bit-rate &lt;RATE&gt;
-</code></pre><p>Sets the video bit rate for the video, in megabits per second. The default value is 4Mbps. You can increase the bit rate to improve video quality, but doing so results in larger movie files. The following example sets the recording bit rate to 5Mbps: <em>adb shell screenrecord &ndash;bit-rate 5000000 /sdcard/demo.mp4</em></p>
-<pre tabindex="0"><code>adb shell screenrecord --time-limit &lt;TIME&gt;
-</code></pre><p>Sets the maximum recording time, in seconds. The default and maximum value is 180 (3 minutes).</p>
-<pre tabindex="0"><code>adb shell screenrecord --rotate
-</code></pre><p>Rotates the output 90 degrees. This feature is experimental.</p>
-<pre tabindex="0"><code>adb shell screenrecord --verbose
-</code></pre><p>Displays log information on the command-line screen. If you do not set this option, the utility does not display any information while running.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb pull /sdcard/demo.mp4
+</span></span></code></pre></div><p><strong>Notes: Stop the screen recording by pressing Ctrl-C, otherwise the recording stops automatically at three minutes or the time limit set by &ndash;time-limit.</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screenrecord --size &lt;WIDTHxHEIGHT&gt;
+</span></span></code></pre></div><p>Sets the video size: 1280x720. The default value is the device&rsquo;s native display resolution (if supported), 1280x720 if not. For best results, use a size supported by your device&rsquo;s Advanced Video Coding (AVC) encoder.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screenrecord --bit-rate &lt;RATE&gt;
+</span></span></code></pre></div><p>Sets the video bit rate for the video, in megabits per second. The default value is 4Mbps. You can increase the bit rate to improve video quality, but doing so results in larger movie files. The following example sets the recording bit rate to 5Mbps: <em>adb shell screenrecord &ndash;bit-rate 5000000 /sdcard/demo.mp4</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screenrecord --time-limit &lt;TIME&gt;
+</span></span></code></pre></div><p>Sets the maximum recording time, in seconds. The default and maximum value is 180 (3 minutes).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screenrecord --rotate
+</span></span></code></pre></div><p>Rotates the output 90 degrees. This feature is experimental.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell screenrecord --verbose
+</span></span></code></pre></div><p>Displays log information on the command-line screen. If you do not set this option, the utility does not display any information while running.</p>
 <h2 id="system">System</h2>
-<pre tabindex="0"><code>adb rootadb sideload
-adb shell ps
-adb shell top
-adb shell getprop
-adb shell setprop
-</code></pre><h3 id="adb-root">adb root</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb rootadb sideload
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>adb shell ps
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>adb shell top
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>adb shell getprop
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>adb shell setprop
+</span></span></code></pre></div><h3 id="adb-root">adb root</h3>
 <p>restarts the adbd daemon with root permissions</p>
-<pre tabindex="0"><code>adb root
-</code></pre><p>Notes: adbd cannot run as root in production builds (test in emulator)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb root
+</span></span></code></pre></div><p>Notes: adbd cannot run as root in production builds (test in emulator)</p>
 <h3 id="adb-sideload">adb sideload</h3>
 <p>flashing/restoring Android update.zip packages.</p>
-<pre tabindex="0"><code>adb sideload &lt;update.zip&gt;
-</code></pre><p>Notes: adb reboot sideload <em>[Android M+]</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb sideload <span style="color:#0550ae">&lt;</span>update<span style="color:#0550ae">.</span>zip<span style="color:#0550ae">&gt;</span>
+</span></span></code></pre></div><p>Notes: adb reboot sideload <em>[Android M+]</em></p>
 <h3 id="adb-shell-ps">adb shell ps</h3>
 <p>print process status</p>
-<pre tabindex="0"><code>ps [options]
-</code></pre><h4 id="step-1-6">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell
-</code></pre><h4 id="step-2-6">STEP 2.</h4>
-<pre tabindex="0"><code>ps
-</code></pre><p>ps -p</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ps [options]
+</span></span></code></pre></div><h4 id="step-1-6">STEP 1.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><h4 id="step-2-6">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ps
+</span></span></code></pre></div><p>ps -p</p>
 <h3 id="adb-shell-top">adb shell top</h3>
 <p>display top CPU processes</p>
-<pre tabindex="0"><code>top [options]
-</code></pre><h4 id="step-1-7">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell
-</code></pre><h4 id="step-2-7">STEP 2.</h4>
-<pre tabindex="0"><code>top
-</code></pre><p>Notes: (press Ctrl-C to stop monitor)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>top [options]
+</span></span></code></pre></div><h4 id="step-1-7">STEP 1.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><h4 id="step-2-7">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>top
+</span></span></code></pre></div><p>Notes: (press Ctrl-C to stop monitor)</p>
 <p>top -t <em>Show threads instead of processes.</em></p>
 <h3 id="adb-shell-getprop">adb shell getprop</h3>
 <p>get property via the android property service</p>
-<pre tabindex="0"><code>getprop [options]
-</code></pre><h4 id="step-1-8">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell
-</code></pre><h4 id="step-2-8">STEP 2.</h4>
-<pre tabindex="0"><code>getprop
-getprop ro.build.version.sdk
-getprop ro.chipname
-getprop | grep adb
-</code></pre><p>See Also <a href="http://adbshell.com/commands/adb-shell-setprop">adb shell setprop</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>getprop [options]
+</span></span></code></pre></div><h4 id="step-1-8">STEP 1.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell
+</span></span></code></pre></div><h4 id="step-2-8">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>getprop
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>getprop ro.build.version.sdk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>getprop ro.chipname
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>getprop | grep adb
+</span></span></code></pre></div><p>See Also <a href="http://adbshell.com/commands/adb-shell-setprop">adb shell setprop</a></p>
 <h3 id="adb-shell-setprop">adb shell setprop</h3>
 <p>set property service</p>
-<pre tabindex="0"><code>setprop &lt;key&gt; &lt;value&gt;
-</code></pre><h4 id="step-1-9">STEP 1.</h4>
-<pre tabindex="0"><code>adb shell 
-</code></pre><h4 id="step-2-9">STEP 2.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>setprop &lt;key&gt; &lt;value&gt;
+</span></span></code></pre></div><h4 id="step-1-9">STEP 1.</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>adb shell 
+</span></span></code></pre></div><h4 id="step-2-9">STEP 2.</h4>
 <p>setprop service.adb.tcp.port 5555</p>
 <p>See Also <a href="http://adbshell.com/commands/adb-shell-getprop">adb shell getprop</a></p>
     </div>

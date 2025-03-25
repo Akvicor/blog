@@ -205,10 +205,10 @@
 <p>管理 -&gt; 服务 -&gt; TSM-SSH</p>
 <p>使用SSH登录到ESXI</p>
 <h2 id="修改的固件vmdk大小">修改的固件vmdk大小</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#0086b3">cd</span> /vmfs/volumes/datastore1
-</span></span><span style="display:flex;"><span>ls *.vmdk
-</span></span><span style="display:flex;"><span>vmkfstools -i openwrt.vmdk 123.vmdk
-</span></span><span style="display:flex;"><span>vmkfstools -X 1024M 123.vmdk <span style="color:#998;font-style:italic"># 需大于源文件大小</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">cd</span> /vmfs/volumes/datastore1
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ls *.vmdk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>vmkfstools -i openwrt.vmdk 123.vmdk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>vmkfstools -X 1024M 123.vmdk <span style="color:#57606a"># 需大于源文件大小</span>
 </span></span></code></pre></div><h2 id="添加硬盘">添加硬盘</h2>
 <p>根据实际情况选择EFI或BIOS引导</p>
 

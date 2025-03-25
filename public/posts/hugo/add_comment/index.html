@@ -159,11 +159,11 @@
         <span>
             
             <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
-            957 字</span>&nbsp;
+            1013 字</span>&nbsp;
         <span>
             
             <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
-            2 分钟</span>
+            3 分钟</span>
             <div class="container-ctgtag">
 	<div class="taxonomy">
 		
@@ -214,109 +214,109 @@
 <li>可配置审核等</li>
 </ul>
 <h3 id="搭建isso">搭建isso</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#000080">services</span>:<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#000080">isso</span>:<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">container_name</span>:<span style="color:#bbb"> </span>isso<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">image</span>:<span style="color:#bbb"> </span>ghcr.io/isso-comments/isso:release<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">ports</span>:<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span>- <span style="color:#d14">&#34;8080:8080&#34;</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">restart</span>:<span style="color:#bbb"> </span>always<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#000080">volumes</span>:<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span>- <span style="color:#d14">&#34;/app/isso/data/config:/config&#34;</span><span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span>- <span style="color:#d14">&#34;/app/isso/data/db:/db&#34;</span><span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#0550ae">services</span><span style="color:#1f2328">:</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#fff">  </span><span style="color:#0550ae">isso</span><span style="color:#1f2328">:</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#fff">    </span><span style="color:#0550ae">container_name</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>isso<span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#fff">    </span><span style="color:#0550ae">image</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>ghcr.io/isso-comments/isso:release<span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#fff">    </span><span style="color:#0550ae">ports</span><span style="color:#1f2328">:</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#fff">      </span>- <span style="color:#0a3069">&#34;8080:8080&#34;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#fff">    </span><span style="color:#0550ae">restart</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>always<span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#fff">    </span><span style="color:#0550ae">volumes</span><span style="color:#1f2328">:</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#fff">      </span>- <span style="color:#0a3069">&#34;/app/isso/data/config:/config&#34;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#fff">      </span>- <span style="color:#0a3069">&#34;/app/isso/data/db:/db&#34;</span><span style="color:#fff">
 </span></span></span></code></pre></div><p>配置: <code>/app/isso/data/config/isso.cfg</code></p>
-<pre tabindex="0"><code class="language-conf" data-lang="conf"># Isso example configuration file
-# vim: set filetype=dosini
-
-[general]
-
-# Change dbpath to /db/comments.db if running in docker!
-dbpath = /db/comments.db
-host =
-    https://isso.akvicor.com
-    https://blog.akvicor.com
-max-age = 5
-notify = smtp
-gravatar = true
-gravatar-url = https://www.gravatar.com/avatar/{}?d=identicon&amp;s=55
-
-[admin]
-enabled = true
-password = abced
-
-[guard]
-# 开启 SPAM 保护。防止一些恶意攻击。比如限制每个钟的新评论个数。
-enabled = true
-# 每分钟内最多五个新评论
-ratelimit = 5
-direct-reply = 7
-; 是否允许回复自己
-reply-to-self = true
-; 是否必须填写作者
-require-author = false
-; 是否必须填写邮箱
-require-email = false
-
-; 是否开启审核，true 是开启，30d 表示删除 30 天没有通过审核的评论
-[moderation]
-enabled = false
-approve-if-email-previously-approved = false
-purge-after = 30d
-
-[smtp]
-host = smtp.xxxx.com
-port = 465
-security = ssl
-username = xxx@xxxx.com
-password = xxxxxxx
-to = akvicor@xxxx.com
-from = &#34;Akvicor&#39;s Blog&#34; &lt;xxx@xxxx.com&gt;
-timeout = 10
-
-[rss]
-base = https://isso.akvicor.com
-limit = 100
-</code></pre><h3 id="配置博客">配置博客</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span># Isso example configuration file
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span># vim: set filetype=dosini
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>[general]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span># Change dbpath to /db/comments.db if running in docker!
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>dbpath = /db/comments.db
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>host =
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    https://isso.akvicor.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    https://blog.akvicor.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>max-age = 5
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>notify = smtp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>gravatar = true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>gravatar-url = https://www.gravatar.com/avatar/{}?d=identicon&amp;s=55
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>[admin]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>enabled = true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>password = abced
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>[guard]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span># 开启 SPAM 保护。防止一些恶意攻击。比如限制每个钟的新评论个数。
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>enabled = true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span># 每分钟内最多五个新评论
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>ratelimit = 5
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>direct-reply = 7
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>; 是否允许回复自己
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>reply-to-self = true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>; 是否必须填写作者
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>require-author = false
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>; 是否必须填写邮箱
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>require-email = false
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>; 是否开启审核，true 是开启，30d 表示删除 30 天没有通过审核的评论
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>[moderation]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>enabled = false
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>approve-if-email-previously-approved = false
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>purge-after = 30d
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span>[smtp]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span>host = smtp.xxxx.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>port = 465
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>security = ssl
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span>username = xxx@xxxx.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>password = xxxxxxx
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>to = akvicor@xxxx.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span>from = &#34;Akvicor&#39;s Blog&#34; &lt;xxx@xxxx.com&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>timeout = 10
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span>[rss]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span>base = https://isso.akvicor.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>limit = 100
+</span></span></code></pre></div><h3 id="配置博客">配置博客</h3>
 <p>找到主题的<code>layouts/_default/single.html</code>文件</p>
 <p>在<code>{{ define &quot;main&quot; }}</code>后面添加以下内容</p>
-<pre tabindex="0"><code>{{ $IsNav := eq .Title &#34;Nav&#34;}}
-{{ $IsSearch := eq .Title &#34;Search&#34;}}
-{{ $IsArchive := eq .Title &#34;Archive&#34;}}
-{{ $IsAbout := eq .Title &#34;About&#34;}}
-{{ $IsSecrets := eq .Section &#34;secrets&#34;}}
-&lt;!-- 那些不需要文章相关功能（如目录层级，文章切换、字数时长统计等）的页面 --&gt;
-&lt;!-- {{ $IsPurePage := or $IsNav $IsSearch $IsArchive $IsAbout }} --&gt;
-&lt;!-- 正常博文 --&gt;
-{{ $IsPostPage := and (not $IsNav) (not $IsSearch) (not $IsArchive) (not $IsAbout) }}
-{{ $IsCommentPage := and (not $IsNav) (not $IsSearch) (not $IsArchive) }}
-{{ $IS_DEV_ENV := eq .Site.BaseURL &#34;http://localhost:1313/&#34;}}
-</code></pre><p>在<code>&lt;article&gt;</code>内部的末尾添加</p>
-<pre tabindex="0"><code>{{ if and .IsPage $IsPostPage (not $IsSecrets) .Site.Params.isso.active (not $IS_DEV_ENV) }}
-    {{- partial &#34;partials/_isso.html&#34; . -}}
-{{ end }}
-</code></pre><p>在<code>layouts/partials</code>下添加<code>_isso.html</code>文件</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;container-comment&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">script</span> <span style="color:#008080">data-isso</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://isso.akvicor.com&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-css</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;true&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-reply-notifications</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;true&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-reply-to-self</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;true&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-require-author</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;false&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-require-email</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;false&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-max-comments-top</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;10&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-max-comments-nested</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;5&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-reveal-on-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;5&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-avatar</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;true&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-gravatar</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;true&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-isso-vote</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;true&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">data-vote-levels</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://isso.akvicor.com/js/embed.min.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080">section</span> <span style="color:#008080">id</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;isso-thread&#34;</span>&gt;&lt;/<span style="color:#000080">section</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">div</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{ $IsNav := eq .Title &#34;Nav&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>{{ $IsSearch := eq .Title &#34;Search&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>{{ $IsArchive := eq .Title &#34;Archive&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>{{ $IsAbout := eq .Title &#34;About&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>{{ $IsSecrets := eq .Section &#34;secrets&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>&lt;!-- 那些不需要文章相关功能（如目录层级，文章切换、字数时长统计等）的页面 --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>&lt;!-- {{ $IsPurePage := or $IsNav $IsSearch $IsArchive $IsAbout }} --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>&lt;!-- 正常博文 --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>{{ $IsPostPage := and (not $IsNav) (not $IsSearch) (not $IsArchive) (not $IsAbout) }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>{{ $IsCommentPage := and (not $IsNav) (not $IsSearch) (not $IsArchive) }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>{{ $IS_DEV_ENV := eq .Site.BaseURL &#34;http://localhost:1313/&#34;}}
+</span></span></code></pre></div><p>在<code>&lt;article&gt;</code>内部的末尾添加</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ if and .IsPage $IsPostPage (not $IsSecrets) .Site.Params.isso.active (not $IS_DEV_ENV) }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    {{- partial &#34;partials/_isso.html&#34; . -}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{{ end }}
+</span></span></code></pre></div><p>在<code>layouts/partials</code>下添加<code>_isso.html</code>文件</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;container-comment&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">script</span> <span style="color:#1f2328">data-isso</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;https://isso.akvicor.com&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#1f2328">data-isso-css</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#1f2328">data-isso-lang</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;en&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#1f2328">data-isso-reply-notifications</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#1f2328">data-isso-reply-to-self</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#1f2328">data-isso-require-author</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#1f2328">data-isso-require-email</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#1f2328">data-isso-max-comments-top</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;10&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#1f2328">data-isso-max-comments-nested</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;5&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#1f2328">data-isso-reveal-on-click</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;5&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    <span style="color:#1f2328">data-isso-avatar</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#1f2328">data-isso-gravatar</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#1f2328">data-isso-vote</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    <span style="color:#1f2328">data-vote-levels</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    <span style="color:#1f2328">src</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;https://isso.akvicor.com/js/embed.min.js&#34;</span><span style="color:#1f2328">&gt;&lt;/</span><span style="color:#0550ae">script</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">section</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;isso-thread&#34;</span><span style="color:#1f2328">&gt;&lt;/</span><span style="color:#0550ae">section</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
 </span></span></code></pre></div><p>在配置文件中添加</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[params.isso]
-</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic"># 是否启用评论插件</span>
-</span></span><span style="display:flex;"><span>    active = <span style="color:#000;font-weight:bold">true</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">[</span><span style="color:#1f2328">params</span><span style="color:#1f2328">.</span><span style="color:#1f2328">isso</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#57606a"># 是否启用评论插件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#1f2328">active</span> <span style="color:#1f2328">=</span> <span style="color:#cf222e">true</span>
 </span></span></code></pre></div><h2 id="utterances">utterances</h2>
 <ul>
 <li>借助Github保存评论</li>
@@ -324,44 +324,44 @@ limit = 100
 </ul>
 <p>找到主题的<code>layouts/_default/single.html</code>文件</p>
 <p>在<code>{{ define &quot;main&quot; }}</code>后面添加以下内容</p>
-<pre tabindex="0"><code>{{ $IsNav := eq .Title &#34;Nav&#34;}}
-{{ $IsSearch := eq .Title &#34;Search&#34;}}
-{{ $IsArchive := eq .Title &#34;Archive&#34;}}
-{{ $IsAbout := eq .Title &#34;About&#34;}}
-{{ $IsSecrets := eq .Section &#34;secrets&#34;}}
-&lt;!-- 那些不需要文章相关功能（如目录层级，文章切换、字数时长统计等）的页面 --&gt;
-&lt;!-- {{ $IsPurePage := or $IsNav $IsSearch $IsArchive $IsAbout }} --&gt;
-&lt;!-- 正常博文 --&gt;
-{{ $IsPostPage := and (not $IsNav) (not $IsSearch) (not $IsArchive) (not $IsAbout) }}
-{{ $IsCommentPage := and (not $IsNav) (not $IsSearch) (not $IsArchive) }}
-{{ $IS_DEV_ENV := eq .Site.BaseURL &#34;http://localhost:1313/&#34;}}
-</code></pre><p>在<code>&lt;article&gt;</code>内部的末尾添加</p>
-<pre tabindex="0"><code>{{ if and .IsPage $IsCommentPage (not $IsSecrets) .Site.Params.utterances.active (not $IS_DEV_ENV) }}
-    {{- partial &#34;partials/_comment.html&#34; . -}}
-{{ end }}
-</code></pre><p>在<code>layouts/partials</code>下添加<code>_comment.html</code>文件</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080">div</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;container-comment&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>	&lt;<span style="color:#000080">script</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://utteranc.es/client.js&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#008080">repo</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{.Site.Params.utterances.repo}}&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#008080">issue-term</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{.Site.Params.utterances.issueTerm}}&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#008080">theme</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{.Site.Params.utterances.theme}}&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#008080">crossorigin</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{.Site.Params.utterances.crossorigin}}&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#008080">async</span>&gt;
-</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#000080">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">div</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{ $IsNav := eq .Title &#34;Nav&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>{{ $IsSearch := eq .Title &#34;Search&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>{{ $IsArchive := eq .Title &#34;Archive&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>{{ $IsAbout := eq .Title &#34;About&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>{{ $IsSecrets := eq .Section &#34;secrets&#34;}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>&lt;!-- 那些不需要文章相关功能（如目录层级，文章切换、字数时长统计等）的页面 --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>&lt;!-- {{ $IsPurePage := or $IsNav $IsSearch $IsArchive $IsAbout }} --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>&lt;!-- 正常博文 --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>{{ $IsPostPage := and (not $IsNav) (not $IsSearch) (not $IsArchive) (not $IsAbout) }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>{{ $IsCommentPage := and (not $IsNav) (not $IsSearch) (not $IsArchive) }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>{{ $IS_DEV_ENV := eq .Site.BaseURL &#34;http://localhost:1313/&#34;}}
+</span></span></code></pre></div><p>在<code>&lt;article&gt;</code>内部的末尾添加</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ if and .IsPage $IsCommentPage (not $IsSecrets) .Site.Params.utterances.active (not $IS_DEV_ENV) }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    {{- partial &#34;partials/_comment.html&#34; . -}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{{ end }}
+</span></span></code></pre></div><p>在<code>layouts/partials</code>下添加<code>_comment.html</code>文件</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;container-comment&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#1f2328">&lt;</span><span style="color:#0550ae">script</span> <span style="color:#1f2328">src</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;https://utteranc.es/client.js&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>        <span style="color:#1f2328">repo</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;{{.Site.Params.utterances.repo}}&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>        <span style="color:#1f2328">issue-term</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;{{.Site.Params.utterances.issueTerm}}&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>        <span style="color:#1f2328">theme</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;{{.Site.Params.utterances.theme}}&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>        <span style="color:#1f2328">crossorigin</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;{{.Site.Params.utterances.crossorigin}}&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>        <span style="color:#1f2328">async</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>	<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">script</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
 </span></span></code></pre></div><p>在配置文件中添加</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[params]
-</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic"># 在开发环境下（http://localhost:1313/），不再启用评论插件，</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic"># 如果想在开发环境下启用它，修改服务端口即可，如下</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic"># hugo server -p=1314</span>
-</span></span><span style="display:flex;"><span>    [params.utterances]
-</span></span><span style="display:flex;"><span>        <span style="color:#998;font-style:italic"># 是否启用评论插件</span>
-</span></span><span style="display:flex;"><span>        active = <span style="color:#000;font-weight:bold">true</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#998;font-style:italic"># 输入你的仓库名称</span>
-</span></span><span style="display:flex;"><span>        repo = <span style="color:#d14">&#34;AkvicorEdwards/blog&#34;</span>
-</span></span><span style="display:flex;"><span>        issueTerm = <span style="color:#d14">&#34;pathname&#34;</span>
-</span></span><span style="display:flex;"><span>        theme = <span style="color:#d14">&#34;github-light&#34;</span>
-</span></span><span style="display:flex;"><span>        crossorigin = <span style="color:#d14">&#34;anonymous&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">[</span><span style="color:#1f2328">params</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#57606a"># 在开发环境下（http://localhost:1313/），不再启用评论插件，</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#57606a"># 如果想在开发环境下启用它，修改服务端口即可，如下</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#57606a"># hugo server -p=1314</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#1f2328">[</span><span style="color:#1f2328">params</span><span style="color:#1f2328">.</span><span style="color:#1f2328">utterances</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        <span style="color:#57606a"># 是否启用评论插件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>        <span style="color:#1f2328">active</span> <span style="color:#1f2328">=</span> <span style="color:#cf222e">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        <span style="color:#57606a"># 输入你的仓库名称</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        <span style="color:#1f2328">repo</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;AkvicorEdwards/blog&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#1f2328">issueTerm</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;pathname&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>        <span style="color:#1f2328">theme</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;github-light&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#1f2328">crossorigin</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;anonymous&#34;</span>
 </span></span></code></pre></div>
     </div>
 

@@ -228,20 +228,20 @@
 <p><code>vim /usr/local/php/etc/php.ini</code></p>
 <p>搜索 scandir、exec、passthru，将其从被禁用的函数中删除。</p>
 <p>重启 web 服务器：</p>
-<pre tabindex="0"><code>service php-fpm restart
-service nginx reload
-</code></pre><p>将要在网站上显示的目录和 _h5ai 文件夹放在一起：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>service php<span style="color:#0550ae">-</span>fpm restart
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>service nginx reload
+</span></span></code></pre></div><p>将要在网站上显示的目录和 _h5ai 文件夹放在一起：</p>
 <p>到目前为止，h5ai 可以正常使用了，但是我们可以开启 _h5ai 全部功能。通过 <code>http(s)://your_domain/_h5ai/public/index.php</code> 可以查看 _h5ai 的全部功能开启情况，默认密码是空的。</p>
 <h2 id="安装-ffmpeg">安装 FFmpeg</h2>
 <h3 id="debian-8">debian 8：</h3>
 <p>编辑软件源文件：</p>
 <p><code>vim /etc/apt/sources.list</code></p>
 <p>添加四个软件源</p>
-<pre tabindex="0"><code>deb http://www.deb-multimedia.org jessie main non-free
-deb ftp://ftp.deb-multimedia.org jessie main non-free
-deb http://www.deb-multimedia.org stable main non-free
-deb ftp://ftp.deb-multimedia.org stable main non-free
-</code></pre><p>更新软件源</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>deb http://www.deb-multimedia.org jessie main non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>deb ftp://ftp.deb-multimedia.org jessie main non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>deb http://www.deb-multimedia.org stable main non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>deb ftp://ftp.deb-multimedia.org stable main non-free
+</span></span></code></pre></div><p>更新软件源</p>
 <p><code>apt-get -y update</code></p>
 <p>安装 ffmpeg</p>
 <p><code>apt-get -y install ffmpeg</code></p>
@@ -250,13 +250,13 @@ deb ftp://ftp.deb-multimedia.org stable main non-free
 <p><code>apt-get -y install ffmpeg</code></p>
 <p>**注意：**请转至 <code>http://www.ffmpeg.org/releases/ </code>查看最新的 FFmpeg 版本。</p>
 <h3 id="编译安装">编译安装。</h3>
-<pre tabindex="0"><code>apt-get -y install ffmpeg
-tar -zxvf ffmpeg-*.*.tar.gz
-cd ffmpeg-*.*
-./configure
-make
-make install
-</code></pre><h2 id="略缩图功能">略缩图功能</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt-get -y install ffmpeg
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>tar -zxvf ffmpeg-*.*.tar.gz
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>cd ffmpeg-*.*
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>./configure
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>make
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>make install
+</span></span></code></pre></div><h2 id="略缩图功能">略缩图功能</h2>
 <p>图片：</p>
 <p>将<code> _h5ai</code> 中，private 与 public 文件夹中的 cache 目录设置权限为 755。</p>
 <p>EXIF：</p>
