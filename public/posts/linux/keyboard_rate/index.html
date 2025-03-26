@@ -205,7 +205,7 @@
 <p>As alternative to this tool, you can set defaults for the X Server at startup.</p>
 <p>For the keyboard repeat rate:</p>
 <p><code>/etc/X11/xinit/xserverrc</code></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>X -ardelay <span style="color:#099">200</span> -arinterval <span style="color:#099">30</span>  <span style="color:#998;font-style:italic"># (interval is 1000/rate_in_hz)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>X -ardelay <span style="color:#0550ae">200</span> -arinterval <span style="color:#0550ae">30</span>  <span style="color:#57606a"># (interval is 1000/rate_in_hz)</span>
 </span></span></code></pre></div><p>For this to configure, you need the privileges to edit X launch properties (probably in your login tool like lightdm).</p>
 <h2 id="xserver-configuration-file">XServer configuration file</h2>
 <p>XServer since version 21.1.0 supports the option AutoRepeat. Basically you need an xorg config section like this (the second value again 1000/rate_in_hz):</p>

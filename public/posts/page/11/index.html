@@ -210,9 +210,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/golang/note/">
+            <a href="https://blog.akvicor.com/posts/idea/goland/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Note <sup></sup></span>
+                <span> GoLand <sup></sup></span>
             </a>
 
             
@@ -220,7 +220,7 @@
                 <span class="date">
                     
                     
-                    2023-02-10
+                    2022-10-07
                 </span>
                 <span class="date">
                     
@@ -236,7 +236,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/golang">Golang</a>
+			<a href="/categories/idea">IDEA</a>
 			
 		</div>
 		<div class="tag">
@@ -245,11 +245,205 @@
 			
 		</div>
 	</div>
-</div><div class="summary">foreach变量 错误代码 1for _, v := range histories { 2 InsertByHistory(&amp;v) 3} 正确代码 1for _, v := range histories { 2 h := v 3 InsertByHistory(&amp;h) 4} 笔记 如以上代码，传递指针时必须声明一个新变量存储v，否则会导致传递给函数的是h</div>
+</div><div class="summary"><ul>
+<li><code>Setting/Tools/Action and Save/Reformat Code</code>: 自动格式化代码</li>
+<li><code>Setting/Tools/Action and Save/Optimize imports</code>: 自动优化import</li>
+<li><code>Setting/Editor/Inspections/Go/Code Style issues/Usage of Snake_Case</code>: 关闭SnakeCase变量名</li>
+<li><code>Setting/Editor/General/Code Folding/</code>: 关闭代码折叠</li>
+</ul></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/windows/fix_windows_and_linux_showing_different_times_when_dual_booting/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Fix Windows and Linux Showing Different Times When Dual Booting <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-10-04
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/windows">Windows</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><h2 id="make-windows-use-utc-time">Make Windows Use UTC Time</h2>
+<p>Filename: <code>Make Windows Use UTC Time.reg</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-reg" data-lang="reg"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Windows Registry Editor Version 5.00
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#cf222e">[</span><span style="color:#6639ba">HKEY_LOCAL_MACHINE</span><span style="color:#cf222e">\System\CurrentControlSet\Control\TimeZoneInformation]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">&#34;RealTimeIsUniversal&#34;</span><span style="color:#0550ae">=</span><span style="color:#953800">dword</span><span style="color:#1f2328">:</span><span style="color:#0550ae">00000001</span>
+</span></span></code></pre></div><p>以管理员身份打开 「PowerShell」，输入以下命令</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Reg add HKLM<span style="color:#1f2328">\</span>SYSTEM<span style="color:#1f2328">\</span>CurrentControlSet<span style="color:#1f2328">\</span>Control<span style="color:#1f2328">\</span>TimeZoneInformation <span style="color:#1f2328">/</span>v RealTimeIsUniversal <span style="color:#1f2328">/</span>t REG_DWORD <span style="color:#1f2328">/</span>d <span style="color:#0550ae">1</span>
+</span></span></code></pre></div><h2 id="make-windows-use-local-time">Make Windows Use Local Time</h2>
+<p>Filename: <code>Make Windows Use Local Time.reg</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-reg" data-lang="reg"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Windows Registry Editor Version 5.00
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#cf222e">[</span><span style="color:#6639ba">HKEY_LOCAL_MACHINE</span><span style="color:#cf222e">\System\CurrentControlSet\Control\TimeZoneInformation]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">&#34;RealTimeIsUniversal&#34;</span><span style="color:#0550ae">=-</span>
+</span></span></code></pre></div></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/windows/auto_restart_network_interface/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Auto Restart Network Interface <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-09-26
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/windows">Windows</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><p>每隔30秒钟检查一次网络状态，如果网络异常则重启网卡，然后刷新DNS缓存。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">@</span><span style="color:#cf222e">echo</span> off
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#cf222e">echo</span> <span style="color:#0a3069">&#34;正在监听网络状态....&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#cf222e">cd</span> C:\opt\netcheck
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#1f2328">:</span><span style="color:#900;font-weight:bold">begin</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>ping akvicor.com <span style="color:#1f2328">&gt;</span> ping.txt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#57606a">rem echo %errorlevel%</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#cf222e">if</span> <span style="color:#953800">%ERRORLEVEL%</span> <span style="color:#0550ae">==</span> 1 <span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">ping2</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">loop</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#1f2328">:</span><span style="color:#900;font-weight:bold">ping2</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>ping baidu.com <span style="color:#1f2328">&gt;</span> ping.txt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#cf222e">if</span> <span style="color:#953800">%ERRORLEVEL%</span> <span style="color:#0550ae">==</span> 1 <span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">reboot</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">loop</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#1f2328">:</span><span style="color:#900;font-weight:bold">reboot</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;网络异常&#34;</span> <span style="color:#1f2328">&gt;&gt;</span> errlog.log
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;正在停用网卡&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>netsh interface set interface <span style="color:#0a3069">&#34;WLAN&#34;</span> disabled
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>timeout /T 3 /NOBREAK
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;正在启用网卡&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>netsh interface set interface <span style="color:#0a3069">&#34;WLAN&#34;</span> enable
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;网卡已重新启动....&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span><span style="color:#cf222e">echo</span> <span style="color:#953800">%date%</span> <span style="color:#953800">%time%</span> <span style="color:#0a3069">&#34;网卡已重新启动&#34;</span> <span style="color:#1f2328">&gt;&gt;</span> errlog.log
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">loop</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#1f2328">:</span><span style="color:#900;font-weight:bold">loop</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>ipconfig /flushdns <span style="color:#1f2328">&gt;</span> nul
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>timeout /T 30 <span style="color:#1f2328">&gt;</span> nul
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span><span style="color:#cf222e">goto</span> <span style="color:#900;font-weight:bold">begin</span>
+</span></span></code></pre></div></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/aos/stack_alignment_in_x64_assembly/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Stack alignment in x64 assembly <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-08-23
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/aos">AOS</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><p>gcc会在<code>call</code>指令之前让<code>rsp</code>按<code>16</code>字节对齐。</p>
+<p>cpu在<code>call</code>的时候将<code>rip</code>压栈<code>rsp -= 8</code>，所以进入被调用者之后<code>rsp = 8 (mod 16)</code>。如果在这个函数里面还要<code>call</code>其他函数的话就要将<code>rsp</code>减掉奇数个<code>8</code>让它重新<code>16</code>字节对齐。</p></div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/golang/note/">查看更多…</a>
+				  <a href="/posts/aos/stack_alignment_in_x64_assembly/">查看更多…</a>
 				</div>
 				
             
@@ -262,9 +456,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/ssl/alpha_ssl/">
+            <a href="https://blog.akvicor.com/posts/aos/boot/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> AlphaSSL <sup></sup></span>
+                <span> BOOT: 从FAT32分区搜索并读取loader <sup></sup></span>
             </a>
 
             
@@ -272,12 +466,12 @@
                 <span class="date">
                     
                     
-                    2023-01-29
+                    2022-08-22
                 </span>
                 <span class="date">
                     
                     
-                    - 2024-09-18
+                    - 2024-09-15
                 </span>
             </div>
             
@@ -288,7 +482,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/ssl">SSL</a>
+			<a href="/categories/aos">AOS</a>
 			
 		</div>
 		<div class="tag">
@@ -297,11 +491,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary">已不可用 SSL2BUY 生成CSR 1openssl req -nodes -newkey rsa:2048 -keyout key -out csr 2# C = US 3# ST = California 4# L = San Jose 5# O = Kayuwki 6# CN = *.kayuwki.com 7# emailAddress = <a href="mailto:admin@kayuwki.com">admin@kayuwki.com</a> 补全并安装证书 由于 AlphaSSL 是中级证书商，因此需要把它的中级证书和签发给我的证书</div>
+</div><div class="summary"><h2 id="初始化寄存器">初始化寄存器</h2>
+<p>我将物理地址<code>0x050000-0x070008</code>之间的内存分配给了堆栈。栈顶设置为<code>0x070008</code>的原因是，kernel函数在编译后会在函数开头加上这样一行汇编代码<code>sub    $0x8,%rsp</code>，将栈顶设置为<code>0x070008</code>可以保证在经过此操作后，栈顶为<code>0x070000</code>。</p></div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/ssl/alpha_ssl/">查看更多…</a>
+				  <a href="/posts/aos/boot/">查看更多…</a>
 				</div>
 				
             
@@ -314,9 +509,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/openwrt/enable_https/">
+            <a href="https://blog.akvicor.com/posts/linux/file_permission/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Enable HTTPS <sup></sup></span>
+                <span> File Permission <sup></sup></span>
             </a>
 
             
@@ -324,54 +519,7 @@
                 <span class="date">
                     
                     
-                    2023-01-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/openwrt">OpenWrt</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">修改uhttpd配置文件 /etc/config/uhttpd 1option cert /viry/cert/akvicor.com.crt 2option key /viry/cert/akvicor.com.key 重启uhttpd服务 /etc/init.d/uhttpd restart</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/trust_ca/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Trust CA certificates <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-01-26
+                    2022-08-19
                 </span>
                 <span class="date">
                     
@@ -396,11 +544,49 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Debian 1# Debian/Ubuntu/Gentoo 2# - 安装 3sudo cp root_ca.crt /usr/local/share/ca-certificates/root_ca.crt 4# update-ca-certificates 会添加 /etc/ca-certificates.conf 配置文件中指定的证书 5# 另外所有 /usr/local/share/ca-certificates/*.crt 会被列为隐式信任 6sudo update-ca-certificates 7 8# - 删除 9sudo rm /usr/local/share/ca-certificates/root_ca.crt 10sudo update-ca-certificates &ndash;fresh RHEL 1# CentOS/Fedora/RHEL 2yum install ca-certificates 3# 启用动态 CA 配置功能： 4update-ca-trust force-enable 5cp root_ca.crt /etc/pki/ca-trust/source/anchors/ 6update-ca-trust MacOS 1# 安</div>
+</div><div class="summary"><h2 id="修改文件或目录所有者">修改文件或目录所有者</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 修改文件的所有者为root</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chown root &lt;file&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 修改文件的所有者和所有组为root</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>chown root: &lt;file&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#57606a"># 修改文件的所有者为root，所有组为akvicor</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>chown root:akvicor &lt;file&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#57606a"># 修改文件的所有组为root</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>chown :root &lt;file&gt;
+</span></span></code></pre></div><h2 id="修改文件或目录的访问权限">修改文件或目录的访问权限</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># chmod &lt;xxx&gt; &lt;file/dir&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chmod <span style="color:#0550ae">777</span> file
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># chmod &lt;u/g/o/a&gt;&lt;+/-&gt;&lt;r/w/x&gt; &lt;file/dir&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>chmod u+x file
+</span></span></code></pre></div><h3 id="目标">目标</h3>
+<ul>
+<li><code>u</code>: 用户</li>
+<li><code>g</code>: 组</li>
+<li><code>o</code>: 其他用户</li>
+<li><code>a</code>: 全部</li>
+</ul>
+<h3 id="操作">操作</h3>
+<ul>
+<li><code>+</code>: 加</li>
+<li><code>-</code>: 减</li>
+</ul>
+<h3 id="权限">权限</h3>
+<ul>
+<li><code>r</code>: 读</li>
+<li><code>w</code>: 写</li>
+<li><code>x</code>: 执行</li>
+</ul>
+<h3 id="特殊权限">特殊权限</h3>
+<ul>
+<li><code>s</code>: -&gt;<code>u</code>组，简称SUID的特殊权限。当执行该文件时将具有该文件所有者的权限。</li>
+<li><code>s</code>: -&gt;<code>g</code>组，简称SGID的特殊权限。在该目录下创建的文件和目录都属于该目录所属的组</li>
+<li><code>t</code>: -&gt;<code>o</code>组，简称SBIT的特殊权限。只能让所属主以及root可以删除/移动/重命名该目录下的文件</li>
+</ul>
+<p>其中sudo命令就是通过<code>u</code>组的<code>s</code>权限实现的。</p></div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/linux/trust_ca/">查看更多…</a>
+				  <a href="/posts/linux/file_permission/">查看更多…</a>
 				</div>
 				
             
@@ -413,9 +599,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/opensource/librespeed/">
+            <a href="https://blog.akvicor.com/posts/linux/zsh/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> LibreSpeed <sup></sup></span>
+                <span> zsh <sup></sup></span>
             </a>
 
             
@@ -423,7 +609,7 @@
                 <span class="date">
                     
                     
-                    2022-11-17
+                    2022-08-09
                 </span>
                 <span class="date">
                     
@@ -439,7 +625,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/open-source">Open Source</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -448,12 +634,30 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Compile from source 1git clone github.com/librespeed/speedtest-go 2cd speedtest-go 3go build -ldflags &quot;-w -s&quot; -trimpath -o speedtest main.go Setting 将settings.toml文件中的assets_path设置为web/assets目录（也可以将assets目录和可执行文</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/opensource/librespeed/">查看更多…</a>
-				</div>
+</div><div class="summary"><h2 id="oh-my-zsh主题显示执行时间">oh-my-zsh主题显示执行时间</h2>
+<p>oh-my-zsh主题显示执行时间</p>
+<p>进入主题目录<code>~/.oh-my-zsh/themes</code></p>
+<p>在想要修改的主题文件中添加如下代码：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>function preexec<span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  timer<span style="color:#0550ae">=$</span><span style="color:#1f2328">{</span>timer<span style="color:#1f2328">:</span><span style="color:#0550ae">-$</span>SECONDS<span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>function precmd<span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  <span style="color:#cf222e">if</span> <span style="color:#1f2328">[</span> <span style="color:#0550ae">$</span>timer <span style="color:#1f2328">];</span> then
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    timer_show<span style="color:#0550ae">=$</span><span style="color:#1f2328">((</span><span style="color:#0550ae">$</span>SECONDS <span style="color:#0550ae">-</span> <span style="color:#0550ae">$</span>timer<span style="color:#1f2328">))</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">[[</span> <span style="color:#0550ae">$</span>timer_show <span style="color:#0550ae">-</span>ge <span style="color:#0550ae">$</span>min_show_time <span style="color:#1f2328">]];</span> then
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>      RPROMPT<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;%{$fg_bold[red]%}(${timer_show}s)</span><span style="color:#0a3069">%f</span><span style="color:#0a3069">%{$fg_bold[white]%}[%*]</span><span style="color:#0a3069">%f</span><span style="color:#0a3069"> %{$reset_color%}%&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#cf222e">else</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>      RPROMPT<span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;%{$fg_bold[white]%}[%*]</span><span style="color:#0a3069">%f</span><span style="color:#0a3069">&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    fi
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    unset timer
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>  fi
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>autoload <span style="color:#0550ae">-</span>Uz add<span style="color:#0550ae">-</span>zsh<span style="color:#0550ae">-</span>hook
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>add<span style="color:#0550ae">-</span>zsh<span style="color:#0550ae">-</span>hook preexec preexec
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>add<span style="color:#0550ae">-</span>zsh<span style="color:#0550ae">-</span>hook precmd precmd
+</span></span></code></pre></div></div>
 				
             
 
@@ -465,9 +669,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/openwrt/lpthread/">
+            <a href="https://blog.akvicor.com/posts/linux/user_group/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> /usr/bin/ld: cannot find -lpthread <sup></sup></span>
+                <span> Linux User/Group <sup></sup></span>
             </a>
 
             
@@ -475,7 +679,7 @@
                 <span class="date">
                     
                     
-                    2022-11-17
+                    2022-08-09
                 </span>
                 <span class="date">
                     
@@ -491,7 +695,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/openwrt">OpenWrt</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -500,7 +704,24 @@
 			
 		</div>
 	</div>
-</div><div class="summary">使用golang编译程序遇到的问题 1# runtime/cgo 2/usr/bin/ld: cannot find -lpthread 3collect2: error: ld returned 1 exit status pthread primitives are part of the core libc.so library. to satisfy -lpthread, create an empty AR archive somewhere in the library search path. 1ar -rc /usr/lib/libpthread.a</div>
+</div><div class="summary"><h2 id="概念和相关文件">概念和相关文件</h2>
+<p>在 Linux 用户系统中存在两类组。第一类是主要用户组（主组），第二类是附加用户组（附属组）。</p>
+<ul>
+<li>主组：也被称为primary group、first group或initial login group，用户的默认组，用户的gid所标识的组。</li>
+<li>附属组：也被称为Secondary group或supplementary group，用户的附加组。</li>
+</ul>
+<h2 id="存储文件">存储文件</h2>
+<ul>
+<li>用户帐户及相关信息都存储在<code>/etc/passwd</code>文件中，</li>
+<li>用户组信息存储在<code>/etc/shadow</code>和<code>/etc/group</code>文件。</li>
+</ul>
+<h2 id="id命令">id命令</h2>
+<p>通过<code>id</code>命令查看用户的主组和附属组</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/user_group/">查看更多…</a>
+				</div>
 				
             
 
@@ -512,9 +733,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/openwrt/squashfs_resize/">
+            <a href="https://blog.akvicor.com/posts/linux/usbfs/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> squashfs镜像扩容 <sup></sup></span>
+                <span> Usbfs <sup></sup></span>
             </a>
 
             
@@ -522,7 +743,7 @@
                 <span class="date">
                     
                     
-                    2022-11-16
+                    2022-08-09
                 </span>
                 <span class="date">
                     
@@ -538,7 +759,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/openwrt">OpenWrt</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -547,11 +768,30 @@
 			
 		</div>
 	</div>
-</div><div class="summary">此方法仅适合刚把镜像写入磁盘还未启动以及还未将镜像写入磁盘这两种情况，一旦系统启动，squashfs分区大小就已经确定了，如果要更改只能使用losetup挂载并</div>
+</div><div class="summary"><p>赋予用户组操作usb设备的权限</p>
+<h2 id="创建用户组并添加用户到用户组">创建用户组并添加用户到用户组</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># 创建用户组</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>groupadd usbfs
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#57606a"># 查看usbfs用户组的id</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#57606a">#   usbfs:x:1001:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>cat /dev/group <span style="color:#1f2328">|</span> grep usbfs
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#57606a"># 把akvicor添加到用户组</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>useradd -G usbfs akvicor
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  <span style="color:#57606a"># 或</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>vim /etc/group
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>  <span style="color:#57606a"># 修改 usbfs:x:1001:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  <span style="color:#57606a"># 为   usbfs:x:1001:akvicor</span>
+</span></span></code></pre></div><h2 id="添加访问权限">添加访问权限</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 进入目录</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">cd</span> /etc/udev/rules.d
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 创建配置文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>vim xxx.rules
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#57606a"># 写入信息到配置文件</span>
+</span></span></code></pre></div><p>允许用户组<code>usbfs</code>访问usb设备</p></div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/openwrt/squashfs_resize/">查看更多…</a>
+				  <a href="/posts/linux/usbfs/">查看更多…</a>
 				</div>
 				
             
@@ -564,9 +804,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/html/placeholder/">
+            <a href="https://blog.akvicor.com/posts/linux/debian/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Placeholder <sup></sup></span>
+                <span> Debian Install <sup></sup></span>
             </a>
 
             
@@ -574,7 +814,7 @@
                 <span class="date">
                     
                     
-                    2022-10-11
+                    2022-08-09
                 </span>
                 <span class="date">
                     
@@ -590,9 +830,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/html">HTML</a>
-			
-			<a href="/categories/css">CSS</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -601,11 +839,39 @@
 			
 		</div>
 	</div>
-</div><div class="summary">input输入框占位符变化：输入框处于聚焦状态时，输入框的占位符内容以动画形式移动到左上角作为标题 1&lt;div class=&quot;input-box&quot;&gt; 2 &lt;input class=&quot;input-control input-outline&quot; placeholder=&quot;账号&quot;&amp;</div>
+</div><div class="summary"><p>Debian安装说明</p>
+<h2 id="debian-源">Debian 源</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wget https://paste.akvicor.com/api/106
+</span></span></code></pre></div><h2 id="debian-12--i3">Debian 12 + i3</h2>
+<h3 id="修改时区">修改时区</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 修改时区</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 同步硬件时间</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>hwclock -w
+</span></span></code></pre></div><h3 id="配置源">配置源</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>curl https://paste.akvicor.com/api/101 &gt; /etc/apt/sources.list
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># 注释掉不需要用到的源，如 bookworm-proposed-updates(介于stable和testing之间), bookworm-backports(新特性移植到旧版本)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>apt update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>apt upgrade
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>reboot
+</span></span></code></pre></div><h3 id="安装基础工具">安装基础工具</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install apt-transport-https ca-certificates
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt install vim curl wget git gcc g++ make screen bc jq zsh
+</span></span></code></pre></div><h3 id="添加基础bash命令">添加基础bash命令</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 添加ll命令.bashrc</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">alias</span> <span style="color:#953800">l</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;ls -al --color=auto&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#6639ba">alias</span> <span style="color:#953800">ll</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;ls -alh --color=auto&#39;</span>
+</span></span></code></pre></div><h3 id="笔记本电源操作">笔记本电源操作</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/systemd/logind.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span> <span style="color:#953800">HandleLidSwitch</span><span style="color:#0550ae">=</span>ignore <span style="color:#57606a"># 合上屏幕</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span> <span style="color:#953800">HandlePowerKey</span><span style="color:#0550ae">=</span>ignore <span style="color:#57606a"># 电源按键</span>
+</span></span></code></pre></div><h3 id="修改启动展示信息">修改启动展示信息</h3>
+<p><strong>ssh登录信息</strong></p></div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/html/placeholder/">查看更多…</a>
+				  <a href="/posts/linux/debian/">查看更多…</a>
 				</div>
 				
             
@@ -618,9 +884,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/windows/kms/">
+            <a href="https://blog.akvicor.com/posts/windows/ip_local_port_range/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> KMS &amp; GVLK <sup></sup></span>
+                <span> Windows IP Local Port Range <sup></sup></span>
             </a>
 
             
@@ -628,7 +894,7 @@
                 <span class="date">
                     
                     
-                    2022-10-08
+                    2022-08-08
                 </span>
                 <span class="date">
                     
@@ -653,64 +919,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Windows <a href="https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations">https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations</a> Windows Server 2022 操作系统版本 KMS 客户端安装程序密钥 Windows Server 2022 Datacenter WX4NM-KYWYW-QJJR4-XV3QB-6VM33 Windows Server 2022 Standard VDYBN-27WPP-V4HQT-9VMD4-VMK7H Windows Server 2019 操作系统版本 KMS 客户端安装程序密钥 Windows Server 2019 Datacenter WMDGN-G9PQG-XVVXX-R3X43-63DFG Windows Server 2019 Standard N69G4-B89J2-4G8F4-WWYCC-J464C Windows Server 2019 Essentials WVDHN-86M7X-466P6-VHXV7-YY726 Windows Server 2016 操作系统版本 KMS 客户端安装</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/kms/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/windows/windows_product_activation/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Windows Product Activation <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-10-08
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/windows">Windows</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">KMS激活Windows 首先用管理员权限打开命令提示符 卸载当前系统秘钥：slmgr.vbs /upk 写入KMS的GVLK秘钥：slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 写入KMS服务器地址：slm</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/windows_product_activation/">查看更多…</a>
-				</div>
+</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">:</span><span style="color:#57606a">: 查看Windows系统TCP端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>netsh int ipv4 show dynamicportrange protocol=udp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#1f2328">:</span><span style="color:#57606a">: 修改Windows系统TCP端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>netsh int ipv4 set dynamicport tcp start=30000 num=35535
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">:</span><span style="color:#57606a">: 查看Windows系统UDP端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>netsh int ipv4 show dynamicportrange protocol=udp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#1f2328">:</span><span style="color:#57606a">: 修改Windows系统UDP端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>netsh int ipv4 set dynamicport udp start=30000 num=35535
+</span></span></code></pre></div></div>
 				
             
 
@@ -747,7 +964,7 @@
         <a href="/posts/page/12/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>

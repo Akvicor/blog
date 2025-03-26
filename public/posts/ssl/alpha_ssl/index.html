@@ -219,12 +219,12 @@
 <h2 id="ssl2buy">SSL2BUY</h2>
 <h3 id="生成csr">生成CSR</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>openssl req -nodes -newkey rsa:2048 -keyout key -out csr
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#998;font-style:italic"># C = US</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#998;font-style:italic"># ST = California</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#998;font-style:italic"># L = San Jose</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#998;font-style:italic"># O = Kayuwki</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#998;font-style:italic"># CN = *.kayuwki.com</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#998;font-style:italic"># emailAddress = admin@kayuwki.com</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># C = US</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># ST = California</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># L = San Jose</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#57606a"># O = Kayuwki</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a"># CN = *.kayuwki.com</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#57606a"># emailAddress = admin@kayuwki.com</span>
 </span></span></code></pre></div><h3 id="补全并安装证书">补全并安装证书</h3>
 <p>由于 AlphaSSL 是中级证书商，因此需要把它的中级证书和签发给我的证书合并。</p>
 <p>下载 <a href="https://support.globalsign.com/ca-certificates/intermediate-certificates/alphassl-intermediate-certificates">AlphaSSL</a> 的名为<code>GlobalSign GCC R6 AlphaSSL CA 2023</code>的证书</p>
@@ -239,7 +239,7 @@
 <p>该方法基于 <a href="https://shop.moeclub.org/index.php">萌咖</a> 提供的API。</p>
 <h3 id="生成-csr">生成 CSR</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>openssl req -nodes -newkey rsa:2048 -keyout kayuki.org.key -out kayuki.org.csr
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#998;font-style:italic"># 域名填写 *.kayuki.org</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># 域名填写 *.kayuki.org</span>
 </span></span></code></pre></div><p>使用openssl生成或使用此网址。<strong>必须加上 <code>*.</code> 才可以申请到泛域名证书</strong></p>
 <p><a href="https://api.moeclub.org/SSL/CSR">https://api.moeclub.org/SSL/CSR</a></p>
 <p>例如 <code>*.kayuki.org</code></p>

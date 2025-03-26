@@ -4,7 +4,7 @@
     <title>IDEA on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/idea/</link>
     <description>Recent content in IDEA on Akvicor&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/idea/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://blog.akvicor.com/posts/idea/duplicated_code/</link>
       <pubDate>Sat, 06 Jul 2024 19:05:39 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/idea/duplicated_code/</guid>
-      <description>打开设置按照以下路径进入并关闭 Editor -&amp;gt; Inspections -&amp;gt; General -&amp;gt; Duplicated code fragment</description>
+      <description>&lt;p&gt;打开设置按照以下路径进入并关闭&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Editor&lt;/code&gt; -&amp;gt; &lt;code&gt;Inspections&lt;/code&gt; -&amp;gt; &lt;code&gt;General&lt;/code&gt; -&amp;gt; &lt;code&gt;Duplicated code fragment&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>型参提醒 Inlay hints</title>
       <link>https://blog.akvicor.com/posts/idea/inlay_hints/</link>
       <pubDate>Sat, 22 Jun 2024 20:19:09 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/idea/inlay_hints/</guid>
-      <description>打开设置搜索Inlay Hints, 或进入Setting/Editor/Inlay Hints, 按照需要关闭</description>
+      <description>&lt;p&gt;打开设置搜索&lt;code&gt;Inlay Hints&lt;/code&gt;, 或进入&lt;code&gt;Setting/Editor/Inlay Hints&lt;/code&gt;, 按照需要关闭&lt;/p&gt;</description>
     </item>
     <item>
       <title>GoLand</title>
       <link>https://blog.akvicor.com/posts/idea/goland/</link>
       <pubDate>Fri, 07 Oct 2022 23:11:43 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/idea/goland/</guid>
-      <description>Setting/Tools/Action and Save/Reformat Code: 自动格式化代码 Setting/Tools/Action and Save/Optimize imports: 自动优化import Setting/Editor/Inspections/Go/Code Style issues/Usage of Snake_Case: 关闭SnakeCase变量名 Setting/Editor/General/Code Folding/: 关闭代码折叠</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;Setting/Tools/Action and Save/Reformat Code&lt;/code&gt;: 自动格式化代码&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Setting/Tools/Action and Save/Optimize imports&lt;/code&gt;: 自动优化import&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Setting/Editor/Inspections/Go/Code Style issues/Usage of Snake_Case&lt;/code&gt;: 关闭SnakeCase变量名&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Setting/Editor/General/Code Folding/&lt;/code&gt;: 关闭代码折叠&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>IntelliJ IDEA Keymap</title>

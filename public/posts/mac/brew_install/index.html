@@ -197,15 +197,15 @@
     <div class='content  content '>
         <p><a href="https://link.jianshu.com?t=http%3A%2F%2Fbrew.sh%2Findex_zh-cn.html">Homebrew</a>是一款Mac OS上的软件包管理工具，通过它可以很方便的安装/卸载软件工具等，类似于Linux下的apt-get，node的npm等包管理工具。</p>
 <p>Homebrew将工具安装在自己创建的/usr/local/Cellar目录下，并在/usr/local/bin建立这些工具的符号链接。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/usr/bin/ruby -e <span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#000;font-weight:bold">)</span><span style="color:#d14">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/usr/bin/ruby -e <span style="color:#0a3069">&#34;</span><span style="color:#cf222e">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#cf222e">)</span><span style="color:#0a3069">&#34;</span>
 </span></span></code></pre></div><p>命令详解：</p>
 <p>1.先用 shell命令curl，将文件下载本地，文件名为 install，文件地址：https://raw.githubusercontent.com/Homebrew/install/master/install</p>
 <p>2.执行 ruby -e 文件install。</p>
 <p>但是ruby命令里面的内容，是下载github上的Homebrew库，但是这个下载是连接国外的网络的，所以比较慢，经常网络断导致安装错误。如果有vpn或者网络较好的情况鼓励使用这种方式，比较方便。</p>
 <p><strong>关闭每次运行时的自动更新</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>	<span style="color:#998;font-style:italic"># 临时关闭  在Terminal中运行</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#998;font-style:italic"># 永久关闭  在Terminal配置文件中加入下面这一行 .bash_profile</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#0086b3">export</span> <span style="color:#008080">HOMEBREW_NO_AUTO_UPDATE</span><span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">true</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>	<span style="color:#57606a"># 临时关闭  在Terminal中运行</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#57606a"># 永久关闭  在Terminal配置文件中加入下面这一行 .bash_profile</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#6639ba">export</span> <span style="color:#953800">HOMEBREW_NO_AUTO_UPDATE</span><span style="color:#0550ae">=</span><span style="color:#6639ba">true</span>
 </span></span></code></pre></div>
     </div>
 

@@ -210,58 +210,6 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/linux/serial_port/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Linux虚拟串口 Serial port <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2024-09-22
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-23
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">首先安装socat 1sudo apt-get install socat 启动虚拟串口 1socat -d -d pty,raw,echo=0 pty,raw,echo=0 成功后返回以下信息 12024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/13 22024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/14 32024/09/22 21:32:10 socat[1997612] N starting data transfer loop with FDs [5,5] and [7,7] （终端1）监听其中一个串口 cat &lt; /dev/pts/2 （终端2</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/serial_port/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
             <a href="https://blog.akvicor.com/posts/harbor/install/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
                 <span> 纯净安装Harbor <sup></sup></span>
@@ -297,7 +245,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">鉴于Harbor官方的安装无比混乱, 因此记录如何将有用的东西提取出来, 最终形成data目录, config目录, docker-compose.yml文件. 修复因端</div>
+</div><div class="summary"><p>鉴于Harbor官方的安装无比混乱, 因此记录如何将有用的东西提取出来, 最终形成<code>data</code>目录, <code>config</code>目录, <code>docker-compose.yml</code>文件.</p>
+<ul>
+<li>修复因端口问题导致的<code>docker login</code>失败</li>
+<li>删除log容器和网络</li>
+<li>增加容器名称前缀</li>
+</ul>
+<h2 id="按照官方教程进行前期操作">按照官方教程进行前期操作</h2>
+<p>下载执行官方配置脚本, 配置<code>harbor.yml</code>, 注意配置和记录端口, 密码和<code>data</code>目录</p></div>
 				
 				
 				<div class="read-more">
@@ -349,7 +304,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary">2024-09-15 网站搬家中… 2024-09-17 部分 传送阵 因为年久失修已经不可使用</div>
+</div><div class="summary"><ul>
+<li><code>2024-09-15</code> 网站搬家中&hellip;</li>
+<li><code>2024-09-17</code> 部分
+<s style="text-decoration: line-through;" title="链接">传送阵</s>
+因为年久失修已经不可使用</li>
+</ul></div>
 				
             
 
@@ -396,7 +356,45 @@
 			
 		</div>
 	</div>
-</div><div class="summary">修改时区 1ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime 配置bash命令 1alias l='ls -Al &ndash;color=auto' 2alias ll='ls -Alh &ndash;color=auto' 配置apt源 删除普通用户 1userdel -r admin 安装工具 1apt update 2apt install -y systemd-timesyncd vim curl wget gcc g++ git make screen telnet jq bc tcptrack 修改主机名 1vim /etc/hosts 2vim /etc/hostname 配置ssh key 1mkdir .ssh 2chmod 600</div>
+</div><div class="summary"><h2 id="修改时区">修改时区</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime
+</span></span></code></pre></div><h2 id="配置bash命令">配置bash命令</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">alias</span> <span style="color:#953800">l</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;ls -Al --color=auto&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">alias</span> <span style="color:#953800">ll</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;ls -Alh --color=auto&#39;</span>
+</span></span></code></pre></div><h2 id="配置apt源">配置apt源</h2>
+<h2 id="删除普通用户">删除普通用户</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>userdel -r admin
+</span></span></code></pre></div><h2 id="安装工具">安装工具</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt install -y systemd-timesyncd vim curl wget gcc g++ git make screen telnet jq bc tcptrack
+</span></span></code></pre></div><h2 id="修改主机名">修改主机名</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/hosts
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>vim /etc/hostname
+</span></span></code></pre></div><h2 id="配置ssh-key">配置ssh key</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir .ssh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chmod <span style="color:#0550ae">600</span> .ssh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>vim .ssh/authorized_keys
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>chmod <span style="color:#0550ae">600</span> .ssh/authorized_keys
+</span></span></code></pre></div><h2 id="配置sshd">配置sshd</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/ssh/sshd_config
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>PermitRootLogin prohibit-password
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>PubkeyAuthentication yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>PasswordAuthentication no
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>ClientAliveInterval <span style="color:#0550ae">15</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>ClientAliveCountMax <span style="color:#0550ae">3</span>
+</span></span></code></pre></div><h2 id="更改密码">更改密码</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>passwd
+</span></span></code></pre></div><h2 id="配置git">配置git</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git config --global user.name <span style="color:#0a3069">&#34;Akvicor&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git config --global user.email akvicor@kayuki.org
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git config --global core.editor vim
+</span></span></code></pre></div><h2 id="motd脚本">motd脚本</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/motd
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>vim /etc/update-motd.d/99-custom
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>chmod +x /etc/update-motd.d/99-custom
+</span></span></code></pre></div><p>内容</p></div>
 				
 				
 				<div class="read-more">
@@ -448,7 +446,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Ed25519算法 1ssh-keygen -t ed25519 -C &quot;your_<a href="mailto:email@example.com">email@example.com</a>&quot; 旧算法 1ssh-keygen -t rsa -b 4096 -C &quot;your_<a href="mailto:email@example.com">email@example.com</a>&quot; 设置文件权限 1chmod 700 ~/.ssh 2chmod 600 ~/.ssh/authorized_keys</div>
+</div><div class="summary"><h2 id="ed25519算法">Ed25519算法</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh-keygen -t ed25519 -C <span style="color:#0a3069">&#34;your_email@example.com&#34;</span>
+</span></span></code></pre></div><h2 id="旧算法">旧算法</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh-keygen -t rsa -b <span style="color:#0550ae">4096</span> -C <span style="color:#0a3069">&#34;your_email@example.com&#34;</span>
+</span></span></code></pre></div><h2 id="设置文件权限">设置文件权限</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>chmod <span style="color:#0550ae">700</span> ~/.ssh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chmod <span style="color:#0550ae">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div></div>
 				
             
 
@@ -495,7 +500,19 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Summary抽屉，可收起和展开 默认收起 A AAA 默认展开 B BBB</div>
+</div><div class="summary"><p>Summary抽屉，可收起和展开</p>
+<details>
+<summary>默认收起 A</summary>
+<ul>
+<li>AAA</li>
+</ul>
+</details>
+<details open>
+<summary>默认展开 B</summary>
+<ul>
+<li>BBB</li>
+</ul>
+</details></div>
 				
             
 
@@ -542,7 +559,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">永久关闭IPV6 编辑grub配置文件/etc/default/grub 修改增加ipv6.disable=1属性 1GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash ipv6.disable=1&quot; 2GRUB_CMDLINE_LINUX=&quot;ipv6.disable=1&quot; 使设置生效 1update-grub</div>
+</div><div class="summary"><p>永久关闭IPV6</p>
+<p>编辑grub配置文件<code>/etc/default/grub</code></p>
+<p>修改增加<code>ipv6.disable=1</code>属性</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>GRUB_CMDLINE_LINUX_DEFAULT=&#34;quiet splash ipv6.disable=1&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>GRUB_CMDLINE_LINUX=&#34;ipv6.disable=1&#34;
+</span></span></code></pre></div><p>使设置生效</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>update-grub
+</span></span></code></pre></div></div>
 				
             
 
@@ -589,12 +613,21 @@
 			
 		</div>
 	</div>
-</div><div class="summary">创建新 React 项目 使用create-react-app创建项目 1npx create-react-app 设置yarn版本 前置条件 1corepack enable # 安装完nodejs后只需要执行一次 设置版本 1yarn policies set-version 4.3.0 修改.yarnrc.</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/nodejs/new-react-project/">查看更多…</a>
-				</div>
+</div><div class="summary"><p>创建新 React 项目</p>
+<h3 id="使用create-react-app创建项目">使用create-react-app创建项目</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>npx create-react-app
+</span></span></code></pre></div><h3 id="设置yarn版本">设置yarn版本</h3>
+<p>前置条件</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>corepack <span style="color:#6639ba">enable</span> <span style="color:#57606a"># 安装完nodejs后只需要执行一次</span>
+</span></span></code></pre></div><p>设置版本</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>yarn policies set-version 4.3.0
+</span></span></code></pre></div><h3 id="修改yarnrcyml配置">修改<code>.yarnrc.yml</code>配置</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>nodeLinker: node-modules
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>yarnPath: .yarn/releases/yarn-4.3.0.cjs
+</span></span></code></pre></div><h3 id="安装依赖">安装依赖</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>yarn install
+</span></span></code></pre></div></div>
 				
             
 
@@ -641,7 +674,8 @@
 			
 		</div>
 	</div>
-</div><div class="summary">打开设置按照以下路径进入并关闭 Editor -&gt; Inspections -&gt; General -&gt; Duplicated code fragment</div>
+</div><div class="summary"><p>打开设置按照以下路径进入并关闭</p>
+<p><code>Editor</code> -&gt; <code>Inspections</code> -&gt; <code>General</code> -&gt; <code>Duplicated code fragment</code></p></div>
 				
             
 
@@ -688,12 +722,127 @@
 			
 		</div>
 	</div>
-</div><div class="summary">官方docker-compose文件生成 <a href="https://setup.mailu.io/2024.06/">https://setup.mailu.io/2024.06/</a> 参考博客 <a href="https://www.ywbj.cc/?p=929">https://www.ywbj.cc/?p=929</a> 测试服务器是否开启25端口 1telnet smtp.google.com 25 #谷歌邮箱地址 2# 或者 3telnet smtp.qq.com 25 #腾讯qq邮箱 如果已经开启则会显示Connecte</div>
+</div><div class="summary"><p>官方docker-compose文件生成</p>
+<p><a href="https://setup.mailu.io/2024.06/">https://setup.mailu.io/2024.06/</a></p>
+<p>参考博客</p>
+<p><a href="https://www.ywbj.cc/?p=929">https://www.ywbj.cc/?p=929</a></p>
+<h2 id="测试服务器是否开启25端口">测试服务器是否开启25端口</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>telnet smtp.google.com <span style="color:#0550ae">25</span> <span style="color:#57606a">#谷歌邮箱地址</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># 或者</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>telnet smtp.qq.com <span style="color:#0550ae">25</span> <span style="color:#57606a">#腾讯qq邮箱</span>
+</span></span></code></pre></div><p>如果已经开启则会显示Connected</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>root@mail:~# telnet smtp.qq.com <span style="color:#0550ae">25</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Trying 157.148.54.34...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Connected to smtp.qq.com.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Escape character is <span style="color:#0a3069">&#39;^]&#39;</span>.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#0550ae">220</span> newxmesmtplogicsvrsza9.qq.com XMail Esmtp QQ Mail Server.
+</span></span></code></pre></div><p>如果未开启会显示一直在连接</p></div>
 				
 				
 				<div class="read-more">
 				  <a href="/posts/mail/install/">查看更多…</a>
 				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/react/use_effect/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 页面加载完毕后执行 useEffect <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-06-22
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/react">React</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><h2 id="一个参数">一个参数</h2>
+<p>useEffect()本身是一个函数，由 React 框架提供，在函数组件内部调用即可。</p>
+<p>举例来说，我们希望组件加载以后，网页标题（document.title）会随之改变。那么，改变网页标题这个操作，就是组件的副效应，必须通过useEffect()来实现。</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/react/use_effect/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/idea/inlay_hints/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 型参提醒 Inlay hints <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-06-22
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/idea">IDEA</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">打开设置搜索<code>Inlay Hints</code>, 或进入<code>Setting/Editor/Inlay Hints</code>, 按照需要关闭</div>
 				
             
 
@@ -730,7 +879,7 @@
         <a href="/posts/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>

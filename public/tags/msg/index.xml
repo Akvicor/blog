@@ -4,7 +4,7 @@
     <title>Msg on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/tags/msg/</link>
     <description>Recent content in Msg on Akvicor&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 17 Feb 2025 03:00:02 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/tags/msg/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/project/msg/</link>
       <pubDate>Sat, 15 Feb 2025 20:57:00 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/project/msg/</guid>
-      <description>这是一篇指导如何使用和开发MSG的博客 概念介绍 平台: 例如SMS,邮箱,Telegram,微信 Bot: 每个bot都可以支持一个或多个平台, 但每种平台只能绑定一个 通知渠道</description>
+      <description>&lt;p&gt;这是一篇指导如何使用和开发MSG的博客&lt;/p&gt;&#xA;&lt;h2 id=&#34;概念介绍&#34;&gt;概念介绍&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;平台: 例如SMS,邮箱,Telegram,微信&lt;/li&gt;&#xA;&lt;li&gt;Bot: 每个bot都可以支持一个或多个平台, 但每种平台只能绑定一个&lt;/li&gt;&#xA;&lt;li&gt;通知渠道: 将Bot,平台以及发送目标绑定在一起, 同时可以给渠道设置标记(全局唯一), 发送信息时可以通过渠道ID或渠道标记向对应的渠道发送信息&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;相关项目&#34;&gt;相关项目&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/Akvicor/msg&#34;&gt;项目代码 Github https://github.com/Akvicor/msg&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gitee.com/Akvicor/msg&#34;&gt;项目代码 Gitee https://gitee.com/Akvicor/msg&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;相关&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

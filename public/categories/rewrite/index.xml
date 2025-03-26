@@ -4,7 +4,7 @@
     <title>Rewrite on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/rewrite/</link>
     <description>Recent content in Rewrite on Akvicor&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/rewrite/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/init/</link>
       <pubDate>Sun, 15 Sep 2024 01:13:06 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/init/</guid>
-      <description>2024-09-15 网站搬家中&amp;hellip; 2024-09-17 部分 传送阵 因为年久失修已经不可使用</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;2024-09-15&lt;/code&gt; 网站搬家中&amp;hellip;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;2024-09-17&lt;/code&gt; 部分&#xA;&lt;s style=&#34;text-decoration: line-through;&#34; title=&#34;链接&#34;&gt;传送阵&lt;/s&gt;&#xA;因为年久失修已经不可使用&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

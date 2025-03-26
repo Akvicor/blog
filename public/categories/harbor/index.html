@@ -245,7 +245,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">鉴于Harbor官方的安装无比混乱, 因此记录如何将有用的东西提取出来, 最终形成data目录, config目录, docker-compose.yml文件. 修复因端</div>
+</div><div class="summary"><p>鉴于Harbor官方的安装无比混乱, 因此记录如何将有用的东西提取出来, 最终形成<code>data</code>目录, <code>config</code>目录, <code>docker-compose.yml</code>文件.</p>
+<ul>
+<li>修复因端口问题导致的<code>docker login</code>失败</li>
+<li>删除log容器和网络</li>
+<li>增加容器名称前缀</li>
+</ul>
+<h2 id="按照官方教程进行前期操作">按照官方教程进行前期操作</h2>
+<p>下载执行官方配置脚本, 配置<code>harbor.yml</code>, 注意配置和记录端口, 密码和<code>data</code>目录</p></div>
 				
 				
 				<div class="read-more">

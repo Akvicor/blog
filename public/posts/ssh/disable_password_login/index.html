@@ -204,22 +204,22 @@
         <p>使用密钥登陆相对于密码来说安全性要高很多</p>
 <p>我们知道SSH登录是用的RSA非对称加密的，所以我们在SSH登录的时候就可以使用RSA密钥登录，SSH有专门创建SSH密钥的工具ssh-keygen，下面就来一睹风采。</p>
 <p>首先进入Linux系统的用户目录下的.ssh目录下，root用户是/root/.ssh，普通用户是/home/您的用户名/.ssh，我们以root用户为例：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#0086b3">cd</span> /root/.ssh
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">cd</span> /root/.ssh
 </span></span></code></pre></div><h2 id="生成密钥">生成密钥</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh-keygen -t rsa -b <span style="color:#099">4096</span> -C <span style="color:#d14">&#34;youremain@gmail.com&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh-keygen -t rsa -b <span style="color:#0550ae">4096</span> -C <span style="color:#0a3069">&#34;youremain@gmail.com&#34;</span>
 </span></span></code></pre></div><p>这里加了-b 参数，指定了长度，也可以不加-b参数</p>
 <p>-C 参数是注释</p>
 <p>执行密钥生成命令，基本上是一路回车既可以了，但是需要注意的是：执行命令的过程中是会提示呢输入密钥的密码的（如下图中红色箭头处，输入两次相同的，即是又一次确认密码），不需要密码直接回车就行。</p>
 <p>密钥生成后会在当前目录下多出两个文件，id_rsa和id_rsa.pub，其中id_rsa是私钥（敲黑板：这个很重要，不能外泄），id_rsa.pub这个是公钥，</p>
 <p>进入远程服务器需要SSH登录的用户的目录下，这里仍然用root用户，cd /root/.ssh，执行ls看看目录下是否有authorized_keys文件没有的话则执行以下命令创建：</p>
 <p>执行成功会创建空authorized_keys文件，授予600权限（注意：此处权限必须是600）：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>chmod <span style="color:#099">600</span> /root/.ssh/authorized_keys
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>chmod <span style="color:#0550ae">600</span> /root/.ssh/authorized_keys
 </span></span></code></pre></div><p>如果已经有了authorized_keys文件，这直接执行以下的密钥追加工作。</p>
 <p>将上面生成的公钥id_rsa.pub追加到authorized_keys文件中：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cat /root/.ssh/id_rsa.pub &gt;&gt; /root/.ssh/authorized_keys
 </span></span></code></pre></div><p>密钥准备好了接下来就可以使用密钥登录了，</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh -i ./id_rsa root@192.168.100.39
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#998;font-style:italic"># or</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># or</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>ssh root@192.168.100.39 -i ./id_rsa
 </span></span></code></pre></div><p>注意：id_rsa是私钥，笔者这里是进入私钥的目录下操作的，如果没在私钥的目录下，请写全目录，比如/mnt/id_rsa，也可以是您自定义的目录。执行命令过程中，如果创建密钥对的时候设置了密码，则会提示您输入密码，没有的话会直接登录。</p>
 <h2 id="禁用服务器密码登录">禁用服务器密码登录</h2>

@@ -245,7 +245,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">扩充固件 将.img文件中的分区使用fdisk扩充7G 写入固件 启用魔法 1echo 0xDEADBEEF &gt; /etc/config/google_fu_mode SSRP 添加Socks5 1opkg update 2opkg install ipt2socks</div>
+</div><div class="summary"><h2 id="扩充固件">扩充固件</h2>
+<p>将.img文件中的分区使用fdisk扩充7G</p>
+<h2 id="写入固件">写入固件</h2>
+<h2 id="启用魔法">启用魔法</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">echo</span> 0xDEADBEEF &gt; /etc/config/google_fu_mode
+</span></span></code></pre></div><h2 id="ssrp-添加socks5">SSRP 添加Socks5</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>opkg update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>opkg install ipt2socks
+</span></span></code></pre></div></div>
 				
             
 
@@ -292,7 +300,22 @@
 			
 		</div>
 	</div>
-</div><div class="summary">服务端（家庭宽带路由器架设 设置PPT服务器IP为路由器IP 172.16.1.1 客户端分配的ip范围 172.16.1.200-209 设置DNS 172.16.1.1 设置用户名和密码 修改防火墙常规设置，转发由拒绝改为接受，否则客户端</div>
+</div><div class="summary"><h2 id="服务端家庭宽带路由器架设">服务端（家庭宽带路由器架设</h2>
+<ol>
+<li>设置PPT服务器IP为路由器IP <code>172.16.1.1</code></li>
+<li>客户端分配的ip范围 <code>172.16.1.200-209</code></li>
+<li>设置DNS <code>172.16.1.1</code></li>
+<li>设置用户名和密码</li>
+<li>修改防火墙常规设置，<strong>转发</strong>由<strong>拒绝</strong>改为<strong>接受</strong>，否则客户端连接后无法通过服务端访问外部网络。</li>
+</ol>
+<h2 id="客户端">客户端</h2>
+<h3 id="安卓">安卓</h3>
+<ol>
+<li>服务器地址 <code>home.akvicor.com</code></li>
+<li>选中 PPP encryption (MPPE)</li>
+<li>填写用户名和密码</li>
+</ol>
+<p><strong>若无网络可以尝试设置以下选项</strong></p></div>
 				
 				
 				<div class="read-more">
@@ -344,7 +367,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">修改/etc/config/ttyd 1config ttyd 2 option interface '@lan' 3 option command '/bin/login' 4 option ssl 'true' 5 option ssl_cert '/viry/cert/akvicor.com.crt' 6 option ssl_key '/viry/cert/akvicor.com.key'</div>
+</div><div class="summary"><p>修改<code>/etc/config/ttyd</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>config ttyd
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>        option interface &#39;@lan&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>        option command &#39;/bin/login&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>        option ssl &#39;true&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>        option ssl_cert &#39;/viry/cert/akvicor.com.crt&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>        option ssl_key &#39;/viry/cert/akvicor.com.key&#39;
+</span></span></code></pre></div></div>
 				
             
 
@@ -391,7 +421,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary">暂停uhttpd服务 uhttpd服务占用了80端口，需要先暂停。使用ssh登录openwrt，执行下面命令暂停uhttpd服务： 1/etc/init.d/uhttpd stop 2/etc/init.d/uhttpd disable 下载caddy 额外功能模</div>
+</div><div class="summary"><h2 id="暂停uhttpd服务">暂停uhttpd服务</h2>
+<p>uhttpd服务占用了80端口，需要先暂停。使用ssh登录openwrt，执行下面命令暂停uhttpd服务：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/etc/init.d/uhttpd stop
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>/etc/init.d/uhttpd disable
+</span></span></code></pre></div><h2 id="下载caddy">下载caddy</h2>
+<p>额外功能模块选上<code>aksdb/caddy-cgi/v2</code></p></div>
 				
 				
 				<div class="read-more">
@@ -443,12 +478,102 @@
 			
 		</div>
 	</div>
-</div><div class="summary">平台 Ubuntu 20.04.6 LTS 编译环境 1sudo apt update -y 2sudo apt full-upgrade -y 3sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \ 4bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib \ 5git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev \ 6libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz \ 7mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pyelftools \ 8libpython3-dev qemu-utils rsync scons</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/openwrt/compile/">查看更多…</a>
-				</div>
+</div><div class="summary"><h2 id="平台">平台</h2>
+<ul>
+<li>Ubuntu 20.04.6 LTS</li>
+</ul>
+<h2 id="编译环境">编译环境</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt update -y
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo apt full-upgrade -y
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential <span style="color:#0a3069">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#0a3069"></span>bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib <span style="color:#0a3069">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#0a3069"></span>git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev <span style="color:#0a3069">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#0a3069"></span>libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz <span style="color:#0a3069">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#0a3069"></span>mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pyelftools <span style="color:#0a3069">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span><span style="color:#0a3069"></span>libpython3-dev qemu-utils rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip <span style="color:#0a3069">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span><span style="color:#0a3069"></span>vim wget xmlto xxd zlib1g-dev
+</span></span></code></pre></div><h2 id="编译openwrt">编译OpenWrt</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># 下载</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>git clone https://github.com/coolsnowwolf/lede <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#6639ba">cd</span> lede
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#57606a"># 添加其他源</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;src-git kenzo https://github.com/kenzok8/openwrt-packages&#34;</span> &gt;&gt; feeds.conf.default
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;src-git small https://github.com/kenzok8/small&#34;</span> &gt;&gt; feeds.conf.default
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#57606a"># 更新源</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>./scripts/feeds update -a
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>./scripts/feeds install -a
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#57606a"># 修改默认IP为 10.0.0.2</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>sed -i <span style="color:#0a3069">&#39;s/192.168.1.1/172.16.1.1/g&#39;</span> package/base-files/files/bin/config_generate
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#57606a"># 修改默认主机名</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>sed -i <span style="color:#0a3069">&#39;/uci commit system/i\uci set system.@system[0].hostname=&#39;</span>op<span style="color:#0a3069">&#39;&#39;</span> package/lean/default-settings/files/zzz-default-settings
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#57606a"># 加入编译者信息</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>sed -i <span style="color:#0a3069">&#34;s/OpenWrt /Akvicor build </span><span style="color:#cf222e">$(</span><span style="color:#953800">TZ</span><span style="color:#0550ae">=</span>UTC-8 date <span style="color:#0a3069">&#34;+%Y.%m.%d&#34;</span><span style="color:#cf222e">)</span><span style="color:#0a3069"> @ OpenWrt /g&#34;</span> package/lean/default-settings/files/zzz-default-settings
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#57606a"># 修改banner</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#6639ba">echo</span> -e <span style="color:#0a3069">&#34;-------------------------------------------\n %D %V, %C\n-------------------------------------------&#34;</span> &gt; package/base-files/files/etc/banner
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#57606a"># 修改IPSec VPN账户名</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>sed -i <span style="color:#0a3069">&#34;s/ &#39;lean&#39;/ &#39;akvicor&#39;/g&#34;</span> feeds/luci/applications/luci-app-ipsec-vpnd/root/etc/config/ipsec
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#57606a"># 配置</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>make menuconfig
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span><span style="color:#57606a"># 修改分区大小</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>Target Images -&gt; Kernel partition size -&gt; <span style="color:#0550ae">64</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>Target Images -&gt; Root filesystem partition size -&gt; <span style="color:#0550ae">4096</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span><span style="color:#57606a"># 添加编程语言支持</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>Languages -&gt; Go -&gt; golang -&gt; on
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span><span style="color:#57606a"># 关闭adbyby plus</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>LuCI -&gt; 3. Applications -&gt; luci-app-adbyby-plus -&gt; off
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span><span style="color:#57606a"># 添加AdguardHome</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>LuCI -&gt; 3. Applications -&gt; luci-app-adguardhome -&gt; on
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span><span style="color:#57606a"># 添加EQOS</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>LuCI -&gt; 3. Applications -&gt; luci-app-eqos -&gt; on
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span><span style="color:#57606a"># 添加Passwall代理</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>LuCI -&gt; 3. Applications -&gt; luci-app-passwall -&gt; on
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span><span style="color:#57606a"># 添加方糖气球 serverchan</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span>LuCI -&gt; 3. Applications -&gt; luci-app-serverchan -&gt; on
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span><span style="color:#57606a"># 添加watchcat</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span>LuCI -&gt; 3. Applications -&gt; luci-app-watchcat -&gt; on
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span><span style="color:#57606a"># 关闭迅雷快鸟</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span><span>LuCI -&gt; 3. Applications -&gt; luci-app-xlnetacc -&gt; off
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span><span><span style="color:#57606a"># 关闭zerotier (一个开源VPN服务，但是需要通过第三方网站使用</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span>LuCI -&gt; 3. Applications -&gt; luci-app-zerotier -&gt; off
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span><span style="color:#57606a"># 下载</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span><span>make download -j8
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64</span><span><span style="color:#57606a"># 编译</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65</span><span>screen -S build
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66</span><span>make <span style="color:#953800">V</span><span style="color:#0550ae">=</span>s -j1
+</span></span></code></pre></div><h2 id="在esxi测试">在esxi测试</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># 上传vmdk文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a"># ssh连接esxi</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#6639ba">cd</span> /vmfs/volumes/hhd/op
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>ls *.vmdk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>vmkfstools -i openwrt-x86-64-generic-squashfs-combined-efi.vmdk opd.vmdk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>vmkfstools -X 5120M opd.vmdk <span style="color:#57606a"># 需大于源文件大小</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#57606a"># 更换op虚拟机的硬盘文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#57606a"># 配置测试网络</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>vim /etc/config/network
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#57606a"># 修改lan的ip地址</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#57606a"># 重启网络，通过浏览器访问</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>/etc/init.d/network restart
+</span></span></code></pre></div></div>
 				
             
 
@@ -495,7 +620,17 @@
 			
 		</div>
 	</div>
-</div><div class="summary">配置 端口：11004 5553重定向：使用53端口替换dnsmasq 执行文件路径：/viry/serv/AdGuardHome/exec/AdGuardHome 配</div>
+</div><div class="summary"><h2 id="配置">配置</h2>
+<ul>
+<li>端口：<code>11004</code></li>
+<li>5553重定向：使用53端口替换dnsmasq</li>
+<li>执行文件路径：<code>/viry/serv/AdGuardHome/exec/AdGuardHome</code></li>
+<li>配置文件路径：<code>/viry/serv/AdGuardHome/data/AdGuardHome.yaml</code></li>
+<li>工作目录：<code>/viry/serv/AdGuardHome</code></li>
+<li>运行日志路径：<code>/viry/serv/AdGuardHome/data/AdGuardHome.log</code></li>
+</ul>
+<h2 id="无法更新内核">无法更新内核</h2>
+<p>问题出在默认执行文件路径不对，将执行文件路径修改为 <code>/usr/bin/AdGuardHome/AdGuardHome</code></p></div>
 				
 				
 				<div class="read-more">
@@ -547,7 +682,16 @@
 			
 		</div>
 	</div>
-</div><div class="summary">开启SSH 管理 -&gt; 服务 -&gt; TSM-SSH 使用SSH登录到ESXI 修改的固件vmdk大小 1cd /vmfs/volumes/datastore1 2ls *.vmdk 3vmkfstools -i openwrt.vmdk 123.vmdk 4vmkfstools -X 1024M 123.vmdk # 需大于源文件大小 添加硬盘 根据实际情况选择EFI或BIOS引导</div>
+</div><div class="summary"><h2 id="开启ssh">开启SSH</h2>
+<p>管理 -&gt; 服务 -&gt; TSM-SSH</p>
+<p>使用SSH登录到ESXI</p>
+<h2 id="修改的固件vmdk大小">修改的固件vmdk大小</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">cd</span> /vmfs/volumes/datastore1
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ls *.vmdk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>vmkfstools -i openwrt.vmdk 123.vmdk
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>vmkfstools -X 1024M 123.vmdk <span style="color:#57606a"># 需大于源文件大小</span>
+</span></span></code></pre></div><h2 id="添加硬盘">添加硬盘</h2>
+<p>根据实际情况选择EFI或BIOS引导</p></div>
 				
             
 
@@ -594,7 +738,10 @@
 			
 		</div>
 	</div>
-</div><div class="summary">修改uhttpd配置文件 /etc/config/uhttpd 1option cert /viry/cert/akvicor.com.crt 2option key /viry/cert/akvicor.com.key 重启uhttpd服务 /etc/init.d/uhttpd restart</div>
+</div><div class="summary"><p>修改uhttpd配置文件 <code>/etc/config/uhttpd</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>option cert /viry/cert/akvicor.com.crt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>option key /viry/cert/akvicor.com.key
+</span></span></code></pre></div><p>重启uhttpd服务 <code>/etc/init.d/uhttpd restart</code></p></div>
 				
             
 
@@ -641,7 +788,13 @@
 			
 		</div>
 	</div>
-</div><div class="summary">使用golang编译程序遇到的问题 1# runtime/cgo 2/usr/bin/ld: cannot find -lpthread 3collect2: error: ld returned 1 exit status pthread primitives are part of the core libc.so library. to satisfy -lpthread, create an empty AR archive somewhere in the library search path. 1ar -rc /usr/lib/libpthread.a</div>
+</div><div class="summary"><p>使用golang编译程序遇到的问题</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># runtime/cgo
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>/usr/bin/ld: cannot find -lpthread
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>collect2: error: ld returned 1 exit status
+</span></span></code></pre></div><p>pthread primitives are part of the core libc.so library. to satisfy <code>-lpthread</code>, create an empty AR archive somewhere in the library search path.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ar -rc /usr/lib/libpthread.a
+</span></span></code></pre></div></div>
 				
             
 
@@ -688,7 +841,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary">此方法仅适合刚把镜像写入磁盘还未启动以及还未将镜像写入磁盘这两种情况，一旦系统启动，squashfs分区大小就已经确定了，如果要更改只能使用losetup挂载并</div>
+</div><div class="summary">此方法仅适合刚把镜像写入磁盘还未启动以及还未将镜像写入磁盘这两种情况，一旦系统启动，squashfs分区大小就已经确定了，如果要更改只能使用losetup挂载并执行resize.f2fs扩展大小。</div>
 				
 				
 				<div class="read-more">

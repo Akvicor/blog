@@ -4,7 +4,7 @@
     <title>Android on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/android/</link>
     <description>Recent content in Android on Akvicor&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 15 Sep 2024 15:35:27 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/android/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/android/oneplus_disable_update/</link>
       <pubDate>Sat, 20 Apr 2024 03:57:22 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/android/oneplus_disable_update/</guid>
-      <description>通过ADB停用系统更新和去除更新统治 1# 屏蔽更新 2adb shell pm disable-user com.oneplus.opbackup 3# 清除更新通知 4adb shell pm clear com.oneplus.opbackup 5# 恢复更新 6adb shell pm enable com.oneplus.opbackup</description>
+      <description>&lt;p&gt;通过ADB停用系统更新和去除更新统治&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#57606a&#34;&gt;# 屏蔽更新&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&lt;/span&gt;&lt;span&gt;adb shell pm disable-user com.oneplus.opbackup&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#57606a&#34;&gt;# 清除更新通知&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4&lt;/span&gt;&lt;span&gt;adb shell pm clear com.oneplus.opbackup&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#57606a&#34;&gt;# 恢复更新&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6&lt;/span&gt;&lt;span&gt;adb shell pm &lt;span style=&#34;color:#6639ba&#34;&gt;enable&lt;/span&gt; com.oneplus.opbackup&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>ADB Commands</title>

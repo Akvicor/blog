@@ -211,12 +211,12 @@
 <ol>
 <li>查看密钥是否存在</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#0086b3">cd</span> ~/.ssh
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">cd</span> ~/.ssh
 </span></span></code></pre></div><p>如果没有密钥则不会有此文件夹，有则备份删除,   也可以直接删除</p>
 <ol start="2">
 <li>生成新密钥</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh-keygen -t rsa -C <span style="color:#d14">&#34;youremail@example.com&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh-keygen -t rsa -C <span style="color:#0a3069">&#34;youremail@example.com&#34;</span>
 </span></span></code></pre></div><p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，因为这个Key仅仅用于简单的服务，所以也无需设置密码。</p>
 <p>如果服务器端需要公钥,  直接把.ssh目录下的id_rsa.pub配置即可, id_rsa为私钥一定要保密!!!!</p>
     </div>

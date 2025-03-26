@@ -245,7 +245,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">编辑 /etc/default/ufw 找到 18行左右的 DEFAULT_FORWARD_POLICY，将值改为true 1vim /etc/default/ufw 编辑 /etc/sysctl.conf 将 net.ipv4.ip_forward=1 注释去掉，并确保值为1 1vim /etc/sysctl.conf 2sysctl -p 编辑 /etc/ufw/before.rules 在 *filter 上方，一般在最顶部，添</div>
+</div><div class="summary"><h2 id="编辑-etcdefaultufw">编辑 <code>/etc/default/ufw</code></h2>
+<p>找到 18行左右的 <code>DEFAULT_FORWARD_POLICY</code>，将值改为<code>true</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/default/ufw
+</span></span></code></pre></div><h2 id="编辑-etcsysctlconf">编辑 <code>/etc/sysctl.conf</code></h2>
+<p>将 <code>net.ipv4.ip_forward=1</code> 注释去掉，并确保值为1</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/sysctl.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sysctl -p
+</span></span></code></pre></div><h2 id="编辑-etcufwbeforerules">编辑 <code>/etc/ufw/before.rules</code></h2>
+<p>在 <code>*filter</code> 上方，一般在最顶部，添加如下命令</p></div>
 				
 				
 				<div class="read-more">
@@ -297,12 +305,31 @@
 			
 		</div>
 	</div>
-</div><div class="summary">docker默认情况下会使用整个172.16.0.0/12网段, 很明显对于个人用户, docker占用了太多的内网IP, 容易与其他内网网段冲突 1. 停用所有镜像 1# 停止</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/docker/network/">查看更多…</a>
-				</div>
+</div><div class="summary"><p>docker默认情况下会使用整个172.16.0.0/12网段, 很明显对于个人用户, docker占用了太多的内网IP, 容易与其他内网网段冲突</p>
+<h2 id="1-停用所有镜像">1. 停用所有镜像</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 停止</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>docker stop <span style="color:#cf222e">$(</span>docker ps -aq<span style="color:#cf222e">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 删除</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>docker rm <span style="color:#cf222e">$(</span>docker ps -aq<span style="color:#cf222e">)</span>
+</span></span></code></pre></div><h2 id="2-清楚已经分配的网络">2. 清楚已经分配的网络</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>docker network prune
+</span></span></code></pre></div><h2 id="3-编辑配置文件">3. 编辑配置文件</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 创建文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>vim /etc/docker/daemon.json
+</span></span></code></pre></div><ul>
+<li>我将<code>172.18.0.1/16</code>分配给默认网段, 一般情况下<code>/24</code>也够用</li>
+<li>我将<code>172.19.0.0/16</code>分配给docker默认的ip段分配器, <code>/26</code>限制每次分配的网段大小</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-json" data-lang="json"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#0550ae">&#34;bip&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;172.18.0.1/16&#34;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#0550ae">&#34;default-address-pools&#34;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">[</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#1f2328">{</span><span style="color:#0550ae">&#34;base&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;172.19.0.0/16&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">&#34;size&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">26</span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><h2 id="4-应用配置">4. 应用配置</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>systemctl daemon-reload
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>systemctl restart docker
+</span></span></code></pre></div></div>
 				
             
 
@@ -349,7 +376,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">远程挂载目录 安装 1apt install sshfs 挂载 1sshfs <a href="mailto:root@10.0.0.4">root@10.0.0.4</a>:/storage /mnt/storage -o _netdev,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/root/.ssh/id_ed25519 开机自动挂载 1# vim /etc/fstab 210.0.0.4:/storage /mnt/storage fuse.sshfs _netdev,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/root/.ssh/id_ed25519 0 0</div>
+</div><div class="summary"><p>远程挂载目录</p>
+<h2 id="安装">安装</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install sshfs
+</span></span></code></pre></div><h2 id="挂载">挂载</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sshfs root@10.0.0.4:/storage /mnt/storage -o _netdev,reconnect,ServerAliveInterval<span style="color:#0550ae">=</span>15,ServerAliveCountMax<span style="color:#0550ae">=</span>3,IdentityFile<span style="color:#0550ae">=</span>/root/.ssh/id_ed25519
+</span></span></code></pre></div><h2 id="开机自动挂载">开机自动挂载</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># vim /etc/fstab</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>10.0.0.4:/storage /mnt/storage fuse.sshfs _netdev,reconnect,ServerAliveInterval<span style="color:#0550ae">=</span>15,ServerAliveCountMax<span style="color:#0550ae">=</span>3,IdentityFile<span style="color:#0550ae">=</span>/root/.ssh/id_ed25519 <span style="color:#0550ae">0</span> <span style="color:#0550ae">0</span>
+</span></span></code></pre></div></div>
 				
             
 
@@ -396,7 +431,16 @@
 			
 		</div>
 	</div>
-</div><div class="summary">NFS是一种没有加密的高性能的远程挂载工具, 如果在局域网中可以直接使用, 如果在公网环境下, 可以搭配Wireguard使用 安装 NFS服务器 假设IP: 10.0.0.4 1apt install -y nfs-kernel-server 客户</div>
+</div><div class="summary"><p>NFS是一种没有加密的高性能的远程挂载工具, 如果在局域网中可以直接使用, 如果在公网环境下, 可以搭配<a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard</a>使用</p>
+<h2 id="安装">安装</h2>
+<h3 id="nfs服务器">NFS服务器</h3>
+<p>假设IP: 10.0.0.4</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install -y nfs-kernel-server
+</span></span></code></pre></div><h3 id="客户端">客户端</h3>
+<p>假设IP: 10.0.0.2</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install -y nfs-common
+</span></span></code></pre></div><h2 id="创建共享">创建共享</h2>
+<p>编辑配置文件</p></div>
 				
 				
 				<div class="read-more">
@@ -448,7 +492,16 @@
 			
 		</div>
 	</div>
-</div><div class="summary">有时候服务器之间需要加密传输数据(例如NFS挂载)，为了平衡延迟和速度，可以采用Wireguard来组建一个内网，这样业务数据可以通过内网IP高速和安全的传输 注</div>
+</div><div class="summary"><p>有时候服务器之间需要加密传输数据(例如<a href="https://blog.akvicor.com/posts/linux/nfs/">NFS挂载</a>)，为了平衡延迟和速度，可以采用Wireguard来组建一个内网，这样业务数据可以通过内网IP高速和安全的传输</p>
+<h2 id="注意">注意</h2>
+<ul>
+<li><strong>Wireguard有加密但无混淆，特征较为明显，谨慎用于其他用途</strong></li>
+<li><strong>Wireguard使用UDP传输，部分云服务商限制了UDP会导致性能较差</strong></li>
+<li>由于海外和国内网络互联较差, 使用了一个带优化线路的中转节点来中转国内和海外服务器, 降低连接延迟, 提高传输速度</li>
+</ul>
+<h2 id="特性"><del>特性</del></h2>
+<h3 id="listenport-监听和发送端口的问题">ListenPort 监听和发送端口的问题</h3>
+<p>当给Interface配置ListenPort之后，这个端口既承担了监听端口的功能，又承担了对外发送端口的功能，这会导致一些问题</p></div>
 				
 				
 				<div class="read-more">
@@ -500,7 +553,18 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Emby的硬件解码需要订阅才能使用 安装驱动 1# 安装显卡驱动 2apt install intel-media-va-driver-non-free 3# 或开源 4apt install intel-media-va-driver 5 6# 如果上述没有生效, 安装这个(不确定这个起作用没有) 7apt install i965-va-driver 配置grub 1vim /etc/default/grub 查看 GRUB_CMDLINE_LINUX 中</div>
+</div><div class="summary"><p>Emby的硬件解码需要订阅才能使用</p>
+<h2 id="安装驱动">安装驱动</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 安装显卡驱动</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt install intel-media-va-driver-non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 或开源</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>apt install intel-media-va-driver
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a"># 如果上述没有生效, 安装这个(不确定这个起作用没有)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>apt install i965-va-driver
+</span></span></code></pre></div><h2 id="配置grub">配置grub</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/default/grub
+</span></span></code></pre></div><p>查看 <code>GRUB_CMDLINE_LINUX</code> 中是否有 <code>nomodeset</code> 项, 如果有需要去掉. 去掉之后使grub生效</p></div>
 				
 				
 				<div class="read-more">
@@ -552,7 +616,10 @@
 			
 		</div>
 	</div>
-</div><div class="summary">如果IP被Google判定为中国, 可使用此方式修复, 视情况可能需要坚持很久 临时解决方案 访问 google.com 时，地址后加上ncr，即 google.com/ncr （ncr = no country redirect = 无国家/地区重定向） 在谷</div>
+</div><div class="summary"><p>如果IP被Google判定为中国, 可使用此方式修复, 视情况可能需要坚持很久</p>
+<h2 id="临时解决方案">临时解决方案</h2>
+<p>访问 <a href="https://google.com">google.com</a> 时，地址后加上ncr，即 <a href="https://google.com/ncr">google.com/ncr</a> （ncr = no country redirect = 无国家/地区重定向）</p>
+<p>在谷歌搜索设置里，SafeSearch选项选为Show explicit results</p></div>
 				
 				
 				<div class="read-more">
@@ -610,7 +677,35 @@
 			
 		</div>
 	</div>
-</div><div class="summary">这是一篇指导如何使用和开发Wallet的博客 详细的内容以后再说吧, 今天连着开源了三个项目, 写了三篇博客, 燃尽了 相关项目 项目代码 Github <a href="https://github.com/Akvicor/wallet">https://github.com/Akvicor/wallet</a> 项目代码 Gitee <a href="https://gitee.com/Akvicor/wallet">https://gitee.com/Akvicor/wallet</a> 界面预览 多用户 自定</div>
+</div><div class="summary"><p>这是一篇指导如何使用和开发Wallet的博客</p>
+<p><s style="text-decoration: line-through;" title="指挖坑">详细的内容以后再说吧, 今天连着开源了三个项目, 写了三篇博客, 燃尽了</s></p>
+<p><img src="https://img.akvicor.com/i/2025/02/16/67b0c8224bb97.gif" alt="64ce148cec784.gif">
+<img src="https://img.akvicor.com/i/2025/02/16/67b0c82167416.gif" alt="64ce146497524.gif"></p>
+<h2 id="相关项目">相关项目</h2>
+<ul>
+<li><a href="https://github.com/Akvicor/wallet">项目代码 Github https://github.com/Akvicor/wallet</a></li>
+<li><a href="https://gitee.com/Akvicor/wallet">项目代码 Gitee https://gitee.com/Akvicor/wallet</a></li>
+</ul>
+<h2 id="界面预览">界面预览</h2>
+<ul>
+<li>多用户</li>
+<li>自定义银行,货币类型,银行卡类型</li>
+<li>保存银行卡信息</li>
+<li>自定义汇率</li>
+<li>自定义交易分类(收入/支出/转账/兑换下的子分类</li>
+<li>创建钱包, 以及钱包下的划分, 每个划分绑定到某张银行卡</li>
+<li>创建愿望单, 与钱包功能一致</li>
+<li>创建债务, 与钱包功能一致</li>
+<li>创建订阅, 自定义付费周期, 自动计算下次付费时间, 下次付费前通过短信或邮件提醒, 自动计算每天/月/年的订阅开支</li>
+<li>开支图表, 日历形式展示每天/月的开支, 饼状图展示区间内的开支占比, 折线图展示区间内的开支占比</li>
+<li>通过短信或邮件发送通知</li>
+</ul>
+<p><img src="https://img.akvicor.com/i/2025/02/16/67b0c60cce4de.png" alt="2025-02-16-004955_1871x779_scrot.png">
+<img src="https://img.akvicor.com/i/2025/02/16/67b0c60aaa42f.png" alt="2025-02-16-005049_1873x623_scrot.png">
+<img src="https://img.akvicor.com/i/2025/02/16/67b0c609c72e5.png" alt="2025-02-16-005055_1881x633_scrot.png">
+<img src="https://img.akvicor.com/i/2025/02/16/67b0c6085955a.png" alt="2025-02-16-005102_1885x862_scrot.png">
+<img src="https://img.akvicor.com/i/2025/02/16/67b0c606e0c86.png" alt="2025-02-16-005106_1874x757_scrot.png">
+<img src="https://img.akvicor.com/i/2025/02/16/67b0c605c3d71.png" alt="2025-02-16-005109_1868x803_scrot.png"></p></div>
 				
 				
 				<div class="read-more">
@@ -670,7 +765,19 @@
 			
 		</div>
 	</div>
-</div><div class="summary">这是一篇指导如何使用和开发MSG的博客 概念介绍 平台: 例如SMS,邮箱,Telegram,微信 Bot: 每个bot都可以支持一个或多个平台, 但每种平台只能绑定一个 通知渠道</div>
+</div><div class="summary"><p>这是一篇指导如何使用和开发MSG的博客</p>
+<h2 id="概念介绍">概念介绍</h2>
+<ul>
+<li>平台: 例如SMS,邮箱,Telegram,微信</li>
+<li>Bot: 每个bot都可以支持一个或多个平台, 但每种平台只能绑定一个</li>
+<li>通知渠道: 将Bot,平台以及发送目标绑定在一起, 同时可以给渠道设置标记(全局唯一), 发送信息时可以通过渠道ID或渠道标记向对应的渠道发送信息</li>
+</ul>
+<h2 id="相关项目">相关项目</h2>
+<ul>
+<li><a href="https://github.com/Akvicor/msg">项目代码 Github https://github.com/Akvicor/msg</a></li>
+<li><a href="https://gitee.com/Akvicor/msg">项目代码 Gitee https://gitee.com/Akvicor/msg</a></li>
+</ul>
+<p>相关</p></div>
 				
 				
 				<div class="read-more">
@@ -730,11 +837,76 @@
 			
 		</div>
 	</div>
-</div><div class="summary">苦于国内的短信平台都需要指定发送模板, 没法发送高度自定义的消息, 且模板审核过于麻烦, 因此想要自己开发一套用于发送短信的平台 受 此文章 的启发, 决定使用Air780E</div>
+</div><div class="summary"><p>苦于国内的短信平台都需要指定发送模板, 没法发送高度自定义的消息, 且模板审核过于麻烦, 因此想要自己开发一套用于发送短信的平台</p>
+<p>受 <a href="https://www.chenxublog.com/2022/10/28/19-9-sms-forwarding-air780e-esp32c3.html">此文章</a> 的启发, 决定使用Air780E和树莓派制作一个能够<strong>接收</strong>和<strong>发送</strong>短信的程序</p></div>
 				
 				
 				<div class="read-more">
 				  <a href="/posts/project/sms/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/serial_port/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Linux虚拟串口 Serial port <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-09-22
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-23
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><p>首先安装socat</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt-get install socat
+</span></span></code></pre></div><p>启动虚拟串口</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>socat -d -d pty,raw,echo<span style="color:#0550ae">=</span><span style="color:#0550ae">0</span> pty,raw,echo<span style="color:#0550ae">=</span><span style="color:#0550ae">0</span>
+</span></span></code></pre></div><p>成功后返回以下信息</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>2024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/13
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>2024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/14
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>2024/09/22 21:32:10 socat[1997612] N starting data transfer loop with FDs [5,5] and [7,7]
+</span></span></code></pre></div><ul>
+<li>（终端1）监听其中一个串口 <code>cat &lt; /dev/pts/2</code></li>
+<li>（终端2）另一个串口写入数据 <code>echo &quot;Hello World!&quot; &gt; /dev/pts/3</code></li>
+</ul>
+<p>现在，从终端1可以看到“”Hello World!“”打印信息，证明串口创建并连接成功。</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/serial_port/">查看更多…</a>
 				</div>
 				
             
@@ -772,7 +944,7 @@
         <a href="/posts/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>

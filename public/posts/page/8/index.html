@@ -210,355 +210,6 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/openwrt/esxi/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> vmdk for ESXi <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-05-05
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/openwrt">OpenWrt</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">开启SSH 管理 -&gt; 服务 -&gt; TSM-SSH 使用SSH登录到ESXI 修改的固件vmdk大小 1cd /vmfs/volumes/datastore1 2ls *.vmdk 3vmkfstools -i openwrt.vmdk 123.vmdk 4vmkfstools -X 1024M 123.vmdk # 需大于源文件大小 添加硬盘 根据实际情况选择EFI或BIOS引导</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/resize_partition/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Resize Partition <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-05-04
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">1.卸载磁盘 1umount -l /data 若提示磁盘忙，使用fuser找出将正在使用磁盘的程序并结束掉。 1fuser -m -v /data 2fuser -m -v -i -k /data 2.磁盘分区 使用fdisk命令重新调整磁盘分区大小 1fdisk -l 2fdisk /dev/sdb 1p</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/resize_partition/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/swap/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 增加SWAP分区 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-05-04
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">一般来说可以按照如下规则设置swap大小： 4G以内的物理内存，SWAP 设置为内存的2倍。 4-8G的物理内存，SWAP 等于内存大小。 8-64G 的物理内存，SWAP 设置为8</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/swap/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/windows/network_connection_does_not_exist/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 无法删除网络驱动器：此网络连接不存在 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-03-28
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/windows">Windows</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">单击 “开始”，指向 “运行”，键入 regedit，然后单击 “确定”。 在注册表编辑器中，找到以下注册表子项： HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2 右键单击要删除的映射驱动器。 例如，右键单击 ##Serv</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/network_connection_does_not_exist/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/music_player_control/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Music Player Control <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-03-22
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">通过命令行控制软件的声音 安装 1sudo apt install playerctl 使用 控制当前 1playerctl play 2playerctl pause 3playerctl play-pause # toggle 4playerctl stop 5playerctl next 6playerctl previous 7playerctl volume 控制指定软件 获取软件列表 1playerctl status -l 控制指定软件，如网易云音乐 1playerctl &ndash;player=netease-cloud-music play-pause</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/fstab/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Fstab <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-03-08
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">系统挂载的一些限制 根目录/是必须挂载的，而且一定要先于其他mount point被挂载进来。 其他挂载点必须为已新建的目录，可任意指定，但一定要遵守必需的系统目录架</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/fstab/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/aos/unreal_mode/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Unreal mode <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-27
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-15
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/aos">AOS</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Unreal mode consists of breaking the 64KiB limit of real mode segments (while retaining 16-bit instructions and the segment * 16 + offset addressing mode) by tweaking the descriptor caches.</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
             <a href="https://blog.akvicor.com/posts/aos32/gb2312/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
                 <span> AOS32 显示中文字符GB2312 <sup></sup></span>
@@ -594,7 +245,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">aos32-gb2312.tgz 一个GB2312汉字是由两个字节编码的，范围为A1A1~FEFE。A1-A9为符号区，B0到F7为汉字区。每一个区有94个字符。 点阵结构 从图片可以看出： 日文编</div>
+</div><div class="summary"><p><a href="https://via.akvicor.com/file?f=1392">aos32-gb2312.tgz</a></p>
+<p>一个GB2312汉字是由两个字节编码的，范围为A1A1~FEFE。A1-A9为符号区，B0到F7为汉字区。每一个区有94个字符。</p>
+<h1 id="点阵结构">点阵结构</h1>
+<p>从图片可以看出：</p>
+<ul>
+<li>日文编码的第一个字节为点阵的左半部分，第二个字节为点阵的右半部分。</li>
+</ul>
+<p><img src="https://img.akvicor.com/i/2024/09/15/66e68e9f894dd.png" alt="日文EUC" title="日文EUC"></p></div>
 				
 				
 				<div class="read-more">
@@ -646,7 +304,33 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><a href="https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access">https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access</a> 安装TexLive，使用 which latex 和 which dvipng 检查是否安装 按照注释中操作 1&lt;?php 2# Place this file in extension directory as Mtag.php 3# Add the following line to LocalSettings.php: 4# include './extensions/Mtag.php'; 5# Mediawiki will render as LaTeX the code within &lt;m&gt; &lt;/m&gt; tags. 6 7$wgExtensionFunctions[] = &quot;wfMtag&quot;; 8 9function wfMtag() { 10 global $wgParser; 11 $wgParser-&gt;setHook( &quot;m&quot;, &quot;returnMtagged&quot; ); 12}</div>
+</div><div class="summary"><p><a href="https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access">https://www.mediawiki.org/wiki/MediaWiki_and_LaTeX_on_a_host_with_shell_access</a></p>
+<p>安装TexLive，使用 which latex 和 which dvipng 检查是否安装</p>
+<h2 id="按照注释中操作">按照注释中操作</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#0550ae">&lt;?</span><span style="color:#1f2328">php</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a"># Place this file in extension directory as Mtag.php
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#57606a"># Add the following line to LocalSettings.php:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#57606a"># include &#39;./extensions/Mtag.php&#39;;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#57606a"># Mediawiki will render as LaTeX the code within &lt;m&gt; &lt;/m&gt; tags.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#953800">$wgExtensionFunctions</span><span style="color:#1f2328">[]</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;wfMtag&#34;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#cf222e">function</span> <span style="color:#6639ba">wfMtag</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#cf222e">global</span> <span style="color:#953800">$wgParser</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#953800">$wgParser</span><span style="color:#0550ae">-&gt;</span><span style="color:#1f2328">setHook</span><span style="color:#1f2328">(</span> <span style="color:#0a3069">&#34;m&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;returnMtagged&#34;</span> <span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#cf222e">function</span> <span style="color:#6639ba">returnMtagged</span><span style="color:#1f2328">(</span> <span style="color:#953800">$code</span><span style="color:#1f2328">,</span> <span style="color:#953800">$argv</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#57606a"># if you have mathtex.cgi installed:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#57606a"></span>    <span style="color:#953800">$txt</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;&lt;img src=&#34;/cgi-bin/mathtex.cgi?&#39;</span><span style="color:#0550ae">.</span><span style="color:#953800">$code</span><span style="color:#0550ae">.</span><span style="color:#0a3069">&#39;&#34;&gt;&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#57606a"># OR if you want to temporarily test a public mathtex.cgi:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#57606a">#    $txt=&#39;&lt;img src=&#34;http://www.forkosh.com/mathtex.cgi?&#39;.$code.&#39;&#34;&gt;&#39;;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#cf222e">return</span> <span style="color:#953800">$txt</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#57606a">?&gt;</span><span style="color:#f6f8fa;background-color:#82071e">
+</span></span></span></code></pre></div><h2 id="下载并解压-mathtexzip">下载并解压 Mathtex.zip</h2>
+<p><a href="https://via.akvicor.com/file?f=1241">https://via.akvicor.com/file?f=1241</a></p></div>
 				
 				
 				<div class="read-more">
@@ -698,13 +382,587 @@
 			
 		</div>
 	</div>
-</div><div class="summary">The CPU in modern computer hardware performs reads and writes to memory most efficiently when the data is naturally aligned, which generally means that the data’s memory address is a multiple of the data size. For instance, in a 32-bit architecture, the data may be aligned if the data is stored in four consecutive bytes and the first byte lies on a 4-byte boundary.
-If the highest and lowest bytes in a datum are not within the same memory word the computer must split the datum access into multiple memory accesses.</div>
+</div><div class="summary"><p>The CPU in modern computer hardware performs reads and writes to memory most efficiently when the data is naturally aligned, which generally means that the data&rsquo;s memory address is a multiple of the data size. For instance, in a 32-bit architecture, the data may be aligned if the data is stored in four consecutive bytes and the first byte lies on a 4-byte boundary.</p>
+<p>If the highest and lowest bytes in a datum are not within the same memory word the computer must split the datum access into multiple memory accesses. This requires a lot of complex circuitry to generate the memory accesses and coordinate them. To handle the case where the memory words are in different memory pages the processor must either verify that both pages are present before executing the instruction or be able to handle a TLB miss or a page fault on any memory access during the instruction execution.</p></div>
 				
 				
 				<div class="read-more">
 				  <a href="/posts/c/data_structure_alignment/">查看更多…</a>
 				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/create_iso_images/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Creating ISO images with dd and mkisofs <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-27
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><h2 id="img-file">IMG file</h2>
+<h3 id="make">Make</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>dd <span style="color:#cf222e">if</span><span style="color:#0550ae">=</span>/dev/zero <span style="color:#953800">of</span><span style="color:#0550ae">=</span>fdimage.img <span style="color:#953800">count</span><span style="color:#0550ae">=</span><span style="color:#0550ae">2880</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># or</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>dd <span style="color:#cf222e">if</span><span style="color:#0550ae">=</span>/dev/zero <span style="color:#953800">of</span><span style="color:#0550ae">=</span>fdimage.img <span style="color:#953800">bs</span><span style="color:#0550ae">=</span><span style="color:#0550ae">1024</span> <span style="color:#953800">count</span><span style="color:#0550ae">=</span><span style="color:#0550ae">1440</span>
+</span></span></code></pre></div><h3 id="format">Format</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkfs.msdos fdimage.img
+</span></span></code></pre></div><h3 id="mount">Mount</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mount -o loop *.img /mnt
+</span></span></code></pre></div><h3 id="bootable">Bootable</h3>
+<p>因为制作可启动镜像一定会用到虚拟机，推荐用 Virtualbox，先到网上下个 DOS 启动盘来引导。用 DOS 的 sys 命令传递系统。推荐使用 FreeDOS，属自由软件。也可用 dd 命令 来传递引导引导信息，并复制启动启动时所需文件来做启动盘。以 FreeDOS 为例，传递启动信息用以下命令，其中下载的启动盘为balder10.img 文件</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/create_iso_images/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/service/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Create Systemd Service Unit <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-27
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><h2 id="文件所在路径">文件所在路径</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /usr/lib/systemd/system/SERVICE_NAME.service
+</span></span></code></pre></div><h2 id="服务模板">服务模板</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[Unit]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>Description=Viry Service
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>After=network.target auditd.service
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>[Service]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>User=root
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>Type=oneshot
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>RemainAfterExit=true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>ExecStart=/viry/serv/serv.sh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>ExecStop=/bin/true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>[Install]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>WantedBy=multi-user.target
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>Alias=viry.service
+</span></span></code></pre></div><h2 id="servsh">serv.sh</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">#!/bin/bash
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Sync Time&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>ntpdate 172.16.1.1
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>hwclock -w
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#953800">TIME</span><span style="color:#0550ae">=</span><span style="color:#cf222e">$(</span><span style="color:#953800">TZ</span><span style="color:#0550ae">=</span>UTC-8 date <span style="color:#0a3069">&#34;+%Y-%m-%d %H:%M:%S&#34;</span><span style="color:#cf222e">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#953800">LOG</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;/viry/serv/serv.log&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Ready&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;&#34;</span> &gt;&gt; <span style="color:#953800">$LOG</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#6639ba">echo</span> <span style="color:#953800">$TIME</span> &gt;&gt; <span style="color:#953800">$LOG</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Start DEMO&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Start DEMO&#34;</span> &gt;&gt; <span style="color:#953800">$LOG</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>sh /viry/serv/demo/demo.sh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Finished&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Finished&#34;</span> &gt;&gt; <span style="color:#953800">$LOG</span>
+</span></span></code></pre></div><h2 id="demosh">demo.sh</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">#!/bin/bash
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#6639ba">cd</span> /viry/serv/demo/exec/
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#953800">screen_name</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;demo&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>screen -s /usr/bin/bash -dmS <span style="color:#953800">$screen_name</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#953800">cmd1</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#953800">cmd2</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;./demo&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>screen -x -S <span style="color:#953800">$screen_name</span> -p <span style="color:#0550ae">0</span> -X stuff <span style="color:#0a3069">&#34;</span><span style="color:#953800">$cmd1</span><span style="color:#0a3069">\n&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>screen -x -S <span style="color:#953800">$screen_name</span> -p <span style="color:#0550ae">0</span> -X stuff <span style="color:#0a3069">&#34;</span><span style="color:#953800">$cmd2</span><span style="color:#0a3069">\n&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;Demo Started&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#6639ba">exit</span> <span style="color:#0550ae">0</span>
+</span></span></code></pre></div></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/css/carousel/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> CSS-Only Carousel <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-25
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/css">CSS</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><p><img src="https://img.akvicor.com/i/2024/09/17/66e99811091b8.gif" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;wheelPlayer wheelAnimate&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>1<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>2<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>3<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>   <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>   <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">auto</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>   <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">350</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>   <span style="color:#cf222e">position</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">relative</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>   <span style="color:#cf222e">height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">25</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>   <span style="color:#cf222e">line-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">26</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>   <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">70</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>   <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>   <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">1</span><span style="color:#cf222e">px</span> <span style="color:#cf222e">solid</span> <span style="color:#cf222e">gray</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelAnimate</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>   <span style="color:#cf222e">animation</span><span style="color:#1f2328">:</span> whellPlayer <span style="color:#0550ae">9</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">infinite</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>   <span style="color:#cf222e">-moz-</span><span style="color:#cf222e">animation</span><span style="color:#1f2328">:</span> whellPlayer <span style="color:#0550ae">9</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">infinite</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>   <span style="color:#cf222e">-webkit-</span><span style="color:#cf222e">animation</span><span style="color:#1f2328">:</span> whellPlayer <span style="color:#0550ae">9</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">infinite</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">:</span><span style="color:#0550ae">nth-of-type</span><span style="color:#0550ae">(</span><span style="color:#0550ae">1</span><span style="color:#0550ae">)</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>   <span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-6</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>   <span style="color:#cf222e">-moz-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-6</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>   <span style="color:#cf222e">-webkit-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-6</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">:</span><span style="color:#0550ae">nth-of-type</span><span style="color:#0550ae">(</span><span style="color:#0550ae">2</span><span style="color:#0550ae">)</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>   <span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-3</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>   <span style="color:#cf222e">-moz-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-3</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>   <span style="color:#cf222e">-webkit-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-3</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>   <span style="color:#cf222e">margin-top</span><span style="color:#1f2328">:</span>  <span style="color:#0550ae">-27</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">wheelPlayer</span> <span style="color:#0550ae">div</span><span style="color:#1f2328">:</span><span style="color:#0550ae">nth-of-type</span><span style="color:#0550ae">(</span><span style="color:#0550ae">3</span><span style="color:#0550ae">)</span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>   <span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">-0</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>   <span style="color:#cf222e">-moz-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>   <span style="color:#cf222e">-webkit-</span><span style="color:#cf222e">animation-delay</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">s</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>   <span style="color:#cf222e">margin-top</span><span style="color:#1f2328">:</span>  <span style="color:#0550ae">-27</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/js/clipboard/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Clipboard <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-23
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/javascript">JavaScript</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><p>向剪切板写入 图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能,是异步的</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">body</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#cf222e">async</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">e</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#cf222e">await</span> <span style="color:#1f2328">navigator</span><span style="color:#1f2328">.</span><span style="color:#1f2328">clipboard</span><span style="color:#1f2328">.</span><span style="color:#1f2328">writeText</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;Yo&#39;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#1f2328">)</span>
+</span></span></code></pre></div><p>Clipboard.read()用于读取剪切板的数据，也是异步的成功返回数据</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/js/clipboard/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/xterm/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Xterm <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim ~/.Xresource
+</span></span></code></pre></div><p>填写配置</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>xterm.termName: xterm-256color
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>xterm*locale:true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>xterm.utf8: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>xterm*utf8Title: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>!fix alt key input 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>!xterm*eightBitInput: false
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>!xterm*altSendsEscape: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>!xterm*scrollBar: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>!xterm*rightScrollBar: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>xterm*SaveLines: 4096
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>!xterm*background: black
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>!xterm*foreground: green
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>xterm*printAttributes: 0
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>xterm*printerCommand: cat &gt; ~/xtermdump
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>!xterm*VT100.translations: #override &lt;Btn1UP&gt;: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>xterm*VT100.translations: #override \
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>        Ctrl &lt;KeyPress&gt; V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>        &lt;BtnUp&gt;: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        Ctrl &lt;KeyPress&gt; P: print() \n
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>xterm*faceName: Ubuntu Bold:antialias=True:pixelsize=12
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>xterm*faceNameDoublesize:Noto Sans Mono CJK SC:antialias=True:pixelsize=12
+</span></span></code></pre></div></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/sudo/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Sudo <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install sudo
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">cd</span> /etc/sudoers.d
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>vim user
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># Akvicor ALL=(ALL)NOPASSWD:ALL</span>
+</span></span></code></pre></div></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/ufw/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Ufw <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><p><a href="https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97">https://wiki.ubuntu.org.cn/Ufw%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97</a></p>
+<h2 id="安装">安装</h2>
+<p>默认UFW的规则是放通全部端口</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt-get install ufw
+</span></span></code></pre></div><h2 id="设置默认规则">设置默认规则</h2>
+<p>首先设置拒绝所有传入并允许所有传出。</p>
+<p>请勿运行以下命令后直接应用，否则会直接锁定你的服务器。确保在应用默认规则前放通了SSH和其他关键服务的端口。</p></div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/ufw/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/windows/notepad_compile/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Notepad Compile <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/windows">Windows</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><h2 id="environment">Environment</h2>
+<p>Add MinGW environment to Path: <code>C:\MinGW\bin</code></p>
+<h2 id="open-notepad">Open Notepad++</h2>
+<p>Plug-&gt;Plugin Manager-&gt;Show Plugin Manager</p>
+<p>at Available, double click &lsquo;downloading list&rsquo;</p>
+<p>Search &lsquo;Nppexec&rsquo;, install and restart</p>
+<h2 id="open-console">Open Console</h2>
+<p>Plug-&gt;NppExec-&gt;Show Console</p>
+<h2 id="compile">Compile</h2>
+<p>Plug-&gt;NppExec-&gt;Execute</p>
+<h3 id="compile-1">Compile</h3>
+<ul>
+<li>input: <code>g++ $(FULL_CURRENT_PATH) -g -o $(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>Compile</code></li>
+</ul>
+<h3 id="run">Run</h3>
+<ul>
+<li>input: <code>$(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>Run</code></li>
+</ul>
+<h3 id="gdb">GDB</h3>
+<ul>
+<li>input: <code>gdb $(CURRENT_DIRECTORY)\$(NAME_PART).exe</code></li>
+<li>click save, input: <code>GDB</code></li>
+</ul>
+<h2 id="add-to-macros-submenu">Add to Macros submenu</h2>
+<p>Plug-&gt;NppExec-&gt;Advanced Options</p>
+<p>at Associated script:</p>
+<ul>
+<li>Add-&gt; Compile and Run and GBD</li>
+<li>Menu items -&gt; Place to the Macros submenu</li>
+</ul></div>
 				
             
 
@@ -741,7 +999,7 @@ If the highest and lowest bytes in a datum are not within the same memory word t
         <a href="/posts/page/9/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>

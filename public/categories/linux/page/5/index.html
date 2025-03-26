@@ -210,209 +210,6 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/linux/zoneinfo/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Debian Zoneinfo <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-15
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">1# 使用UTC时间 2cp /usr/share/zoneinfo/UTC /etc/localtime 3# 使用GMT-8时间，即北京时间 4cp /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime 5# 查看当前时间 6date &quot;+%Y-%m-%d %H:%M:%S&quot; 7TZ=UTC-8 date +%c%:::z 8# 同步时间到硬件 9hwclock -w</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/trust_ca/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Trust CA certificates <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-01-26
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">Debian 1# Debian/Ubuntu/Gentoo 2# - 安装 3sudo cp root_ca.crt /usr/local/share/ca-certificates/root_ca.crt 4# update-ca-certificates 会添加 /etc/ca-certificates.conf 配置文件中指定的证书 5# 另外所有 /usr/local/share/ca-certificates/*.crt 会被列为隐式信任 6sudo update-ca-certificates 7 8# - 删除 9sudo rm /usr/local/share/ca-certificates/root_ca.crt 10sudo update-ca-certificates &ndash;fresh RHEL 1# CentOS/Fedora/RHEL 2yum install ca-certificates 3# 启用动态 CA 配置功能： 4update-ca-trust force-enable 5cp root_ca.crt /etc/pki/ca-trust/source/anchors/ 6update-ca-trust MacOS 1# 安</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/trust_ca/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/file_permission/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> File Permission <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-08-19
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">修改文件或目录所有者 1# 修改文件的所有者为root 2chown root &lt;file&gt; 3# 修改文件的所有者和所有组为root 4chown root: &lt;file&gt; 5# 修改文件的所有者为root，所有组为akvicor 6chown root:akvicor &lt;file&gt; 7# 修改</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/file_permission/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/zsh/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> zsh <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-08-09
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">oh-my-zsh主题显示执行时间 oh-my-zsh主题显示执行时间 进入主题目录~/.oh-my-zsh/themes 在想要修改的主题文件中添加如下代码： 1function preexec() {</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/linux/zsh/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
             <a href="https://blog.akvicor.com/posts/linux/user_group/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
                 <span> Linux User/Group <sup></sup></span>
@@ -448,7 +245,19 @@
 			
 		</div>
 	</div>
-</div><div class="summary">概念和相关文件 在 Linux 用户系统中存在两类组。第一类是主要用户组（主组），第二类是附加用户组（附属组）。 主组：也被称为primary group、first group或</div>
+</div><div class="summary"><h2 id="概念和相关文件">概念和相关文件</h2>
+<p>在 Linux 用户系统中存在两类组。第一类是主要用户组（主组），第二类是附加用户组（附属组）。</p>
+<ul>
+<li>主组：也被称为primary group、first group或initial login group，用户的默认组，用户的gid所标识的组。</li>
+<li>附属组：也被称为Secondary group或supplementary group，用户的附加组。</li>
+</ul>
+<h2 id="存储文件">存储文件</h2>
+<ul>
+<li>用户帐户及相关信息都存储在<code>/etc/passwd</code>文件中，</li>
+<li>用户组信息存储在<code>/etc/shadow</code>和<code>/etc/group</code>文件。</li>
+</ul>
+<h2 id="id命令">id命令</h2>
+<p>通过<code>id</code>命令查看用户的主组和附属组</p></div>
 				
 				
 				<div class="read-more">
@@ -500,7 +309,26 @@
 			
 		</div>
 	</div>
-</div><div class="summary">赋予用户组操作usb设备的权限 创建用户组并添加用户到用户组 1# 创建用户组 2groupadd usbfs 3# 查看usbfs用户组的id 4# usbfs:x:1001: 5cat /dev/group | grep usbfs 6# 把akvicor添加到用户组 7useradd -G usbfs akvicor 8 # 或</div>
+</div><div class="summary"><p>赋予用户组操作usb设备的权限</p>
+<h2 id="创建用户组并添加用户到用户组">创建用户组并添加用户到用户组</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># 创建用户组</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>groupadd usbfs
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#57606a"># 查看usbfs用户组的id</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#57606a">#   usbfs:x:1001:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>cat /dev/group <span style="color:#1f2328">|</span> grep usbfs
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#57606a"># 把akvicor添加到用户组</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>useradd -G usbfs akvicor
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  <span style="color:#57606a"># 或</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>vim /etc/group
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>  <span style="color:#57606a"># 修改 usbfs:x:1001:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  <span style="color:#57606a"># 为   usbfs:x:1001:akvicor</span>
+</span></span></code></pre></div><h2 id="添加访问权限">添加访问权限</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 进入目录</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">cd</span> /etc/udev/rules.d
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 创建配置文件</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>vim xxx.rules
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#57606a"># 写入信息到配置文件</span>
+</span></span></code></pre></div><p>允许用户组<code>usbfs</code>访问usb设备</p></div>
 				
 				
 				<div class="read-more">
@@ -552,7 +380,35 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Debian安装说明 Debian 源 1wget <a href="https://paste.akvicor.com/api/106">https://paste.akvicor.com/api/106</a> Debian 12 + i3 修改时区 1# 修改时区 2ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime 3# 同步硬件时间 4hwclock -w 配置源 1curl <a href="https://paste.akvicor.com/api/101">https://paste.akvicor.com/api/101</a> &gt; /etc/apt/sources.list 2# 注释掉不需要用到的源，如 bookworm-proposed-up</div>
+</div><div class="summary"><p>Debian安装说明</p>
+<h2 id="debian-源">Debian 源</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wget https://paste.akvicor.com/api/106
+</span></span></code></pre></div><h2 id="debian-12--i3">Debian 12 + i3</h2>
+<h3 id="修改时区">修改时区</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 修改时区</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 同步硬件时间</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>hwclock -w
+</span></span></code></pre></div><h3 id="配置源">配置源</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>curl https://paste.akvicor.com/api/101 &gt; /etc/apt/sources.list
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># 注释掉不需要用到的源，如 bookworm-proposed-updates(介于stable和testing之间), bookworm-backports(新特性移植到旧版本)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>apt update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>apt upgrade
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>reboot
+</span></span></code></pre></div><h3 id="安装基础工具">安装基础工具</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install apt-transport-https ca-certificates
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt install vim curl wget git gcc g++ make screen bc jq zsh
+</span></span></code></pre></div><h3 id="添加基础bash命令">添加基础bash命令</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 添加ll命令.bashrc</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">alias</span> <span style="color:#953800">l</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;ls -al --color=auto&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#6639ba">alias</span> <span style="color:#953800">ll</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;ls -alh --color=auto&#39;</span>
+</span></span></code></pre></div><h3 id="笔记本电源操作">笔记本电源操作</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/systemd/logind.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span> <span style="color:#953800">HandleLidSwitch</span><span style="color:#0550ae">=</span>ignore <span style="color:#57606a"># 合上屏幕</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span> <span style="color:#953800">HandlePowerKey</span><span style="color:#0550ae">=</span>ignore <span style="color:#57606a"># 电源按键</span>
+</span></span></code></pre></div><h3 id="修改启动展示信息">修改启动展示信息</h3>
+<p><strong>ssh登录信息</strong></p></div>
 				
 				
 				<div class="read-more">
@@ -604,7 +460,16 @@
 			
 		</div>
 	</div>
-</div><div class="summary">1# 查看当前临时端口的范围 2sysctl net.ipv4.ip_local_port_range 3cat /proc/sys/net/ipv4/ip_local_port_range 4# 暂时性修改临时端口的范围 5echo 1024 65535 &gt; /proc/sys/net/ipv4/ip_local_port_range 6sysctl -w net.ipv4.ip_local_port_range=&quot;1024 64000&quot; 7# 永久性修改临时端口范围 8vim /etc/sysctl.conf # 编辑此文件并添加下面一行内容 9net.ipv4.ip_local_port_range = 1024 65535</div>
+</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 查看当前临时端口的范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sysctl net.ipv4.ip_local_port_range
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>cat /proc/sys/net/ipv4/ip_local_port_range
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># 暂时性修改临时端口的范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#6639ba">echo</span> <span style="color:#0550ae">1024</span> <span style="color:#0550ae">65535</span> &gt; /proc/sys/net/ipv4/ip_local_port_range
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>sysctl -w net.ipv4.ip_local_port_range<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;1024 64000&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#57606a"># 永久性修改临时端口范围</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>vim /etc/sysctl.conf <span style="color:#57606a"># 编辑此文件并添加下面一行内容</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>net.ipv4.ip_local_port_range <span style="color:#0550ae">=</span> <span style="color:#0550ae">1024</span> <span style="color:#0550ae">65535</span>
+</span></span></code></pre></div></div>
 				
             
 
@@ -651,7 +516,8 @@
 			
 		</div>
 	</div>
-</div><div class="summary">xset:用于设置显示器的各种用户属性选项。如果想要持久化设置，可以将设置写入.xinitrc文件中。 dpms（Display Power Manage System）和屏保是互相作用</div>
+</div><div class="summary"><p><code>xset</code>:用于设置显示器的各种用户属性选项。如果想要持久化设置，可以将设置写入<code>.xinitrc</code>文件中。</p>
+<p>dpms（Display Power Manage System）和屏保是互相作用的，这两个值谁设的小谁生效。</p></div>
 				
 				
 				<div class="read-more">
@@ -703,11 +569,217 @@
 			
 		</div>
 	</div>
-</div><div class="summary">编辑 1apt install apt-transport-https ca-certificates 2vim /etc/apt/sources.list Debian 11 1# Official &amp; Contrib &amp; Non-free 2deb <a href="https://deb.debian.org/debian">https://deb.debian.org/debian</a> bullseye main contrib non-free 3deb-src <a href="https://deb.debian.org/debian">https://deb.debian.org/debian</a> bullseye main contrib non-free 4 5deb <a href="https://deb.debian.org/debian-security">https://deb.debian.org/debian-security</a> bullseye-security main contrib non-free 6deb-src <a href="https://deb.debian.org/debian-security">https://deb.debian.org/debian-security</a> bullseye-security main contrib non-free 7 8deb <a href="https://deb.debian.org/debian">https://deb.debian.org/debian</a> bullseye-updates main contrib non-free 9deb-src <a href="https://deb.debian.org/debian">https://deb.debian.org/debian</a> bullseye-updates main contrib non-free 10 11# Backports 12deb <a href="https://deb.debian.org/debian">https://deb.debian.org/debian</a> bullseye-backports main contrib non-free 13deb-src <a href="https://deb.debian.org/debian">https://deb.debian.org/debian</a> bullseye-backports main contrib non-free Debian 12 1# apt install apt-transport-https ca-certificates 2 3deb <a href="https://deb.debian.org/debian/">https://deb.debian.org/debian/</a> bookworm</div>
+</div><div class="summary"><p>编辑</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install apt-transport-https ca-certificates
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>vim /etc/apt/sources.list
+</span></span></code></pre></div><h2 id="debian-11">Debian 11</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span># Official &amp; Contrib &amp; Non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>deb https://deb.debian.org/debian bullseye main contrib non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>deb-src https://deb.debian.org/debian bullseye main contrib non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>deb https://deb.debian.org/debian-security bullseye-security main contrib non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>deb-src https://deb.debian.org/debian-security bullseye-security main contrib non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>deb https://deb.debian.org/debian bullseye-updates main contrib non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>deb-src https://deb.debian.org/debian bullseye-updates main contrib non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span># Backports
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>deb https://deb.debian.org/debian bullseye-backports main contrib non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>deb-src https://deb.debian.org/debian bullseye-backports main contrib non-free
+</span></span></code></pre></div><h2 id="debian-12">Debian 12</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span># apt install apt-transport-https ca-certificates
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>deb https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>deb-src https://deb.debian.org/debian/ bookworm contrib main non-free non-free-firmware
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>deb https://deb.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>deb-src https://deb.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>deb https://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>deb-src https://deb.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>deb https://deb.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>deb-src https://deb.debian.org/debian-security/ bookworm-security contrib main non-free non-free-firmware
+</span></span></code></pre></div></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/ssh/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 开启SSH服务 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-07-14
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><h2 id="安装ssh服务">安装SSH服务</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt-get install openssh-server
+</span></span></code></pre></div><h2 id="修改ssh配置文件">修改SSH配置文件</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/ssh/sshd_config
+</span></span></code></pre></div><p>配置项</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span># 监听端口
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>Port 22
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span># 监听地址
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>ListenAddress 0.0.0.0
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span># 是否允许root用户登录
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>PermitRootLogin yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span># 允许密码认证
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>PasswordAuthentication yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span># 允许密钥认证
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>PubkeyAuthentication yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span># 客户端保活
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>ClientAliveInterval 60
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>ClientAliveCountMax 3
+</span></span></code></pre></div><h2 id="message-of-the-day">Message of the Day</h2>
+<p>内容放在<code>vim /etc/motd</code>，可以用 UpdateMotd 动态生成的内容，也可以直接使用landscape-common</p></div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/linux/apt_sources/">查看更多…</a>
+				  <a href="/posts/linux/ssh/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/limit_for_number_of_file_watchers_reached/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Ubuntu Error: ENOSPC:System limit for number of file watchers reached <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2020-01-03
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">Ubuntu Error: ENOSPC:System limit for number of file watchers reached</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/limit_for_number_of_file_watchers_reached/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/xshell_bash/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> xshell登录服务器提示符显示-bash-4.2#解决方法 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2019-09-29
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">突然发现root登录的xshell的终端提示符显示的是-bash-4.2# 而不是root@主机名 + 路径的显示方式。搞了半天也不知道为什么出现这种情况。今天终于搞定这个问题，</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/xshell_bash/">查看更多…</a>
 				</div>
 				
             
@@ -727,6 +799,9 @@
         <a href="/categories/linux/page/4/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
       </li>
       <li class="page-item">
+        <a href="/categories/linux/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
         <a href="/categories/linux/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
       <li class="page-item">
@@ -738,14 +813,11 @@
       <li class="page-item active">
         <a aria-current="page" aria-label="Page 5" class="page-link" role="button">5</a>
       </li>
-      <li class="page-item">
-        <a href="/categories/linux/page/6/" aria-label="Page 6" class="page-link" role="button">6</a>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
       </li>
-      <li class="page-item">
-        <a href="/categories/linux/page/6/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/categories/linux/page/6/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>

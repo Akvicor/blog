@@ -218,7 +218,7 @@
 <li>创建swap交换分区文件/swap/swapfile，大小为8G</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir /swap
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>dd <span style="color:#000;font-weight:bold">if</span><span style="color:#000;font-weight:bold">=</span>/dev/zero <span style="color:#008080">of</span><span style="color:#000;font-weight:bold">=</span>/swap/swapfile <span style="color:#008080">bs</span><span style="color:#000;font-weight:bold">=</span>1G <span style="color:#008080">count</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">8</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>dd <span style="color:#cf222e">if</span><span style="color:#0550ae">=</span>/dev/zero <span style="color:#953800">of</span><span style="color:#0550ae">=</span>/swap/swapfile <span style="color:#953800">bs</span><span style="color:#0550ae">=</span>1G <span style="color:#953800">count</span><span style="color:#0550ae">=</span><span style="color:#0550ae">8</span>
 </span></span></code></pre></div><ol start="3">
 <li>格式化swap分区：</li>
 </ol>
@@ -228,7 +228,7 @@
 </span></span></code></pre></div><ol start="5">
 <li>修改权限：</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>chmod <span style="color:#099">600</span> /swap/swapfile
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>chmod <span style="color:#0550ae">600</span> /swap/swapfile
 </span></span></code></pre></div><ol start="6">
 <li>激活swap分区：</li>
 </ol>
@@ -238,7 +238,7 @@
 </ol>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/fstab
 </span></span></code></pre></div><p>在该文件底部添加如下内容：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/swap/swapfile swap swap default <span style="color:#099">0</span> <span style="color:#099">0</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/swap/swapfile swap swap default <span style="color:#0550ae">0</span> <span style="color:#0550ae">0</span>
 </span></span></code></pre></div><h2 id="删除swap交换分区">删除swap交换分区</h2>
 <ol>
 <li>停止正在使用的swap分区：</li>
@@ -251,7 +251,7 @@
 </span></span></code></pre></div><ol start="3">
 <li>删除或注释在/etc/fstab文件中的以下开机自动挂载内容：</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/swap/swapfile swap swap default <span style="color:#099">0</span> <span style="color:#099">0</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>/swap/swapfile swap swap default <span style="color:#0550ae">0</span> <span style="color:#0550ae">0</span>
 </span></span></code></pre></div>
     </div>
 

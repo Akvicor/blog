@@ -245,7 +245,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">编辑 /etc/default/ufw 找到 18行左右的 DEFAULT_FORWARD_POLICY，将值改为true 1vim /etc/default/ufw 编辑 /etc/sysctl.conf 将 net.ipv4.ip_forward=1 注释去掉，并确保值为1 1vim /etc/sysctl.conf 2sysctl -p 编辑 /etc/ufw/before.rules 在 *filter 上方，一般在最顶部，添</div>
+</div><div class="summary"><h2 id="编辑-etcdefaultufw">编辑 <code>/etc/default/ufw</code></h2>
+<p>找到 18行左右的 <code>DEFAULT_FORWARD_POLICY</code>，将值改为<code>true</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/default/ufw
+</span></span></code></pre></div><h2 id="编辑-etcsysctlconf">编辑 <code>/etc/sysctl.conf</code></h2>
+<p>将 <code>net.ipv4.ip_forward=1</code> 注释去掉，并确保值为1</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/sysctl.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sysctl -p
+</span></span></code></pre></div><h2 id="编辑-etcufwbeforerules">编辑 <code>/etc/ufw/before.rules</code></h2>
+<p>在 <code>*filter</code> 上方，一般在最顶部，添加如下命令</p></div>
 				
 				
 				<div class="read-more">
@@ -297,7 +305,15 @@
 			
 		</div>
 	</div>
-</div><div class="summary">远程挂载目录 安装 1apt install sshfs 挂载 1sshfs <a href="mailto:root@10.0.0.4">root@10.0.0.4</a>:/storage /mnt/storage -o _netdev,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/root/.ssh/id_ed25519 开机自动挂载 1# vim /etc/fstab 210.0.0.4:/storage /mnt/storage fuse.sshfs _netdev,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/root/.ssh/id_ed25519 0 0</div>
+</div><div class="summary"><p>远程挂载目录</p>
+<h2 id="安装">安装</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install sshfs
+</span></span></code></pre></div><h2 id="挂载">挂载</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sshfs root@10.0.0.4:/storage /mnt/storage -o _netdev,reconnect,ServerAliveInterval<span style="color:#0550ae">=</span>15,ServerAliveCountMax<span style="color:#0550ae">=</span>3,IdentityFile<span style="color:#0550ae">=</span>/root/.ssh/id_ed25519
+</span></span></code></pre></div><h2 id="开机自动挂载">开机自动挂载</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># vim /etc/fstab</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>10.0.0.4:/storage /mnt/storage fuse.sshfs _netdev,reconnect,ServerAliveInterval<span style="color:#0550ae">=</span>15,ServerAliveCountMax<span style="color:#0550ae">=</span>3,IdentityFile<span style="color:#0550ae">=</span>/root/.ssh/id_ed25519 <span style="color:#0550ae">0</span> <span style="color:#0550ae">0</span>
+</span></span></code></pre></div></div>
 				
             
 
@@ -344,7 +360,16 @@
 			
 		</div>
 	</div>
-</div><div class="summary">NFS是一种没有加密的高性能的远程挂载工具, 如果在局域网中可以直接使用, 如果在公网环境下, 可以搭配Wireguard使用 安装 NFS服务器 假设IP: 10.0.0.4 1apt install -y nfs-kernel-server 客户</div>
+</div><div class="summary"><p>NFS是一种没有加密的高性能的远程挂载工具, 如果在局域网中可以直接使用, 如果在公网环境下, 可以搭配<a href="https://blog.akvicor.com/posts/linux/wireguard/">Wireguard</a>使用</p>
+<h2 id="安装">安装</h2>
+<h3 id="nfs服务器">NFS服务器</h3>
+<p>假设IP: 10.0.0.4</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install -y nfs-kernel-server
+</span></span></code></pre></div><h3 id="客户端">客户端</h3>
+<p>假设IP: 10.0.0.2</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install -y nfs-common
+</span></span></code></pre></div><h2 id="创建共享">创建共享</h2>
+<p>编辑配置文件</p></div>
 				
 				
 				<div class="read-more">
@@ -396,7 +421,16 @@
 			
 		</div>
 	</div>
-</div><div class="summary">有时候服务器之间需要加密传输数据(例如NFS挂载)，为了平衡延迟和速度，可以采用Wireguard来组建一个内网，这样业务数据可以通过内网IP高速和安全的传输 注</div>
+</div><div class="summary"><p>有时候服务器之间需要加密传输数据(例如<a href="https://blog.akvicor.com/posts/linux/nfs/">NFS挂载</a>)，为了平衡延迟和速度，可以采用Wireguard来组建一个内网，这样业务数据可以通过内网IP高速和安全的传输</p>
+<h2 id="注意">注意</h2>
+<ul>
+<li><strong>Wireguard有加密但无混淆，特征较为明显，谨慎用于其他用途</strong></li>
+<li><strong>Wireguard使用UDP传输，部分云服务商限制了UDP会导致性能较差</strong></li>
+<li>由于海外和国内网络互联较差, 使用了一个带优化线路的中转节点来中转国内和海外服务器, 降低连接延迟, 提高传输速度</li>
+</ul>
+<h2 id="特性"><del>特性</del></h2>
+<h3 id="listenport-监听和发送端口的问题">ListenPort 监听和发送端口的问题</h3>
+<p>当给Interface配置ListenPort之后，这个端口既承担了监听端口的功能，又承担了对外发送端口的功能，这会导致一些问题</p></div>
 				
 				
 				<div class="read-more">
@@ -448,7 +482,18 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Emby的硬件解码需要订阅才能使用 安装驱动 1# 安装显卡驱动 2apt install intel-media-va-driver-non-free 3# 或开源 4apt install intel-media-va-driver 5 6# 如果上述没有生效, 安装这个(不确定这个起作用没有) 7apt install i965-va-driver 配置grub 1vim /etc/default/grub 查看 GRUB_CMDLINE_LINUX 中</div>
+</div><div class="summary"><p>Emby的硬件解码需要订阅才能使用</p>
+<h2 id="安装驱动">安装驱动</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 安装显卡驱动</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt install intel-media-va-driver-non-free
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 或开源</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>apt install intel-media-va-driver
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a"># 如果上述没有生效, 安装这个(不确定这个起作用没有)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>apt install i965-va-driver
+</span></span></code></pre></div><h2 id="配置grub">配置grub</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/default/grub
+</span></span></code></pre></div><p>查看 <code>GRUB_CMDLINE_LINUX</code> 中是否有 <code>nomodeset</code> 项, 如果有需要去掉. 去掉之后使grub生效</p></div>
 				
 				
 				<div class="read-more">
@@ -500,7 +545,19 @@
 			
 		</div>
 	</div>
-</div><div class="summary">首先安装socat 1sudo apt-get install socat 启动虚拟串口 1socat -d -d pty,raw,echo=0 pty,raw,echo=0 成功后返回以下信息 12024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/13 22024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/14 32024/09/22 21:32:10 socat[1997612] N starting data transfer loop with FDs [5,5] and [7,7] （终端1）监听其中一个串口 cat &lt; /dev/pts/2 （终端2</div>
+</div><div class="summary"><p>首先安装socat</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt-get install socat
+</span></span></code></pre></div><p>启动虚拟串口</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>socat -d -d pty,raw,echo<span style="color:#0550ae">=</span><span style="color:#0550ae">0</span> pty,raw,echo<span style="color:#0550ae">=</span><span style="color:#0550ae">0</span>
+</span></span></code></pre></div><p>成功后返回以下信息</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>2024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/13
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>2024/09/22 21:32:10 socat[1997612] N PTY is /dev/pts/14
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>2024/09/22 21:32:10 socat[1997612] N starting data transfer loop with FDs [5,5] and [7,7]
+</span></span></code></pre></div><ul>
+<li>（终端1）监听其中一个串口 <code>cat &lt; /dev/pts/2</code></li>
+<li>（终端2）另一个串口写入数据 <code>echo &quot;Hello World!&quot; &gt; /dev/pts/3</code></li>
+</ul>
+<p>现在，从终端1可以看到“”Hello World!“”打印信息，证明串口创建并连接成功。</p></div>
 				
 				
 				<div class="read-more">
@@ -552,7 +609,45 @@
 			
 		</div>
 	</div>
-</div><div class="summary">修改时区 1ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime 配置bash命令 1alias l='ls -Al &ndash;color=auto' 2alias ll='ls -Alh &ndash;color=auto' 配置apt源 删除普通用户 1userdel -r admin 安装工具 1apt update 2apt install -y systemd-timesyncd vim curl wget gcc g++ git make screen telnet jq bc tcptrack 修改主机名 1vim /etc/hosts 2vim /etc/hostname 配置ssh key 1mkdir .ssh 2chmod 600</div>
+</div><div class="summary"><h2 id="修改时区">修改时区</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime
+</span></span></code></pre></div><h2 id="配置bash命令">配置bash命令</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">alias</span> <span style="color:#953800">l</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;ls -Al --color=auto&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">alias</span> <span style="color:#953800">ll</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;ls -Alh --color=auto&#39;</span>
+</span></span></code></pre></div><h2 id="配置apt源">配置apt源</h2>
+<h2 id="删除普通用户">删除普通用户</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>userdel -r admin
+</span></span></code></pre></div><h2 id="安装工具">安装工具</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt install -y systemd-timesyncd vim curl wget gcc g++ git make screen telnet jq bc tcptrack
+</span></span></code></pre></div><h2 id="修改主机名">修改主机名</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/hosts
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>vim /etc/hostname
+</span></span></code></pre></div><h2 id="配置ssh-key">配置ssh key</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir .ssh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chmod <span style="color:#0550ae">600</span> .ssh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>vim .ssh/authorized_keys
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>chmod <span style="color:#0550ae">600</span> .ssh/authorized_keys
+</span></span></code></pre></div><h2 id="配置sshd">配置sshd</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/ssh/sshd_config
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>PermitRootLogin prohibit-password
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>PubkeyAuthentication yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>PasswordAuthentication no
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>ClientAliveInterval <span style="color:#0550ae">15</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>ClientAliveCountMax <span style="color:#0550ae">3</span>
+</span></span></code></pre></div><h2 id="更改密码">更改密码</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>passwd
+</span></span></code></pre></div><h2 id="配置git">配置git</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git config --global user.name <span style="color:#0a3069">&#34;Akvicor&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git config --global user.email akvicor@kayuki.org
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git config --global core.editor vim
+</span></span></code></pre></div><h2 id="motd脚本">motd脚本</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /etc/motd
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>vim /etc/update-motd.d/99-custom
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>chmod +x /etc/update-motd.d/99-custom
+</span></span></code></pre></div><p>内容</p></div>
 				
 				
 				<div class="read-more">
@@ -604,7 +699,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">Ed25519算法 1ssh-keygen -t ed25519 -C &quot;your_<a href="mailto:email@example.com">email@example.com</a>&quot; 旧算法 1ssh-keygen -t rsa -b 4096 -C &quot;your_<a href="mailto:email@example.com">email@example.com</a>&quot; 设置文件权限 1chmod 700 ~/.ssh 2chmod 600 ~/.ssh/authorized_keys</div>
+</div><div class="summary"><h2 id="ed25519算法">Ed25519算法</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh-keygen -t ed25519 -C <span style="color:#0a3069">&#34;your_email@example.com&#34;</span>
+</span></span></code></pre></div><h2 id="旧算法">旧算法</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh-keygen -t rsa -b <span style="color:#0550ae">4096</span> -C <span style="color:#0a3069">&#34;your_email@example.com&#34;</span>
+</span></span></code></pre></div><h2 id="设置文件权限">设置文件权限</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>chmod <span style="color:#0550ae">700</span> ~/.ssh
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chmod <span style="color:#0550ae">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div></div>
 				
             
 
@@ -651,7 +753,14 @@
 			
 		</div>
 	</div>
-</div><div class="summary">永久关闭IPV6 编辑grub配置文件/etc/default/grub 修改增加ipv6.disable=1属性 1GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash ipv6.disable=1&quot; 2GRUB_CMDLINE_LINUX=&quot;ipv6.disable=1&quot; 使设置生效 1update-grub</div>
+</div><div class="summary"><p>永久关闭IPV6</p>
+<p>编辑grub配置文件<code>/etc/default/grub</code></p>
+<p>修改增加<code>ipv6.disable=1</code>属性</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>GRUB_CMDLINE_LINUX_DEFAULT=&#34;quiet splash ipv6.disable=1&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>GRUB_CMDLINE_LINUX=&#34;ipv6.disable=1&#34;
+</span></span></code></pre></div><p>使设置生效</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>update-grub
+</span></span></code></pre></div></div>
 				
             
 
@@ -698,7 +807,82 @@
 			
 		</div>
 	</div>
-</div><div class="summary">lsb_release 1apt-get install lsb-release 2lsb_release -a issue 1cat /etc/issue os-release 1cat /etc/os-release hostnamectl 1hostnamectl uname 1uname debian_version 1cat /etc/debian_version</div>
+</div><div class="summary"><h2 id="lsb_release">lsb_release</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt-get install lsb-release
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>lsb_release -a
+</span></span></code></pre></div><h2 id="issue">issue</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cat /etc/issue
+</span></span></code></pre></div><h2 id="os-release">os-release</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cat /etc/os-release
+</span></span></code></pre></div><h2 id="hostnamectl">hostnamectl</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hostnamectl
+</span></span></code></pre></div><h2 id="uname">uname</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>uname
+</span></span></code></pre></div><h2 id="debian_version">debian_version</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>cat /etc/debian_version
+</span></span></code></pre></div></div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/ntp/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> 搭建NTP服务器 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2024-05-12
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary"><p>为其他设备提供NTP授时服务</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># 安装NTP服务</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>apt-get install ntp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#57606a"># 编辑配置文件, pool 后替换为想要的ntp地址</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>vim /etc/ntpsec/ntp.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#57606a"># 重启NTP服务</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>systemctl status ntp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>systemctl restart ntp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#57606a"># 检查NTP同步功能</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>ntpq -p
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#57606a"># 开放UDP的123端口</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 检查与NTP服务器的连接, 使用IP可以跳过dns解析</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ntpdate -q 13.113.25.87
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 设置NTP服务器</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>vim /etc/ntpsec/ntp.conf
+</span></span></code></pre></div></div>
 				
             
 
@@ -735,7 +919,7 @@
         <a href="/categories/linux/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/categories/linux/page/6/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/categories/linux/page/5/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>
