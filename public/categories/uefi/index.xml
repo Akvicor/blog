@@ -4,7 +4,7 @@
     <title>UEFI on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/uefi/</link>
     <description>Recent content in UEFI on Akvicor&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/uefi/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/efi/refind/</link>
       <pubDate>Thu, 28 Jul 2022 23:34:28 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/efi/refind/</guid>
-      <description>&lt;h2 id=&#34;安装refind&#34;&gt;安装rEFInd&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/techysy/rEFInd&#34;&gt;https://github.com/techysy/rEFInd&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;sudo apt-get install refind&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;输入y继续执行，首次安装时，系统会询问你是否将rEFInd安装到ESP&lt;/li&gt;&#xA;&lt;li&gt;关闭安全启动&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;安装主题&#34;&gt;安装主题&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#6639ba&#34;&gt;cd&lt;/span&gt; /boot/efi/EFI/refind&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&lt;/span&gt;&lt;span&gt;mkdir themes&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#6639ba&#34;&gt;cd&lt;/span&gt; themes&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4&lt;/span&gt;&lt;span&gt;git clone https://github.com/kgoettler/ursamajor-rEFInd.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;屏蔽多余启动项&#34;&gt;屏蔽多余启动项&lt;/h2&gt;&#xA;&lt;p&gt;先注释&lt;code&gt;include themes/ursamajor-rEFInd/theme.conf&lt;/code&gt;，在选择界面使用&lt;code&gt;delete&lt;/code&gt;删除不需要的启动项&lt;/p&gt;</description>
+      <description>安装rEFInd https://github.com/techysy/rEFInd 1sudo apt-get install refind 输入y继续执行，首次安装时，系统会询问你是否将rEFInd安装到ESP 关闭安全启动 安装主题 1cd /boot/efi/EFI/refind 2mkdir themes 3cd themes 4git clone https://github.com/kgoettler/ursamajor-rEFInd.git 屏蔽多余启动项 先注释inc</description>
     </item>
   </channel>
 </rss>

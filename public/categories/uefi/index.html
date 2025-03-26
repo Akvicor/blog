@@ -245,20 +245,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="安装refind">安装rEFInd</h2>
-<p><a href="https://github.com/techysy/rEFInd">https://github.com/techysy/rEFInd</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt-get install refind
-</span></span></code></pre></div><ul>
-<li>输入y继续执行，首次安装时，系统会询问你是否将rEFInd安装到ESP</li>
-<li>关闭安全启动</li>
-</ul>
-<h2 id="安装主题">安装主题</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">cd</span> /boot/efi/EFI/refind
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>mkdir themes
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#6639ba">cd</span> themes
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git clone https://github.com/kgoettler/ursamajor-rEFInd.git
-</span></span></code></pre></div><h2 id="屏蔽多余启动项">屏蔽多余启动项</h2>
-<p>先注释<code>include themes/ursamajor-rEFInd/theme.conf</code>，在选择界面使用<code>delete</code>删除不需要的启动项</p></div>
+</div><div class="summary">安装rEFInd <a href="https://github.com/techysy/rEFInd">https://github.com/techysy/rEFInd</a> 1sudo apt-get install refind 输入y继续执行，首次安装时，系统会询问你是否将rEFInd安装到ESP 关闭安全启动 安装主题 1cd /boot/efi/EFI/refind 2mkdir themes 3cd themes 4git clone <a href="https://github.com/kgoettler/ursamajor-rEFInd.git">https://github.com/kgoettler/ursamajor-rEFInd.git</a> 屏蔽多余启动项 先注释inc</div>
 				
 				
 				<div class="read-more">

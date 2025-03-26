@@ -4,7 +4,7 @@
     <title>AOS on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/aos/</link>
     <description>Recent content in AOS on Akvicor&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 15 Sep 2024 15:34:58 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/aos/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://blog.akvicor.com/posts/aos/unreal_mode/</link>
       <pubDate>Mon, 27 Feb 2023 08:37:25 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/aos/unreal_mode/</guid>
-      <description>&lt;p&gt;Unreal mode consists of breaking the 64KiB limit of real mode segments (while retaining 16-bit instructions and the segment * 16 + offset addressing mode) by tweaking the descriptor caches.&lt;/p&gt;</description>
+      <description>Unreal mode consists of breaking the 64KiB limit of real mode segments (while retaining 16-bit instructions and the segment * 16 + offset addressing mode) by tweaking the descriptor caches.</description>
     </item>
     <item>
       <title>Stack alignment in x64 assembly</title>
       <link>https://blog.akvicor.com/posts/aos/stack_alignment_in_x64_assembly/</link>
       <pubDate>Tue, 23 Aug 2022 17:29:21 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/aos/stack_alignment_in_x64_assembly/</guid>
-      <description>&lt;p&gt;gcc会在&lt;code&gt;call&lt;/code&gt;指令之前让&lt;code&gt;rsp&lt;/code&gt;按&lt;code&gt;16&lt;/code&gt;字节对齐。&lt;/p&gt;&#xA;&lt;p&gt;cpu在&lt;code&gt;call&lt;/code&gt;的时候将&lt;code&gt;rip&lt;/code&gt;压栈&lt;code&gt;rsp -= 8&lt;/code&gt;，所以进入被调用者之后&lt;code&gt;rsp = 8 (mod 16)&lt;/code&gt;。如果在这个函数里面还要&lt;code&gt;call&lt;/code&gt;其他函数的话就要将&lt;code&gt;rsp&lt;/code&gt;减掉奇数个&lt;code&gt;8&lt;/code&gt;让它重新&lt;code&gt;16&lt;/code&gt;字节对齐。&lt;/p&gt;</description>
+      <description>gcc会在call指令之前让rsp按16字节对齐。 cpu在call的时候将rip压栈rsp -= 8，所以进入被调用者之后rsp = 8 (mod 16)。如果在这个函数里面还要c</description>
     </item>
     <item>
       <title>BOOT: 从FAT32分区搜索并读取loader</title>
       <link>https://blog.akvicor.com/posts/aos/boot/</link>
       <pubDate>Mon, 22 Aug 2022 21:52:00 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/aos/boot/</guid>
-      <description>&lt;h2 id=&#34;初始化寄存器&#34;&gt;初始化寄存器&lt;/h2&gt;&#xA;&lt;p&gt;我将物理地址&lt;code&gt;0x050000-0x070008&lt;/code&gt;之间的内存分配给了堆栈。栈顶设置为&lt;code&gt;0x070008&lt;/code&gt;的原因是，kernel函数在编译后会在函数开头加上这样一行汇编代码&lt;code&gt;sub    $0x8,%rsp&lt;/code&gt;，将栈顶设置为&lt;code&gt;0x070008&lt;/code&gt;可以保证在经过此操作后，栈顶为&lt;code&gt;0x070000&lt;/code&gt;。&lt;/p&gt;</description>
+      <description>初始化寄存器 我将物理地址0x050000-0x070008之间的内存分配给了堆栈。栈顶设置为0x070008的原因是，kernel函数在编译后会在函数开头加上这</description>
     </item>
   </channel>
 </rss>

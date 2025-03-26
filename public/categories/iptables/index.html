@@ -245,18 +245,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="whereis-iptables-查看系统是否安装防火墙可以看到">whereis iptables #查看系统是否安装防火墙可以看到:</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>iptables: /sbin/iptables /usr/share/iptables /usr/share/man/man8/iptables.8.gz <span style="color:#57606a">#表示已经安装iptables</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt-get install iptables <span style="color:#57606a">#如果默认没有安装，请运行此命令安装防火墙</span>
-</span></span></code></pre></div><h2 id="iptables--l-查看防火墙配置信息显示如下">iptables -L #查看防火墙配置信息，显示如下:</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Chain INPUT <span style="color:#0550ae">(</span>policy ACCEPT<span style="color:#0550ae">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>target prot opt <span style="color:#6639ba">source</span> destination
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Chain FORWARD <span style="color:#0550ae">(</span>policy ACCEPT<span style="color:#0550ae">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>target prot opt <span style="color:#6639ba">source</span> destination
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Chain OUTPUT <span style="color:#0550ae">(</span>policy ACCEPT<span style="color:#0550ae">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>target prot opt <span style="color:#6639ba">source</span> destination
-</span></span></code></pre></div><h2 id="vi-etciptablesrulesv4">vi /etc/iptables/rules.v4</h2>
-<p>添加以下内容(备注:80是指web服务器端口,3306是指MySQL数据库链接端口,22是指SSH远程管理端口.)</p></div>
+</div><div class="summary">whereis iptables #查看系统是否安装防火墙可以看到: 1iptables: /sbin/iptables /usr/share/iptables /usr/share/man/man8/iptables.8.gz #表示已经安装iptables 2apt-get install iptables #如果默认没有安装，请运行此命令安装防火墙 iptables -L #查看防火墙配置信息，显示如下:</div>
 				
 				
 				<div class="read-more">

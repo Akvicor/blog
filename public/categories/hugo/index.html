@@ -245,19 +245,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>Summary抽屉，可收起和展开</p>
-<details>
-<summary>默认收起 A</summary>
-<ul>
-<li>AAA</li>
-</ul>
-</details>
-<details open>
-<summary>默认展开 B</summary>
-<ul>
-<li>BBB</li>
-</ul>
-</details></div>
+</div><div class="summary">Summary抽屉，可收起和展开 默认收起 A AAA 默认展开 B BBB</div>
 				
             
 
@@ -304,8 +292,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>由于css中限制了标签的宽高, 如果标题过长会无法显示, 因此需要修改css中的属性</p>
-<p>在<code>virgo/assets/scss/partials/content/nav.scss</code>中的<code>.container-nav/.toc/li</code>中的<code>width</code></p></div>
+</div><div class="summary">由于css中限制了标签的宽高, 如果标题过长会无法显示, 因此需要修改css中的属性 在virgo/assets/scss/partials/content/nav.</div>
 				
 				
 				<div class="read-more">
@@ -357,26 +344,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>utterances和isso两种评论系统搭建</p>
-<h2 id="isso">isso</h2>
-<ul>
-<li>自建</li>
-<li>数据存储在本地, 方便备份迁移</li>
-<li>无需登陆</li>
-<li>可配置审核等</li>
-</ul>
-<h3 id="搭建isso">搭建isso</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#0550ae">services</span><span style="color:#1f2328">:</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#fff">  </span><span style="color:#0550ae">isso</span><span style="color:#1f2328">:</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#fff">    </span><span style="color:#0550ae">container_name</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>isso<span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#fff">    </span><span style="color:#0550ae">image</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>ghcr.io/isso-comments/isso:release<span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#fff">    </span><span style="color:#0550ae">ports</span><span style="color:#1f2328">:</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#fff">      </span>- <span style="color:#0a3069">&#34;8080:8080&#34;</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#fff">    </span><span style="color:#0550ae">restart</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span>always<span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#fff">    </span><span style="color:#0550ae">volumes</span><span style="color:#1f2328">:</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#fff">      </span>- <span style="color:#0a3069">&#34;/app/isso/data/config:/config&#34;</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#fff">      </span>- <span style="color:#0a3069">&#34;/app/isso/data/db:/db&#34;</span><span style="color:#fff">
-</span></span></span></code></pre></div><p>配置: <code>/app/isso/data/config/isso.cfg</code></p></div>
+</div><div class="summary">utterances和isso两种评论系统搭建 isso 自建 数据存储在本地, 方便备份迁移 无需登陆 可配置审核等 搭建isso 1services: 2 isso: 3 container_name: isso 4 image: ghcr.io/isso-comments/isso:release 5 ports: 6 - &quot;8080:8080&quot; 7 restart: always 8 volumes: 9 - &quot;/app/isso/data/config:/config&quot; 10 -</div>
 				
 				
 				<div class="read-more">
@@ -428,12 +396,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h1 id="编写">编写</h1>
-<p>将js文件放在主题的static/js文件夹中，css文件放在主题的static/css文件夹中</p>
-<p>在layouts/partials/head.html中添加</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    &lt;script src=&#34;/js/hide_and_seek.js&#34;&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/hide_and_seek.css&#34;&gt;
-</span></span></code></pre></div><p>编写<code>hide_and_seek.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p></div>
+</div><div class="summary">编写 将js文件放在主题的static/js文件夹中，css文件放在主题的static/css文件夹中 在layouts/partials/head.html中添加</div>
 				
 				
 				<div class="read-more">
@@ -485,13 +448,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>当页面失去焦点时改变标题，恢复焦点时恢复标题</p>
-<p>将js文件放在主题的static/js文件夹中</p>
-<p>在layouts/partials/head.html中添加</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    {{ if .Site.Params.funnyTitle | default false }}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    &lt;script src=&#34;/js/funny_title.js&#34;&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    {{- end -}}
-</span></span></code></pre></div><p>此时在hugo.toml中添加以下内容开启</p></div>
+</div><div class="summary">当页面失去焦点时改变标题，恢复焦点时恢复标题 将js文件放在主题的static/js文件夹中 在layouts/partials/head.html中添加 1 {{ if .Site.Params.funnyTitle |</div>
 				
 				
 				<div class="read-more">
@@ -543,8 +500,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="删除图片边框">删除图片边框</h2>
-<p>修改文件 <code>themes/archive/assets/css/main.css</code>，注释掉<code>border: 3px solid #ececec;</code>。</p></div>
+</div><div class="summary">删除图片边框 修改文件 themes/archive/assets/css/main.css，注释掉border: 3px solid #ececec;。</div>
 				
             
 
@@ -591,8 +547,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="编写">编写</h2>
-<p>编写<code>arrow.html</code>、<code>arrow_colour.html</code>、<code>arrow_?.html</code>或<code>arrow_?_colour.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p></div>
+</div><div class="summary">编写 编写arrow.html、arrow_colour.html、arrow_?.html或arrow_?_colour.html放在layouts/short</div>
 				
 				
 				<div class="read-more">
@@ -644,37 +599,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="编写">编写</h2>
-<p>编写<code>tag.html</code>或<code>tag_?.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;!-- layouts/shortcodes/tag.html --&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;strong style= &#34;background: {{ .Get &#34;colour&#34; }};border: 1px solid {{ .Get &#34;colour&#34; }};border-radius: 5px;&#34;&gt;{{ .Get &#34;tag&#34; }}&lt;/strong&gt;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;!-- layouts/shortcodes/tag_academic.html --&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;strong style= &#34;background: #33BBFF;border: 1px solid #33BBFF;border-radius: 5px;&#34;&gt;学术&lt;/strong&gt;
-</span></span></code></pre></div><h2 id="使用">使用</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{&lt; tag colour=&#34;green&#34; tag=&#34;自定义&#34; &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>{{&lt; tag_academic &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>{{&lt; tag_read &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>{{&lt; tag_sport &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>{{&lt; tag_kegel &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>{{&lt; tag_relax &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>{{&lt; tag_bathe &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>{{&lt; tag_play &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>{{&lt; tag_go_out &gt;}}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>{{&lt; tag_hentai &gt;}}
-</span></span></code></pre></div>
-<strong style= "background: green;border: 1px solid green;border-radius: 5px;">自定义</strong>
-<p>
-<strong style= "background: #33BBFF;border: 1px solid #33BBFF;border-radius: 5px;">学术</strong>
-<p><strong style= "background: #4DB6AC;border: 1px solid #4DB6AC;border-radius: 5px;">阅读</strong></p>
-<p><strong style= "background: #BB8FCE;border: 1px solid #BB8FCE;border-radius: 5px;">运动</strong></p>
-<p><strong style= "background: #EB984E;border: 1px solid #EB984E;border-radius: 5px;">提肛</strong></p>
-<p><strong style= "background: #26C6DA;border: 1px solid #26C6DA;border-radius: 5px;">放松</strong></p>
-<p><strong style= "background: #F06292;border: 1px solid #F06292;border-radius: 5px;">洗澡</strong></p>
-<p><strong style= "background: #66BB6A;border: 1px solid #66BB6A;border-radius: 5px;">游戏</strong></p>
-<p><strong style= "background: #EF5350;border: 1px solid #EF5350;border-radius: 5px;">外出</strong></p>
-<p><strong style= "background: #FFC300;border: 1px solid #FFC300;border-radius: 5px;"> 色色 </strong></p></p>
-</div>
+</div><div class="summary">编写 编写tag.html或tag_?.html放在layouts/shortcodes/文件夹中 1&lt;!&ndash; layouts/shortcodes/tag.html &ndash;&gt; 2&lt;strong style= &quot;background: {{ .Get &quot;colour&quot; }};border: 1px solid {{ .Get &quot;colour&quot; }};border-radius: 5px;&quot;&gt;{{ .Get &quot;tag&quot; }}&lt;/strong&gt; 1&lt;!&ndash; layouts/shortcodes/tag_academic.html &ndash;&gt; 2&lt;strong style= &quot;background: #33BBFF;border: 1px solid #33BBFF;border-radius: 5p</div>
 				
 				
 				<div class="read-more">
@@ -726,10 +651,10 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="1-下载字体">1. 下载字体</h2>
-<p>添加到<code>static/fonts</code>文件夹下，若使用了主题则可以放在主题的fonts文件夹下，如<code>themes/archie/static/fonts</code>。</p>
-<h2 id="2-添加字体">2. 添加字体</h2>
-<p>在<code>fonts.css</code>中添加字体，如<code>themes/archie/assets/css/fonts.css</code></p></div>
+</div><div class="summary"><ol>
+<li>下载字体 添加到static/fonts文件夹下，若使用了主题则可以放在主题的fonts文件夹下，如themes/archie/static/fonts。 2. 添加</li>
+</ol>
+</div>
 				
 				
 				<div class="read-more">
@@ -781,70 +706,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="编写">编写</h2>
-<p>编写<code>ruby.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;!-- layouts/shortcodes/ruby.html --&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;ruby&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  {{ .Get &#34;text&#34; }}&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;{{ .Get &#34;title&#34; }}&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>&lt;/ruby&gt;
-</span></span></code></pre></div><h2 id="使用">使用</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{&lt; ruby title=&#34;完全没理解&#34; text=&#34;太棒了,我逐渐理解一切&#34; &gt;}}
-</span></span></code></pre></div>
-<ruby>太棒了,我逐渐理解一切<rp>(</rp><rt>完全没理解</rt><rp>)</rp></ruby></div>
+</div><div class="summary">编写 编写ruby.html放在layouts/shortcodes/文件夹中 1&lt;!&ndash; layouts/shortcodes/ruby.html &ndash;&gt; 2&lt;ruby&gt; 3 {{ .Get &quot;text&quot; }}&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;{{ .Get &quot;title&quot; }}&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt; 4&lt;/ruby&gt; 使用 1{{&lt; ruby title=&quot;完全没理解&quot; text</div>
 				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/hugo/kidding/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Kidding <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-07-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/hugo">Hugo</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="编写">编写</h2>
-<p>编写<code>kidding.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;!-- layouts/shortcodes/kidding.html --&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;s style=&#34;text-decoration: line-through;&#34; title=&#34;{{ .Get &#34;title&#34; }}&#34;&gt;{{ .Get &#34;text&#34; }}&lt;/s&gt;
-</span></span></code></pre></div><h2 id="使用">使用</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{&lt; kidding title=&#34;完全没理解&#34; text=&#34;太棒了,我逐渐理解一切&#34; &gt;}}
-</span></span></code></pre></div>
-<s style="text-decoration: line-through;" title="完全没理解">太棒了,我逐渐理解一切</s></div>
+				
+				<div class="read-more">
+				  <a href="/posts/hugo/ruby/">查看更多…</a>
+				</div>
 				
             
 

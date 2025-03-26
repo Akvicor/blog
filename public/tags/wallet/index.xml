@@ -4,7 +4,7 @@
     <title>Wallet on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/tags/wallet/</link>
     <description>Recent content in Wallet on Akvicor&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 17 Feb 2025 03:00:02 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/tags/wallet/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/project/wallet/</link>
       <pubDate>Sat, 15 Feb 2025 23:49:00 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/project/wallet/</guid>
-      <description>&lt;p&gt;这是一篇指导如何使用和开发Wallet的博客&lt;/p&gt;&#xA;&#xA;&lt;s style=&#34;text-decoration: line-through;&#34; title=&#34;指挖坑&#34;&gt;详细的内容以后再说吧, 今天连着开源了三个项目, 写了三篇博客, 燃尽了&lt;/s&gt;&#xA;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c8224bb97.gif&#34; alt=&#34;64ce148cec784.gif&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c82167416.gif&#34; alt=&#34;64ce146497524.gif&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;相关项目&#34;&gt;相关项目&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/Akvicor/wallet&#34;&gt;项目代码 Github https://github.com/Akvicor/wallet&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gitee.com/Akvicor/wallet&#34;&gt;项目代码 Gitee https://gitee.com/Akvicor/wallet&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;界面预览&#34;&gt;界面预览&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;多用户&lt;/li&gt;&#xA;&lt;li&gt;自定义银行,货币类型,银行卡类型&lt;/li&gt;&#xA;&lt;li&gt;保存银行卡信息&lt;/li&gt;&#xA;&lt;li&gt;自定义汇率&lt;/li&gt;&#xA;&lt;li&gt;自定义交易分类(收入/支出/转账/兑换下的子分类&lt;/li&gt;&#xA;&lt;li&gt;创建钱包, 以及钱包下的划分, 每个划分绑定到某张银行卡&lt;/li&gt;&#xA;&lt;li&gt;创建愿望单, 与钱包功能一致&lt;/li&gt;&#xA;&lt;li&gt;创建债务, 与钱包功能一致&lt;/li&gt;&#xA;&lt;li&gt;创建订阅, 自定义付费周期, 自动计算下次付费时间, 下次付费前通过短信或邮件提醒, 自动计算每天/月/年的订阅开支&lt;/li&gt;&#xA;&lt;li&gt;开支图表, 日历形式展示每天/月的开支, 饼状图展示区间内的开支占比, 折线图展示区间内的开支占比&lt;/li&gt;&#xA;&lt;li&gt;通过短信或邮件发送通知&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c60cce4de.png&#34; alt=&#34;2025-02-16-004955_1871x779_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c60aaa42f.png&#34; alt=&#34;2025-02-16-005049_1873x623_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c609c72e5.png&#34; alt=&#34;2025-02-16-005055_1881x633_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c6085955a.png&#34; alt=&#34;2025-02-16-005102_1885x862_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c606e0c86.png&#34; alt=&#34;2025-02-16-005106_1874x757_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c605c3d71.png&#34; alt=&#34;2025-02-16-005109_1868x803_scrot.png&#34;&gt;&lt;/p&gt;</description>
+      <description>这是一篇指导如何使用和开发Wallet的博客 详细的内容以后再说吧, 今天连着开源了三个项目, 写了三篇博客, 燃尽了 相关项目 项目代码 Github https://github.com/Akvicor/wallet 项目代码 Gitee https://gitee.com/Akvicor/wallet 界面预览 多用户 自定</description>
     </item>
   </channel>
 </rss>

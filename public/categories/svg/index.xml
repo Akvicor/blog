@@ -4,7 +4,7 @@
     <title>SVG on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/svg/</link>
     <description>Recent content in SVG on Akvicor&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/svg/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/svg/struct/</link>
       <pubDate>Thu, 08 Feb 2024 01:17:50 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/svg/struct/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;M = moveto(M X,Y)&lt;/code&gt;：起始 将画笔移动到指定的坐标位置&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;L = lineto(L X,Y)&lt;/code&gt;：连线 画直线到指定的坐标位置&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;H = horizontal lineto(H X)&lt;/code&gt;：水平线 画水平线到指定的X坐标位置&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;V = vertical lineto(V Y)&lt;/code&gt;：垂直线 画垂直线到指定的Y坐标位置&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;C = curveto(C X1,Y1,X2,Y2,ENDX,ENDY)&lt;/code&gt;：三次贝塞尔曲线&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;S = smooth curveto(S X2,Y2,ENDX,ENDY)&lt;/code&gt;：三次贝塞尔曲线&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Q = quadratic Belzier curve(Q X,Y,ENDX,ENDY)&lt;/code&gt;：二次贝塞尔曲线&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;T = smooth quadratic Belzier curveto(T ENDX,ENDY)&lt;/code&gt;：二次贝塞尔曲线 映射&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;A = elliptical Arc(A RX,RY,XROTATION,FLAG1,FLAG2,X,Y)&lt;/code&gt;：椭圆弧 弧线&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Z = closepath()&lt;/code&gt;：闭合（从最后一个点连直线到起始点）关闭路径&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;使用大写字母表示绝对位置，小写字母表示相对位置（相对于起点的位置，向右向下为正）。&lt;/p&gt;</description>
+      <description>M = moveto(M X,Y)：起始 将画笔移动到指定的坐标位置 L = lineto(L X,Y)：连线 画直线到指定的坐标位置 H = horizontal lineto(H X)：水平线 画水平线到指定的X坐标位置 V = vertical lineto(V Y)：垂直线 画垂直</description>
     </item>
   </channel>
 </rss>

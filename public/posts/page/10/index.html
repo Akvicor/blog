@@ -210,6 +210,449 @@
         <div class="item" >
            
             
+            <a href="https://blog.akvicor.com/posts/linux/netstat/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Netstat <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">1# 查看系统tcp连接中各个状态的连接数。 2netstat -an|awk '/^tcp/ {++s[$NF]} END {for(a in s ) print a,s[a]}' 3 4# 查看和本机23端口建立连接并状态在established的所有ip 5netstat -an|grep 80|grep ESTA|awk '{print $5}'|awk 'BEGIN {FS=&quot;:&quot;} {print $1 &quot;\n&quot;}'|sort|uniq -c</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/iptables_deny_ip/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Iptables deny ip <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">only permit china ip 1systemctl stop firewalld.service 2systemctl disable firewalld.service 3 4yum install ipset 5yum install iptables-services 清空之前的规则 1iptables -P INPUT ACCEPT 2iptables -F 创建一个名为cnip的规则 1ipset -N cnip hash:net 2ipset save 3# 下载国家IP段，这里以中国为例 4wget -P . <a href="http://www.ipdeny.com/ipblocks/data/countries/cn.zone">http://www.ipdeny.com/ipblocks/data/countries/cn.zone</a> 5# 将IP段添加到cni</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/iptables_deny_ip/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/logind/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Debian 笔记本合盖和电源键作用 <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">取消笔记本合盖后挂起 1vim /etc/systemd/logind.conf 修改 1# HandleLidSwitch=suspend 2HandleLidSwitch=ignore 3# HandlePowerKey=poweroff 4HandlePowerKey=ignore 修改屏幕保护</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/gdb/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> GDB Usage <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">连接远程调试 1target remote localhost:1234 查看内存 1x/&lt;n/f/u&gt; &lt;addr&gt; 2 3x /8xb 0xffff80000002fff0 4# 以16进制方式查看0xffff80000002fff0处8字节内容 n 从当前地址往后请求的字节数，如果不指定的话，GDB默</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/gdb/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/apt_key_deprecated/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> APT key deprecated <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">1curl -s URL | sudo gpg &ndash;no-default-keyring &ndash;keyring gnupg-ring:/etc/apt/trusted.gpg.d/NAME.gpg &ndash;import 2sudo chmod 644 /etc/apt/trusted.gpg.d/NAME.gpg google-chrome 1curl -s <a href="https://dl.google.com/linux/linux_signing_key.pub">https://dl.google.com/linux/linux_signing_key.pub</a> | sudo gpg &ndash;no-default-keyring &ndash;keyring gnupg-ring:/etc/apt/trusted.gpg.d/google_linux_signing_key.gpg &ndash;import 2sudo chmod 644 /etc/apt/trusted.gpg.d/google_linux_signing_key.gpg</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/bochs/install/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Bochs Install <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/bochs">Bochs</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">1apt install bochs bochs-x</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/alsa/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Alsa <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">声音控制 1apt install alsa-tools 2amixer set 'Master' unmute 更换默认card 找到对应card序号 1cat /proc/asound/cards 创建此文件 /etc/asound.conf 添加以下内容 1# 1 应改为对应card序号 2defaults.pcm.card 1 3defaults.ctl.card 1 查看cardID或名字 1# 列出映射设备 2aplay -l</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/alsa/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/zoneinfo/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Debian Zoneinfo <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-15
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux">Linux</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">1# 使用UTC时间 2cp /usr/share/zoneinfo/UTC /etc/localtime 3# 使用GMT-8时间，即北京时间 4cp /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime 5# 查看当前时间 6date &quot;+%Y-%m-%d %H:%M:%S&quot; 7TZ=UTC-8 date +%c%:::z 8# 同步时间到硬件 9hwclock -w</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/docker/install/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Docker Install <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2023-02-14
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/docker">Docker</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">Debian 官方安装文档https://docs.docker.com/engine/install/debian/ Uninstall old versions 1apt-get remove docker docker-engine docker.io containerd runc Set up the repository 1# Add Docker's official GPG key: 2apt-get update 3apt-get install ca-certificates curl 4install</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/docker/install/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
             <a href="https://blog.akvicor.com/posts/caddy/install/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
                 <span> Caddy Install <sup></sup></span>
@@ -245,918 +688,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>官方安装文档<a href="https://caddyserver.com/docs/install">https://caddyserver.com/docs/install</a></p>
-<h1 id="debian-ubuntu-raspbian">Debian, Ubuntu, Raspbian</h1>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>curl -1sLf <span style="color:#0a3069">&#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#39;</span> <span style="color:#1f2328">|</span> gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>curl -1sLf <span style="color:#0a3069">&#39;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#39;</span> <span style="color:#1f2328">|</span> tee /etc/apt/sources.list.d/caddy-stable.list
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>apt update
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>apt install caddy
-</span></span></code></pre></div><h2 id="compile">Compile</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>~/go/bin/xcaddy build --with github.com/mholt/caddy-webdav --with github.com/aksdb/caddy-cgi/v2
-</span></span></code></pre></div><h2 id="module">Module</h2>
-<h3 id="cgi">cgi</h3>
-<p>cgi模块：CGI能够让浏览者与服务器进行交互</p></div>
+</div><div class="summary">官方安装文档https://caddyserver.com/docs/install Debian, Ubuntu, Raspbian 1apt install -y debian-keyring debian-archive-keyring apt-transport-https curl 2curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg &ndash;dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg 3curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list 4apt update 5apt install caddy Compile 1go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest 2~/go/bin/xcaddy build &ndash;with github.com/mholt/caddy-webdav &ndash;with</div>
 				
 				
 				<div class="read-more">
 				  <a href="/posts/caddy/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/golang/note/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Note <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-02-10
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/golang">Golang</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="foreach变量">foreach变量</h2>
-<h3 id="错误代码">错误代码</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">for</span> <span style="color:#1f2328">_</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">v</span> <span style="color:#0550ae">:=</span> <span style="color:#cf222e">range</span> <span style="color:#1f2328">histories</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#6639ba">InsertByHistory</span><span style="color:#1f2328">(</span><span style="color:#0550ae">&amp;</span><span style="color:#1f2328">v</span><span style="color:#1f2328">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div><h3 id="正确代码">正确代码</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">for</span> <span style="color:#1f2328">_</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">v</span> <span style="color:#0550ae">:=</span> <span style="color:#cf222e">range</span> <span style="color:#1f2328">histories</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#1f2328">h</span> <span style="color:#0550ae">:=</span> <span style="color:#1f2328">v</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>	<span style="color:#6639ba">InsertByHistory</span><span style="color:#1f2328">(</span><span style="color:#0550ae">&amp;</span><span style="color:#1f2328">h</span><span style="color:#1f2328">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div><h3 id="笔记">笔记</h3>
-<p>如以上代码，传递指针时必须声明一个新变量存储<code>v</code>，否则会导致传递给函数的是<code>histories</code>最后一个元素的首地址</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/golang/note/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/ssl/alpha_ssl/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> AlphaSSL <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-01-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/ssl">SSL</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><p>已不可用</p>
-<h2 id="ssl2buy">SSL2BUY</h2>
-<h3 id="生成csr">生成CSR</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>openssl req -nodes -newkey rsa:2048 -keyout key -out csr
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a"># C = US</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># ST = California</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># L = San Jose</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#57606a"># O = Kayuwki</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#57606a"># CN = *.kayuwki.com</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#57606a"># emailAddress = admin@kayuwki.com</span>
-</span></span></code></pre></div><h3 id="补全并安装证书">补全并安装证书</h3>
-<p>由于 AlphaSSL 是中级证书商，因此需要把它的中级证书和签发给我的证书合并。</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/ssl/alpha_ssl/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/openwrt/enable_https/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Enable HTTPS <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-01-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/openwrt">OpenWrt</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><p>修改uhttpd配置文件 <code>/etc/config/uhttpd</code></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>option cert /viry/cert/akvicor.com.crt
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>option key /viry/cert/akvicor.com.key
-</span></span></code></pre></div><p>重启uhttpd服务 <code>/etc/init.d/uhttpd restart</code></p></div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/linux/trust_ca/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Trust CA certificates <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2023-01-26
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/linux">Linux</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="debian">Debian</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># Debian/Ubuntu/Gentoo</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#57606a"># - 安装</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>sudo cp root_ca.crt /usr/local/share/ca-certificates/root_ca.crt
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#57606a"># update-ca-certificates 会添加 /etc/ca-certificates.conf 配置文件中指定的证书</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#57606a">#   另外所有 /usr/local/share/ca-certificates/*.crt 会被列为隐式信任</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>sudo update-ca-certificates
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#57606a"># - 删除</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>sudo rm /usr/local/share/ca-certificates/root_ca.crt
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>sudo update-ca-certificates --fresh
-</span></span></code></pre></div><h2 id="rhel">RHEL</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># CentOS/Fedora/RHEL</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>yum install ca-certificates
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 启用动态 CA 配置功能：</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>update-ca-trust force-enable
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>cp root_ca.crt /etc/pki/ca-trust/source/anchors/
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>update-ca-trust
-</span></span></code></pre></div><h2 id="macos">MacOS</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 安装 root_ca.crt</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ~/root_ca.crt
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># 删除指定的证书</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>sudo security delete-certificate -c <span style="color:#0a3069">&#34;&lt;name of existing certificate&gt;&#34;</span>
-</span></span></code></pre></div><h2 id="windows">Windows</h2>
-<ol>
-<li>在根证书文件点鼠标右键，选择“安装证书”</li>
-<li>选择“当前用户”或者“本地计算机”，下一步</li>
-<li>“将所有的证书都放入下列存储”，“浏览”，“受信任的根证书颁发机构”，“确定”，下一步</li>
-<li>完成，“是”，确定</li>
-</ol></div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/opensource/librespeed/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> LibreSpeed <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-11-17
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/open-source">Open Source</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="compile-from-source">Compile from source</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git clone github.com/librespeed/speedtest-go
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">cd</span> speedtest-go
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>go build -ldflags <span style="color:#0a3069">&#34;-w -s&#34;</span> -trimpath -o speedtest main.go
-</span></span></code></pre></div><h2 id="setting">Setting</h2>
-<p>将<code>settings.toml</code>文件中的<code>assets_path</code>设置为<code>web/assets</code>目录（也可以将<code>assets</code>目录和可执行文件移动到其他位置）</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/opensource/librespeed/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/openwrt/lpthread/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> /usr/bin/ld: cannot find -lpthread <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-11-17
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/openwrt">OpenWrt</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><p>使用golang编译程序遇到的问题</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># runtime/cgo
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>/usr/bin/ld: cannot find -lpthread
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>collect2: error: ld returned 1 exit status
-</span></span></code></pre></div><p>pthread primitives are part of the core libc.so library. to satisfy <code>-lpthread</code>, create an empty AR archive somewhere in the library search path.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ar -rc /usr/lib/libpthread.a
-</span></span></code></pre></div></div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/openwrt/squashfs_resize/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> squashfs镜像扩容 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-11-16
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/openwrt">OpenWrt</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">此方法仅适合刚把镜像写入磁盘还未启动以及还未将镜像写入磁盘这两种情况，一旦系统启动，squashfs分区大小就已经确定了，如果要更改只能使用losetup挂载并执行resize.f2fs扩展大小。</div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/openwrt/squashfs_resize/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/html/placeholder/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Placeholder <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-10-11
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/html">HTML</a>
-			
-			<a href="/categories/css">CSS</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="input输入框占位符变化输入框处于聚焦状态时输入框的占位符内容以动画形式移动到左上角作为标题">input输入框占位符变化：输入框处于聚焦状态时，输入框的占位符内容以动画形式移动到左上角作为标题</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;input-box&#34;</span><span style="color:#1f2328">&gt;</span> 
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">input</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;input-control input-outline&#34;</span> <span style="color:#1f2328">placeholder</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;账号&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">label</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;input-label&#34;</span><span style="color:#1f2328">&gt;</span>账号<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">label</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
-</span></span></code></pre></div><p>首先：让浏览器默认的<code>placeholder</code>效果不可见</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">input-control</span><span style="color:#1f2328">:</span><span style="color:#0550ae">placeholder-shown</span><span style="color:#1f2328">::</span><span style="color:#0550ae">placeholder</span> <span style="color:#1f2328">{</span> 
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">transparent</span><span style="color:#1f2328">;</span> 
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div><p>其次：使用<code>.input-label</code>元素代替浏览器原声的占位符</p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/html/placeholder/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/windows/kms/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> KMS &amp; GVLK <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-10-08
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/windows">Windows</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="windows">Windows</h2>
-<p><a href="https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations">https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys?source=recommendations</a></p>
-<h3 id="windows-server-2022">Windows Server 2022</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows Server 2022 Datacenter</td>
-          <td>WX4NM-KYWYW-QJJR4-XV3QB-6VM33</td>
-      </tr>
-      <tr>
-          <td>Windows Server 2022 Standard</td>
-          <td>VDYBN-27WPP-V4HQT-9VMD4-VMK7H</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-server-2019">Windows Server 2019</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows Server 2019 Datacenter</td>
-          <td>WMDGN-G9PQG-XVVXX-R3X43-63DFG</td>
-      </tr>
-      <tr>
-          <td>Windows Server 2019 Standard</td>
-          <td>N69G4-B89J2-4G8F4-WWYCC-J464C</td>
-      </tr>
-      <tr>
-          <td>Windows Server 2019 Essentials</td>
-          <td>WVDHN-86M7X-466P6-VHXV7-YY726</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-server-2016">Windows Server 2016</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows Server 2016 Datacenter</td>
-          <td>CB7KF-BWN84-R7R2Y-793K2-8XDDG</td>
-      </tr>
-      <tr>
-          <td>Windows Server 2016 Standard</td>
-          <td>WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</td>
-      </tr>
-      <tr>
-          <td>Windows Server 2016 Essentials</td>
-          <td>JCKRF-N37P4-C2D82-9YXRT-4M63B</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-11">Windows 11</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows 11 专业版</td>
-          <td>W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
-      </tr>
-      <tr>
-          <td>Windows 11 专业版 N</td>
-          <td>MH37W-N47XK-V7XM9-C7227-GCQG9</td>
-      </tr>
-      <tr>
-          <td>Windows 11 专业工作站版</td>
-          <td>NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
-      </tr>
-      <tr>
-          <td>Windows 11 专业工作站版 N</td>
-          <td>9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
-      </tr>
-      <tr>
-          <td>Windows 11 专业教育版</td>
-          <td>6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
-      </tr>
-      <tr>
-          <td>Windows 11 专业教育版 N</td>
-          <td>YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
-      </tr>
-      <tr>
-          <td>Windows 11 教育版</td>
-          <td>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
-      </tr>
-      <tr>
-          <td>Windows 11 教育版 N</td>
-          <td>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
-      </tr>
-      <tr>
-          <td>Windows 11 企业版</td>
-          <td>NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
-      </tr>
-      <tr>
-          <td>Windows 11 企业版 N</td>
-          <td>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
-      </tr>
-      <tr>
-          <td>Windows 11 企业版 G</td>
-          <td>YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
-      </tr>
-      <tr>
-          <td>Windows 11 企业版 G N</td>
-          <td>44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-10">Windows 10</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows 10 专业版</td>
-          <td>W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
-      </tr>
-      <tr>
-          <td>Windows 10 专业版 N</td>
-          <td>MH37W-N47XK-V7XM9-C7227-GCQG9</td>
-      </tr>
-      <tr>
-          <td>Windows 10 专业工作站版</td>
-          <td>NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
-      </tr>
-      <tr>
-          <td>Windows 10 专业工作站版 N</td>
-          <td>9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
-      </tr>
-      <tr>
-          <td>Windows 10 专业教育版</td>
-          <td>6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
-      </tr>
-      <tr>
-          <td>Windows 10 专业教育版 N</td>
-          <td>YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
-      </tr>
-      <tr>
-          <td>Windows 10 教育版</td>
-          <td>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
-      </tr>
-      <tr>
-          <td>Windows 10 教育版 N</td>
-          <td>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
-      </tr>
-      <tr>
-          <td>Windows 10 企业版</td>
-          <td>NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
-      </tr>
-      <tr>
-          <td>Windows 10 企业版 N</td>
-          <td>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
-      </tr>
-      <tr>
-          <td>Windows 10 企业版 G</td>
-          <td>YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
-      </tr>
-      <tr>
-          <td>Windows 10 企业版 G N</td>
-          <td>44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-10-ltsc-2021">Windows 10 LTSC 2021</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows 10 企业版 LTSC 2021</td>
-          <td>M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
-      </tr>
-      <tr>
-          <td>Windows 10 企业版 N LTSC 2021</td>
-          <td>92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-10-ltsc-2019">Windows 10 LTSC 2019</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows 10 企业版 LTSC 2019</td>
-          <td>M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
-      </tr>
-      <tr>
-          <td>Windows 10 企业版 N LTSC 2019</td>
-          <td>92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-10-ltsb-2016">Windows 10 LTSB 2016</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows 10 企业版 LTSB 2016</td>
-          <td>DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</td>
-      </tr>
-      <tr>
-          <td>Windows 10 企业版 N LTSB 2016</td>
-          <td>QFFDN-GRT3P-VKWWX-X7T3R-8B639</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-7">Windows 7</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows 7 专业版</td>
-          <td>FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</td>
-      </tr>
-      <tr>
-          <td>Windows 7 专业版 N</td>
-          <td>MRPKT-YTG23-K7D7T-X2JMM-QY7MG</td>
-      </tr>
-      <tr>
-          <td>Windows 7 专业版 E</td>
-          <td>W82YF-2Q76Y-63HXB-FGJG9-GF7QX</td>
-      </tr>
-      <tr>
-          <td>Windows 7 企业版</td>
-          <td>33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</td>
-      </tr>
-      <tr>
-          <td>Windows 7 企业版 N</td>
-          <td>YDRBP-3D83W-TY26F-D46B2-XCKRJ</td>
-      </tr>
-      <tr>
-          <td>Windows 7 企业版 E</td>
-          <td>C29WB-22CC8-VJ326-GHFJW-H9DH4</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="windows-xp">Windows XP</h3>
-<table>
-  <thead>
-      <tr>
-          <th>操作系统版本</th>
-          <th>KMS 客户端安装程序密钥</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Windows XP 专业版</td>
-          <td>MRX3F-47B9T-2487J-KWKMF-RPWBY</td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="office">Office</h2>
-<p><a href="https://learn.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks?redirectedfrom=MSDN">https://learn.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks?redirectedfrom=MSDN</a></p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/kms/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/windows/windows_product_activation/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Windows Product Activation <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-10-08
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/windows">Windows</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="kms激活windows">KMS激活Windows</h2>
-<ol>
-<li>首先用管理员权限打开命令提示符</li>
-<li>卸载当前系统秘钥：<code>slmgr.vbs /upk</code></li>
-<li>写入KMS的GVLK秘钥：<code>slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code></li>
-<li>写入KMS服务器地址：<code>slmgr /skms home.akvicor.com</code></li>
-<li>连接KMS服务器激活：<code>slmgr /ato</code></li>
-<li>查看激活状态：<code>slmgr.vbs -dlv</code></li>
-</ol>
-<h2 id="kms激活office">KMS激活Office</h2>
-<ol>
-<li>首先用管理员权限打开命令提示符</li>
-<li>切换到Office的安装路径，例如：<code>C:\Program Files\Microsoft Office\Office16</code></li>
-<li>查看当前密钥最后五位数：<code>cscript ospp.vbs /dstatus</code></li>
-<li>卸载当前密钥：<code>cscript ospp.vbs /unpkey:XXXXX</code></li>
-<li>安装KMS密钥：<code>cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code></li>
-<li>设置激活KMS服务器：<code>cscript ospp.vbs /sethst:home.akvicor.com</code></li>
-<li>执行激活命令：<code>cscript ospp.vbs /act</code></li>
-</ol>
-<h2 id="download-office">Download Office</h2>
-<p>Office Deployment Tool简称ODT，是微软官方提供的Office部署工具。下载地址为：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a>或<a href="http://pi.akvicor.com:7021/file?f=1284">http://pi.akvicor.com:7021/file?f=1284</a></p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/windows/windows_product_activation/">查看更多…</a>
 				</div>
 				
             
@@ -1194,7 +730,7 @@
         <a href="/posts/page/11/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>

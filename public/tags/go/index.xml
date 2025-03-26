@@ -4,7 +4,7 @@
     <title>Go on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/tags/go/</link>
     <description>Recent content in Go on Akvicor&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 17 Feb 2025 03:00:02 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://blog.akvicor.com/posts/project/wallet/</link>
       <pubDate>Sat, 15 Feb 2025 23:49:00 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/project/wallet/</guid>
-      <description>&lt;p&gt;这是一篇指导如何使用和开发Wallet的博客&lt;/p&gt;&#xA;&#xA;&lt;s style=&#34;text-decoration: line-through;&#34; title=&#34;指挖坑&#34;&gt;详细的内容以后再说吧, 今天连着开源了三个项目, 写了三篇博客, 燃尽了&lt;/s&gt;&#xA;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c8224bb97.gif&#34; alt=&#34;64ce148cec784.gif&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c82167416.gif&#34; alt=&#34;64ce146497524.gif&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;相关项目&#34;&gt;相关项目&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/Akvicor/wallet&#34;&gt;项目代码 Github https://github.com/Akvicor/wallet&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gitee.com/Akvicor/wallet&#34;&gt;项目代码 Gitee https://gitee.com/Akvicor/wallet&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;界面预览&#34;&gt;界面预览&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;多用户&lt;/li&gt;&#xA;&lt;li&gt;自定义银行,货币类型,银行卡类型&lt;/li&gt;&#xA;&lt;li&gt;保存银行卡信息&lt;/li&gt;&#xA;&lt;li&gt;自定义汇率&lt;/li&gt;&#xA;&lt;li&gt;自定义交易分类(收入/支出/转账/兑换下的子分类&lt;/li&gt;&#xA;&lt;li&gt;创建钱包, 以及钱包下的划分, 每个划分绑定到某张银行卡&lt;/li&gt;&#xA;&lt;li&gt;创建愿望单, 与钱包功能一致&lt;/li&gt;&#xA;&lt;li&gt;创建债务, 与钱包功能一致&lt;/li&gt;&#xA;&lt;li&gt;创建订阅, 自定义付费周期, 自动计算下次付费时间, 下次付费前通过短信或邮件提醒, 自动计算每天/月/年的订阅开支&lt;/li&gt;&#xA;&lt;li&gt;开支图表, 日历形式展示每天/月的开支, 饼状图展示区间内的开支占比, 折线图展示区间内的开支占比&lt;/li&gt;&#xA;&lt;li&gt;通过短信或邮件发送通知&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c60cce4de.png&#34; alt=&#34;2025-02-16-004955_1871x779_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c60aaa42f.png&#34; alt=&#34;2025-02-16-005049_1873x623_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c609c72e5.png&#34; alt=&#34;2025-02-16-005055_1881x633_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c6085955a.png&#34; alt=&#34;2025-02-16-005102_1885x862_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c606e0c86.png&#34; alt=&#34;2025-02-16-005106_1874x757_scrot.png&#34;&gt;&#xA;&lt;img src=&#34;https://img.akvicor.com/i/2025/02/16/67b0c605c3d71.png&#34; alt=&#34;2025-02-16-005109_1868x803_scrot.png&#34;&gt;&lt;/p&gt;</description>
+      <description>这是一篇指导如何使用和开发Wallet的博客 详细的内容以后再说吧, 今天连着开源了三个项目, 写了三篇博客, 燃尽了 相关项目 项目代码 Github https://github.com/Akvicor/wallet 项目代码 Gitee https://gitee.com/Akvicor/wallet 界面预览 多用户 自定</description>
     </item>
     <item>
       <title>MSG 信息发送平台攻略</title>
       <link>https://blog.akvicor.com/posts/project/msg/</link>
       <pubDate>Sat, 15 Feb 2025 20:57:00 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/project/msg/</guid>
-      <description>&lt;p&gt;这是一篇指导如何使用和开发MSG的博客&lt;/p&gt;&#xA;&lt;h2 id=&#34;概念介绍&#34;&gt;概念介绍&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;平台: 例如SMS,邮箱,Telegram,微信&lt;/li&gt;&#xA;&lt;li&gt;Bot: 每个bot都可以支持一个或多个平台, 但每种平台只能绑定一个&lt;/li&gt;&#xA;&lt;li&gt;通知渠道: 将Bot,平台以及发送目标绑定在一起, 同时可以给渠道设置标记(全局唯一), 发送信息时可以通过渠道ID或渠道标记向对应的渠道发送信息&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;相关项目&#34;&gt;相关项目&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/Akvicor/msg&#34;&gt;项目代码 Github https://github.com/Akvicor/msg&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gitee.com/Akvicor/msg&#34;&gt;项目代码 Gitee https://gitee.com/Akvicor/msg&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;相关&lt;/p&gt;</description>
+      <description>这是一篇指导如何使用和开发MSG的博客 概念介绍 平台: 例如SMS,邮箱,Telegram,微信 Bot: 每个bot都可以支持一个或多个平台, 但每种平台只能绑定一个 通知渠道</description>
     </item>
     <item>
       <title>Air780E&#43;树莓派短信收发平台</title>
       <link>https://blog.akvicor.com/posts/project/sms/</link>
       <pubDate>Sat, 15 Feb 2025 16:59:28 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/project/sms/</guid>
-      <description>&lt;p&gt;苦于国内的短信平台都需要指定发送模板, 没法发送高度自定义的消息, 且模板审核过于麻烦, 因此想要自己开发一套用于发送短信的平台&lt;/p&gt;&#xA;&lt;p&gt;受 &lt;a href=&#34;https://www.chenxublog.com/2022/10/28/19-9-sms-forwarding-air780e-esp32c3.html&#34;&gt;此文章&lt;/a&gt; 的启发, 决定使用Air780E和树莓派制作一个能够&lt;strong&gt;接收&lt;/strong&gt;和&lt;strong&gt;发送&lt;/strong&gt;短信的程序&lt;/p&gt;</description>
+      <description>苦于国内的短信平台都需要指定发送模板, 没法发送高度自定义的消息, 且模板审核过于麻烦, 因此想要自己开发一套用于发送短信的平台 受 此文章 的启发, 决定使用Air780E</description>
     </item>
   </channel>
 </rss>

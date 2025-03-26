@@ -4,7 +4,7 @@
     <title>AOS32 on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/aos32/</link>
     <description>Recent content in AOS32 on Akvicor&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 26 Mar 2025 00:26:47 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/aos32/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/aos32/gb2312/</link>
       <pubDate>Mon, 27 Feb 2023 08:16:02 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/aos32/gb2312/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://via.akvicor.com/file?f=1392&#34;&gt;aos32-gb2312.tgz&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;一个GB2312汉字是由两个字节编码的，范围为A1A1~FEFE。A1-A9为符号区，B0到F7为汉字区。每一个区有94个字符。&lt;/p&gt;&#xA;&lt;h1 id=&#34;点阵结构&#34;&gt;点阵结构&lt;/h1&gt;&#xA;&lt;p&gt;从图片可以看出：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;日文编码的第一个字节为点阵的左半部分，第二个字节为点阵的右半部分。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.akvicor.com/i/2024/09/15/66e68e9f894dd.png&#34; alt=&#34;日文EUC&#34; title=&#34;日文EUC&#34;&gt;&lt;/p&gt;</description>
+      <description>aos32-gb2312.tgz 一个GB2312汉字是由两个字节编码的，范围为A1A1~FEFE。A1-A9为符号区，B0到F7为汉字区。每一个区有94个字符。 点阵结构 从图片可以看出： 日文编</description>
     </item>
   </channel>
 </rss>

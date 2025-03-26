@@ -228,7 +228,7 @@
 <p><code>vim /usr/local/php/etc/php.ini</code></p>
 <p>搜索 scandir、exec、passthru，将其从被禁用的函数中删除。</p>
 <p>重启 web 服务器：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>service php<span style="color:#0550ae">-</span>fpm restart
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>service php<span style="color:#000;font-weight:bold">-</span>fpm restart
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>service nginx reload
 </span></span></code></pre></div><p>将要在网站上显示的目录和 _h5ai 文件夹放在一起：</p>
 <p>到目前为止，h5ai 可以正常使用了，但是我们可以开启 _h5ai 全部功能。通过 <code>http(s)://your_domain/_h5ai/public/index.php</code> 可以查看 _h5ai 的全部功能开启情况，默认密码是空的。</p>

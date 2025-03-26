@@ -245,31 +245,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>docker默认情况下会使用整个172.16.0.0/12网段, 很明显对于个人用户, docker占用了太多的内网IP, 容易与其他内网网段冲突</p>
-<h2 id="1-停用所有镜像">1. 停用所有镜像</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 停止</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>docker stop <span style="color:#cf222e">$(</span>docker ps -aq<span style="color:#cf222e">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 删除</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>docker rm <span style="color:#cf222e">$(</span>docker ps -aq<span style="color:#cf222e">)</span>
-</span></span></code></pre></div><h2 id="2-清楚已经分配的网络">2. 清楚已经分配的网络</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>docker network prune
-</span></span></code></pre></div><h2 id="3-编辑配置文件">3. 编辑配置文件</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 创建文件</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>vim /etc/docker/daemon.json
-</span></span></code></pre></div><ul>
-<li>我将<code>172.18.0.1/16</code>分配给默认网段, 一般情况下<code>/24</code>也够用</li>
-<li>我将<code>172.19.0.0/16</code>分配给docker默认的ip段分配器, <code>/26</code>限制每次分配的网段大小</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-json" data-lang="json"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#0550ae">&#34;bip&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;172.18.0.1/16&#34;</span><span style="color:#1f2328">,</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#0550ae">&#34;default-address-pools&#34;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">[</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#1f2328">{</span><span style="color:#0550ae">&#34;base&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;172.19.0.0/16&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">&#34;size&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">26</span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#1f2328">]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div><h2 id="4-应用配置">4. 应用配置</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>systemctl daemon-reload
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>systemctl restart docker
-</span></span></code></pre></div></div>
+</div><div class="summary">docker默认情况下会使用整个172.16.0.0/12网段, 很明显对于个人用户, docker占用了太多的内网IP, 容易与其他内网网段冲突 1. 停用所有镜像 1# 停止</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/docker/network/">查看更多…</a>
+				</div>
 				
             
 
@@ -316,10 +297,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>暴力删除registry镜像文件</p>
-<p>直接进入这个目录删除仓库 <code>/HHD4/docker/docker_hub/docker/registry/v2/repositories</code></p>
-<p>进入docker实例执行垃圾回收 <code>/bin/registry garbage-collect /etc/docker/registry/config.yml</code></p>
-<p>重启registry</p></div>
+</div><div class="summary">暴力删除registry镜像文件 直接进入这个目录删除仓库 /HHD4/docker/docker_hub/docker/registry/v2/repositories 进入docker实例执行垃圾回收 /bin/registry garbage-collect /etc/docker/registry/config.yml 重启registry</div>
 				
             
 
@@ -366,34 +344,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="debian">Debian</h2>
-<p>官方安装文档<a href="https://docs.docker.com/engine/install/debian/">https://docs.docker.com/engine/install/debian/</a></p>
-<h3 id="uninstall-old-versions">Uninstall old versions</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt-get remove docker docker-engine docker.io containerd runc
-</span></span></code></pre></div><h3 id="set-up-the-repository">Set up the repository</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># Add Docker&#39;s official GPG key:</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>apt-get update
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>apt-get install ca-certificates curl
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>install -m <span style="color:#0550ae">0755</span> -d /etc/apt/keyrings
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>chmod a+r /etc/apt/keyrings/docker.asc
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#57606a"># Add the repository to Apt sources:</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#6639ba">echo</span> <span style="color:#0a3069">\
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#0a3069"></span>  <span style="color:#0a3069">&#34;deb [arch=</span><span style="color:#cf222e">$(</span>dpkg --print-architecture<span style="color:#cf222e">)</span><span style="color:#0a3069"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#0a3069">  </span><span style="color:#cf222e">$(</span>. /etc/os-release <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#6639ba">echo</span> <span style="color:#0a3069">&#34;</span><span style="color:#953800">$VERSION_CODENAME</span><span style="color:#0a3069">&#34;</span><span style="color:#cf222e">)</span><span style="color:#0a3069"> stable&#34;</span> <span style="color:#1f2328">|</span> <span style="color:#0a3069">\
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#0a3069"></span>  tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>apt-get update
-</span></span></code></pre></div><h3 id="install-docker-engine">Install Docker Engine</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>apt-get update
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-</span></span></code></pre></div><h3 id="portainer管理多台服务器的docker">Portainer管理多台服务器的docker</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim /usr/lib/systemd/system/docker.service
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#57606a">#找到ExecStart这行 在后面加上-H tcp://0.0.0.0:2375  其它方式一会docker就挂了 而且重启无效 </span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#953800">ExecStart</span><span style="color:#0550ae">=</span>/usr/bin/dockerd -H fd:// --containerd<span style="color:#0550ae">=</span>/run/containerd/containerd.sock -H tcp://0.0.0.0:2375
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>systemctl daemon-reload
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>systemctl restart docker
-</span></span></code></pre></div></div>
+</div><div class="summary">Debian 官方安装文档https://docs.docker.com/engine/install/debian/ Uninstall old versions 1apt-get remove docker docker-engine docker.io containerd runc Set up the repository 1# Add Docker's official GPG key: 2apt-get update 3apt-get install ca-certificates curl 4install</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/docker/install/">查看更多…</a>
+				</div>
 				
             
 
@@ -440,21 +396,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="上传镜像">上传镜像</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>docker images
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>docker login
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>docker tag hello-world etanqil/test
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>docker push etanqil/test
-</span></span></code></pre></div><h2 id="停止删除所有的docker容器和镜像">停止、删除所有的docker容器和镜像</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 列出所有的容器 ID</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>docker ps -aq
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#57606a"># 停止所有的容器</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>docker stop <span style="color:#cf222e">$(</span>docker ps -aq<span style="color:#cf222e">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#57606a"># 删除所有的容器</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>docker rm <span style="color:#cf222e">$(</span>docker ps -aq<span style="color:#cf222e">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#57606a"># 删除所有的镜像</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>docker rmi <span style="color:#cf222e">$(</span>docker images -q<span style="color:#cf222e">)</span>
-</span></span></code></pre></div><p>现在的docker有了专门清理资源(container、image、网络)的命令。 docker 1.13 中增加了 docker system prune的命令，针对container、image可以使用 <code>docker container prune</code>、<code>docker image prune</code> 命令。</p></div>
+</div><div class="summary">上传镜像 1docker images 2docker login 3docker tag hello-world etanqil/test 4docker push etanqil/test 停止、删除所有的docker容器和镜像 1# 列出所有的容器 ID 2docker ps -aq 3# 停止所有的容器 4docker stop $(docker ps -aq) 5# 删除所有的容器 6docker rm $(docker ps -aq) 7# 删除所有的镜像</div>
 				
 				
 				<div class="read-more">

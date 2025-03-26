@@ -4,7 +4,7 @@
     <title>React on Akvicor&#39;s Blog</title>
     <link>https://blog.akvicor.com/categories/react/</link>
     <description>Recent content in React on Akvicor&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 18 Sep 2024 00:08:45 +0800</lastBuildDate>
     <atom:link href="https://blog.akvicor.com/categories/react/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://blog.akvicor.com/posts/react/use_effect/</link>
       <pubDate>Sat, 22 Jun 2024 21:03:07 +0800</pubDate>
       <guid>https://blog.akvicor.com/posts/react/use_effect/</guid>
-      <description>&lt;h2 id=&#34;一个参数&#34;&gt;一个参数&lt;/h2&gt;&#xA;&lt;p&gt;useEffect()本身是一个函数，由 React 框架提供，在函数组件内部调用即可。&lt;/p&gt;&#xA;&lt;p&gt;举例来说，我们希望组件加载以后，网页标题（document.title）会随之改变。那么，改变网页标题这个操作，就是组件的副效应，必须通过useEffect()来实现。&lt;/p&gt;</description>
+      <description>一个参数 useEffect()本身是一个函数，由 React 框架提供，在函数组件内部调用即可。 举例来说，我们希望组件加载以后，网页标题（document.title）会随</description>
     </item>
   </channel>
 </rss>

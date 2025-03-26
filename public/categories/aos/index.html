@@ -292,8 +292,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p>gcc会在<code>call</code>指令之前让<code>rsp</code>按<code>16</code>字节对齐。</p>
-<p>cpu在<code>call</code>的时候将<code>rip</code>压栈<code>rsp -= 8</code>，所以进入被调用者之后<code>rsp = 8 (mod 16)</code>。如果在这个函数里面还要<code>call</code>其他函数的话就要将<code>rsp</code>减掉奇数个<code>8</code>让它重新<code>16</code>字节对齐。</p></div>
+</div><div class="summary">gcc会在call指令之前让rsp按16字节对齐。 cpu在call的时候将rip压栈rsp -= 8，所以进入被调用者之后rsp = 8 (mod 16)。如果在这个函数里面还要c</div>
 				
 				
 				<div class="read-more">
@@ -345,8 +344,7 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="初始化寄存器">初始化寄存器</h2>
-<p>我将物理地址<code>0x050000-0x070008</code>之间的内存分配给了堆栈。栈顶设置为<code>0x070008</code>的原因是，kernel函数在编译后会在函数开头加上这样一行汇编代码<code>sub    $0x8,%rsp</code>，将栈顶设置为<code>0x070008</code>可以保证在经过此操作后，栈顶为<code>0x070000</code>。</p></div>
+</div><div class="summary">初始化寄存器 我将物理地址0x050000-0x070008之间的内存分配给了堆栈。栈顶设置为0x070008的原因是，kernel函数在编译后会在函数开头加上这</div>
 				
 				
 				<div class="read-more">

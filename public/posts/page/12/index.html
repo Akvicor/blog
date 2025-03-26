@@ -210,9 +210,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/linux/ip_local_port_range/">
+            <a href="https://blog.akvicor.com/posts/idea/goland/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Linux IP Local Port Range <sup></sup></span>
+                <span> GoLand <sup></sup></span>
             </a>
 
             
@@ -220,7 +220,257 @@
                 <span class="date">
                     
                     
-                    2022-08-08
+                    2022-10-07
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/idea">IDEA</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">Setting/Tools/Action and Save/Reformat Code: 自动格式化代码 Setting/Tools/Action and Save/Optimize imports: 自动优化import Setting/Editor/Inspections/Go/Code Style issues/Usage of Snake_Case: 关闭SnakeCase变量名 Setting/Editor/General/Code Folding/: 关闭代码折叠</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/windows/fix_windows_and_linux_showing_different_times_when_dual_booting/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Fix Windows and Linux Showing Different Times When Dual Booting <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-10-04
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/windows">Windows</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">Make Windows Use UTC Time Filename: Make Windows Use UTC Time.reg 1Windows Registry Editor Version 5.00 2 3[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation] 4&quot;RealTimeIsUniversal&quot;=dword:00000001 以管理员身份打开 「PowerShell」，输入以下命令 1Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1 Make Windows Use Local Time Filename: Make Windows Use Local Time.reg 1Windows Registry Editor Version 5.00 2 3[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation] 4&quot;RealTimeIsUniversal&quot;=-</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/windows/auto_restart_network_interface/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Auto Restart Network Interface <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-09-26
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-18
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/windows">Windows</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">每隔30秒钟检查一次网络状态，如果网络异常则重启网卡，然后刷新DNS缓存。 1@echo off 2echo &quot;正在监听网络状态&hellip;.&quot; 3 4cd C:\opt\netcheck 5 6:begin 7ping akvicor.com &gt; ping.txt 8rem echo %errorlevel% 9if %ERRORLEVEL% == 1 goto ping2</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/windows/auto_restart_network_interface/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/aos/stack_alignment_in_x64_assembly/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> Stack alignment in x64 assembly <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-08-23
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/aos">AOS</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">gcc会在call指令之前让rsp按16字节对齐。 cpu在call的时候将rip压栈rsp -= 8，所以进入被调用者之后rsp = 8 (mod 16)。如果在这个函数里面还要c</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/aos/stack_alignment_in_x64_assembly/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/aos/boot/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> BOOT: 从FAT32分区搜索并读取loader <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-08-22
+                </span>
+                <span class="date">
+                    
+                    
+                    - 2024-09-15
+                </span>
+            </div>
+            
+            
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/aos">AOS</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div><div class="summary">初始化寄存器 我将物理地址0x050000-0x070008之间的内存分配给了堆栈。栈顶设置为0x070008的原因是，kernel函数在编译后会在函数开头加上这</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/aos/boot/">查看更多…</a>
+				</div>
+				
+            
+
+        </div>
+        
+    
+        
+        
+        <div class="item" >
+           
+            
+            <a href="https://blog.akvicor.com/posts/linux/file_permission/">
+                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
+                <span> File Permission <sup></sup></span>
+            </a>
+
+            
+            <div class="desc">
+                <span class="date">
+                    
+                    
+                    2022-08-19
                 </span>
                 <span class="date">
                     
@@ -245,16 +495,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># 查看当前临时端口的范围</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sysctl net.ipv4.ip_local_port_range
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>cat /proc/sys/net/ipv4/ip_local_port_range
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#57606a"># 暂时性修改临时端口的范围</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#6639ba">echo</span> <span style="color:#0550ae">1024</span> <span style="color:#0550ae">65535</span> &gt; /proc/sys/net/ipv4/ip_local_port_range
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>sysctl -w net.ipv4.ip_local_port_range<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;1024 64000&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#57606a"># 永久性修改临时端口范围</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>vim /etc/sysctl.conf <span style="color:#57606a"># 编辑此文件并添加下面一行内容</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>net.ipv4.ip_local_port_range <span style="color:#0550ae">=</span> <span style="color:#0550ae">1024</span> <span style="color:#0550ae">65535</span>
-</span></span></code></pre></div></div>
+</div><div class="summary">修改文件或目录所有者 1# 修改文件的所有者为root 2chown root &lt;file&gt; 3# 修改文件的所有者和所有组为root 4chown root: &lt;file&gt; 5# 修改文件的所有者为root，所有组为akvicor 6chown root:akvicor &lt;file&gt; 7# 修改</div>
+				
+				
+				<div class="read-more">
+				  <a href="/posts/linux/file_permission/">查看更多…</a>
+				</div>
 				
             
 
@@ -266,9 +512,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/linux/xset/">
+            <a href="https://blog.akvicor.com/posts/linux/zsh/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Xset <sup></sup></span>
+                <span> zsh <sup></sup></span>
             </a>
 
             
@@ -276,7 +522,7 @@
                 <span class="date">
                     
                     
-                    2022-08-01
+                    2022-08-09
                 </span>
                 <span class="date">
                     
@@ -301,12 +547,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><p><code>xset</code>:用于设置显示器的各种用户属性选项。如果想要持久化设置，可以将设置写入<code>.xinitrc</code>文件中。</p>
-<p>dpms（Display Power Manage System）和屏保是互相作用的，这两个值谁设的小谁生效。</p></div>
+</div><div class="summary">oh-my-zsh主题显示执行时间 oh-my-zsh主题显示执行时间 进入主题目录~/.oh-my-zsh/themes 在想要修改的主题文件中添加如下代码： 1function preexec() {</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/linux/xset/">查看更多…</a>
+				  <a href="/posts/linux/zsh/">查看更多…</a>
 				</div>
 				
             
@@ -319,9 +564,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/hugo/ruby/">
+            <a href="https://blog.akvicor.com/posts/linux/user_group/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Ruby <sup></sup></span>
+                <span> Linux User/Group <sup></sup></span>
             </a>
 
             
@@ -329,7 +574,7 @@
                 <span class="date">
                     
                     
-                    2022-07-29
+                    2022-08-09
                 </span>
                 <span class="date">
                     
@@ -345,7 +590,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/hugo">Hugo</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -354,145 +599,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="编写">编写</h2>
-<p>编写<code>ruby.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;!-- layouts/shortcodes/ruby.html --&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;ruby&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  {{ .Get &#34;text&#34; }}&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;{{ .Get &#34;title&#34; }}&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>&lt;/ruby&gt;
-</span></span></code></pre></div><h2 id="使用">使用</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{&lt; ruby title=&#34;完全没理解&#34; text=&#34;太棒了,我逐渐理解一切&#34; &gt;}}
-</span></span></code></pre></div>
-<ruby>太棒了,我逐渐理解一切<rp>(</rp><rt>完全没理解</rt><rp>)</rp></ruby></div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/hugo/kidding/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Kidding <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-07-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/hugo">Hugo</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="编写">编写</h2>
-<p>编写<code>kidding.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;!-- layouts/shortcodes/kidding.html --&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;s style=&#34;text-decoration: line-through;&#34; title=&#34;{{ .Get &#34;title&#34; }}&#34;&gt;{{ .Get &#34;text&#34; }}&lt;/s&gt;
-</span></span></code></pre></div><h2 id="使用">使用</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{&lt; kidding title=&#34;完全没理解&#34; text=&#34;太棒了,我逐渐理解一切&#34; &gt;}}
-</span></span></code></pre></div>
-<s style="text-decoration: line-through;" title="完全没理解">太棒了,我逐渐理解一切</s></div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/hugo/heimu/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Heimu <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-07-29
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/hugo">Hugo</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h1 id="编写">编写</h1>
-<p>将<code>heimu.css</code>文件放在<code>themes/archie/assets/css/</code>文件夹中</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">/* heimu.css */</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#0550ae">,</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span> <span style="color:#0550ae">a</span><span style="color:#0550ae">,</span> <span style="color:#0550ae">a</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#0550ae">,</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span> <span style="color:#0550ae">a</span><span style="color:#1f2328">.</span><span style="color:#1f2328">new</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#252525</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#252525</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span><span style="color:#0550ae">,</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#1f2328">:</span><span style="color:#0550ae">active</span><span style="color:#0550ae">,</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#0550ae">,</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#1f2328">:</span><span style="color:#0550ae">active</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span> <span style="color:#57606a">!important</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#0550ae">a</span><span style="color:#0550ae">,</span> <span style="color:#0550ae">a</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#0550ae">,</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#1f2328">:</span><span style="color:#0550ae">active</span> <span style="color:#0550ae">a</span><span style="color:#0550ae">,</span> <span style="color:#0550ae">a</span><span style="color:#1f2328">:</span><span style="color:#0550ae">active</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">lightblue</span> <span style="color:#57606a">!important</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">new</span><span style="color:#0550ae">,</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">new</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span><span style="color:#0550ae">,</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">new</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#0550ae">,</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span><span style="color:#1f2328">:</span><span style="color:#0550ae">active</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">new</span><span style="color:#0550ae">,</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">new</span><span style="color:#1f2328">:</span><span style="color:#0550ae">active</span><span style="color:#0550ae">,</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">new</span><span style="color:#1f2328">:</span><span style="color:#0550ae">active</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">heimu</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#BA0000</span> <span style="color:#57606a">!important</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div><p>编写<code>heimu.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p></div>
+</div><div class="summary">概念和相关文件 在 Linux 用户系统中存在两类组。第一类是主要用户组（主组），第二类是附加用户组（附属组）。 主组：也被称为primary group、first group或</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/hugo/heimu/">查看更多…</a>
+				  <a href="/posts/linux/user_group/">查看更多…</a>
 				</div>
 				
             
@@ -505,9 +616,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/efi/refind/">
+            <a href="https://blog.akvicor.com/posts/linux/usbfs/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> UEFI启动管理器rEFInd <sup></sup></span>
+                <span> Usbfs <sup></sup></span>
             </a>
 
             
@@ -515,7 +626,7 @@
                 <span class="date">
                     
                     
-                    2022-07-28
+                    2022-08-09
                 </span>
                 <span class="date">
                     
@@ -531,7 +642,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/uefi">UEFI</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -540,24 +651,11 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><h2 id="安装refind">安装rEFInd</h2>
-<p><a href="https://github.com/techysy/rEFInd">https://github.com/techysy/rEFInd</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo apt-get install refind
-</span></span></code></pre></div><ul>
-<li>输入y继续执行，首次安装时，系统会询问你是否将rEFInd安装到ESP</li>
-<li>关闭安全启动</li>
-</ul>
-<h2 id="安装主题">安装主题</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6639ba">cd</span> /boot/efi/EFI/refind
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>mkdir themes
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#6639ba">cd</span> themes
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git clone https://github.com/kgoettler/ursamajor-rEFInd.git
-</span></span></code></pre></div><h2 id="屏蔽多余启动项">屏蔽多余启动项</h2>
-<p>先注释<code>include themes/ursamajor-rEFInd/theme.conf</code>，在选择界面使用<code>delete</code>删除不需要的启动项</p></div>
+</div><div class="summary">赋予用户组操作usb设备的权限 创建用户组并添加用户到用户组 1# 创建用户组 2groupadd usbfs 3# 查看usbfs用户组的id 4# usbfs:x:1001: 5cat /dev/group | grep usbfs 6# 把akvicor添加到用户组 7useradd -G usbfs akvicor 8 # 或</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/efi/refind/">查看更多…</a>
+				  <a href="/posts/linux/usbfs/">查看更多…</a>
 				</div>
 				
             
@@ -570,9 +668,9 @@
         <div class="item" >
            
             
-            <a href="https://blog.akvicor.com/posts/ssl/pem/">
+            <a href="https://blog.akvicor.com/posts/linux/debian/">
                 <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 生成cert.pem和key.pem <sup></sup></span>
+                <span> Debian Install <sup></sup></span>
             </a>
 
             
@@ -580,12 +678,12 @@
                 <span class="date">
                     
                     
-                    2022-07-27
+                    2022-08-09
                 </span>
                 <span class="date">
                     
                     
-                    - 2025-03-26
+                    - 2024-09-18
                 </span>
             </div>
             
@@ -596,7 +694,7 @@
 		<div class="ctg">
 			
 			
-			<a href="/categories/ssl">SSL</a>
+			<a href="/categories/linux">Linux</a>
 			
 		</div>
 		<div class="tag">
@@ -605,414 +703,12 @@
 			
 		</div>
 	</div>
-</div><div class="summary"><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">#1、生成RSA密钥的方法 </span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>openssl genrsa -des3 -out key.pem <span style="color:#0550ae">2048</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#57606a">#这个命令会生成一个2048位的密钥，同时有一个des3方法加密的密码，如果你不想要每次都输入密码，可以改成：</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>openssl genrsa -out key.pem <span style="color:#0550ae">2048</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#57606a">#建议用2048位密钥，少于此可能会不安全或很快将不安全。</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#57606a">#2、生成一个证书请求</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>openssl req -new -key key.pem -out cert.csr
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#57606a">#这个命令将会生成一个证书请求，当然，用到了前面生成的密钥key.pem文件</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#57606a">#这里将生成一个新的文件cert.csr，即一个证书请求文件，你可以拿着这个文件去数字证书颁发机构（即CA）申请一个数字证书。CA会给你一个新的文件cert.pem，那才是你的数字证书。</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#57606a">#如果是自己做测试，那么证书的申请机构和颁发机构都是自己。就可以用下面这个命令来生成证书：</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>openssl req -new -x509 -key key.pem -out cert.pem -days <span style="color:#0550ae">1095</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#57606a">#这个命令将用上面生成的密钥key.pem生成一个数字证书cert.pem</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#57606a">#3、使用数字证书和密钥 </span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#57606a">#有了key.pem和cert.pem文件后就可以在自己的程序中使用了，比如做一个加密通讯的服务器</span>
-</span></span></code></pre></div><p>go语言中调用</p></div>
+</div><div class="summary">Debian安装说明 Debian 源 1wget <a href="https://paste.akvicor.com/api/106">https://paste.akvicor.com/api/106</a> Debian 12 + i3 修改时区 1# 修改时区 2ln -sf /usr/share/zoneinfo/Etc/GMT-8 /etc/localtime 3# 同步硬件时间 4hwclock -w 配置源 1curl <a href="https://paste.akvicor.com/api/101">https://paste.akvicor.com/api/101</a> &gt; /etc/apt/sources.list 2# 注释掉不需要用到的源，如 bookworm-proposed-up</div>
 				
 				
 				<div class="read-more">
-				  <a href="/posts/ssl/pem/">查看更多…</a>
+				  <a href="/posts/linux/debian/">查看更多…</a>
 				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/hugo/install/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Hugo Install <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-07-17
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/hugo">Hugo</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="github">GitHub</h2>
-<p><a href="https://github.com/gohugoio/hugo.git">https://github.com/gohugoio/hugo.git</a></p>
-<h2 id="build">Build</h2>
-<ol>
-<li>使用官方编译版本</li>
-<li>使用源码编译</li>
-</ol>
-<p><a href="http://pi.akvicor.com:7021/?p=199">http://pi.akvicor.com:7021/?p=199</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>wget http://pi.akvicor.com:7021/file?f<span style="color:#0550ae">=</span><span style="color:#0550ae">1233</span> -O hugo_build.tgz
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>tar -zxvf hugo_build.tgz
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#6639ba">cd</span> hugo
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>./build.sh
-</span></span></code></pre></div><h2 id="install">Install</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mv gopath/bin/hugo /usr/bin/hugo
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>hugo version
-</span></span></code></pre></div><h2 id="usage">Usage</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a"># 版本和环境详细信息</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>hugo env
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#57606a"># 创建新站点</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>hugo new site siteName
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#57606a"># 创建文章</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>hugo new index.md
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#57606a"># 编译生成静态文件并输出到public目录</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>hugo
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#57606a"># 编译生成静态文件并启动web服务</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>hugo server
-</span></span></code></pre></div><h2 id="主题">主题</h2>
-<p><a href="https://github.com/athul/archie">https://github.com/athul/archie</a></p></div>
-				
-				
-				<div class="read-more">
-				  <a href="/posts/hugo/install/">查看更多…</a>
-				</div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/hugo/search_func/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> 搜索功能 <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-07-14
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/hugo">Hugo</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><p>为hugo添加搜索功能，在<code>content</code>下创建<code>search.html</code>页面，添加以下内容</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span>+++
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span><span>title = &#34;Search&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3</span><span>description = &#34;Akvico&#39;s Blog&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4</span><span>date = &#34;2022-07-14&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5</span><span>author = &#34;Akvicor&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6</span><span>+++
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">style</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9</span><span>  <span style="color:#57606a">/* 手机适配 */</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10</span><span>  <span style="color:#1f2328">@</span><span style="color:#cf222e">media</span> <span style="color:#0550ae">screen</span> <span style="color:#0550ae">and</span> <span style="color:#0550ae">(</span><span style="color:#0550ae">max-width</span><span style="color:#0550ae">:</span> <span style="color:#0550ae">500px</span><span style="color:#0550ae">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11</span><span>     <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12</span><span>       <span style="color:#cf222e">padding-right</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">25</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13</span><span>     <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15</span><span>     <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span> <span style="color:#0550ae">input</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16</span><span>       <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">%</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17</span><span>     <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19</span><span>     <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span> <span style="color:#0550ae">button</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20</span><span>       <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21</span><span>     <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23</span><span>  <span style="color:#57606a">/* 电脑适配 */</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24</span><span>  <span style="color:#1f2328">@</span><span style="color:#cf222e">media</span> <span style="color:#0550ae">screen</span> <span style="color:#0550ae">and</span> <span style="color:#0550ae">(</span><span style="color:#0550ae">min-width</span><span style="color:#0550ae">:</span> <span style="color:#0550ae">500px</span><span style="color:#0550ae">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25</span><span>      <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26</span><span>        <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">500</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27</span><span>      <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29</span><span>      <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span> <span style="color:#0550ae">input</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30</span><span>        <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">444</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31</span><span>      <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34</span><span>  <span style="color:#57606a">/* 通用样式 */</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35</span><span>  <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36</span><span>    <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">auto</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39</span><span>  <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span> <span style="color:#0550ae">input</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40</span><span>    <span style="color:#cf222e">outline</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41</span><span>    <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#cf222e">solid</span> <span style="color:#0550ae">#c05b4d</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42</span><span>    <span style="color:#cf222e">height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">32</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43</span><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45</span><span>  <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span> <span style="color:#0550ae">button</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46</span><span>    <span style="color:#cf222e">outline</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47</span><span>    <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48</span><span>    <span style="color:#cf222e">height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">56</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49</span><span>    <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span><span style="color:#0550ae">56</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50</span><span>    <span style="color:#cf222e">position</span><span style="color:#1f2328">:</span><span style="color:#cf222e">absolute</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51</span><span>    <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span><span style="color:#0550ae">#c05b4d</span> <span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53</span><span>  <span style="color:#1f2328">.</span><span style="color:#1f2328">search</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">icon</span><span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54</span><span>    <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">28</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55</span><span>    <span style="color:#cf222e">height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">28</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">style</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;search&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59</span><span>  <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">input</span> <span style="color:#1f2328">type</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;text&#34;</span> <span style="color:#1f2328">placeholder</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;&#34;</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;search-key&#34;</span> <span style="color:#1f2328">/&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60</span><span>  <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">button</span> <span style="color:#1f2328">onclick</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;search()&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61</span><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">svg</span> <span style="color:#1f2328">t</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;1583982313567&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;icon&#34;</span> <span style="color:#1f2328">viewBox</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;0 0 1024 1024&#34;</span> <span style="color:#1f2328">version</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;1.1&#34;</span> <span style="color:#1f2328">xmlns</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;http://www.w3.org/2000/svg&#34;</span> <span style="color:#1f2328">p-id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;1271&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62</span><span>      <span style="color:#1f2328">width</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;200&#34;</span> <span style="color:#1f2328">height</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;200&#34;</span> <span style="color:#1f2328">xmlns:xlink</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;http://www.w3.org/1999/xlink&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63</span><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">defs</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64</span><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">style</span> <span style="color:#1f2328">type</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;text/css&#34;</span><span style="color:#1f2328">&gt;&lt;/</span><span style="color:#0550ae">style</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65</span><span>      <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">defs</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66</span><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">path</span> <span style="color:#1f2328">d</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;M694.857143 475.428571q0-105.714286-75.142857-180.857142T438.857143 219.428571 258 294.571429 182.857143 475.428571t75.142857 180.857143T438.857143 731.428571t180.857143-75.142857T694.857143 475.428571z m292.571428 475.428572q0 29.714286-21.714285 51.428571t-51.428572 21.714286q-30.857143 0-51.428571-21.714286l-196-195.428571q-102.285714 70.857143-228 70.857143-81.714286 0-156.285714-31.714286t-128.571429-85.714286-85.714286-128.571428T36.571429 475.428571t31.714285-156.285714 85.714286-128.571428 128.571429-85.714286T438.857143 73.142857t156.285714 31.714286 128.571429 85.714286 85.714285 128.571428T841.142857 475.428571q0 125.714286-70.857143 228l196 196q21.142857 21.142857 21.142857 51.428572z&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67</span><span>        <span style="color:#1f2328">p-id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;1272&#34;</span> <span style="color:#1f2328">fill</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;#ffffff&#34;</span><span style="color:#1f2328">&gt;&lt;/</span><span style="color:#0550ae">path</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68</span><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">svg</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69</span><span>  <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;search-tip&#34;</span> <span style="color:#1f2328">style</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;color: #c05b4d;text-align: center;display: none;&#34;</span><span style="color:#1f2328">&gt;</span>Searching ...<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">br</span> <span style="color:#1f2328">/&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;result&#34;</span><span style="color:#1f2328">&gt;&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">script</span> <span style="color:#1f2328">type</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;text/javascript&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76</span><span>  <span style="color:#57606a">// enter
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77</span><span><span style="color:#57606a"></span>  <span style="color:#6639ba">window</span><span style="color:#1f2328">.</span><span style="color:#1f2328">onload</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">function</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78</span><span>    <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">onkeydown</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">function</span><span style="color:#1f2328">(</span><span style="color:#1f2328">ev</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79</span><span>      <span style="color:#cf222e">var</span> <span style="color:#1f2328">event</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">ev</span> <span style="color:#0550ae">||</span> <span style="color:#1f2328">event</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80</span><span>      <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">event</span><span style="color:#1f2328">.</span><span style="color:#1f2328">keyCode</span> <span style="color:#0550ae">==</span> <span style="color:#0550ae">13</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81</span><span>        <span style="color:#1f2328">search</span><span style="color:#1f2328">()</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82</span><span>      <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83</span><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86</span><span>  <span style="color:#57606a">// search
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87</span><span><span style="color:#57606a"></span>  <span style="color:#cf222e">function</span> <span style="color:#1f2328">search</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88</span><span>    <span style="color:#1f2328">key</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;search-key&#34;</span><span style="color:#1f2328">).</span><span style="color:#1f2328">value</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89</span><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">key</span> <span style="color:#0550ae">===</span> <span style="color:#0a3069">&#34;&#34;</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90</span><span>      <span style="color:#cf222e">return</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91</span><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92</span><span>    <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;search-key&#34;</span><span style="color:#1f2328">).</span><span style="color:#1f2328">value</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;&#34;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94</span><span>    <span style="color:#57606a">// tip
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95</span><span><span style="color:#57606a"></span>    <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;search-tip&#34;</span><span style="color:#1f2328">).</span><span style="color:#1f2328">innerText</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;Searching ...&#34;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96</span><span>    <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;search-tip&#34;</span><span style="color:#1f2328">).</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">display</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;block&#34;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98</span><span>    <span style="color:#57606a">// clear
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99</span><span><span style="color:#57606a"></span>    <span style="color:#cf222e">var</span> <span style="color:#1f2328">el</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;result&#39;</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100</span><span>    <span style="color:#cf222e">var</span> <span style="color:#1f2328">childs</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">el</span><span style="color:#1f2328">.</span><span style="color:#1f2328">childNodes</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101</span><span>    <span style="color:#cf222e">for</span> <span style="color:#1f2328">(</span><span style="color:#cf222e">var</span> <span style="color:#1f2328">i</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">childs</span><span style="color:#1f2328">.</span><span style="color:#1f2328">length</span> <span style="color:#0550ae">-</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">;</span> <span style="color:#1f2328">i</span> <span style="color:#0550ae">&gt;=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span> <span style="color:#1f2328">i</span><span style="color:#0550ae">--</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102</span><span>      <span style="color:#1f2328">el</span><span style="color:#1f2328">.</span><span style="color:#1f2328">removeChild</span><span style="color:#1f2328">(</span><span style="color:#1f2328">childs</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">]);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103</span><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105</span><span>    <span style="color:#57606a">// xml
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106</span><span><span style="color:#57606a"></span>    <span style="color:#1f2328">xmltext</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">new</span> <span style="color:#1f2328">XMLHttpRequest</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107</span><span>    <span style="color:#1f2328">xmltext</span><span style="color:#1f2328">.</span><span style="color:#1f2328">open</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;GET&#34;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#34;/index.xml&#34;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108</span><span>    <span style="color:#1f2328">xmltext</span><span style="color:#1f2328">.</span><span style="color:#1f2328">send</span><span style="color:#1f2328">();</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109</span><span>    <span style="color:#1f2328">resp</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">xmltext</span><span style="color:#1f2328">.</span><span style="color:#1f2328">responseXML</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110</span><span>    <span style="color:#1f2328">items</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">resp</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementsByTagName</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;item&#34;</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111</span><span>    <span style="color:#57606a">// search
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112</span><span><span style="color:#57606a"></span>    <span style="color:#cf222e">var</span> <span style="color:#1f2328">i</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113</span><span>    <span style="color:#1f2328">haveResult</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114</span><span>    <span style="color:#cf222e">while</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">i</span> <span style="color:#0550ae">&lt;</span> <span style="color:#1f2328">items</span><span style="color:#1f2328">.</span><span style="color:#1f2328">length</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115</span><span>      <span style="color:#1f2328">txt</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">items</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">].</span><span style="color:#1f2328">getElementsByTagName</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;title&#34;</span><span style="color:#1f2328">)[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">].</span><span style="color:#1f2328">innerHTML</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">items</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">].</span><span style="color:#1f2328">getElementsByTagName</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;description&#34;</span><span style="color:#1f2328">)[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">].</span><span style="color:#1f2328">innerHTML</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116</span><span>      <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">txt</span><span style="color:#1f2328">.</span><span style="color:#1f2328">indexOf</span><span style="color:#1f2328">(</span><span style="color:#1f2328">key</span><span style="color:#1f2328">)</span> <span style="color:#0550ae">&gt;</span> <span style="color:#0550ae">-</span><span style="color:#0550ae">1</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117</span><span>        <span style="color:#1f2328">haveResult</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118</span><span>        <span style="color:#1f2328">title</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">items</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">].</span><span style="color:#1f2328">getElementsByTagName</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;title&#34;</span><span style="color:#1f2328">)[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">].</span><span style="color:#1f2328">innerHTML</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119</span><span>        <span style="color:#1f2328">link</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">items</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">].</span><span style="color:#1f2328">getElementsByTagName</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;link&#34;</span><span style="color:#1f2328">)[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">].</span><span style="color:#1f2328">innerHTML</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120</span><span>        <span style="color:#1f2328">time</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">items</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">].</span><span style="color:#1f2328">getElementsByTagName</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;pubDate&#34;</span><span style="color:#1f2328">)[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">].</span><span style="color:#1f2328">innerHTML</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121</span><span>        <span style="color:#1f2328">mark</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">items</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">].</span><span style="color:#1f2328">getElementsByTagName</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;description&#34;</span><span style="color:#1f2328">)[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">].</span><span style="color:#1f2328">innerHTML</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122</span><span>        <span style="color:#1f2328">addItem</span><span style="color:#1f2328">(</span><span style="color:#1f2328">title</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">link</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">time</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">mark</span><span style="color:#1f2328">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123</span><span>      <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124</span><span>      <span style="color:#1f2328">i</span><span style="color:#0550ae">++</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125</span><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126</span><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#0550ae">!</span><span style="color:#1f2328">haveResult</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127</span><span>      <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;search-tip&#34;</span><span style="color:#1f2328">).</span><span style="color:#1f2328">innerText</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;NULL&#34;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128</span><span>      <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;search-tip&#34;</span><span style="color:#1f2328">).</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">display</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;block&#34;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129</span><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132</span><span>  <span style="color:#57606a">// add
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133</span><span><span style="color:#57606a"></span>  <span style="color:#cf222e">function</span> <span style="color:#1f2328">addItem</span><span style="color:#1f2328">(</span><span style="color:#1f2328">title</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">link</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">time</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">mark</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134</span><span>    <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;search-tip&#34;</span><span style="color:#1f2328">).</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">display</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;none&#34;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135</span><span>    <span style="color:#1f2328">tmpl</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;&lt;article class=\&#34;post\&#34; style=\&#34;border-bottom: 1px solid #e6e6e6;\&#34; &gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136</span><span>      <span style="color:#0a3069">&#34;&lt;header class=\&#34;post-header\&#34;&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137</span><span>      <span style="color:#0a3069">&#34;&lt;h1 class=\&#34;post-title\&#34;&gt;&lt;a class=\&#34;post-link\&#34; href=\&#34;&#34;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">link</span> <span style="color:#0550ae">+</span> <span style="color:#0a3069">&#34;\&#34; target=\&#34;_blank\&#34;&gt;&#34;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">title</span> <span style="color:#0550ae">+</span> <span style="color:#0a3069">&#34;&lt;/a&gt;&lt;/h1&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138</span><span>      <span style="color:#0a3069">&#34;&lt;div class=\&#34;post-meta\&#34;&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139</span><span>      <span style="color:#0a3069">&#34; &lt;span class=\&#34;post-time\&#34;&gt;&#34;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">time</span> <span style="color:#0550ae">+</span> <span style="color:#0a3069">&#34;&lt;/span&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140</span><span>      <span style="color:#0a3069">&#34;&lt;/div&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141</span><span>      <span style="color:#0a3069">&#34; &lt;/header&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142</span><span>      <span style="color:#0a3069">&#34;&lt;div class=\&#34;post-content\&#34;&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143</span><span>      <span style="color:#0a3069">&#34;&lt;div class=\&#34;post-summary\&#34;&gt;&#34;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">mark</span> <span style="color:#0550ae">+</span> <span style="color:#0a3069">&#34;&lt;/div&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144</span><span>      <span style="color:#0a3069">&#34;&lt;div class=\&#34;read-more\&#34;&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145</span><span>      <span style="color:#0a3069">&#34;&lt;a href=\&#34;&#34;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">link</span> <span style="color:#0550ae">+</span> <span style="color:#0a3069">&#34;\&#34; class=\&#34;read-more-link\&#34; target=\&#34;_blank\&#34;&gt;Read more&lt;/a&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146</span><span>      <span style="color:#0a3069">&#34;&lt;/div&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">147</span><span>      <span style="color:#0a3069">&#34; &lt;/div&gt;&#34;</span> <span style="color:#0550ae">+</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">148</span><span>      <span style="color:#0a3069">&#34;&lt;/article&gt;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">149</span><span>    <span style="color:#1f2328">div</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">createElement</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;div&#34;</span><span style="color:#1f2328">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">150</span><span>    <span style="color:#1f2328">div</span><span style="color:#1f2328">.</span><span style="color:#1f2328">innerHTML</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">tmpl</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">151</span><span>    <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;result&#39;</span><span style="color:#1f2328">).</span><span style="color:#1f2328">appendChild</span><span style="color:#1f2328">(</span><span style="color:#1f2328">div</span><span style="color:#1f2328">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">152</span><span>  <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">153</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">script</span><span style="color:#1f2328">&gt;</span>
-</span></span></code></pre></div></div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/hugo/abbr/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Abbr <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-07-14
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/hugo">Hugo</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary"><h2 id="编写">编写</h2>
-<p>编写<code>abbr.html</code>放在<code>layouts/shortcodes/</code>文件夹中</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;!-- layouts/shortcodes/abbr.html --&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;abbr title=&#34;{{ .Get &#34;title&#34; }}&#34;&gt;{{ .Get &#34;text&#34; }}&lt;/abbr&gt;
-</span></span></code></pre></div><h2 id="使用">使用</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{&lt; abbr title=&#34;Ocean University of China&#34; text=&#34;OUC&#34; &gt;}}
-</span></span></code></pre></div>
-<abbr title="Ocean University of China">OUC</abbr></div>
-				
-            
-
-        </div>
-        
-    
-        
-        
-        <div class="item" >
-           
-            
-            <a href="https://blog.akvicor.com/posts/hugo/shortcodes/">
-                <span> <img src="/imgs/icons/post-3.svg" width="16" /> </span>
-                <span> Shortcodes <sup></sup></span>
-            </a>
-
-            
-            <div class="desc">
-                <span class="date">
-                    
-                    
-                    2022-07-14
-                </span>
-                <span class="date">
-                    
-                    
-                    - 2024-09-18
-                </span>
-            </div>
-            
-            
-            <div class="container-ctgtag">
-	<div class="taxonomy">
-		
-		<div class="ctg">
-			
-			
-			<a href="/categories/hugo">Hugo</a>
-			
-		</div>
-		<div class="tag">
-			
-			
-			
-		</div>
-	</div>
-</div><div class="summary">为防止 shortcodes 语法被博客生产 短代码, 加 * 使用 <code>{{&lt;/* myshortcode */&gt;}}</code></div>
 				
             
 
@@ -1049,7 +745,7 @@
         <a href="/posts/page/13/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
     </div>
